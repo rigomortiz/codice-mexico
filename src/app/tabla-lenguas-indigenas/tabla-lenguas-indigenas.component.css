@@ -13,7 +13,7 @@
   font-family: 'Montserrat';
 }
 
-.familias-menu > tbody > tr :hover {
+.familias-menu :hover {
      cursor: pointer;
 }
 
@@ -34,11 +34,11 @@
     /*width: 105px;*/
     height: 4.6vw;
     padding: 5px;
-    border-radius: 7px;
+    border-radius: 5px;
     overflow: hidden;
     margin: 3px;
     /*transition: box-shadow .1s;*/
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 4px 0 rgba(0,0,0,.1), inset 0 0 0 2px rgba(0,0,0,.1);
    /* transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
     -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);*/
     z-index: auto;
@@ -53,11 +53,11 @@
     /*width: 105px;*/
     height: 4.6vw;
     padding: 5px;
-    border-radius: 7px;
+    border-radius: 5px;
     overflow: hidden;
     margin: 3px;
     /*transition: box-shadow .1s;*/
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 3px 0 rgba(0,0,0,.1), inset 0 0 0 1px rgba(0,0,0,.1);
     transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
     -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
     z-index: 1;
@@ -66,12 +66,22 @@
     /*border: 1px solid #ccc;*/
 }
 
+.hide {
+    background-color: #CCCCCC !important;
+    color: #969696 !important;
+    pointer-events: none !important;
+    box-shadow: 0 0px 0px 0 rgba(0,0,0,.1), inset 0 0 0 0px rgba(0,0,0,.1) !important;
+}
+
+.hide:hover {
+    transform: scale(1) !important;
+}
+
 .group:after {
     border-radius: 5px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     opacity: 0;
 }
-
 
 .group-up-right-effect {
     border-radius: 5px;
@@ -182,7 +192,6 @@
     box-shadow: none;
 }
 
-
 .group-info-basic {
     font-size: 12px;
     height: 100%;
@@ -208,14 +217,12 @@ li.no-focus, li.no-focus .group {
     color: darkgray;
 }
 
-
 .no-focus .atomic-number:before {
     color: darkgray !important;
 }
 
 
 /**FAMILIAS*/
-
 .algica, .algica.no-focus:hover {
     background-color: #ef7659;
     color: #FFFFFF;
@@ -233,7 +240,6 @@ li.no-focus, li.no-focus .group {
 
 .oto-mangue, .oto-mangue.no-focus:hover {
     background-color: #92d26b;
-    color: #ffffff;
     color: #ffffff;
 }
 
@@ -286,57 +292,6 @@ li.no-focus, li.no-focus .group {
     background-color: #8cabde;
     color: #515757;
 }
-
-/*
-.other-nonmetals, .other-nonmetals.no-focus:hover  {
-    background: #76FF03;
-}
-
-.noble-gases, .noble-gases.no-focus:hover  {
-    background: #df5ff5;
-}
-
-.halogens, .halogens.no-focus:hover  {
-    background: #18FFFF;
-}
-
-.metalloids, .metalloids.no-focus:hover  {
-    background: #00E676;
-}
-
-.alkaline-earth-metals, .alkaline-earth-metals.no-focus:hover  {
-    background: #eaea18;
-}
-
-.alkali-metals, .alkali-metals.no-focus:hover  {
-    background: #f7a91d;
-}
-
-.transition-metals, .transition-metals.no-focus:hover  {
-    background: #ff3e7f;
-}
-
-.post-transition-metals, .post-transition-metals.no-focus:hover  {
-    background: #40C4FF;
-}
-
-.lanthanoids, .lanthanoids.no-focus:hover  {
-    background: #fd6d3f;
-}
-
-.actinoids, .actinoids.no-focus:hover  {
-    background: #ff1744;
-}
-
-#six .lanthanoids, #seven .actinoids {
-    justify-content: center;
-}
-
-#six .lanthanoids .atomic-number, #seven .actinoids .atomic-number {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-}*/
 
 .element-symbol {
     margin-top: -10px;
@@ -693,7 +648,6 @@ div#lanthanide-series .group:nth-child(2):before, div#actinide-series .group:nth
 
 }
 
-
 @media(max-width: 1500px) {
 
     .atomic-mass {
@@ -888,6 +842,7 @@ div#lanthanide-series .group:nth-child(2):before, div#actinide-series .group:nth
     }
 
 }
+
 /*
 /*
 @media(max-width: 768px) {

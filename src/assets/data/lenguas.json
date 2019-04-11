@@ -163,13 +163,13 @@
 },
     {
         "numero":"66", "simbolo":"Y", "nombre":"Yaqui", "posicion":"group-up-right", "familia":"yuto-nahua"
+},  {
+        "numero":"38.1 - 38.9", "simbolo":"Na", "nombre":"Náhuatl", "posicion":"group-up-right", "familia":"maya"
 },
     {
         "numero":"48", "simbolo":"Qe", "nombre":"Q’eqchi’", "posicion":"group-up-right", "familia":"maya"
 },
-    {
-        "numero":"38.1 - 38.9", "simbolo":"Na", "nombre":"Náhuatl", "posicion":"group-up-right", "familia":"maya"
-},
+    
     {
         "numero":"49", "simbolo":"Qk", "nombre":"Qato’k", "posicion":"group-up-right", "familia":"maya"
 },
@@ -189,7 +189,7 @@
         "numero":"62", "simbolo":"Tn", "nombre":"Totonaco", "posicion":"group-up-right", "familia":"totonaco-tepehua"
 },
     {
-        "numero":"10", "simbolo":"ChO", "nombre":"Chontal de Oaxaca", "posicion":"group-up-right", "familia":"totonaco-tepehua"
+        "numero":"10", "simbolo":"ChO", "nombre":"Chontal de Oaxaca", "posicion":"group-up-right", "familia":"chontal-oaxaca"
 },
     {
         "numero":"67", "simbolo":"Za", "nombre":"Zapoteco", "posicion":"group-up-left", "familia":"oto-mangue"

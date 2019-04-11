@@ -9,13 +9,27 @@ import { LenguasDataService } from './lenguas-data.service';
 })
 export class TablaLenguasIndigenasComponent implements OnInit {
   lenguas = [];
-  constructor(private lenguasDataService: LenguasDataService) { }
+  algica: boolean;
+
+  constructor(private lenguasDataService: LenguasDataService) {
+    this.algica = true;
+   }
 
   ngOnInit() {
     this.lenguasDataService.getJSON().subscribe(resp =>{
         console.log(resp);
         this.lenguas = resp.body;
     })
+  }
+
+  onSelectFamilia(f: String){
+    let c = document.getElementsByClassName(f);
+    for(let i =0; i< c.length; i++){
+      if(c[i].classList.toggle)
+       c[i].classList.toggle("hide");
+    }
+    let e = document.getElementById("familia-" + f);
+    e.classList.toggle("group-empty");
   }
 
 }
