@@ -7,7 +7,24 @@
     margin-left: auto;
     margin-right: auto;
     font-family: 'Montserrat', serif;
+}
 
+.familias-menu  {
+  font-family: 'Montserrat';
+}
+
+.familias-menu > tbody > tr :hover {
+     cursor: pointer;
+}
+
+.bd-color {
+    border-radius: 2px;
+    box-shadow: 0 2px 3px 0 rgba(0,0,0,.1), inset 0 0 0 1px rgba(0,0,0,.1);
+    display: inline-block;
+    float: left;
+    height: 16px;
+    margin-right: 8px;
+    width: 16px;
 }
 
 .group {
@@ -28,7 +45,6 @@
     /*transition:all 1s;*/
     /*border: 1px solid #ccc;*/
 }
-
 
 .group-select {
     /*max-width: 107px;*/

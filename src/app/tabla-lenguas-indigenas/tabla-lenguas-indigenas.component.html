@@ -1,9 +1,36 @@
-<div class="columns">
-  <div class="column">
-    <h1 class="periodic-table.title">LENGUAS INDÍGENAS DE MÉXICO</h1>
+<div class="columns is-mobile">
+  <div class="column ">
+    <h1 class="title is-size-4-mobile">LENGUAS INDÍGENAS DE MÉXICO</h1>
 </div>
-  <div class="column">2</div>
+<div class="column"  style="display: flex; justify-content: flex-end"><figure class="image is-96x96">
+  <img src="https://bulma.io/images/placeholders/96x96.png">
+</figure></div>
 </div>
+
+
+<table class="familias-menu is-size-7">
+  <tbody>
+    <tr>
+      <td id="familia-algica"><span class="bd-color algica"></span>ÁLGICA</td>
+      <td id="familia-cochimi-yumana"><span class="bd-color cochimi-yumana"></span>COCHIMÍ-YUMANA</td>
+    </tr>
+    <tr>
+      <td id="familia-chontal-oaxaca"><span class="bd-color chontal-oaxaca"></span>CHONTAL DE OAXACA</td>
+      <td id="familia-huave"><span class="bd-color huave"></span>HUAVE</td>
+    </tr>
+      <td id="familia-maya"><span class="bd-color maya"></span>MAYA</td>
+      <td id="familia-mixe-zoque"><span class="bd-color mixe-zoque"></span>MIXE-ZOQUE</td>
+    <tr>
+      <td id="familia-oto-mangue"><span class="bd-color oto-mangue"></span>OTO-MANGUE</td>
+      <td id="familia-seri"><span class="bd-color seri"></span>SERI</td>
+    </tr>
+      <td id="familia-tarasca"><span class="bd-color tarasca"></span>TARASCA</td>
+      <td id="familia-totonaco-tepehua"><span class="bd-color totonaco-tepehua"></span>TOTONACO-TEPEHUA</td>
+    <tr>
+      <td id="familia-nahua"><span class="bd-color yuto-nahua"></span>YUTO-NAHUA</td>
+    </tr>
+  </tbody>
+</table>
 <ol *ngIf="lenguas" class="periodic-table">
   <!-- PRIMER NIVEL -->
   <li *ngFor="let lengua of lenguas" id="{{lengua.id}}" class="group {{lengua.posicion}} {{lengua.familia}}">
