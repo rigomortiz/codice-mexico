@@ -11,6 +11,15 @@
 
 .familias-menu  {
   font-family: 'Montserrat';
+  font-stretch: expanded;
+  position: absolute;
+  top: 250px;
+  bottom: 0;
+  margin-left: 15%;
+}
+
+.familias-menu tr {
+  padding: 10px;
 }
 
 .familias-menu :hover {
