@@ -1,0 +1,254 @@
+[
+    {
+        "numero":"25", "simbolo":"Kp", "nombre":"Kickapoo", "posicion":"group-down-right", "familia":"algica"
+},
+    {
+        "numero":"51", "simbolo":"Sr", "nombre":"Seri", "posicion":"group-down-left", "familia":"seri", "id":"seri"
+},
+    {
+        "numero":"14", "simbolo":"Cu", "nombre":"Cucapá", "posicion":"group-down-right", "familia":"cochimi-yumana"
+},
+    {
+        "numero":"26", "simbolo":"KaW", "nombre":"Kiliwa", "posicion":"group-down-right", "familia":"cochimi-yumana"
+},
+    {
+        "numero":"2", "simbolo":"Am", "nombre":"Amuzgo", "posicion":"group-down-right", "familia":"oto-mangue", "id":"oto-mangue"
+},
+    {
+        "numero":"6", "simbolo":"Ca", "nombre":"Chatino", "posicion":"group-down-right", "familia":"oto-mangue"
+},
+    {
+        "numero":"7", "simbolo":"Cj", "nombre":"Chichimeco-jonaz", "posicion":"group-down-right", "familia":"oto-mangue"
+},
+    {
+        "numero":"8", "simbolo":"Cn", "nombre":"Chinanteco", "posicion":"group-down-right", "familia":"oto-mangue"
+},
+    {
+        "numero":"9", "simbolo":"Cc", "nombre":"Chocholteco", "posicion":"group-down-left", "familia":"oto-mangue"
+},
+    {
+        "numero":"10", "simbolo":"Co", "nombre":"Chontal de Oaxaca", "posicion":"group-down-left", "familia":"oto-mangue"
+},
+    {
+        "numero":"27", "simbolo":"Ku", "nombre":"Ku'hl", "posicion":"group-down-right", "familia":"cochimi-yumana"
+},
+    {
+        "numero":"28", "simbolo":"Km", "nombre":"Kumiai", "posicion":"group-down-right", "familia":"cochimi-yumana"
+},
+    {
+        "numero":"1", "simbolo":"AK", "nombre":"Akateko", "posicion":"group group-down-right", "familia":"maya", "id":"maya"
+},
+    {
+        "numero":"15", "simbolo":"Cui", "nombre":"Cuicateco", "posicion":"group-down-right", "familia":"oto-mangue"
+},
+    {
+        "numero":"20", "simbolo":"Ix", "nombre":"Ixcalteco", "posicion":"group-down-right", "familia":"oto-mangue"
+},
+    {
+        "numero":"31", "simbolo":"Mz", "nombre":"Matlatzinca", "posicion":"group-down-right", "familia":"oto-mangue"
+},
+    {
+        "numero":"34", "simbolo":"Mh", "nombre":"Mazahua", "posicion":"group-down-left", "familia":"oto-mangue"
+},
+    {
+        "numero":"35", "simbolo":"Mt", "nombre":"Mazateco", "posicion":"group-down-left", "familia":"oto-mangue"
+},
+    {
+        "numero":"41", "simbolo":"Pal", "nombre":"Paipai", "posicion":"group-down-right", "familia":"cochimi-yumana"
+},
+    {
+        "numero":"13", "simbolo":"Co", "nombre":"Cora", "posicion":"group-down-right", "familia":"yuto-nahua"
+},
+    {
+        "numero":"16", "simbolo":"Gu", "nombre":"Guarijío", "posicion":"group-down-right", "familia":"yuto-nahua"
+},
+    {
+        "numero":"19", "simbolo":"Hi", "nombre":"Huichol", "posicion":"group-down-right", "familia":"yuto-nahua"
+},
+    {
+        "numero":"18", "simbolo":"Hv", "nombre":"Huave", "posicion":"group-down-right", "familia":"huave"
+},
+    {
+        "numero":"3", "simbolo":"Aw", "nombre":"Awakateko", "posicion":"group-down-right", "familia":"maya"
+},
+    {
+        "numero":"5", "simbolo":"Chl", "nombre":"Ch’ol", "posicion":"group-down-right", "familia":"maya"
+},
+    {
+        "numero":"11", "simbolo":"ChT", "nombre":"Chontal de Tabasco", "posicion":"group-down-right", "familia":"maya"
+},
+    {
+        "numero":"12", "simbolo":"Ch", "nombre":"Chuj", "posicion":"group-down-right", "familia":"maya"
+},
+    {
+        "numero":"17", "simbolo":"Ht", "nombre":"Huasteco", "posicion":"group-down-right", "familia":"maya"
+},
+    {
+        "numero":"21", "simbolo":"Il", "nombre":"Ixil", "posicion":"group-down-right", "familia":"maya"
+},
+    {
+        "numero":"22", "simbolo":"Jk", "nombre":"Jakalteco", "posicion":"group-down-right", "familia":"maya"
+},
+    {
+        "numero":"37", "simbolo":"Mi", "nombre":"Mixteco", "posicion":"group-down-right", "familia":"oto-mangue"
+},
+    {
+        "numero":"40", "simbolo":"Ot", "nombre":"Otomí", "posicion":"group-down-right", "familia":"oto-mangue"
+},
+    {
+        "numero":"42", "simbolo":"PaM", "nombre":"Pame", "posicion":"group-down-left", "familia":"oto-mangue"
+},
+    {
+        "numero":"45", "simbolo":"Po", "nombre":"Popoloca", "posicion":"group-down-left", "familia":"oto-mangue"
+},
+    {
+        "numero":"4", "simbolo":"Ay", "nombre":"Ayapaneco", "posicion":"group-up-right", "familia":"mixe-zoque"
+},
+    {
+        "numero":"36", "simbolo":"Mx", "nombre":"Mixe", "posicion":"group-up-right", "familia":"mixe-zoque"
+},
+    {
+        "numero":"33", "simbolo":"Mo", "nombre":"Mayo", "posicion":"group-up-right", "familia":"yuto-nahua"
+},
+    {
+        "numero":"43", "simbolo":"Pg", "nombre":"Pápago", "posicion":"group-up-right", "familia":"yuto-nahua"
+},
+    {
+        "numero":"44", "simbolo":"Pm", "nombre":"Pima", "posicion":"group-up-right", "familia":"yuto-nahua"
+},
+    {
+        "numero":"52", "simbolo":"Tu", "nombre":"Tarahumara", "posicion":"group-up-right", "familia":"yuto-nahua"
+},
+    {
+        "numero":"23", "simbolo":"Ki", "nombre":"K’iche’", "posicion":"group-up-right", "familia":"maya"
+},
+    {
+        "numero":"24", "simbolo":"Kq", "nombre":"Kaqchikel", "posicion":"group-up-right", "familia":"maya"
+},
+    {
+        "numero":"29", "simbolo":"L", "nombre":"Lacandón", "posicion":"group-up-right", "familia":"maya"
+},
+    {
+        "numero":"30", "simbolo":"Mm", "nombre":"Mam", "posicion":"group-up-right", "familia":"maya"
+},
+    {
+        "numero":"32", "simbolo":"Ma", "nombre":"Maya", "posicion":"group-up-right", "familia":"maya"
+},
+    {
+        "numero":"47", "simbolo":"Qa", "nombre":"Q’anjob’al", "posicion":"group-up-right", "familia":"maya"
+},
+    {
+        "numero":"54", "simbolo":"Tk", "nombre":"Teko", "posicion":"group-up-right", "familia":"teko"
+},
+    {
+        "numero":"59", "simbolo":"Tha", "nombre":"Tlahuica", "posicion":"group-up-lef", "familia":"oto-mangue"
+},
+    {
+        "numero":"60", "simbolo":"Tl", "nombre":"Tlapaneco", "posicion":"group-up-left", "familia":"oto-mangue"
+},
+    {
+        "numero":"63", "simbolo":"Tr", "nombre":"Triqui", "posicion":"group-up-left", "familia":"oto-mangue"
+},
+    {
+        "numero":"59", "simbolo":"Ol", "nombre":"Oluteco", "posicion":"group-up-right", "familia":"mixe-zoque"
+},
+    {
+        "numero":"46", "simbolo":"Ps", "nombre":"Popoluca de la Sierra", "posicion":"group-up-right", "familia":"mixe-zoque"
+},
+    {
+        "numero":"56", "simbolo":"ThN", "nombre":"Tepehuano del norte", "posicion":"group-up-right", "familia":"yuto-nahua"
+},
+    {
+        "numero":"57", "simbolo":"ThS", "nombre":"Tepehuano del sur", "posicion":"group-up-right", "familia":"yuto-nahua"
+},
+    {
+        "numero":"66", "simbolo":"Y", "nombre":"Yaqui", "posicion":"group-up-right", "familia":"yuto-nahua"
+},
+    {
+        "numero":"48", "simbolo":"Qe", "nombre":"Q’eqchi’", "posicion":"group-up-right", "familia":"maya"
+},
+    {
+        "numero":"38.1 - 38.9", "simbolo":"Na", "nombre":"Náhuatl", "posicion":"group-up-right", "familia":"maya"
+},
+    {
+        "numero":"49", "simbolo":"Qk", "nombre":"Qato’k", "posicion":"group-up-right", "familia":"maya"
+},
+    {
+        "numero":"61", "simbolo":"Tb", "nombre":"Tojolabal", "posicion":"group-up-right", "familia":"maya"
+},
+    {
+        "numero":"64", "simbolo":"Tz", "nombre":"Tseltal", "posicion":"group-up-right", "familia":"maya"
+},
+    {
+        "numero":"65", "simbolo":"Ts", "nombre":"Tsotsil", "posicion":"group-up-right", "familia":"totonaco-tepehua"
+},
+    {
+        "numero":"55", "simbolo":"Tp", "nombre":"Tepehua", "posicion":"group-up-right", "familia":"totonaco-tepehua"
+},
+    {
+        "numero":"62", "simbolo":"Tn", "nombre":"Totonaco", "posicion":"group-up-right", "familia":"totonaco-tepehua"
+},
+    {
+        "numero":"10", "simbolo":"ChO", "nombre":"Chontal de Oaxaca", "posicion":"group-up-right", "familia":"totonaco-tepehua"
+},
+    {
+        "numero":"67", "simbolo":"Za", "nombre":"Zapoteco", "posicion":"group-up-left", "familia":"oto-mangue"
+},
+    {
+        "numero":"53", "simbolo":"Ts", "nombre":"Tarasco", "posicion":"group-up-left", "familia":"tarasca"
+},
+    {
+        "numero":"50", "simbolo":"Sa", "nombre":"Sayulteco", "posicion":"group-up-right", "familia":"mixe-zoque"
+},
+    {
+        "numero":"58", "simbolo":"Tx", "nombre":"Texistepequeño", "posicion":"group-up-right", "familia":"mixe-zoque"
+},
+    {
+        "numero":"68", "simbolo":"Zq", "nombre":"Zoque", "posicion":"group-up-right", "familia":"mixe-zoque"
+},
+    {
+        "numero":"67.1", "simbolo":"ZSn", "nombre":"Zopoteco Sierra Norte", "posicion":"group-up-right", "familia":"zapoteco", "id":"zapoteco"
+},
+    {
+        "numero":"67.2", "simbolo":"ZVc", "nombre":"Zopoteco Valle Centrales", "posicion":"group-up-left", "familia":"zapoteco"
+},
+    {
+        "numero":"67.3", "simbolo":"ZLt", "nombre":"Zopoteco Itsmo", "posicion":"group-up-left", "familia":"zapoteco"
+},
+    {
+        "numero":"38-1", "simbolo":"Ng", "nombre":"Nahuas de Guerrero", "posicion":"group-up-right", "familia":"nahuas", "id":"nahuas"
+},
+    {
+        "numero":"38-2", "simbolo":"Nh", "nombre":"Nahuas de Hidalgo", "posicion":"group-up-right", "familia":"nahuas"
+},
+    {
+        "numero":"38-3", "simbolo":"Nj", "nombre":"Nahuas de Jalisco", "posicion":"group-up-right", "familia":"nahuas"
+},
+    {
+        "numero":"38-4", "simbolo":"Nmi", "nombre":"Nahuas de Michoacán", "posicion":"group-up-right", "familia":"nahuas"
+},
+    {
+        "numero":"38-5", "simbolo":"Nmo", "nombre":"Nahuas de Morelos", "posicion":"group-up-right", "familia":"nahuas"
+},
+    {
+        "numero":"38-6", "simbolo":"Np", "nombre":"Nahuas de Puebla", "posicion":"group-up-right", "familia":"nahuas"
+},
+    {
+        "numero":"38-7", "simbolo":"NSlp", "nombre":"Nahuas de San Luis Potosí", "posicion":"group-up-right", "familia":"nahuas"
+},
+    {
+        "numero":"38-8", "simbolo":"Nt", "nombre":"Nahuas de Tlaxcala", "posicion":"group-up-right", "familia":"nahuas"
+},
+    {
+        "numero":"38-9", "simbolo":"Nv", "nombre":"Nahuas de Veracruz", "posicion":"group-up-right", "familia":"nahuas"
+},
+    {
+        "numero":"38-10", "simbolo":"Nem", "nombre":"Nahuas del Estado de México", "posicion":"group-up-left", "familia":"nahuas"
+},
+    {
+        "numero":"38-11", "simbolo":"Ndn", "nombre":"Mexicaneros de Durango y Nayarit", "posicion":"group-up-left", "familia":"nahuas"
+},
+    {
+        "numero":"38-12", "simbolo":"Nma", "nombre":"Nahuas de Milpa Alta", "posicion":"group-up-left", "familia":"nahuas"
+}
+]

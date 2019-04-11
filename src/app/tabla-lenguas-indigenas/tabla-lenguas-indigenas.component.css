@@ -1,0 +1,1296 @@
+.periodic-table {
+    max-width: 1700px;
+    /*max-height: 300px;*/
+    display: grid;
+    grid-template-columns: repeat(16, 6.25%);
+    grid-template-rows: repeat(4, 5vw);
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Montserrat', serif;
+
+}
+
+.group {
+    /*max-width: 107px;*/
+    /*min-height: 103px;*/
+    /*max-height: 103px;*/
+    /*width: 105px;*/
+    height: 4.6vw;
+    padding: 5px;
+    border-radius: 7px;
+    overflow: hidden;
+    margin: 3px;
+    /*transition: box-shadow .1s;*/
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+   /* transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+    -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);*/
+    z-index: auto;
+    /*transition:all 1s;*/
+    /*border: 1px solid #ccc;*/
+}
+
+
+.group-select {
+    /*max-width: 107px;*/
+    /*min-height: 103px;*/
+    /*max-height: 103px;*/
+    /*width: 105px;*/
+    height: 4.6vw;
+    padding: 5px;
+    border-radius: 7px;
+    overflow: hidden;
+    margin: 3px;
+    /*transition: box-shadow .1s;*/
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+    -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+    z-index: 1;
+
+    /*transition:all 1s;*/
+    /*border: 1px solid #ccc;*/
+}
+
+.group:after {
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+}
+
+
+.group-up-right-effect {
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    height:15vw;
+    margin-top: -10.2vw;
+    width:295%;
+    -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.group-down-right-effect {
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    height:15vw;
+    width:295%;
+    -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.group-up-left-effect {
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    height:15vw;
+    margin-top: -10.2vw;
+    margin-left: -12.2vw;
+    -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.group-down-left-effect {
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    height:15vw;
+    margin-left: -12.2vw;
+    -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+
+.group:hover {
+    transform: scale(1.5, 1.5);
+    cursor: pointer;
+}
+
+/*.modal-content {
+    color: #4a4a4a;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+}*/
+
+.group:hover::after {
+    opacity: 1;
+    /*border-top: 100px solid transparent !important;
+    bottom: 100px !important;*/
+}
+
+.noHover{
+    pointer-events: auto;
+    z-index: 10;
+    position: static;
+}
+
+.noHover:hover {
+    transform: none;
+    cursor: auto;
+}
+
+.focus-group {
+    transform: scale(1.1, 1.1);
+    z-index: 9;
+    position: relative;
+}
+
+.group.no-focus:hover {
+    color: black !important;
+}
+
+.group.no-focus.focus-group:after {
+    border-top-color: #e0e0e0;
+}
+
+.group:first-of-type {
+    transform-origin: left;
+}
+
+.group:last-of-type {
+    transform-origin: right;
+}
+
+.periodo:first-of-type .group:last-of-type {
+    transform-origin: right top;
+}
+
+.periodo:first-of-type .group:first-of-type {
+    transform-origin: left top;
+}
+
+.group.empty {
+    border-color: transparent;
+    pointer-events: none;
+}
+
+.group.empty:hover {
+    transform: scale(1);
+    z-index: 1;
+    box-shadow: none;
+}
+
+
+.group-info-basic {
+    font-size: 12px;
+    height: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: none;
+}
+
+.focus {
+    transform: scale(1.1, 1.1);
+    z-index: 9;
+    position: relative;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 30px 5px inset !important;
+}
+
+div.no-focus, div.no-focus .group {
+    background: #e0e0e0;
+    color: darkgray;
+}
+
+li.no-focus, li.no-focus .group {
+    background: #e0e0e0;
+    color: darkgray;
+}
+
+
+.no-focus .atomic-number:before {
+    color: darkgray !important;
+}
+
+
+/**FAMILIAS*/
+
+.algica, .algica.no-focus:hover {
+    background-color: #ef7659;
+    color: #FFFFFF;
+}
+
+.seri, .seri.no-focus:hover {
+    background-color: #9350ae;
+    color: #FFFFFF;
+}
+
+.cochimi-yumana, .cochimi-yumana.no-focus:hover {
+    background-color: #c92031;
+    color: #bdbfbd;
+}
+
+.oto-mangue, .oto-mangue.no-focus:hover {
+    background-color: #92d26b;
+    color: #ffffff;
+    color: #ffffff;
+}
+
+.maya, .maya.no-focus:hover {
+    background-color: #f8ca35;
+    color: #7a7d7f;
+}
+
+.yuto-nahua, .yuto-nahua.no-focus:hover {
+    background-color: #64cab9;
+    color: #FFFFFF;
+}
+
+.huave, .huave.no-focus:hover {
+    background-color: #389386;
+    color: #bdbfbd;
+}
+
+.mixe-zoque, .mixe-zoque.no-focus:hover {
+    background-color: #e6457f;
+    color: #bdbfbd;
+}
+
+.teko, .teko.no-focus:hover {
+    background-color: #3ab863;
+    color: #FFFFFF;
+}
+
+.totonaco-tepehua, .totonaco-tepehua.no-focus:hover {
+    background-color: #915128;
+    color: #FFFFFF;
+}
+
+.chontal-oaxaca, .chontal-oaxaca.no-focus:hover {
+    background-color: #ae1e94;
+    color: #FFFFFF;
+}
+
+.tarasca, .tarasca.no-focus:hover {
+    background-color: #4c6eb5;
+    color: #FFFFFF;
+}
+
+.zapoteco, .zapoteco.no-focus:hover {
+    background-color: #51b54f;
+    color: #ffffff;
+}
+
+.nahuas, .nahuas.no-focus:hover {
+    background-color: #8cabde;
+    color: #515757;
+}
+
+/*
+.other-nonmetals, .other-nonmetals.no-focus:hover  {
+    background: #76FF03;
+}
+
+.noble-gases, .noble-gases.no-focus:hover  {
+    background: #df5ff5;
+}
+
+.halogens, .halogens.no-focus:hover  {
+    background: #18FFFF;
+}
+
+.metalloids, .metalloids.no-focus:hover  {
+    background: #00E676;
+}
+
+.alkaline-earth-metals, .alkaline-earth-metals.no-focus:hover  {
+    background: #eaea18;
+}
+
+.alkali-metals, .alkali-metals.no-focus:hover  {
+    background: #f7a91d;
+}
+
+.transition-metals, .transition-metals.no-focus:hover  {
+    background: #ff3e7f;
+}
+
+.post-transition-metals, .post-transition-metals.no-focus:hover  {
+    background: #40C4FF;
+}
+
+.lanthanoids, .lanthanoids.no-focus:hover  {
+    background: #fd6d3f;
+}
+
+.actinoids, .actinoids.no-focus:hover  {
+    background: #ff1744;
+}
+
+#six .lanthanoids, #seven .actinoids {
+    justify-content: center;
+}
+
+#six .lanthanoids .atomic-number, #seven .actinoids .atomic-number {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}*/
+
+.element-symbol {
+    margin-top: -10px;
+    font-size: 24px;
+    text-align: left;
+}
+
+.atomic-number {
+    font-size: 14px;
+    text-align: right;
+}
+
+.atomic-orbital-shells {
+    float: right;
+    font-size: 10px;
+    display: flex;
+    flex-direction: column;
+    flex: 0;
+    position: absolute;
+    right: 5px;
+}
+
+.atomic-orbital-shells span {
+    display: block;
+    text-align: right;
+    line-height: 10px;
+}
+
+.element-name, .atomic-mass {
+    font-size: 9px;
+    flex: 1 1;
+    align-items: flex-end;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+    margin-top: -5px;
+}
+
+
+.categorias .active:after {
+    content: "";
+    width: 5px;
+    height: 5px;
+    background: #00c300;
+    border: 7px solid white;
+    transition: .7s;
+}
+
+.categorias div:after {
+    content: "";
+    width: 0px;
+    height: 0px;
+    border: 3px solid transparent;
+    transition: .7s;
+    position: absolute;
+    display: block;
+    border-radius: 100%;
+    margin: auto;
+    background: transparent;
+    right: 3px;
+    bottom: 2px;
+}
+
+.categorias {
+    width: 200px;
+    justify-content: center;
+    right: 0;
+    left: 0;
+    font-family: 'Montserrat';
+    top: 0;
+}
+
+.categorias div {
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid white;
+    z-index: 9;
+    transition: .7s;
+    transform-origin: top;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.categorias div:hover {
+    /*transform: scale(1.2, 1.2);*/
+    /*z-index: 10;*/
+}
+
+.categorias div:before {
+    content: "";
+    border-left: 0px solid transparent;
+    border-bottom: 100px solid rgba(0,0,0,0.1);
+    border-right: 50px solid transparent;
+    border-top: 0px solid transparent;
+    z-index: 0;
+    position: absolute;
+    left: -100px;
+    top: 0px;
+    width: auto;
+    height: auto;
+    padding-left: 50px;
+    transition: .3s;
+}
+
+.categorias div:hover:before {
+    /*left: 0px;*/
+}
+
+#one .group:first-child,#one .group:last-child {
+    z-index: 2;
+    position: relative;
+}
+
+.characteristic {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 50px;
+    z-index: 1;
+    font-family: 'Montserrat';
+    justify-content: space-between;
+    width: 100%;
+    margin: auto;
+    max-width: 1245px;
+}
+
+.characteristic .non-metals {
+    flex: 0 28%;
+    max-width: 345px;
+}
+
+.characteristic div {
+    text-align: center;
+    padding: 5.5px 0px;
+    box-sizing: border-box;
+    position: relative;
+    border: 2px solid #e2e2e2;
+    border-top: 0px;
+    justify-content: center;
+    display: flex;
+}
+
+.characteristic div span {
+    position: absolute;
+    left: auto;
+    right: auto;
+    background: white;
+    width: auto;
+    padding: 5px;
+    box-sizing: border-box;
+    top: 0;
+    color: #545454;
+}
+
+.characteristic .metals {
+    flex: 0 65%;
+    max-width: 804px;
+}
+
+.card .element-name {
+    text-overflow: initial;
+    max-width: none;
+}
+
+.card.overview p:before {
+    font-family: Font Awesome\ 5 Free;
+    font-weight: 900;
+    margin-right: 10px;
+    color: #545454;
+}
+
+.card.overview p:nth-of-type(3):before {
+    content: "\f1da";
+}
+
+.card.overview p:nth-of-type(2):before {
+    content: "\f2cb";
+}
+
+.card.overview p:nth-of-type(1):before {
+    content: "\f0c3";
+}
+
+.card .endangered div[class*="threat"] [class*="fa"]:not(.fa-xs) {
+    font-size: 20px;
+}
+
+.card .endangered {
+    margin-bottom: 0;
+    margin-top: 15px;
+    font-size: 12px;
+    border-top: 1px solid #e2e2e2;
+    padding-top: 15px;
+}
+
+.card .endangered:after,
+.card .endangered:before {
+    display: none;
+}
+
+.card .endangered div[class*="threat"] sup {
+    left: 20px;
+    top: -5px;
+    font-size: 8px;
+}
+
+.card .endangered div[class*="threat"] {
+    justify-content: flex-start;
+}
+
+.card .endangered div[class*="threat"] span:first-of-type {
+    margin-right: 12px;
+}
+
+div#lanthanide-series .group:nth-child(2):after {
+    content: "Ln Series";
+}
+
+div#actinide-series .group:nth-child(2):after {
+    content: "An Series";
+}
+
+div#lanthanide-series .group:nth-child(2):after, div#actinide-series .group:nth-child(2):after {
+    display: block;
+    border: 0px;
+    width: auto;
+    height: auto;
+    left: auto;
+    right: 10px;
+    top: 0;
+    color: #545454;
+}
+
+div#lanthanide-series .group:nth-child(2):before, div#actinide-series .group:nth-child(2):before {
+    display: none;
+}
+
+.endangered {
+    text-align: center;
+    vertical-align: middle;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 85px 0 30px 0;
+    color: #545454;
+    position: relative;
+}
+
+.endangered:before {
+    content: "Endangered Elements";
+    position: absolute;
+    top: -50px;
+    text-align: center;
+    left: 0;
+    right: 0;
+    width: 180px;
+    margin: auto;
+    display: block;
+    background: white;
+    z-index: 8;
+}
+
+.endangered:after {
+    content: "";
+    width: 85%;
+    height: 10px;
+    display: block;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: -45px;
+    position: absolute;
+    border: 2px solid #e2e2e2;
+    border-bottom: 0;
+}
+
+.endangered div[class*="threat"] {
+    display: inline-block;
+    flex: 1 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: .5s;
+    border: 1px solid transparent;
+}
+
+.endangered div[class*="threat"]:hover span:first-of-type,
+.endangered div[class*="threat"].active span:first-of-type {
+    transform: scale(1.15);
+    transform-origin: left;
+}
+
+.endangered div[class*="threat"] span {
+    transition: .5s;
+}
+
+.endangered div[class*="threat"]:hover,
+.endangered div[class*="threat"].active {
+    background: #f5f5f5;
+    border: 1px solid #e2e2e2;
+}
+
+.endangered div[class*="threat"] [class*="fa"]:not(.fa-xs) {
+    font-size: 50px;
+}
+
+.endangered .threat-limited [class*="fa"] {
+    color: #ded014;
+}
+
+.endangered .threat-rising [class*="fa"] {
+    color: #e27807;
+}
+
+.endangered .threat-serious [class*="fa"] {
+    color: #d00000;
+}
+
+.endangered div[class*="threat"] sup {
+    position: absolute;
+    left: 45px;
+    top: -2px;
+    width: 50px;
+    text-align: left;
+    letter-spacing: 2px;
+}
+
+.endangered div[class*="threat"] span:first-of-type {
+    position: relative;
+}
+
+@media(max-width: 1700px) {
+
+    .atomic-mass {
+        max-width: none;
+        font-size: 9px;
+    }
+
+    .atomic-number {
+        font-size: 9px;
+    }
+
+    .element-name {
+        font-size: 8px;
+    }
+
+    .atomic-orbital-shells {
+        /*display: none;*/
+    }
+
+}
+
+
+@media(max-width: 1500px) {
+
+    .atomic-mass {
+        display: none;
+    }
+
+    .group {
+        width: auto;
+        /* min-height: 85px; */
+    }    
+
+    .atomic-orbital-shells {
+        display: none;
+    }
+
+        .categorias div {
+            font-size: 0px;
+            padding: 7px 20px;
+            position: relative;
+        }
+
+        .characteristic {
+            max-width: 420px;
+            top: 20px;
+        }
+
+        .characteristic .non-metals {
+            max-width: 125px;
+            flex: 0 30%;
+        }
+
+        .characteristic .metals {
+            flex: 0 60%;
+            max-width: 252px;
+        }
+
+        .characteristic div span {
+            font-size: 12px;
+        }
+
+    .endangered {
+        font-size: 15px;
+    }
+
+    .endangered div[class*="threat"] [class*="fa"]:not(.fa-xs) {
+        font-size: 30px;
+    }
+
+    .endangered div[class*="threat"] sup {
+        left: 25px;
+        top: -5px;
+        font-size: 10px;
+    }
+
+}
+
+@media(max-width: 1300px) {
+
+    .atomic-number {
+        font-size: 9px;
+    }
+
+    .element-name {
+        font-size: 6px;
+        padding-top: 6px;
+    }
+
+    .atomic-orbital-shells {
+        font-size: 9px;
+    }
+
+    .group {
+        min-height: inherit;
+    }
+
+    .element-symbol strong {
+        font-weight: 100;
+    }
+
+    .element-symbol{
+        font-size: 19px;
+    }
+
+    div#lanthanide-series .group:nth-child(2):before, div#actinide-series .group:nth-child(2):before {
+        position: absolute;
+        right: 10px;
+        top: 25px;
+    }
+
+    div#lanthanide-series .group:nth-child(2), div#actinide-series .group:nth-child(2) {
+        position: relative;
+    }
+
+    div#lanthanide-series .group:nth-child(2):before, div#actinide-series .group:nth-child(2):before {
+        position: absolute;
+        right: 10px;
+        top: 25px;
+    }
+
+    div#lanthanide-series .group:nth-child(2):after, div#actinide-series .group:nth-child(2):after {
+        font-size: 12px;
+        top: auto;
+        bottom: 20px;
+        left: 0;
+    }
+
+}
+
+@media(max-width: 1024px) {
+
+    .categorias{
+        display: flex;
+        width: 100%;
+    }
+
+    .categorias > div{
+        width: 20%;
+    }
+
+    .element-name {
+        font-size: 5px;
+        line-height: 1em;
+
+    }
+
+    .atomic-number {
+        font-size: 6px;
+        letter-spacing: 0.1em;
+    }
+
+    .atomic-mass {
+        display: none;
+    }
+
+    .atomic-orbital-shells {
+        display: none;
+    }
+
+    .element-symbol {
+        padding-top: 4px;
+        font-size: 12px;
+    }
+
+    .endangered {
+        font-size: 12px;
+    }
+
+    .endangered div[class*="threat"] {
+        flex-direction: column;
+    }
+
+    .endangered div[class*="threat"] span:first-of-type {
+        margin-bottom: 10px;
+    }
+
+    .card .endangered div[class*="threat"] {
+        flex-direction: row;
+    }
+
+    .card .endangered div[class*="threat"] span:first-of-type {
+        margin-bottom: 0;
+    }
+
+}
+
+@media(max-width: 980px) {
+    element-name {
+        font-size: 10px;
+        line-height: 1em;
+
+    }
+    .categorias{
+        font-size: 11px;
+    }
+
+    .element-symbol {
+        text-align: center;
+    }
+
+    .element-symbol {
+        font-size: 20px;
+    }
+
+    .element-symbol {
+        font-size: 10px;
+        padding-top: 9px;
+        text-align: left;
+    }
+
+    .atomic-number {
+        font-size: 6px;
+    }
+
+}
+/*
+/*
+@media(max-width: 768px) {
+    .categorias{
+        font-size: 9px;
+    }
+
+    .atomic-number {
+        font-size: 7px;
+    }
+
+    .element-name {
+        font-size: 8px;
+    }
+    .group {
+        padding: 5px;
+    }
+    .element-symbol {
+        text-align: center;
+    }
+
+    div#lanthanide-series .group:nth-child(2):before, div#actinide-series .group:nth-child(2):before {
+        top: 15px;
+    }
+
+    div#lanthanide-series .group:nth-child(2):after, div#actinide-series .group:nth-child(2):after {
+        font-size: 15px;
+        width: 100%;
+        text-align: center;
+        right: 0;
+    }
+
+    div#lanthanide-series .group:nth-child(2):after {
+        content: "Ln";
+    }
+
+    div#actinide-series .group:nth-child(2):after {
+        content: "An";
+    }
+
+    .characteristic div {
+        padding: 3px 0px;
+        height: 5px;
+    }
+
+    .characteristic div span {
+        font-size: 12px;
+        top: -5px;
+    }
+
+    .categorias .active:after {
+        width: 10px;
+        height: 10px;
+    }
+
+    footer > div span:nth-of-type(3) {
+        font-size: 10px;
+        margin: 5px 0;
+    }
+
+    footer > div span {
+        display: block;
+    }
+
+    footer > div span.divider {
+        display: none;
+    }
+
+    .card .element-name {
+        font-size: 25px;
+    }
+
+    .endangered div[class*="threat"] {
+        justify-content: flex-start;
+        padding: 5px;
+    }
+
+    .endangered div[class*="threat"]:nth-child(2) {
+        border-right: 1px solid #e2e2e2;
+        border-left: 1px solid #e2e2e2;
+    }
+
+    .card .endangered div[class*="threat"] {
+        text-align: left;
+    }
+
+}
+
+@media(max-width: 600px) {
+
+    div#lanthanide-series .group:nth-child(2):after, div#actinide-series .group:nth-child(2):after {
+        font-size: 12px;
+        bottom: 5px;
+    }
+    .element-name {
+        font-size: 6px;
+    }
+    .atomic-number {
+        !*display: none;*!
+    }
+
+
+
+    .group .element-symbol {
+        text-align: center;
+        font-size: 12px;
+    }
+
+    #six .lanthanoids .atomic-number:before,#seven .actinoids .atomic-number:before {
+        top: 3px;
+        font-size: 15px;
+    }
+
+    div#lanthanide-series .group:nth-child(2):before, div#actinide-series .group:nth-child(2):before {
+        top: 7px;
+    }
+
+    .categorias div {
+        padding: 5px 15px;
+    }
+
+    .categorias .active:after {
+        width: 7px;
+        height: 7px;
+        border: 2px solid white;
+    }
+
+    .characteristic {
+        max-width: 320px;
+        top: 15px;
+    }
+
+    .characteristic div span {
+        padding: 0px 5px;
+        font-size: 10px;
+        top: -2px;
+    }
+
+    .characteristic div {
+        height: 5px;
+        padding: 0px;
+    }
+
+    .endangered {
+        font-size: 10px;
+    }
+
+    .endangered div[class*="threat"] [class*="fa"]:not(.fa-xs) {
+        font-size: 20px;
+    }
+
+    .endangered div[class*="threat"] sup {
+        left: 18px;
+        top: -3px;
+        font-size: 8px;
+    }
+
+    .endangered:before {
+        width: 130px;
+    }
+
+}
+
+@media(max-width: 500px) {
+
+    .atomic-mass {
+        display: block;
+        max-width: none;
+        font-size: 11px;
+    }
+
+    .element-symbol strong {
+        font-weight: 300;
+        font-size: 20px;
+
+    }
+
+    .atomic-number {
+        font-size: 12px;
+    }
+
+    .element-name {
+        font-size: 11px;
+    }
+
+    .atomic-orbital-shells {
+        display: block;
+
+        font-size: 11px;
+    }
+
+    .periodic-table {
+        display: inline-block !important;
+    }
+
+    .periodic-table > li{
+        width: 25%;
+        height: 90px;
+    }
+
+    div#lanthanide-series .group:nth-child(2):after, div#actinide-series .group:nth-child(2):after {
+        !*display: none;*!
+    }
+
+    #six .lanthanoids .atomic-number:before, #seven .actinoids .atomic-number:before {
+        top: 2px;
+        font-size: 12px;
+    }
+
+    .group {
+    }
+
+    div#lanthanide-series .group:nth-child(2):before, div#actinide-series .group:nth-child(2):before {
+        top: 8px;
+        font-size: 12px;
+    }
+
+    #six .lanthanoids .atomic-number:before,#seven .actinoids .atomic-number:before {
+        top: 3px;
+        font-size: 15px;
+    }
+
+    .group:after {
+        border-left: 5px solid transparent !important;
+        border-right: 5px solid transparent !important;
+        border-top-width: 8px !important;
+        bottom: -8px !important;
+    }
+
+    .endangered {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 35px;
+    }
+
+    .endangered:before {
+        width: 100%;
+        text-align: left;
+        top: 0;
+        position: relative;
+        margin-bottom: 15px;
+        border-bottom: 2px solid #e2e2e2;
+        padding-bottom: 10px;
+    }
+
+    .endangered:after {
+        visibility: hidden;
+        display: none;
+    }
+
+    .endangered div[class*="threat"] {
+        flex-direction: row;
+        flex-basis: 100%;
+        flex: 1 1;
+        align-items: baseline;
+        padding: 10px 5px;
+        width: 100%;
+    }
+
+    .endangered div[class*="threat"]:nth-child(2) {
+        border: 0;
+        border-top: 1px solid #e2e2e2;
+        border-bottom: 1px solid #e2e2e2;
+    }
+
+    .endangered div[class*="threat"]:hover, .endangered div[class*="threat"].active {
+        border: 1px solid #e2e2e2;
+    }
+
+    .endangered div[class*="threat"] span:first-of-type {
+        margin-bottom: 0;
+        margin-right: 10px;
+    }
+
+    .card .endangered div[class*="threat"] {
+        align-items: center;
+    }
+
+}
+
+@media(max-width: 400px) {
+
+    .atomic-mass {
+        display: block;
+        max-width: none;
+        font-size: 11px;
+    }
+
+    .element-symbol strong {
+        font-weight: 300;
+        font-size: 20px;
+
+    }
+
+    .atomic-number {
+        font-size: 12px;
+    }
+
+    .element-name {
+        font-size: 11px;
+    }
+
+    .atomic-orbital-shells {
+        display: block;
+
+        font-size: 11px;
+    }
+
+    .periodic-table {
+        display: inline-block !important;
+    }
+
+    .periodic-table > li{
+        width: 25%;
+        height: 90px;
+    }
+
+    #six .lanthanoids .atomic-number:before, #seven .actinoids .atomic-number:before {
+        font-size: 10px;
+        top: 2px;
+    }
+
+    div#lanthanide-series .group:nth-child(2):before, div#actinide-series .group:nth-child(2):before {
+        font-size: 10px;
+    }
+
+}
+
+@media(max-width: 350px) {
+
+    .atomic-mass {
+        display: block;
+        max-width: none;
+        font-size: 11px;
+    }
+
+    .element-symbol strong {
+        font-weight: 300;
+        font-size: 20px;
+
+    }
+
+    .atomic-number {
+        font-size: 12px;
+    }
+
+    .element-name {
+        font-size: 11px;
+    }
+
+    .atomic-orbital-shells {
+        display: block;
+
+        font-size: 11px;
+    }
+
+    .periodic-table {
+        display: inline-block !important;
+    }
+
+    .periodic-table > li{
+        width: 33%;
+        height: 90px;
+    }
+
+    .categorias {
+        justify-content: space-between;
+    }
+
+    .categorias div {
+        flex: 1 1;
+        padding: 5px 0px;
+    }
+
+    .characteristic {
+        max-width: none;
+    }
+
+    .characteristic .non-metals {
+        max-width: none;
+        flex: 0 30%;
+    }
+
+    .characteristic .metals {
+        max-width: none;
+    }
+
+}
+
+
+*/
+
+/*.periodic-table > li:before {
+    !*counter-increment: element;*!
+    !*content: counter(element);*!
+    position: absolute;
+    bottom: 5px;
+    !*left: 6px;*!
+    font-size: .9vw;
+    font-weight: lighter;
+}*/
+
+
+#seri {
+    grid-column-start: 16;
+}
+
+#oto-mangue, #maya {
+    grid-column-start: 11;
+}
+
+#cerium, #thorium {
+    grid-column-start: 3;
+}
+
+#zapoteco {
+    grid-column-start: 14;
+}
+
+#nahuas {
+    grid-column-start: 3;
+}

@@ -1,0 +1,17 @@
+<div class="columns">
+  <div class="column">
+    <h1 class="periodic-table.title">LENGUAS INDÍGENAS DE MÉXICO</h1>
+</div>
+  <div class="column">2</div>
+</div>
+<ol *ngIf="lenguas" class="periodic-table">
+  <!-- PRIMER NIVEL -->
+  <li *ngFor="let lengua of lenguas" id="{{lengua.id}}" class="group {{lengua.posicion}} {{lengua.familia}}">
+    <p class="atomic-number">{{lengua.numero}}
+    </p>
+    <p class="element-symbol">
+      <b>{{lengua.simbolo}}</b>
+    </p>
+    <p class="element-name">{{lengua.nombre}}</p>
+  </li>
+</ol>
