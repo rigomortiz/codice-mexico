@@ -24,12 +24,29 @@ export class TablaLenguasIndigenasComponent implements OnInit {
 
   onSelectFamilia(f: String){
     let c = document.getElementsByClassName(f);
+  
     for(let i =0; i< c.length; i++){
       if(c[i].classList.toggle)
        c[i].classList.toggle("hide");
     }
-    let e = document.getElementById("familia-" + f);
-    e.classList.toggle("group-empty");
+    if(f === "oto-mangue"){
+      let c = document.getElementsByClassName("zapoteco");
+
+      for(let i =0; i< c.length; i++){
+        if(c[i].classList.toggle)
+        c[i].classList.toggle("hide");
+      }
+    }
+
+     if(f === "yuto-nahua"){
+      let c = document.getElementsByClassName("nahuas");
+
+      for(let i =0; i< c.length; i++){
+        if(c[i].classList.toggle)
+        c[i].classList.toggle("hide");
+      }
+    }
+
   }
 
 }

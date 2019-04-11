@@ -71,6 +71,7 @@
     color: #969696 !important;
     pointer-events: none !important;
     box-shadow: 0 0px 0px 0 rgba(0,0,0,.1), inset 0 0 0 0px rgba(0,0,0,.1) !important;
+    background-image: -webkit-linear-gradient(135deg,  #CCCCCC 50%, #CCCCCC 50%) !important;
 }
 
 .hide:hover {
@@ -284,12 +285,15 @@ li.no-focus, li.no-focus .group {
 }
 
 .zapoteco, .zapoteco.no-focus:hover {
-    background-color: #51b54f;
+    background-image: -webkit-linear-gradient(135deg,  #51b54f 50%, #92d26b 50%) ;
+    /*background-color: #51b54f;*/
     color: #ffffff;
 }
 
 .nahuas, .nahuas.no-focus:hover {
-    background-color: #8cabde;
+    /*background-color: #8cabde;*/
+    background-image: -webkit-linear-gradient(135deg,  #8cabde 50%, #64cab9 50%) ;
+
     color: #515757;
 }
 
