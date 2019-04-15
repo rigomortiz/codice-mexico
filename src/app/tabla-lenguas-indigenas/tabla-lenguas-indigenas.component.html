@@ -48,7 +48,7 @@
     </table>
 </div>
 <br>
-<div style=" overflow: scroll;background-color: #fffff0;">
+<div style="background-color: #fffff0;" class="tabla-periodica">
   <ol *ngIf="lenguas" class="periodic-table">
     <!-- PRIMER NIVEL -->
     <li *ngFor="let lengua of lenguas" id="{{lengua.id}}" (click)="onViewLengua(lengua)" class="group {{lengua.posicion}} {{lengua.familia}}">

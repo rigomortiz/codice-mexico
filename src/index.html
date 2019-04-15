@@ -25,6 +25,19 @@
       body {
       }
   </style>
+  <script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId            : '1866747600266711',
+      autoLogAppEvents : true,
+      xfbml            : true,
+      version          : 'v3.2'
+    });
+    FB.AppEvents.logPageView();
+  };
+</script>
+<script async defer src="https://connect.facebook.net/en_US/sdk.js"></script>
+    
 </head>
 <body>
   <my-app>loading</my-app>

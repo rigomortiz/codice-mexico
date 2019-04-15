@@ -324,7 +324,7 @@ li.no-focus, li.no-focus .group {
 }
 
 .element-name, .atomic-mass {
-    font-size: 9px;
+    font-size: 14px;
     flex: 1 1;
     align-items: flex-end;
     overflow: hidden;

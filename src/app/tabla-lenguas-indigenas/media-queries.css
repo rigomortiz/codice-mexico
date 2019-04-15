@@ -272,6 +272,10 @@
 */
 
 @media (min-width: 320px) and (max-width: 480px) {
+  .tabla-periodica{
+     overflow: scroll;
+  }
+
   .periodic-table {
     /*max-height: 300px;*/
     grid-template-columns: repeat(16, 60px)  !important;
