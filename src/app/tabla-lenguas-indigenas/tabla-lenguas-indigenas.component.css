@@ -1,7 +1,7 @@
 @import url("./media-queries.css");
 
 .periodic-table {
-    max-width: 1700px;
+    max-width: 1500px;
     /*max-height: 300px;*/
     display: grid;
     grid-template-columns: repeat(16, 6.25%);
