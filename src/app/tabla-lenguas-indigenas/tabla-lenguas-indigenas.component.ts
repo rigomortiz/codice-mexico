@@ -1,5 +1,7 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { LenguasDataService } from './lenguas-data.service';
+import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
+
 export class Lengua{
   id: string;
   numero: string;
@@ -15,10 +17,11 @@ export class Lengua{
 })
 export class TablaLenguasIndigenasComponent implements OnInit, AfterViewInit {
   lenguas = [];
+  safeHtml: SafeHtml;
   nombre = "";
   descripcion = "";
 
-  constructor(private lenguasDataService: LenguasDataService) {
+  constructor(private lenguasDataService: LenguasDataService, private sanitizer: DomSanitizer) {
   }
 
   ngOnInit() {
@@ -56,8 +59,7 @@ export class TablaLenguasIndigenasComponent implements OnInit, AfterViewInit {
     let c = document.getElementsByClassName("modal");
     c[0].classList.toggle("is-active");
     this.nombre = lengua.nombre;
-    this.descripcion = lengua.descripcion;
-    console.log(this.descripcion);
+    this.descripcion = this.sanitizer.bypassSecurityTrustHtml( lengua.descripcion);
   }
 
   onCloseLengua(){

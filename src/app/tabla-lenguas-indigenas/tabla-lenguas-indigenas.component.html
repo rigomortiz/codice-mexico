@@ -36,6 +36,7 @@
       </tbody>
     </table>
 </div>
+
 <ol *ngIf="lenguas" class="periodic-table">
   <!-- PRIMER NIVEL -->
   <li *ngFor="let lengua of lenguas" id="{{lengua.id}}" (click)="onViewLengua(lengua)" class="group {{lengua.posicion}} {{lengua.familia}}">
@@ -55,9 +56,8 @@
             <p class="modal-card-title">{{nombre}}</p>
             <button class="delete close" aria-label="close" (click)="onCloseLengua()"></button>
         </header>
-        <section class="modal-card-body">
+        <section class="modal-card-body"  [innerHTML]="descripcion">
             <!-- Content ... -->
-            {{descripcion}}
         </section>
         <footer class="modal-card-foot">
           <!--
