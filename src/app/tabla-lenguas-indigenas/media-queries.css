@@ -1,0 +1,338 @@
+/* 
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+
+@media (min-width: 1281px) {
+  #seri {
+    grid-column-start: 16;
+  }
+
+  #oto-mangue, #maya {
+      grid-column-start: 11;
+  }
+
+  #cerium, #thorium {
+      grid-column-start: 3;
+  }
+
+  #zapoteco {
+      grid-column-start: 14;
+  }
+
+  #nahuas {
+      grid-column-start: 3;
+  }
+}
+
+/* 
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to 1280px
+*/
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+  #seri {
+    grid-column-start: 16;
+  }
+
+  #oto-mangue, #maya {
+      grid-column-start: 11;
+  }
+
+  #cerium, #thorium {
+      grid-column-start: 3;
+  }
+
+  #zapoteco {
+      grid-column-start: 14;
+  }
+
+  #nahuas {
+      grid-column-start: 3;
+  }
+}
+
+/* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .periodic-table {
+    /*max-height: 300px;*/
+    grid-template-columns: repeat(16, 60px)  !important;
+    grid-template-rows: repeat(5, 70px) !important;
+
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Montserrat', serif;
+  }
+  .group {
+      height: 65px;
+  }
+  #seri {
+    grid-column-start: 16;
+  }
+
+  #oto-mangue, #maya {
+      grid-column-start: 11;
+  }
+
+  #cerium, #thorium {
+      grid-column-start: 3;
+  }
+
+  #zapoteco {
+      grid-column-start: 14;
+  }
+
+  #nahuas {
+      grid-column-start: 3;
+  }
+  .familias-menu  {
+      font-family: 'Montserrat';
+      font-stretch: expanded;
+      font-size: 9px;
+  }
+  .familias-menu td {
+    padding: 2px;
+  }
+
+  .familias-menu :hover {
+      cursor: pointer;
+  }
+
+  .atomic-mass {
+    display: block;
+    max-width: none;
+    font-size: 11px;
+  }
+
+  .element-symbol {
+    font-weight: 300;
+    font-size: 18px;
+  }
+
+  .atomic-number {
+    font-size: 9px;
+  }
+
+  .element-name {
+    font-size: 11px;
+  }
+ 
+}
+
+/* 
+  ##Device = Tablets, Ipads (landscape)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+   .periodic-table {
+    /*max-height: 300px;*/
+    grid-template-columns: repeat(16, 60px)  !important;
+    grid-template-rows: repeat(5, 70px) !important;
+
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Montserrat', serif;
+  }
+  .group {
+      height: 65px;
+  }
+  #seri {
+    grid-column-start: 16;
+  }
+
+  #oto-mangue, #maya {
+      grid-column-start: 11;
+  }
+
+  #cerium, #thorium {
+      grid-column-start: 3;
+  }
+
+  #zapoteco {
+      grid-column-start: 14;
+  }
+
+  #nahuas {
+      grid-column-start: 3;
+  }
+  .familias-menu  {
+      font-family: 'Montserrat';
+      font-stretch: expanded;
+      font-size: 9px;
+  }
+  .familias-menu td {
+    padding: 2px;
+  }
+
+  .familias-menu :hover {
+      cursor: pointer;
+  }
+
+  .atomic-mass {
+    display: block;
+    max-width: none;
+    font-size: 11px;
+  }
+
+  .element-symbol {
+    font-weight: 300;
+    font-size: 18px;
+  }
+
+  .atomic-number {
+    font-size: 9px;
+  }
+
+  .element-name {
+    font-size: 11px;
+  }
+
+}
+
+/* 
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+
+   .periodic-table {
+    /*max-height: 300px;*/
+    grid-template-columns: repeat(16, 60px)  !important;
+    grid-template-rows: repeat(5, 70px) !important;
+
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Montserrat', serif;
+  }
+  .group {
+      height: 65px;
+  }
+  #seri {
+    grid-column-start: 16;
+  }
+
+  #oto-mangue, #maya {
+      grid-column-start: 11;
+  }
+
+  #cerium, #thorium {
+      grid-column-start: 3;
+  }
+
+  #zapoteco {
+      grid-column-start: 14;
+  }
+
+  #nahuas {
+      grid-column-start: 3;
+  }
+  .familias-menu  {
+      font-family: 'Montserrat';
+      font-stretch: expanded;
+      font-size: 9px;
+  }
+  .familias-menu td {
+    padding: 2px;
+  }
+
+  .familias-menu :hover {
+      cursor: pointer;
+  }
+
+  .atomic-mass {
+    display: block;
+    max-width: none;
+    font-size: 11px;
+  }
+
+  .element-symbol {
+    font-weight: 300;
+    font-size: 18px;
+  }
+
+  .atomic-number {
+    font-size: 9px;
+  }
+
+  .element-name {
+    font-size: 11px;
+  }
+
+}
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .periodic-table {
+    /*max-height: 300px;*/
+    grid-template-columns: repeat(16, 60px)  !important;
+    grid-template-rows: repeat(5, 70px) !important;
+
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Montserrat', serif;
+  }
+  .group {
+      height: 65px;
+  }
+  #seri {
+    grid-column-start: 16;
+  }
+
+  #oto-mangue, #maya {
+      grid-column-start: 11;
+  }
+
+  #cerium, #thorium {
+      grid-column-start: 3;
+  }
+
+  #zapoteco {
+      grid-column-start: 14;
+  }
+
+  #nahuas {
+      grid-column-start: 3;
+  }
+  .familias-menu  {
+      font-family: 'Montserrat';
+      font-stretch: expanded;
+      font-size: 9px;
+  }
+  .familias-menu td {
+    padding: 2px;
+  }
+
+  .familias-menu :hover {
+      cursor: pointer;
+  }
+
+  .atomic-mass {
+    display: block;
+    max-width: none;
+    font-size: 11px;
+  }
+
+  .element-symbol {
+    font-weight: 300;
+    font-size: 18px;
+  }
+
+  .atomic-number {
+    font-size: 9px;
+  }
+
+  .element-name {
+    font-size: 11px;
+  }
+
+}

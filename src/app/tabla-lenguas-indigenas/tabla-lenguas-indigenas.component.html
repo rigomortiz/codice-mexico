@@ -6,6 +6,14 @@
   <img src="https://bulma.io/images/placeholders/96x96.png">
 </figure></div>
 </div>
+<a class="button is-link is-small">
+    <span class="icon is-small">
+      <i class="fa fa-facebook"></i>
+    </span>
+    <span>Compartir</span>
+  </a>
+<br>
+<br>
 <div class="familias-menu is-mobile">
     <table >
       <thead>
@@ -40,23 +48,24 @@
     </table>
 </div>
 <br>
-<ol *ngIf="lenguas" class="periodic-table">
-  <!-- PRIMER NIVEL -->
-  <li *ngFor="let lengua of lenguas" id="{{lengua.id}}" (click)="onViewLengua(lengua)" class="group {{lengua.posicion}} {{lengua.familia}}">
-    <p class="atomic-number">{{lengua.numero}}
-    </p>
-    <p class="element-symbol">
-      <b>{{lengua.simbolo}}</b>
-    </p>
-    <p class="element-name">{{lengua.nombre}}</p>
-  </li>
-</ol>
-
+<div style=" overflow: scroll;background-color: #fffff0;">
+  <ol *ngIf="lenguas" class="periodic-table">
+    <!-- PRIMER NIVEL -->
+    <li *ngFor="let lengua of lenguas" id="{{lengua.id}}" (click)="onViewLengua(lengua)" class="group {{lengua.posicion}} {{lengua.familia}}">
+      <p class="atomic-number">{{lengua.numero}}
+      </p>
+      <p class="element-symbol">
+        <b>{{lengua.simbolo}}</b>
+      </p>
+      <p class="element-name">{{lengua.nombre}}</p>
+    </li>
+  </ol>
+</div>
 <div class="modal">
     <div class="modal-background"></div>
     <div class="modal-card">
         <header class="modal-card-head {{familia}}">
-            <p class="modal-card-title">{{nombre}}</p>
+            <p class="modal-card-title {{familia}}">{{nombre}}</p>
             <button class="delete close" aria-label="close" (click)="onCloseLengua()"></button>
         </header>
         <section class="modal-card-body"  [innerHTML]="descripcion">

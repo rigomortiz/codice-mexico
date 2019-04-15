@@ -13,7 +13,7 @@ export class Lengua{
 @Component({
   selector: 'app-tabla-lenguas-indigenas',
   templateUrl: './tabla-lenguas-indigenas.component.html',
-  styleUrls: ['./tabla-lenguas-indigenas.component.css']
+  styleUrls: ['./tabla-lenguas-indigenas.component.css', 'media-queries.css']
 })
 export class TablaLenguasIndigenasComponent implements OnInit, AfterViewInit {
   lenguas = [];
@@ -31,7 +31,7 @@ export class TablaLenguasIndigenasComponent implements OnInit, AfterViewInit {
         console.log(resp);
         this.lenguas = resp.body;
     });
-
+  /*
      this.breakpointObserver
       .observe(['(max-width: 350px)'])
       .subscribe((state: BreakpointState) => {
@@ -41,6 +41,7 @@ export class TablaLenguasIndigenasComponent implements OnInit, AfterViewInit {
           this.showContainer = false;
         }
       });
+  */
   }
 
   onSelectFamilia(f: String){
