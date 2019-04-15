@@ -1,7 +1,7 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { LenguasDataService } from './lenguas-data.service';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
-
+import { BreakpointObserver, BreakpointState } from '@angular/cdk/layout'
 export class Lengua{
   id: string;
   numero: string;
@@ -20,8 +20,10 @@ export class TablaLenguasIndigenasComponent implements OnInit, AfterViewInit {
   safeHtml: SafeHtml;
   nombre = "";
   descripcion = "";
+  familia = "";
+  public showContainer: boolean;
 
-  constructor(private lenguasDataService: LenguasDataService, private sanitizer: DomSanitizer) {
+  constructor(private lenguasDataService: LenguasDataService, private sanitizer: DomSanitizer, public breakpointObserver: BreakpointObserver) {
   }
 
   ngOnInit() {
@@ -29,19 +31,33 @@ export class TablaLenguasIndigenasComponent implements OnInit, AfterViewInit {
         console.log(resp);
         this.lenguas = resp.body;
     });
+
+     this.breakpointObserver
+      .observe(['(max-width: 350px)'])
+      .subscribe((state: BreakpointState) => {
+        if (state.matches) {
+          this.showContainer = true;
+        } else {
+          this.showContainer = false;
+        }
+      });
   }
 
   onSelectFamilia(f: String){
     let c = document.getElementsByClassName(f);
   
     for(let i =0; i< c.length; i++){
-       c[i].classList.toggle("hide");
+      c[i].classList.toggle("hide");
+      if(this.showContainer && c[i].tagName == "LI")
+        c[i].classList.toggle("hide-mobile");
     }
     if(f === "oto-mangue"){
       let c = document.getElementsByClassName("zapoteco");
 
       for(let i =0; i< c.length; i++){
         c[i].classList.toggle("hide");
+        if(this.showContainer && c[i].tagName == "LI")
+        c[i].classList.toggle("hide-mobile");
       }
     }
 
@@ -50,6 +66,8 @@ export class TablaLenguasIndigenasComponent implements OnInit, AfterViewInit {
 
       for(let i =0; i< c.length; i++){
         c[i].classList.toggle("hide");
+        if(this.showContainer && c[i].tagName == "LI")
+          c[i].classList.toggle("hide-mobile");
       }
     }
 
@@ -59,6 +77,7 @@ export class TablaLenguasIndigenasComponent implements OnInit, AfterViewInit {
     let c = document.getElementsByClassName("modal");
     c[0].classList.toggle("is-active");
     this.nombre = lengua.nombre;
+    this.familia = lengua.familia;
     this.descripcion = this.sanitizer.bypassSecurityTrustHtml( lengua.descripcion);
   }
 

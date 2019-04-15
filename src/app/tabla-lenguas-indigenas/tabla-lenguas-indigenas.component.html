@@ -7,7 +7,10 @@
 </figure></div>
 </div>
 <div class="familias-menu is-mobile">
-    <table class="">
+    <table >
+      <thead>
+        <h3 class="title is-size-6-mobile">Familias</h3>
+      </thead>
       <tbody>
         <tr>
           <td id="familia-algica" (click)="onSelectFamilia('algica')" ><span class="bd-color algica"></span>ÁLGICA</td>
@@ -36,7 +39,7 @@
       </tbody>
     </table>
 </div>
-
+<br>
 <ol *ngIf="lenguas" class="periodic-table">
   <!-- PRIMER NIVEL -->
   <li *ngFor="let lengua of lenguas" id="{{lengua.id}}" (click)="onViewLengua(lengua)" class="group {{lengua.posicion}} {{lengua.familia}}">
@@ -52,18 +55,18 @@
 <div class="modal">
     <div class="modal-background"></div>
     <div class="modal-card">
-        <header class="modal-card-head">
+        <header class="modal-card-head {{familia}}">
             <p class="modal-card-title">{{nombre}}</p>
             <button class="delete close" aria-label="close" (click)="onCloseLengua()"></button>
         </header>
         <section class="modal-card-body"  [innerHTML]="descripcion">
             <!-- Content ... -->
         </section>
+        <!--
         <footer class="modal-card-foot">
-          <!--
             <button class="button is-success">Save changes</button>
             <button class="button close">Cancel</button>
-            -->
         </footer>
+        -->
     </div>
 </div>
