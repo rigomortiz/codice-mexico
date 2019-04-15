@@ -15,6 +15,8 @@ export class Lengua{
 })
 export class TablaLenguasIndigenasComponent implements OnInit, AfterViewInit {
   lenguas = [];
+  nombre = "";
+  descripcion = "";
 
   constructor(private lenguasDataService: LenguasDataService) {
   }
@@ -51,9 +53,16 @@ export class TablaLenguasIndigenasComponent implements OnInit, AfterViewInit {
   }
 
   onViewLengua(lengua: Lengua){
-      let c = document.getElementsByClassName("modal");
-        c[0].classList.toggle("is-active");
+    let c = document.getElementsByClassName("modal");
+    c[0].classList.toggle("is-active");
+    this.nombre = lengua.nombre;
+    this.descripcion = lengua.descripcion;
+    console.log(this.descripcion);
+  }
 
+  onCloseLengua(){
+    let c = document.getElementsByClassName("modal");
+    c[0].classList.toggle("is-active");
   }
 
 }

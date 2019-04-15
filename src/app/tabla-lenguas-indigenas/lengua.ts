@@ -5,4 +5,5 @@ export class Lengua{
   nombre: string;
   posicion: string;
   familia: string;
+  descripcion: string;
 }
