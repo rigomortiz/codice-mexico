@@ -298,12 +298,12 @@ li.no-focus, li.no-focus .group {
 
 .element-symbol {
     margin-top: -10px;
-    font-size: 24px;
+    font-size: 18px;
     text-align: left;
 }
 
 .atomic-number {
-    font-size: 14px;
+    font-size: 11px;
     text-align: right;
 }
 
@@ -324,7 +324,7 @@ li.no-focus, li.no-focus .group {
 }
 
 .element-name, .atomic-mass {
-    font-size: 14px;
+    font-size: 10px;
     flex: 1 1;
     align-items: flex-end;
     overflow: hidden;

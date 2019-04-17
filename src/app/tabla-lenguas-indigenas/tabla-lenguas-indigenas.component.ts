@@ -2,6 +2,11 @@ import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { LenguasDataService } from './lenguas-data.service';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 import { BreakpointObserver, BreakpointState } from '@angular/cdk/layout'
+
+import {
+    SocialService
+} from "ng6-social-button";
+
 export class Lengua{
   id: string;
   numero: string;
@@ -13,7 +18,8 @@ export class Lengua{
 @Component({
   selector: 'app-tabla-lenguas-indigenas',
   templateUrl: './tabla-lenguas-indigenas.component.html',
-  styleUrls: ['./tabla-lenguas-indigenas.component.css', 'media-queries.css']
+  styleUrls: ['./tabla-lenguas-indigenas.component.css', 'media-queries.css'],
+
 })
 export class TablaLenguasIndigenasComponent implements OnInit, AfterViewInit {
   lenguas = [];
@@ -23,7 +29,12 @@ export class TablaLenguasIndigenasComponent implements OnInit, AfterViewInit {
   familia = "";
   public showContainer: boolean;
 
-  constructor(private lenguasDataService: LenguasDataService, private sanitizer: DomSanitizer, public breakpointObserver: BreakpointObserver) {
+  shareObj = {
+      href: "FACEBOOK-SHARE-LINK",
+      hashtag:"#FACEBOOK-SHARE-HASGTAG"
+  };
+
+  constructor(private lenguasDataService: LenguasDataService, private sanitizer: DomSanitizer, public breakpointObserver: BreakpointObserver, private socialAuthService: SocialService) {
   }
 
   ngOnInit() {
@@ -86,5 +97,9 @@ export class TablaLenguasIndigenasComponent implements OnInit, AfterViewInit {
     let c = document.getElementsByClassName("modal");
     c[0].classList.toggle("is-active");
   }
+
+    public facebookSharing(shareObj: any){
+        this.socialAuthService.facebookSharing(shareObj);
+    }
 
 }
