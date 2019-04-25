@@ -7,7 +7,7 @@
 </figure></div>
 </div>
 <!-- Your share button code -->
-<button class="button is-small is-link" (click)="facebookSharing(shareObj)">Compartir</button>  
+<button class="button is-small is-link" (click)="facebookSharing(shareObj)">Compartir</button>
 <br>
 <br>
 <div class="familias-menu is-mobile">
@@ -59,19 +59,29 @@
 </div>
 <div class="modal">
     <div class="modal-background"></div>
+    <div class="modal-content" style="width: 90%;">
+        <p class="image">
+            <img src="./assets/img/infografias-horizontal/maya-19.jpg" alt="">
+        </p>
+    </div>
+    <button class="modal-close is-large" aria-label="close" (click)="onCloseLengua()"></button>
+</div>
+<!--
+<div class="modal">
+    <div class="modal-background"></div>
     <div class="modal-card">
         <header class="modal-card-head {{familia}}">
             <p class="modal-card-title {{familia}}">{{nombre}}</p>
             <button class="delete close" aria-label="close" (click)="onCloseLengua()"></button>
         </header>
         <section class="modal-card-body"  [innerHTML]="descripcion">
-            <!-- Content ... -->
+            Content
         </section>
-        <!--
+
         <footer class="modal-card-foot">
             <button class="button is-success">Save changes</button>
             <button class="button close">Cancel</button>
         </footer>
-        -->
+
     </div>
-</div>
+</div>-->

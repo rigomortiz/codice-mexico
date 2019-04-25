@@ -14,6 +14,7 @@ export class Lengua{
   nombre: string;
   posicion: string;
   familia: string;
+  descripcion: string;
 }
 @Component({
   selector: 'app-tabla-lenguas-indigenas',
@@ -55,7 +56,7 @@ export class TablaLenguasIndigenasComponent implements OnInit, AfterViewInit {
   */
   }
 
-  onSelectFamilia(f: String){
+  onSelectFamilia(f: string){
     let c = document.getElementsByClassName(f);
   
     for(let i =0; i< c.length; i++){
@@ -88,18 +89,24 @@ export class TablaLenguasIndigenasComponent implements OnInit, AfterViewInit {
   onViewLengua(lengua: Lengua){
     let c = document.getElementsByClassName("modal");
     c[0].classList.toggle("is-active");
+    document.getElementsByTagName("html")[0].style.overflowY="hidden";
     this.nombre = lengua.nombre;
     this.familia = lengua.familia;
-    this.descripcion = this.sanitizer.bypassSecurityTrustHtml( lengua.descripcion);
+    this.descripcion = this.sanitizer.bypassSecurityTrustHtml( lengua.descripcion).toString();
   }
 
   onCloseLengua(){
     let c = document.getElementsByClassName("modal");
     c[0].classList.toggle("is-active");
+    document.getElementsByTagName("html")[0].style.overflowY="auto";
+
   }
 
     public facebookSharing(shareObj: any){
         this.socialAuthService.facebookSharing(shareObj);
+    }
+
+    ngAfterViewInit(): void {
     }
 
 }
