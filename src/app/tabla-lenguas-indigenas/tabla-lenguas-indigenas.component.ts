@@ -26,6 +26,7 @@ export class TablaLenguasIndigenasComponent implements OnInit, AfterViewInit {
   lenguas = [];
   safeHtml: SafeHtml;
   nombre = "";
+  simbolo = "";
   descripcion = "";
   familia = "";
   public showContainer: boolean;
@@ -92,6 +93,7 @@ export class TablaLenguasIndigenasComponent implements OnInit, AfterViewInit {
     document.getElementsByTagName("html")[0].style.overflowY="hidden";
     this.nombre = lengua.nombre;
     this.familia = lengua.familia;
+    this.simbolo = lengua.simbolo;
     this.descripcion = this.sanitizer.bypassSecurityTrustHtml( lengua.descripcion).toString();
   }
 

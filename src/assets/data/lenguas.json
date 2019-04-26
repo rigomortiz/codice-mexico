@@ -39,7 +39,7 @@
     "posicion": "group-down-right",
     "familia": "oto-mangue",
     "id": "oto-mangue",
-    "img": "./assets/img/infografias-horizontal/.jpg"
+    "img": "./assets/img/infografias-horizontal/Amuzgo.jpg"
   },
   {
     "numero": "6",
@@ -47,7 +47,7 @@
     "nombre": "Chatino",
     "posicion": "group-down-right",
     "familia": "oto-mangue",
-    "img": "./assets/img/infografias-horizontal/.jpg"
+    "img": "./assets/img/infografias-horizontal/Chatino.jpg"
   },
   {
     "numero": "7",
@@ -55,7 +55,7 @@
     "nombre": "Chichimeco-jonaz",
     "posicion": "group-down-right",
     "familia": "oto-mangue",
-    "img": "./assets/img/infografias-horizontal/.jpg"
+    "img": "./assets/img/infografias-horizontal/Chichimeco-jonaz.jpg"
   },
   {
     "numero": "8",
@@ -63,7 +63,7 @@
     "nombre": "Chinanteco",
     "posicion": "group-down-right",
     "familia": "oto-mangue",
-    "img": "./assets/img/infografias-horizontal/.jpg"
+    "img": "./assets/img/infografias-horizontal/Chinanteco.jpg"
   },
   {
     "numero": "9",
@@ -71,7 +71,7 @@
     "nombre": "Chocholteco",
     "posicion": "group-down-left",
     "familia": "oto-mangue",
-    "img": "./assets/img/infografias-horizontal/.jpg"
+    "img": "./assets/img/infografias-horizontal/Chocholteco.jpg"
   },
   {
     "numero": "10",
@@ -79,7 +79,7 @@
     "nombre": "Chontal de Oaxaca",
     "posicion": "group-down-left",
     "familia": "oto-mangue",
-    "img": "./assets/img/infografias-horizontal/.jpg"
+    "img": "./assets/img/infografias-horizontal/Chontal de Oaxaca.jpg"
   },
   {
     "numero": "27",
@@ -112,7 +112,7 @@
     "nombre": "Cuicateco",
     "posicion": "group-down-right",
     "familia": "oto-mangue",
-    "img": "./assets/img/infografias-horizontal/.jpg"
+    "img": "./assets/img/infografias-horizontal/Cuicateco.jpg"
   },
   {
     "numero": "20",
@@ -120,7 +120,7 @@
     "nombre": "Ixcalteco",
     "posicion": "group-down-right",
     "familia": "oto-mangue",
-    "img": "./assets/img/infografias-horizontal/.jpg"
+    "img": "./assets/img/infografias-horizontal/Ixcalteco.jpg"
   },
   {
     "numero": "31",
@@ -128,7 +128,7 @@
     "nombre": "Matlatzinca",
     "posicion": "group-down-right",
     "familia": "oto-mangue",
-    "img": "./assets/img/infografias-horizontal/.jpg"
+    "img": "./assets/img/infografias-horizontal/Matlatzinca.jpg"
   },
   {
     "numero": "34",
@@ -136,7 +136,7 @@
     "nombre": "Mazahua",
     "posicion": "group-down-left",
     "familia": "oto-mangue",
-    "img": "./assets/img/infografias-horizontal/.jpg"
+    "img": "./assets/img/infografias-horizontal/Mazahua.jpg"
   },
   {
     "numero": "35",
@@ -144,7 +144,7 @@
     "nombre": "Mazateco",
     "posicion": "group-down-left",
     "familia": "oto-mangue",
-    "img": "./assets/img/infografias-horizontal/.jpg"
+    "img": "./assets/img/infografias-horizontal/Mazateco.jpg"
   },
   {
     "numero": "41",
@@ -248,7 +248,7 @@
     "nombre": "Mixteco",
     "posicion": "group-down-right",
     "familia": "oto-mangue",
-    "img": "./assets/img/infografias-horizontal/.jpg"
+    "img": "./assets/img/infografias-horizontal/Mixteco.jpg"
   },
   {
     "numero": "40",
@@ -256,7 +256,7 @@
     "nombre": "Otomí",
     "posicion": "group-down-right",
     "familia": "oto-mangue",
-    "img": "./assets/img/infografias-horizontal/.jpg"
+    "img": "./assets/img/infografias-horizontal/Otomí.jpg"
   },
   {
     "numero": "42",
@@ -264,7 +264,7 @@
     "nombre": "Pame",
     "posicion": "group-down-left",
     "familia": "oto-mangue",
-    "img": "./assets/img/infografias-horizontal/.jpg"
+    "img": "./assets/img/infografias-horizontal/Pame.jpg"
   },
   {
     "numero": "45",
@@ -272,7 +272,7 @@
     "nombre": "Popoloca",
     "posicion": "group-down-left",
     "familia": "oto-mangue",
-    "img": "./assets/img/infografias-horizontal/.jpg"
+    "img": "./assets/img/infografias-horizontal/Popoloca.jpg"
   },
   {
     "numero": "4",
@@ -376,7 +376,7 @@
     "nombre": "Teko",
     "posicion": "group-up-right",
     "familia": "teko",
-    "img": "./assets/img/infografias-horizontal/.jpg"
+    "img": "./assets/img/infografias-horizontal/Teko.jpg"
   },
   {
     "numero": "59",
@@ -384,7 +384,7 @@
     "nombre": "Tlahuica",
     "posicion": "group-up-lef",
     "familia": "oto-mangue",
-    "img": "./assets/img/infografias-horizontal/.jpg"
+    "img": "./assets/img/infografias-horizontal/Tlahuica.jpg"
   },
   {
     "numero": "60",
@@ -392,7 +392,7 @@
     "nombre": "Tlapaneco",
     "posicion": "group-up-left",
     "familia": "oto-mangue",
-    "img": "./assets/img/infografias-horizontal/.jpg"
+    "img": "./assets/img/infografias-horizontal/Tlapaneco.jpg"
   },
   {
     "numero": "63",
@@ -400,10 +400,10 @@
     "nombre": "Triqui",
     "posicion": "group-up-left",
     "familia": "oto-mangue",
-    "img": "./assets/img/infografias-horizontal/.jpg"
+    "img": "./assets/img/infografias-horizontal/Triqui.jpg"
   },
   {
-    "numero": "59",
+    "numero": "39",
     "simbolo": "Ol",
     "nombre": "Oluteco",
     "posicion": "group-up-right",
@@ -443,11 +443,11 @@
     "img": "./assets/img/infografias-horizontal/Yaqui.jpg"
   },
   {
-    "numero": "38.1 - 38.9",
+    "numero": "38",
     "simbolo": "Na",
     "nombre": "Náhuatl",
     "posicion": "group-up-right",
-    "familia": "maya",
+    "familia": "yuto-nahua",
     "img": "./assets/img/infografias-horizontal/Náhuatl.jpg"
   },
   {
@@ -487,7 +487,7 @@
     "simbolo": "Ts",
     "nombre": "Tsotsil",
     "posicion": "group-up-right",
-    "familia": "totonaco-tepehua",
+    "familia": "maya",
     "img": "./assets/img/infografias-horizontal/Tsotsil.jpg"
   },
   {
@@ -512,7 +512,7 @@
     "nombre": "Chontal de Oaxaca",
     "posicion": "group-up-right",
     "familia": "chontal-oaxaca",
-    "img": "./assets/img/infografias-horizontal/.jpg"
+    "img": "./assets/img/infografias-horizontal/Chontal de Oaxaca.jpg"
   },
   {
     "numero": "67",
@@ -520,7 +520,7 @@
     "nombre": "Zapoteco",
     "posicion": "group-up-left",
     "familia": "oto-mangue",
-    "img": "./assets/img/infografias-horizontal/.jpg"
+    "img": "./assets/img/infografias-horizontal/Zapoteco.jpg"
   },
   {
     "numero": "53",
@@ -528,7 +528,7 @@
     "nombre": "Tarasco",
     "posicion": "group-up-left",
     "familia": "tarasca",
-    "img": "./assets/img/infografias-horizontal/.jpg"
+    "img": "./assets/img/infografias-horizontal/Tarasco.jpg"
   },
   {
     "numero": "50",
@@ -561,7 +561,7 @@
     "posicion": "group-up-right",
     "familia": "zapoteco",
     "id": "zapoteco",
-    "img": "./assets/img/infografias-horizontal/.jpg"
+    "img": "./assets/img/infografias-horizontal/Zopoteco Sierra Norte.jpg"
   },
   {
     "numero": "67.2",
@@ -569,7 +569,7 @@
     "nombre": "Zopoteco Valle Centrales",
     "posicion": "group-up-left",
     "familia": "zapoteco",
-    "img": "./assets/img/infografias-horizontal/.jpg"
+    "img": "./assets/img/infografias-horizontal/Zopoteco Valle Centrales.jpg"
   },
   {
     "numero": "67.3",
@@ -577,7 +577,7 @@
     "nombre": "Zopoteco Itsmo",
     "posicion": "group-up-left",
     "familia": "zapoteco",
-    "img": "./assets/img/infografias-horizontal/.jpg"
+    "img": "./assets/img/infografias-horizontal/Zopoteco Itsmo.jpg"
   },
   {
     "numero": "38-1",

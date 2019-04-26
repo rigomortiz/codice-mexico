@@ -2,4 +2,8 @@
 
 [Edit on StackBlitz ⚡️](https://stackblitz.com/edit/tabla-lenguas-indigenas)
 
-Cuicateco
+Teko
+Náhuatl
+Zapoteco
+Tarasco
+Chontal de Oaxaca color mal
