@@ -332,3 +332,9 @@ li.no-focus, li.no-focus .group {
     white-space: normal;
     margin-top: -5px;
 }
+
+.tabla-periodica{
+    background-color: #f5f5f5;
+    border-radius: 6px;
+    padding: 10px;
+}

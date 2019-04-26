@@ -7,7 +7,7 @@
 </figure></div>
 </div>
 <!-- Your share button code -->
-<button class="button is-small is-link" (click)="facebookSharing(shareObj)">Compartir</button>
+<button class="button is-link" (click)="facebookSharing(shareObj)">Compartir</button>
 <br>
 <br>
 <div class="familias-menu is-mobile">
@@ -15,7 +15,7 @@
       <thead>
         <h3 class="title is-size-6-mobile">Familias</h3>
       </thead>
-      <tbody>
+      <tbody style="cursor: pointer;">
         <tr>
           <td id="familia-algica" (click)="onSelectFamilia('algica')" ><span class="bd-color algica"></span>ÁLGICA</td>
           <td id="familia-cochimi-yumana" (click)="onSelectFamilia('cochimi-yumana')" ><span class="bd-color cochimi-yumana"></span>COCHIMÍ-YUMANA</td>
@@ -44,7 +44,7 @@
     </table>
 </div>
 <br>
-<div style="background-color: #fffff0;" class="tabla-periodica">
+<div class="tabla-periodica">
   <ol *ngIf="lenguas" class="periodic-table">
     <!-- PRIMER NIVEL -->
     <li *ngFor="let lengua of lenguas" id="{{lengua.id}}" (click)="onViewLengua(lengua)" class="group {{lengua.posicion}} {{lengua.familia}}">
@@ -57,31 +57,29 @@
     </li>
   </ol>
 </div>
+<!--
 <div class="modal">
     <div class="modal-background"></div>
     <div class="modal-content" style="width: 90%;">
         <p class="image">
-            <img src="./assets/img/infografias-horizontal/maya-19.jpg" alt="">
+            <img src="./assets/img/infografias-horizontal/{{nombre}}.jpg" alt="{{nombre}}">
         </p>
     </div>
     <button class="modal-close is-large" aria-label="close" (click)="onCloseLengua()"></button>
 </div>
-<!--
+-->
 <div class="modal">
     <div class="modal-background"></div>
-    <div class="modal-card">
+    <div class="modal-card" style="width: 90%;">
         <header class="modal-card-head {{familia}}">
             <p class="modal-card-title {{familia}}">{{nombre}}</p>
             <button class="delete close" aria-label="close" (click)="onCloseLengua()"></button>
         </header>
-        <section class="modal-card-body"  [innerHTML]="descripcion">
-            Content
+        <section class="modal-card-body" style="padding:0">
+          <img src="./assets/img/infografias-horizontal/{{nombre}}.jpg" alt="{{nombre}}">
         </section>
-
-        <footer class="modal-card-foot">
-            <button class="button is-success">Save changes</button>
-            <button class="button close">Cancel</button>
-        </footer>
-
+       <footer class="modal-card-foot">
+         <button class="button is-link" (click)="facebookSharing(shareObj)">Compartir</button>
+       </footer>
     </div>
-</div>-->
+</div>
