@@ -1,6 +1,6 @@
 [
   {
-    "numero": "25",
+    "numero": "24",
     "simbolo": "Kp",
     "nombre": "Kickapoo",
     "posicion": "group-down-right",
@@ -8,16 +8,16 @@
     "img": "./assets/img/infografias-horizontal/Kickapoo.jpg"
   },
   {
-    "numero": "51",
-    "simbolo": "Sr",
-    "nombre": "Seri",
-    "posicion": "group-down-left",
-    "familia": "seri",
-    "id": "seri",
-    "img": "./assets/img/infografias-horizontal/Seri.jpg"
+    "numero": "",
+    "simbolo": "",
+    "nombre": "",
+    "posicion": "group-down-right",
+    "familia": "null",
+    "id": "null",
+    "img": ""
   },
   {
-    "numero": "14",
+    "numero": "6",
     "simbolo": "Cu",
     "nombre": "Cucapá",
     "posicion": "group-down-right",
@@ -25,20 +25,82 @@
     "img": "./assets/img/infografias-horizontal/Cucapá.jpg"
   },
   {
-    "numero": "26",
-    "simbolo": "KaW",
+    "numero": "25",
+    "simbolo": "KW",
     "nombre": "Kiliwa",
     "posicion": "group-down-right",
     "familia": "cochimi-yumana",
     "img": "./assets/img/infografias-horizontal/Kiliwa.jpg"
   },
   {
+    "numero": "4",
+    "simbolo": "Ay",
+    "nombre": "Ayapaneco",
+    "posicion": "group-up-right",
+    "familia": "mixe-zoque",
+    "id": "ayapaneco",
+    "img": "./assets/img/infografias-horizontal/Ayapaneco.jpg"
+  },
+  {
+    "numero": "36",
+    "simbolo": "Mx",
+    "nombre": "Mixe",
+    "posicion": "group-up-right",
+    "familia": "mixe-zoque",
+    "img": "./assets/img/infografias-horizontal/Mixe.jpg"
+  },
+  {
+    "numero": "39",
+    "simbolo": "Ol",
+    "nombre": "Oluteco",
+    "posicion": "group-up-right",
+    "familia": "mixe-zoque",
+    "img": "./assets/img/infografias-horizontal/Oluteco.jpg"
+  },
+  {
+    "numero": "27",
+    "simbolo": "Ku",
+    "nombre": "Ku'hl",
+    "posicion": "group-down-right",
+    "familia": "cochimi-yumana",
+    "img": "./assets/img/infografias-horizontal/Ku'hl.jpg"
+  },
+  {
+    "numero": "28",
+    "simbolo": "Km",
+    "nombre": "Kumiai",
+    "posicion": "group-down-right",
+    "familia": "cochimi-yumana",
+    "img": "./assets/img/infografias-horizontal/Kumiai.jpg"
+  },
+  {
+    "numero": "41",
+    "simbolo": "Pal",
+    "nombre": "Paipai",
+    "posicion": "group-down-right",
+    "familia": "cochimi-yumana",
+    "img": "./assets/img/infografias-horizontal/Paipai.jpg"
+  },
+  {
+    "numero": "46",
+    "simbolo": "Ps",
+    "nombre": "Popoluca de la Sierra",
+    "posicion": "group-up-right",
+    "familia": "mixe-zoque",
+    "id": "mixezoque",
+    "img": "./assets/img/infografias-horizontal/Popoluca de la Sierra.jpg"
+  },
+
+
+
+
+
+  {
     "numero": "2",
     "simbolo": "Am",
     "nombre": "Amuzgo",
     "posicion": "group-down-right",
     "familia": "oto-mangue",
-    "id": "oto-mangue",
     "img": "./assets/img/infografias-horizontal/Amuzgo.jpg"
   },
   {
@@ -80,22 +142,6 @@
     "posicion": "group-down-left",
     "familia": "oto-mangue",
     "img": "./assets/img/infografias-horizontal/Chontal de Oaxaca.jpg"
-  },
-  {
-    "numero": "27",
-    "simbolo": "Ku",
-    "nombre": "Ku'hl",
-    "posicion": "group-down-right",
-    "familia": "cochimi-yumana",
-    "img": "./assets/img/infografias-horizontal/Ku'hl.jpg"
-  },
-  {
-    "numero": "28",
-    "simbolo": "Km",
-    "nombre": "Kumiai",
-    "posicion": "group-down-right",
-    "familia": "cochimi-yumana",
-    "img": "./assets/img/infografias-horizontal/Kumiai.jpg"
   },
   {
     "numero": "1",
@@ -145,14 +191,6 @@
     "posicion": "group-down-left",
     "familia": "oto-mangue",
     "img": "./assets/img/infografias-horizontal/Mazateco.jpg"
-  },
-  {
-    "numero": "41",
-    "simbolo": "Pal",
-    "nombre": "Paipai",
-    "posicion": "group-down-right",
-    "familia": "cochimi-yumana",
-    "img": "./assets/img/infografias-horizontal/Paipai.jpg"
   },
   {
     "numero": "13",
@@ -274,22 +312,8 @@
     "familia": "oto-mangue",
     "img": "./assets/img/infografias-horizontal/Popoloca.jpg"
   },
-  {
-    "numero": "4",
-    "simbolo": "Ay",
-    "nombre": "Ayapaneco",
-    "posicion": "group-up-right",
-    "familia": "mixe-zoque",
-    "img": "./assets/img/infografias-horizontal/Ayapaneco.jpg"
-  },
-  {
-    "numero": "36",
-    "simbolo": "Mx",
-    "nombre": "Mixe",
-    "posicion": "group-up-right",
-    "familia": "mixe-zoque",
-    "img": "./assets/img/infografias-horizontal/Mixe.jpg"
-  },
+
+
   {
     "numero": "33",
     "simbolo": "Mo",
@@ -401,22 +425,6 @@
     "posicion": "group-up-left",
     "familia": "oto-mangue",
     "img": "./assets/img/infografias-horizontal/Triqui.jpg"
-  },
-  {
-    "numero": "39",
-    "simbolo": "Ol",
-    "nombre": "Oluteco",
-    "posicion": "group-up-right",
-    "familia": "mixe-zoque",
-    "img": "./assets/img/infografias-horizontal/Oluteco.jpg"
-  },
-  {
-    "numero": "46",
-    "simbolo": "Ps",
-    "nombre": "Popoluca de la Sierra",
-    "posicion": "group-up-right",
-    "familia": "mixe-zoque",
-    "img": "./assets/img/infografias-horizontal/Popoluca de la Sierra.jpg"
   },
   {
     "numero": "56",

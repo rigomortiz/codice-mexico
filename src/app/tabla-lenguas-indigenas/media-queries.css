@@ -4,6 +4,17 @@
 */
 
 @media (min-width: 1281px) {
+    #null{
+        grid-column-start: 16;
+    }
+    #ayapaneco{
+        grid-column-start: 14;
+    }
+    #mixezoque{
+        grid-column-start: 13;
+    }
+
+
   #seri {
     grid-column-start: 16;
   }
@@ -31,6 +42,15 @@
 */
 
 @media (min-width: 1025px) and (max-width: 1280px) {
+    #null{
+        grid-column-start: 16;
+    }
+    #ayapaneco{
+        grid-column-start: 14;
+    }
+    #mixezoque{
+        grid-column-start: 13;
+    }
   #seri {
     grid-column-start: 16;
   }
@@ -285,8 +305,8 @@
 
   .periodic-table {
     /*max-height: 300px;*/
-    grid-template-columns: repeat(16, 60px)  !important;
-    grid-template-rows: repeat(5, 70px) !important;
+  grid-template-columns: repeat(4, 25%) !important;
+  grid-template-rows: repeat(25, 100px) !important;
 
     margin-left: auto;
     margin-right: auto;
@@ -296,23 +316,23 @@
       height: 65px;
   }
   #seri {
-    grid-column-start: 16;
+    grid-column-start: 1;
   }
 
   #oto-mangue, #maya {
-      grid-column-start: 11;
+      grid-column-start: 1;
   }
 
   #cerium, #thorium {
-      grid-column-start: 3;
+      grid-column-start: 1;
   }
 
   #zapoteco {
-      grid-column-start: 14;
+      grid-column-start: 1;
   }
 
   #nahuas {
-      grid-column-start: 3;
+      grid-column-start: 1;
   }
   .familias-menu  {
       font-family: 'Montserrat';

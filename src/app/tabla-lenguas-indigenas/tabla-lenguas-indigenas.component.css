@@ -223,6 +223,12 @@ li.no-focus, li.no-focus .group {
 
 
 /**FAMILIAS*/
+.null, .null.no-focus:hover {
+    display: block;
+    background-color: #ffffff;
+    color: #FFFFFF;
+}
+
 .algica, .algica.no-focus:hover {
     background-color: #ef7659;
     color: #FFFFFF;
@@ -235,7 +241,7 @@ li.no-focus, li.no-focus .group {
 
 .cochimi-yumana, .cochimi-yumana.no-focus:hover {
     background-color: #c92031;
-    color: #bdbfbd;
+    color: #ffffff;
 }
 
 .oto-mangue, .oto-mangue.no-focus:hover {
@@ -260,7 +266,7 @@ li.no-focus, li.no-focus .group {
 
 .mixe-zoque, .mixe-zoque.no-focus:hover {
     background-color: #e6457f;
-    color: #bdbfbd;
+    color: #ffffff;
 }
 
 .teko, .teko.no-focus:hover {
@@ -298,7 +304,7 @@ li.no-focus, li.no-focus .group {
 
 .element-symbol {
     margin-top: -10px;
-    font-size: 18px;
+    font-size: 20px;
     text-align: left;
 }
 

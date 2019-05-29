@@ -112,25 +112,25 @@
 }
 
 @media(max-width: 1300px) {
-#seri {
-    grid-column-start: 16;
-}
+    #seri {
+        grid-column-start: 16;
+    }
 
-#oto-mangue, #maya {
-    grid-column-start: 11;
-}
+    #oto-mangue, #maya {
+        grid-column-start: 11;
+    }
 
-#cerium, #thorium {
-    grid-column-start: 3;
-}
+    #cerium, #thorium {
+        grid-column-start: 3;
+    }
 
-#zapoteco {
-    grid-column-start: 14;
-}
+    #zapoteco {
+        grid-column-start: 14;
+    }
 
-#nahuas {
-    grid-column-start: 3;
-}
+    #nahuas {
+        grid-column-start: 3;
+    }
     .atomic-number {
         font-size: 9px;
     }
@@ -182,25 +182,25 @@
 }
 
 @media(max-width: 1024px) {
-#seri {
-    grid-column-start: 16;
-}
+    #seri {
+        grid-column-start: 16;
+    }
 
-#oto-mangue, #maya {
-    grid-column-start: 11;
-}
+    #oto-mangue, #maya {
+        grid-column-start: 11;
+    }
 
-#cerium, #thorium {
-    grid-column-start: 3;
-}
+    #cerium, #thorium {
+        grid-column-start: 3;
+    }
 
-#zapoteco {
-    grid-column-start: 14;
-}
+    #zapoteco {
+        grid-column-start: 14;
+    }
 
-#nahuas {
-    grid-column-start: 3;
-}
+    #nahuas {
+        grid-column-start: 3;
+    }
     .categorias{
         display: flex;
         width: 100%;
@@ -257,25 +257,25 @@
 }
 
 @media(max-width: 980px) {
-  #seri {
-    grid-column-start: 16;
-}
+    #seri {
+        grid-column-start: 16;
+    }
 
-#oto-mangue, #maya {
-    grid-column-start: 11;
-}
+    #oto-mangue, #maya {
+        grid-column-start: 11;
+    }
 
-#cerium, #thorium {
-    grid-column-start: 3;
-}
+    #cerium, #thorium {
+        grid-column-start: 3;
+    }
 
-#zapoteco {
-    grid-column-start: 14;
-}
+    #zapoteco {
+        grid-column-start: 14;
+    }
 
-#nahuas {
-    grid-column-start: 3;
-}
+    #nahuas {
+        grid-column-start: 3;
+    }
     element-name {
         font-size: 10px;
         line-height: 1em;
@@ -646,13 +646,26 @@
     font-size: .9vw;
     font-weight: lighter;
 }*/
-
-
-
-
-
-
 @media(max-width: 350px) {
+    #seri {
+        grid-column-start: 1;
+    }
+
+    #oto-mangue, #maya {
+        grid-column-start: 1;
+    }
+
+    #cerium, #thorium {
+        grid-column-start: 1;
+    }
+
+    #zapoteco {
+        grid-column-start: 1;
+    }
+
+    #nahuas {
+        grid-column-start: 1;
+    }
   .periodic-table {
     /*max-height: 300px;*/
     grid-template-columns: repeat(4, 25%) !important;
@@ -706,6 +719,25 @@
 }
 
 @media(max-width: 400px) {
+    #seri {
+        grid-column-start: 1;
+    }
+
+    #oto-mangue, #maya {
+        grid-column-start: 1;
+    }
+
+    #cerium, #thorium {
+        grid-column-start: 1;
+    }
+
+    #zapoteco {
+        grid-column-start: 1;
+    }
+
+    #nahuas {
+        grid-column-start: 1;
+    }
   .periodic-table {
     /*max-height: 300px;*/
     grid-template-columns: repeat(4, 25%) !important;
@@ -723,37 +755,37 @@
     font-family: 'Montserrat';
     font-stretch: expanded;
     font-size: 9px;
-}
-.familias-menu td {
-  padding: 2px;
-}
+    }
+    .familias-menu td {
+      padding: 2px;
+    }
 
-.familias-menu :hover {
-     cursor: pointer;
-}
+    .familias-menu :hover {
+         cursor: pointer;
+    }
 
-.atomic-mass {
-  display: block;
-  max-width: none;
-  font-size: 11px;
-}
+    .atomic-mass {
+      display: block;
+      max-width: none;
+      font-size: 11px;
+    }
 
-.element-symbol {
-  font-weight: 300;
-  font-size: 20px;
-}
+    .element-symbol {
+      font-weight: 300;
+      font-size: 20px;
+    }
 
-.atomic-number {
-  font-size: 12px;
-}
+    .atomic-number {
+      font-size: 12px;
+    }
 
-.element-name {
-  font-size: 11px;
-}
+    .element-name {
+      font-size: 11px;
+    }
 
-.atomic-orbital-shells {
-  display: block;
-  font-size: 11px;
-}
+    .atomic-orbital-shells {
+      display: block;
+      font-size: 11px;
+    }
 
 }
