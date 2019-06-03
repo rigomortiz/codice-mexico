@@ -2,8 +2,7 @@
 
 [Edit on StackBlitz ⚡️](https://stackblitz.com/edit/tabla-lenguas-indigenas)
 
-Teko
-Náhuatl
-Zapoteco
-Tarasco
-Chontal de Oaxaca color mal
+###Insipración
+
+
+https://codepen.io/nemophrost/pen/EkImb

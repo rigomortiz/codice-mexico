@@ -11,6 +11,15 @@
 <br>
 <br>
 <div class="familias-menu is-mobile">
+    <h3 class="title is-size-6-mobile">Ordenar por:</h3>
+    <div class="control">
+        <div class="select">
+            <select>
+                <option>Select dropdown</option>
+                <option>With options</option>
+            </select>
+        </div>
+    </div>
     <table >
       <thead>
         <h3 class="title is-size-6-mobile">Familias</h3>
@@ -36,8 +45,12 @@
           <td id="familia-tarasca" (click)="onSelectFamilia('tarasca')" ><span class="bd-color tarasca"></span>TARASCA</td>
           <td id="familia-totonaco-tepehua" (click)="onSelectFamilia('totonaco-tepehua')" ><span class="bd-color totonaco-tepehua"></span>TOTONACO-TEPEHUA</td>
         </tr>
+        <tr>
+            <td id="familia-yuto-nahua" (click)="onSelectFamilia('yuto-nahua')" ><span class="bd-color yuto-nahua"></span>YUTO-NAHUA</td>
+        </tr>
       </tbody>
     </table>
+
 </div>
 <br>
 <div class="tabla-periodica">
