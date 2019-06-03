@@ -2,6 +2,7 @@
   "name": "angular",
   "version": "0.0.0",
   "private": true,
+  "main": "index.js",
   "dependencies": {
     "@angular/cdk": "7.3.7",
     "@angular/common": "7.2.13",
@@ -16,15 +17,19 @@
     "core-js": "2.6.5",
     "ng6-social-button": "^1.0.5",
     "rxjs": "6.4.0",
-    "zone.js": "0.8.29"
+    "zone.js": "0.8.29",
+    "ejs": "^2.5.6",
+    "express": "^4.15.2"
   },
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "ngstart": "ng serve",
     "build": "ng build",
-    "test": "ng test",
+    "ngtest": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "start": "node index.js",
+    "test": "node test.js"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.10.0",
@@ -46,6 +51,8 @@
     "ts-node": "~7.0.0",
     "tslint": "~5.11.0",
     "typescript": "~3.1.1",
-    "xlsx": "^0.14.3"
+    "xlsx": "^0.14.3",
+    "request": "^2.81.0",
+    "tape": "^4.7.0"
   }
 }
