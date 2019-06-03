@@ -87,10 +87,17 @@
     "nombre": "Popoluca de la Sierra",
     "posicion": "group-up-right",
     "familia": "mixe-zoque",
-    "id": "mixezoque",
+    "id": "mixe-zoque",
     "img": "./assets/img/infografias-horizontal/Popoluca de la Sierra.jpg"
   },
-
+  {
+    "numero": "50",
+    "simbolo": "Sa",
+    "nombre": "Sayulteco",
+    "posicion": "group-up-right",
+    "familia": "mixe-zoque",
+    "img": "./assets/img/infografias-horizontal/Sayulteco.jpg"
+  },
 
 
 
@@ -537,14 +544,6 @@
     "posicion": "group-up-left",
     "familia": "tarasca",
     "img": "./assets/img/infografias-horizontal/Tarasco.jpg"
-  },
-  {
-    "numero": "50",
-    "simbolo": "Sa",
-    "nombre": "Sayulteco",
-    "posicion": "group-up-right",
-    "familia": "mixe-zoque",
-    "img": "./assets/img/infografias-horizontal/Sayulteco.jpg"
   },
   {
     "numero": "58",

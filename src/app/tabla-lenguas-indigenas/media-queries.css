@@ -4,36 +4,21 @@
 */
 
 @media (min-width: 1281px) {
-    #null{
-        grid-column-start: 16;
+    #Kp{
+        grid-column: 1 / span 1
     }
-    #ayapaneco{
+    #Cu{
+        grid-column: 1 / span 1;
+    }
+    #Ay{
         grid-column-start: 14;
     }
-    #mixezoque{
+    #Ps{
         grid-column-start: 13;
     }
-
-
-  #seri {
-    grid-column-start: 16;
-  }
-
-  #oto-mangue, #maya {
-      grid-column-start: 11;
-  }
-
-  #cerium, #thorium {
-      grid-column-start: 3;
-  }
-
-  #zapoteco {
-      grid-column-start: 14;
-  }
-
-  #nahuas {
-      grid-column-start: 3;
-  }
+    #Qe{
+        grid-column-start: 12;
+    }
 }
 
 /* 
@@ -42,34 +27,21 @@
 */
 
 @media (min-width: 1025px) and (max-width: 1280px) {
-    #null{
-        grid-column-start: 16;
+    #Kp{
+        grid-column: 1 / span 1
     }
-    #ayapaneco{
+    #Cu{
+        grid-column: 1 / span 1;
+    }
+    #Ay{
         grid-column-start: 14;
     }
-    #mixezoque{
+    #Ps{
         grid-column-start: 13;
     }
-  #seri {
-    grid-column-start: 16;
-  }
-
-  #oto-mangue, #maya {
-      grid-column-start: 11;
-  }
-
-  #cerium, #thorium {
-      grid-column-start: 3;
-  }
-
-  #zapoteco {
-      grid-column-start: 14;
-  }
-
-  #nahuas {
-      grid-column-start: 3;
-  }
+    #Qe{
+        grid-column-start: 12;
+    }
 }
 
 /* 
@@ -89,25 +61,6 @@
   }
   .group {
       height: 65px;
-  }
-  #seri {
-    grid-column-start: 16;
-  }
-
-  #oto-mangue, #maya {
-      grid-column-start: 11;
-  }
-
-  #cerium, #thorium {
-      grid-column-start: 3;
-  }
-
-  #zapoteco {
-      grid-column-start: 14;
-  }
-
-  #nahuas {
-      grid-column-start: 3;
   }
   .familias-menu  {
       font-family: 'Montserrat';
@@ -165,25 +118,6 @@
   .group {
       height: 65px;
   }
-  #seri {
-    grid-column-start: 16;
-  }
-
-  #oto-mangue, #maya {
-      grid-column-start: 11;
-  }
-
-  #cerium, #thorium {
-      grid-column-start: 3;
-  }
-
-  #zapoteco {
-      grid-column-start: 14;
-  }
-
-  #nahuas {
-      grid-column-start: 3;
-  }
   .familias-menu  {
       font-family: 'Montserrat';
       font-stretch: expanded;
@@ -240,25 +174,7 @@
   .group {
       height: 65px;
   }
-  #seri {
-    grid-column-start: 16;
-  }
 
-  #oto-mangue, #maya {
-      grid-column-start: 11;
-  }
-
-  #cerium, #thorium {
-      grid-column-start: 3;
-  }
-
-  #zapoteco {
-      grid-column-start: 14;
-  }
-
-  #nahuas {
-      grid-column-start: 3;
-  }
   .familias-menu  {
       font-family: 'Montserrat';
       font-stretch: expanded;
@@ -315,25 +231,7 @@
   .group {
       height: 65px;
   }
-  #seri {
-    grid-column-start: 1;
-  }
 
-  #oto-mangue, #maya {
-      grid-column-start: 1;
-  }
-
-  #cerium, #thorium {
-      grid-column-start: 1;
-  }
-
-  #zapoteco {
-      grid-column-start: 1;
-  }
-
-  #nahuas {
-      grid-column-start: 1;
-  }
   .familias-menu  {
       font-family: 'Montserrat';
       font-stretch: expanded;

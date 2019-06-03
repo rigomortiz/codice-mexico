@@ -36,10 +36,6 @@
           <td id="familia-tarasca" (click)="onSelectFamilia('tarasca')" ><span class="bd-color tarasca"></span>TARASCA</td>
           <td id="familia-totonaco-tepehua" (click)="onSelectFamilia('totonaco-tepehua')" ><span class="bd-color totonaco-tepehua"></span>TOTONACO-TEPEHUA</td>
         </tr>
-        <tr>
-          <td id="familia-yuto-nahua" (click)="onSelectFamilia('yuto-nahua')" ><span class="bd-color yuto-nahua"></span>YUTO-NAHUA</td>
-          <td id="familia-teko" (click)="onSelectFamilia('teko')" ><span class="bd-color teko"></span>TEKO</td>
-        </tr>
       </tbody>
     </table>
 </div>
@@ -47,13 +43,13 @@
 <div class="tabla-periodica">
   <ol *ngIf="lenguas" class="periodic-table">
     <!-- PRIMER NIVEL -->
-    <li *ngFor="let lengua of lenguas" id="{{lengua.id}}" (click)="onViewLengua(lengua)" class="group {{lengua.posicion}} {{lengua.familia}}">
-      <p class="atomic-number">{{lengua.numero}}
+    <li *ngFor="let lengua of lenguas" id="{{lengua[2]}}" (click)="onViewLengua(lengua)" class="group {{lengua[19]}}">
+      <p class="atomic-number">{{lengua[0]}}
       </p>
       <p class="element-symbol">
-        <b>{{lengua.simbolo}}</b>
+        <b>{{lengua[2]}}</b>
       </p>
-      <p class="element-name">{{lengua.nombre}}</p>
+      <p class="element-name">{{lengua[1]}}</p>
     </li>
   </ol>
 </div>
