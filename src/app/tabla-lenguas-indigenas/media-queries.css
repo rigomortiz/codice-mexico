@@ -2,266 +2,257 @@
   ##Device = Desktops
   ##Screen = 1281px to higher resolution desktops
 */
-
 @media (min-width: 1281px) {
-    #Kp{
+    #Kp {
         grid-column: 1 / span 1
     }
-    #Cu{
+
+    #Cu {
         grid-column: 1 / span 1;
     }
-    #Ay{
+
+    #Ay {
         grid-column-start: 14;
     }
-    #Ps{
+
+    #Ps {
         grid-column-start: 13;
     }
-    #Qe{
+
+    #Qe {
         grid-column-start: 12;
     }
-}
 
-/* 
-  ##Device = Laptops, Desktops
-  ##Screen = B/w 1025px to 1280px
-*/
-
-@media (min-width: 1025px) and (max-width: 1280px) {
-    #Kp{
-        grid-column: 1 / span 1
+    .familias-menu {
+        display: table;
+        list-style: none;
+        margin: 0 auto;
     }
-    #Cu{
-        grid-column: 1 / span 1;
+
+    .familias-menu li{
+        font-family: 'Montserrat', serif;
+        display: inline;
+        cursor: pointer;
+        overflow: hidden;
+        padding: 5px;
     }
-    #Ay{
-        grid-column-start: 14;
+
+    .familias-menu li a{
     }
-    #Ps{
-        grid-column-start: 13;
+
+    .tabla-periodica{
+        display: table;
+        list-style: none;
+        margin: 0 auto;
     }
-    #Qe{
-        grid-column-start: 12;
+
+    .tabla-periodica-grids {
+        display: grid;
+        grid-template-columns: repeat(16, 6.25%);
+        grid-template-rows: repeat(4, 5vw);
+        margin-left: auto;
+        margin-right: auto;
+        font-family: 'Montserrat', serif;
     }
 }
 
-/* 
-  ##Device = Tablets, Ipads (portrait)
-  ##Screen = B/w 768px to 1024px
-*/
+/*!* */
+/*  ##Device = Laptops, Desktops*/
+/*  ##Screen = B/w 1025px to 1280px*/
+/**!*/
 
-@media (min-width: 768px) and (max-width: 1024px) {
-    .periodic-table {
-    /*max-height: 300px;*/
-    grid-template-columns: repeat(16, 60px)  !important;
-    grid-template-rows: repeat(5, 70px) !important;
+/*@media (min-width: 1025px) and (max-width: 1280px) {*/
+/*    #Kp {*/
+/*        grid-column: 1 / span 1*/
+/*    }*/
 
-    margin-left: auto;
-    margin-right: auto;
-    font-family: 'Montserrat', serif;
-  }
-  .group {
-      height: 65px;
-  }
-  .familias-menu  {
-      font-family: 'Montserrat';
-      font-stretch: expanded;
-      font-size: 9px;
-  }
-  .familias-menu td {
-    padding: 2px;
-  }
+/*    #Cu {*/
+/*        grid-column: 1 / span 1;*/
+/*    }*/
 
-  .familias-menu :hover {
-      cursor: pointer;
-  }
+/*    #Ay {*/
+/*        grid-column-start: 14;*/
+/*    }*/
 
-  .atomic-mass {
-    display: block;
-    max-width: none;
-    font-size: 11px;
-  }
+/*    #Ps {*/
+/*        grid-column-start: 13;*/
+/*    }*/
 
-  .element-symbol {
-    font-weight: 300;
-    font-size: 14px;
-  }
+/*    #Qe {*/
+/*        grid-column-start: 12;*/
+/*    }*/
 
-  .atomic-number {
-    font-size: 9px;
-  }
+/*    .tabla-periodica-grids {*/
+/*        max-width: 1500px;*/
+/*        !*max-height: 300px;*!*/
+/*        display: grid;*/
+/*        grid-template-columns: repeat(16, 6.25%);*/
+/*        grid-template-rows: repeat(4, 5vw);*/
+/*        margin-left: auto;*/
+/*        margin-right: auto;*/
+/*        font-family: 'Montserrat', serif;*/
+/*    }*/
+/*}*/
 
-  .element-name {
-    font-size: 11px;
-  }
- 
-}
+/*!* */
+/*  ##Device = Tablets, Ipads (portrait)*/
+/*  ##Screen = B/w 768px to 1024px*/
+/**!*/
 
-/* 
-  ##Device = Tablets, Ipads (landscape)
-  ##Screen = B/w 768px to 1024px
-*/
+/*@media (min-width: 768px) and (max-width: 1024px) {*/
+/*    .tabla-periodica-grids {*/
+/*        !*max-height: 300px;*!*/
+/*        grid-template-columns: repeat(16, 60px) !important;*/
+/*        grid-template-rows: repeat(5, 70px) !important;*/
 
-@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
-   .tabla-periodica{
-     overflow: scroll;
-  }
+/*        margin-left: auto;*/
+/*        margin-right: auto;*/
+/*        font-family: 'Montserrat', serif;*/
+/*    }*/
 
-   .periodic-table {
-    /*max-height: 300px;*/
-    grid-template-columns: repeat(16, 60px)  !important;
-    grid-template-rows: repeat(5, 70px) !important;
+/*    .group {*/
+/*        height: 65px;*/
+/*    }*/
 
-    margin-left: auto;
-    margin-right: auto;
-    font-family: 'Montserrat', serif;
-  }
-  .group {
-      height: 65px;
-  }
-  .familias-menu  {
-      font-family: 'Montserrat';
-      font-stretch: expanded;
-      font-size: 9px;
-  }
-  .familias-menu td {
-    padding: 2px;
-  }
+/*    .atomic-mass {*/
+/*        display: block;*/
+/*        max-width: none;*/
+/*        font-size: 11px;*/
+/*    }*/
 
-  .familias-menu :hover {
-      cursor: pointer;
-  }
+/*    .element-symbol {*/
+/*        font-weight: 300;*/
+/*        font-size: 14px;*/
+/*    }*/
 
-  .atomic-mass {
-    display: block;
-    max-width: none;
-    font-size: 11px;
-  }
+/*    .atomic-number {*/
+/*        font-size: 9px;*/
+/*    }*/
 
-  .element-symbol {
-    font-weight: 300;
-    font-size: 18px;
-  }
+/*    .element-name {*/
+/*        font-size: 11px;*/
+/*    }*/
+/*}*/
 
-  .atomic-number {
-    font-size: 9px;
-  }
+/*!* */
+/*  ##Device = Tablets, Ipads (landscape)*/
+/*  ##Screen = B/w 768px to 1024px*/
+/**!*/
 
-  .element-name {
-    font-size: 11px;
-  }
+/*@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {*/
+/*    .tabla-periodica-grids {*/
+/*        !*max-height: 300px;*!*/
+/*        grid-template-columns: repeat(16, 60px) !important;*/
+/*        grid-template-rows: repeat(5, 70px) !important;*/
 
-}
+/*        margin-left: auto;*/
+/*        margin-right: auto;*/
+/*        font-family: 'Montserrat', serif;*/
+/*    }*/
 
-/* 
-  ##Device = Low Resolution Tablets, Mobiles (Landscape)
-  ##Screen = B/w 481px to 767px
-*/
+/*    .group {*/
+/*        height: 65px;*/
+/*    }*/
 
-@media (min-width: 481px) and (max-width: 767px) {
- .tabla-periodica{
-     overflow: scroll;
-  }
+/*    .atomic-mass {*/
+/*        display: block;*/
+/*        max-width: none;*/
+/*        font-size: 11px;*/
+/*    }*/
 
-   .periodic-table {
-    /*max-height: 300px;*/
-    grid-template-columns: repeat(16, 60px)  !important;
-    grid-template-rows: repeat(5, 70px) !important;
+/*    .element-symbol {*/
+/*        font-weight: 300;*/
+/*        font-size: 18px;*/
+/*    }*/
 
-    margin-left: auto;
-    margin-right: auto;
-    font-family: 'Montserrat', serif;
-  }
-  .group {
-      height: 65px;
-  }
+/*    .atomic-number {*/
+/*        font-size: 9px;*/
+/*    }*/
 
-  .familias-menu  {
-      font-family: 'Montserrat';
-      font-stretch: expanded;
-      font-size: 9px;
-  }
-  .familias-menu td {
-    padding: 2px;
-  }
+/*    .element-name {*/
+/*        font-size: 11px;*/
+/*    }*/
 
-  .familias-menu :hover {
-      cursor: pointer;
-  }
+/*}*/
 
-  .atomic-mass {
-    display: block;
-    max-width: none;
-    font-size: 11px;
-  }
+/*!* */
+/*  ##Device = Low Resolution Tablets, Mobiles (Landscape)*/
+/*  ##Screen = B/w 481px to 767px*/
+/**!*/
 
-  .element-symbol {
-    font-weight: 300;
-    font-size: 18px;
-  }
+/*@media (min-width: 481px) and (max-width: 767px) {*/
+/*    .tabla-periodica-grids {*/
+/*        !*max-height: 300px;*!*/
+/*        grid-template-columns: repeat(16, 60px) !important;*/
+/*        grid-template-rows: repeat(5, 70px) !important;*/
 
-  .atomic-number {
-    font-size: 9px;
-  }
+/*        margin-left: auto;*/
+/*        margin-right: auto;*/
+/*        font-family: 'Montserrat', serif;*/
+/*    }*/
 
-  .element-name {
-    font-size: 11px;
-  }
+/*    .group {*/
+/*        height: 65px;*/
+/*    }*/
 
-}
+/*    .atomic-mass {*/
+/*        display: block;*/
+/*        max-width: none;*/
+/*        font-size: 11px;*/
+/*    }*/
 
-/* 
-  ##Device = Most of the Smartphones Mobiles (Portrait)
-  ##Screen = B/w 320px to 479px
-*/
+/*    .element-symbol {*/
+/*        font-weight: 300;*/
+/*        font-size: 18px;*/
+/*    }*/
 
-@media (min-width: 320px) and (max-width: 480px) {
-  .tabla-periodica{
-     overflow: scroll;
-  }
+/*    .atomic-number {*/
+/*        font-size: 9px;*/
+/*    }*/
 
-  .periodic-table {
-    /*max-height: 300px;*/
-  grid-template-columns: repeat(4, 25%) !important;
-  grid-template-rows: repeat(25, 100px) !important;
+/*    .element-name {*/
+/*        font-size: 11px;*/
+/*    }*/
 
-    margin-left: auto;
-    margin-right: auto;
-    font-family: 'Montserrat', serif;
-  }
-  .group {
-      height: 65px;
-  }
+/*}*/
 
-  .familias-menu  {
-      font-family: 'Montserrat';
-      font-stretch: expanded;
-      font-size: 9px;
-  }
-  .familias-menu td {
-    padding: 2px;
-  }
+/*!* */
+/*  ##Device = Most of the Smartphones Mobiles (Portrait)*/
+/*  ##Screen = B/w 320px to 479px*/
+/**!*/
 
-  .familias-menu :hover {
-      cursor: pointer;
-  }
+/*@media (min-width: 320px) and (max-width: 480px) {*/
+/*    .tabla-periodica-grids {*/
+/*        !*max-height: 300px;*!*/
+/*        grid-template-columns: repeat(4, 25%) !important;*/
+/*        grid-template-rows: repeat(25, 100px) !important;*/
 
-  .atomic-mass {
-    display: block;
-    max-width: none;
-    font-size: 11px;
-  }
+/*        margin-left: auto;*/
+/*        margin-right: auto;*/
+/*        font-family: 'Montserrat', serif;*/
+/*    }*/
 
-  .element-symbol {
-    font-weight: 300;
-    font-size: 18px;
-  }
+/*    .group {*/
+/*        height: 65px;*/
+/*    }*/
 
-  .atomic-number {
-    font-size: 9px;
-  }
+/*    .atomic-mass {*/
+/*        display: block;*/
+/*        max-width: none;*/
+/*        font-size: 11px;*/
+/*    }*/
 
-  .element-name {
-    font-size: 11px;
-  }
+/*    .element-symbol {*/
+/*        font-weight: 300;*/
+/*        font-size: 18px;*/
+/*    }*/
 
-}
+/*    .atomic-number {*/
+/*        font-size: 9px;*/
+/*    }*/
+
+/*    .element-name {*/
+/*        font-size: 11px;*/
+/*    }*/
+
+/*}*/

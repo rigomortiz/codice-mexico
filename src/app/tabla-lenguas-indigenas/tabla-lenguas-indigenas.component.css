@@ -1,8 +1,9 @@
 @import url("./media-queries.css");
 
+/*
 .periodic-table {
     max-width: 1500px;
-    /*max-height: 300px;*/
+    //max-height: 300px;
     display: grid;
     grid-template-columns: repeat(16, 6.25%);
     grid-template-rows: repeat(4, 5vw);
@@ -10,7 +11,7 @@
     margin-right: auto;
     font-family: 'Montserrat', serif;
 }
-
+*/
 
 .bd-color {
     border-radius: 2px;
@@ -337,9 +338,10 @@ li.no-focus, li.no-focus .group {
     white-space: normal;
     margin-top: -5px;
 }
-
+/*
 .tabla-periodica{
     background-color: #f5f5f5;
     border-radius: 6px;
     padding: 10px;
 }
+ */
