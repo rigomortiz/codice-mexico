@@ -1,0 +1,92 @@
+/**FAMILIAS*/
+.null, .null.no-focus:hover {
+    display: block;
+    background-color: #ffffff;
+    color: #FFFFFF;
+}
+
+.algica, .algica.no-focus:hover {
+    border-color: transparent;
+    background-color: #ef7659;
+    color: #FFFFFF;
+}
+
+.seri, .seri.no-focus:hover {
+    border-color: transparent;
+    background-color: #9350ae;
+    color: #FFFFFF;
+}
+
+.cochimi-yumana, .cochimi-yumana.no-focus:hover {
+    border-color: transparent;
+    background-color: #c92031;
+    color: #ffffff;
+}
+
+.oto-mangue, .oto-mangue.no-focus:hover {
+    border-color: transparent;
+    background-color: #92d26b;
+    color: #ffffff;
+}
+
+.maya, .maya.no-focus:hover {
+    border-color: transparent;
+    background-color: #f8ca35;
+    color: #ffffff;
+}
+
+.yuto-nahua, .yuto-nahua.no-focus:hover {
+    border-color: transparent;
+    background-color: #64cab9;
+    color: #FFFFFF;
+}
+
+.huave, .huave.no-focus:hover {
+    border-color: transparent;
+    background-color: #389386;
+    color: #ffffff;
+}
+
+.mixe-zoque, .mixe-zoque.no-focus:hover {
+    border-color: transparent;
+    background-color: #e6457f;
+    color: #ffffff;
+}
+
+.teko, .teko.no-focus:hover {
+    border-color: transparent;
+    background-color: #3ab863;
+    color: #FFFFFF;
+}
+
+.totonaco-tepehua, .totonaco-tepehua.no-focus:hover {
+    border-color: transparent;
+    background-color: #915128;
+    color: #FFFFFF;
+}
+
+.chontal-oaxaca, .chontal-oaxaca.no-focus:hover {
+    border-color: transparent;
+    background-color: #ae1e94;
+    color: #FFFFFF;
+}
+
+.tarasca, .tarasca.no-focus:hover {
+    border-color: transparent;
+    background-color: #4c6eb5;
+    color: #FFFFFF;
+}
+
+.zapoteco, .zapoteco.no-focus:hover {
+    border-color: transparent;
+    background-image: -webkit-linear-gradient(135deg,  #51b54f 50%, #92d26b 50%) ;
+    /*background-color: #51b54f;*/
+    color: #ffffff;
+}
+
+.nahuas, .nahuas.no-focus:hover {
+    border-color: transparent;
+    /*background-color: #8cabde;*/
+    background-image: -webkit-linear-gradient(135deg,  #8cabde 50%, #64cab9 50%) ;
+    color: #515757;
+}

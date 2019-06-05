@@ -13,48 +13,57 @@
 </div>
 -->
 
-
-<div class="familias-menu">
-    <p class="title">Familias</p>
-    <ul>
-        <li>
-            <a class="button is-rounded is-small algica" id="familia-algica" (click)="onSelectFamilia('algica')" >ÁLGICA</a>
-        </li>
-        <li class="" id="familia-cochimi-yumana" (click)="onSelectFamilia('cochimi-yumana')">
-            <a class="button is-rounded is-small chontal-oaxaca">CHONTAL DE OAXACA</a>
-        </li>
-        <li class="">
-            <a class="button is-rounded is-small cochimi-yumana">COCHIMÍ-YUMANA</a>
-        </li>
-        <li class="">
-            <a class="button is-rounded is-small huave">HUAVE</a>
-        </li>
-        <li class="">
-            <a class="button is-rounded is-small maya">MAYA</a>
-        </li>
-        <li class="">
-            <a class="button is-rounded is-small mixe-zoque">MIXE-ZOQUE</a>
-        </li>
-        <li class="">
-            <a class="button is-rounded is-small oto-mangue">OTO-MANGUE</a>
-        </li>
-        <li class="">
-            <a class="button is-rounded is-small seri">SERI</a>
-        </li>
-        <li class="">
-            <a class="button is-rounded is-small tarasca">TARASCA</a>
-        </li>
-        <li class="">
-            <a class="button is-rounded is-small totonaco-tepehua">TOTONACO-TEPEHUA</a>
-        </li>
-        <li class="">
-            <a class="button is-rounded is-small yuto-nahua">YUTO-NAHUA</a>
-        </li>
-    </ul>
+<div class="columns">
+    <div class="column is-four-fifths familias-menu">
+        <p class="subtitle">Familias</p>
+        <ul>
+            <li id="familia-algica" (click)="onSelectFamilia('algica')">
+                <a class="button  is-small algica" >ÁLGICA</a>
+            </li>
+            <li id="familia-chontal-oaxaca" (click)="onSelectFamilia('chontal-oaxaca')">
+                <a class="button  is-small chontal-oaxaca">CHONTAL DE OAXACA</a>
+            </li>
+            <li id="familia-cochimi-yumana" (click)="onSelectFamilia('cochimi-yumana')">
+                <a class="button  is-small cochimi-yumana">COCHIMÍ-YUMANA</a>
+            </li>
+            <li id="familia-huave" (click)="onSelectFamilia('huave')">
+                <a class="button  is-small huave">HUAVE</a>
+            </li>
+            <li id="familia-maya" (click)="onSelectFamilia('maya')">
+                <a class="button  is-small maya">MAYA</a>
+            </li>
+            <li id="familia-mixe-zoque" (click)="onSelectFamilia('mixe-zoque')">
+                <a class="button  is-small mixe-zoque">MIXE-ZOQUE</a>
+            </li>
+            <li id="familia-oto-mangue" (click)="onSelectFamilia('oto-mangue')">
+                <a class="button  is-small oto-mangue">OTO-MANGUE</a>
+            </li>
+            <li id="familia-seri" (click)="onSelectFamilia('seri')">
+                <a class="button  is-small seri">SERI</a>
+            </li>
+            <li id="familia-tarasca" (click)="onSelectFamilia('tarasca')">
+                <a class="button  is-small tarasca">TARASCA</a>
+            </li>
+            <li id="familia-totonaco-tepehua" (click)="onSelectFamilia('totonaco-tepehua')">
+                <a class="button  is-small totonaco-tepehua">TOTONACO-TEPEHUA</a>
+            </li>
+            <li id="familia-yuto-nahua" (click)="onSelectFamilia('yuto-nahua')">
+                <a class="button  is-small is-success ">YUTO-NAHUA</a>
+            </li>
+        </ul>
+    </div>
+    <div class="column orden-menu">
+        <p class="subtitle">Ordenar</p>
+        <div class="select">
+            <select (change)="filterChanged($event.target.value)">
+                <option *ngFor="let type of filterTypes" [value]="type.value">{{type.display}}</option>
+            </select>
+        </div>
+    </div>
 </div>
 <div class="tabla-periodica">
     <ol *ngIf="lenguas" class="tabla-periodica-grids">
-        <li *ngFor="let lengua of lenguas" id="{{lengua[2]}}" (click)="onViewLengua(lengua)" class="group {{lengua[19]}}">
+        <li *ngFor="let lengua of lenguas" id="{{lengua[2]}}" (click)="onViewLengua(lengua)" class="group {{lengua[19]}}" style="{{lengua[20]}}">
             <p class="atomic-number">
                 {{lengua[0]}}
             </p>

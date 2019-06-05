@@ -3,7 +3,8 @@ import { LenguasDataService } from './lenguas-data.service';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 import { BreakpointObserver, BreakpointState } from '@angular/cdk/layout'
 import * as XLSX from 'xlsx';
-const POSICION_ID : number = 17;
+const POSICION : number = 17;
+const LENGUA : number = 1;
 
 import {
     SocialService
@@ -31,6 +32,7 @@ export class TablaLenguasIndigenasComponent implements OnInit, AfterViewInit {
     simbolo = "";
     descripcion = "";
     familia = "";
+    selectedFilter: string;
     public showContainer: boolean;
 
     shareObj = {
@@ -38,7 +40,15 @@ export class TablaLenguasIndigenasComponent implements OnInit, AfterViewInit {
         hashtag:"#FACEBOOK-SHARE-HASGTAG"
     };
 
-    constructor(private lenguasDataService: LenguasDataService, private sanitizer: DomSanitizer, public breakpointObserver: BreakpointObserver, private socialAuthService: SocialService) {
+    public filterTypes = [
+        {value:'familias', display:'Familias'},
+        {value:'lengua', display:'Lenguas'},
+    ];
+
+    constructor(private lenguasDataService: LenguasDataService, private sanitizer: DomSanitizer,
+                public breakpointObserver: BreakpointObserver, private socialAuthService: SocialService) {
+        this.selectedFilter = 'familia';
+
     }
 
     ngOnInit() {
@@ -54,7 +64,7 @@ export class TablaLenguasIndigenasComponent implements OnInit, AfterViewInit {
             const ws: XLSX.WorkSheet = workbook.Sheets['Hoja1'];
             this.lenguas = XLSX.utils.sheet_to_json(ws, {header: 1});
             this.lenguas.shift();
-            this.orderById();
+            this.orderByPosicion();
         })
         /*
            this.breakpointObserver
@@ -123,12 +133,32 @@ export class TablaLenguasIndigenasComponent implements OnInit, AfterViewInit {
     ngAfterViewInit(): void {
     }
 
-    public orderById() {
+    public orderByPosicion() {
         this.lenguas.sort((a, b) => {
-            if (a[POSICION_ID] < b[POSICION_ID]) return -1;
-            if (a[POSICION_ID] > b[POSICION_ID]) return 1;
+            if (a[POSICION] < b[POSICION]) return -1;
+            if (a[POSICION] > b[POSICION]) return 1;
+            return 0;
+        });
+        this.lenguas.forEach(value => {
+            value[20] = "";
+        })
+    }
+
+    public orderByLengua(){
+        this.lenguas.sort((a, b) => {
+            if (a[LENGUA] < b[LENGUA]) return -1;
+            if (a[LENGUA] > b[LENGUA]) return 1;
             return 0;
         });
     }
 
+    filterChanged(selectedValue:string){
+        if(selectedValue === 'familias'){
+            this.orderByPosicion();
+            console.log('value is ', selectedValue);
+        }else if(selectedValue === 'lengua'){
+            this.orderByLengua();
+            console.log('value is ', selectedValue);
+        }
+    }
 }

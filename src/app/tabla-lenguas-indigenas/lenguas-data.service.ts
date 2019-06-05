@@ -18,11 +18,9 @@ export class LenguasDataService {
     }
 
     public getExcel(): Observable<HttpResponse<any>> {
-       //return this.httpClient.get("https://uc7c904a5d0cbc4ffea1ae400f12.dl.dropboxusercontent.com/cd/0/get/AiIe7BW5zCTgAfTndstw47dfJzJdz6PhU0Y7jJv5TY1zzfEIzUUgLmxosZnnZl4MjymYa6I466FGWeoFj-n0Lk3w3ZJAwrXtq4HC0FfEwjGwpQ/file?dl=1#", {
        return this.httpClient.get("./assets/data/excel.xlsx", {
            responseType: 'arraybuffer',
            observe:'response'
        });
-        //utils.sheet_to_json()
     }
 }
