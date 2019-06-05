@@ -47,36 +47,25 @@ export class TablaLenguasIndigenasComponent implements OnInit, AfterViewInit {
 
     constructor(private lenguasDataService: LenguasDataService, private sanitizer: DomSanitizer,
                 public breakpointObserver: BreakpointObserver, private socialAuthService: SocialService) {
-        this.selectedFilter = 'familia';
 
-    }
-
-    ngOnInit() {
-        /*
-        this.lenguasDataService.getJSON().subscribe(resp =>{
-            console.log(resp.body);
-            this.lenguas = resp.body;
-        });
-       */
         this.lenguasDataService.getExcel().subscribe(resp => {
             let data = new Uint8Array(resp.body);
             let workbook = XLSX.read(data, {type: "array"});
             const ws: XLSX.WorkSheet = workbook.Sheets['Hoja1'];
             this.lenguas = XLSX.utils.sheet_to_json(ws, {header: 1});
             this.lenguas.shift();
-            this.orderByPosicion();
-        })
-        /*
-           this.breakpointObserver
-            .observe(['(max-width: 350px)'])
-            .subscribe((state: BreakpointState) => {
-              if (state.matches) {
-                this.showContainer = true;
-              } else {
-                this.showContainer = false;
-              }
+            this.lenguas.sort((a, b) => {
+                if (a[POSICION] < b[POSICION]) return -1;
+                if (a[POSICION] > b[POSICION]) return 1;
+                return 0;
             });
-        */
+        });
+
+        this.selectedFilter = 'familia';
+    }
+
+    ngOnInit() {
+
     }
 
     onSelectFamilia(f: string){
@@ -123,7 +112,6 @@ export class TablaLenguasIndigenasComponent implements OnInit, AfterViewInit {
         let c = document.getElementsByClassName("modal");
         c[0].classList.toggle("is-active");
         document.getElementsByTagName("html")[0].style.overflowY="auto";
-
     }
 
     public facebookSharing(shareObj: any){
@@ -131,34 +119,42 @@ export class TablaLenguasIndigenasComponent implements OnInit, AfterViewInit {
     }
 
     ngAfterViewInit(): void {
+
     }
 
     public orderByPosicion() {
+        Array.from(document.getElementsByClassName("group")).forEach(function(item) {
+            console.log(item);
+            item.classList.add("tabla-periodica");
+        });
+
         this.lenguas.sort((a, b) => {
             if (a[POSICION] < b[POSICION]) return -1;
             if (a[POSICION] > b[POSICION]) return 1;
             return 0;
         });
-        this.lenguas.forEach(value => {
-            value[20] = "";
-        })
+
     }
 
     public orderByLengua(){
+        Array.from(document.getElementsByClassName("group")).forEach(function(item) {
+            item.classList.remove("tabla-periodica");
+            console.log(item);
+        });
         this.lenguas.sort((a, b) => {
             if (a[LENGUA] < b[LENGUA]) return -1;
             if (a[LENGUA] > b[LENGUA]) return 1;
             return 0;
         });
+
+
     }
 
     filterChanged(selectedValue:string){
         if(selectedValue === 'familias'){
             this.orderByPosicion();
-            console.log('value is ', selectedValue);
         }else if(selectedValue === 'lengua'){
             this.orderByLengua();
-            console.log('value is ', selectedValue);
         }
     }
 }

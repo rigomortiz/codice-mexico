@@ -24,27 +24,26 @@
         margin: 5px;
     }
 
-    /*
-    #Kp {
+
+    #Kp.tabla-periodica {
         grid-column: 1 / span 1;
     }
 
-    #Cu {
+    #Cu.tabla-periodica {
         grid-column: 1 / span 1;
     }
 
-    #Ay {
+    #Ay.tabla-periodica {
         grid-column-start: 14;
     }
 
-    #Ps {
+    #Ps.tabla-periodica {
         grid-column-start: 13;
     }
 
-    #Qe {
+    #Qe.tabla-periodica {
         grid-column-start: 12;
     }
-    */
 
     .orden-menu .subtitle{
         margin-bottom: 10px !important;

@@ -63,7 +63,7 @@
 </div>
 <div class="tabla-periodica">
     <ol *ngIf="lenguas" class="tabla-periodica-grids">
-        <li *ngFor="let lengua of lenguas" id="{{lengua[2]}}" (click)="onViewLengua(lengua)" class="group {{lengua[19]}}" style="{{lengua[20]}}">
+        <li *ngFor="let lengua of lenguas" id="{{lengua[2]}}" (click)="onViewLengua(lengua)" class="group {{lengua[19]}} tabla-periodica">
             <p class="atomic-number">
                 {{lengua[0]}}
             </p>
