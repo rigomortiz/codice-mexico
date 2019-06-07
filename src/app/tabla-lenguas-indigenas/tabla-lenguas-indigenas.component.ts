@@ -30,27 +30,10 @@ import * as XLSX from 'xlsx';
  */
 const ID : number = 0;
 const LENGUA : number = 1;
-const CVE_LEN : number = 2;
-const FAMILIA : number = 3;
-const CVE_FAM : number = 4;
-const POBLACION : number = 5;
-const GRUPOS_POBLACION : number = 6;
-const RESIDENTES : number = 7;
-const NACIDOS : number = 8;
-const PROMEDIO_MIGRACION : number = 9;
-const MIGRACION : number = 10;
-const POBLACION_TOTAL : number = 11;
-const RURAL : number = 12;
-const GRUPOS_RURAL : number = 13;
-const TOTAL_POBLACION : number = 14;
-const IRE : number = 15;
-const GRADO : number = 16;
-const POSICION : number = 17;
-const POSICION_TABLA_PERIODICA : number = 18;
-const CLASE_HTML : number = 19;
 
-const ASC : number = 1;
-const DESC : number = -1;
+import {
+    SocialService
+} from "ng6-social-button";
 
 export class Lengua{
     id: string;
