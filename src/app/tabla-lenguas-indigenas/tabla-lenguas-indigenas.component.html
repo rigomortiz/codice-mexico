@@ -64,12 +64,9 @@
 <div class="tabla-periodica">
     <ol *ngIf="lenguas" class="tabla-periodica-grids">
         <li *ngFor="let lengua of lenguas" id="{{lengua[CVE_LEN]}}" (click)="onViewLengua(lengua)" class="group {{lengua[CLASE_HTML]}} tabla-periodica">
-            <b class="numero-id">
+            <p class="numero-id">
                 {{lengua[ID]}}
-            </b>
-            <b class="numero-poblacion">
-                {{lengua[POBLACION]}}
-            </b>
+            </p>
             <p class="element-symbol">
                 <b>{{lengua[CVE_LEN]}}</b>
             </p>
