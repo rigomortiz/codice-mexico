@@ -2,13 +2,55 @@ import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { LenguasDataService } from './lenguas-data.service';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 import { BreakpointObserver, BreakpointState } from '@angular/cdk/layout'
+import { SocialService } from "ng6-social-button";
 import * as XLSX from 'xlsx';
-const POSICION : number = 17;
-const LENGUA : number = 1;
 
-import {
-    SocialService
-} from "ng6-social-button";
+/**
+ * ID
+ * Lengua
+ * CVE-LEN
+ * FAMILIA
+ * CVE-FAM
+ * Población Indígena
+ * 5 grupos de población
+ * Porcentaje de población indígena que residía en otra entidad o país en marzo 2010, 2015
+ * Porcentaje de población indígena que nació en otra entidad
+ * Promedio de migración temporal y absoluta
+ * Migración
+ * Total de población
+ * Rural (<2500)
+ * Cinco grupos de población rural
+ * Total de población
+ * IRE (Índice de Remplazo Etnolingüístico)
+ * Grado
+ * Posición
+ * Posición en la tabla periódica
+ * clase html
+
+ */
+const ID : number = 0;
+const LENGUA : number = 1;
+const CVE_LEN : number = 2;
+const FAMILIA : number = 3;
+const CVE_FAM : number = 4;
+const POBLACION : number = 5;
+const GRUPOS_POBLACION : number = 6;
+const RESIDENTES : number = 7;
+const NACIDOS : number = 8;
+const PROMEDIO_MIGRACION : number = 9;
+const MIGRACION : number = 10;
+const POBLACION_TOTAL : number = 11;
+const RURAL : number = 12;
+const GRUPOS_RURAL : number = 13;
+const TOTAL_POBLACION : number = 14;
+const IRE : number = 15;
+const GRADO : number = 16;
+const POSICION : number = 17;
+const POSICION_TABLA_PERIODICA : number = 18;
+const CLASE_HTML : number = 19;
+
+const ASC : number = 1;
+const DESC : number = -1;
 
 export class Lengua{
     id: string;
@@ -26,24 +68,45 @@ export class Lengua{
 
 })
 export class TablaLenguasIndigenasComponent implements OnInit, AfterViewInit {
-    lenguas = [];
-    safeHtml: SafeHtml;
-    nombre = "";
-    simbolo = "";
-    descripcion = "";
-    familia = "";
-    selectedFilter: string;
+    private lenguas = [];
+    private safeHtml: SafeHtml;
+    private nombre = "";
+    private simbolo = "";
+    private descripcion = "";
+    private familia = "";
+    private selectedFilter: string;
     public showContainer: boolean;
 
-    shareObj = {
+    private shareObj = {
         href: "FACEBOOK-SHARE-LINK",
         hashtag:"#FACEBOOK-SHARE-HASGTAG"
     };
 
-    public filterTypes = [
+    private filterTypes = [
         {value:'familias', display:'Familias'},
         {value:'lengua', display:'Lenguas'},
+        {value:'poblacion', display:'Población'},
     ];
+    ID : number = 0;
+    LENGUA : number = 1;
+    CVE_LEN : number = 2;
+    FAMILIA : number = 3;
+    CVE_FAM : number = 4;
+    POBLACION : number = 5;
+    GRUPOS_POBLACION : number = 6;
+    RESIDENTES : number = 7;
+    NACIDOS : number = 8;
+    PROMEDIO_MIGRACION : number = 9;
+    MIGRACION : number = 10;
+    POBLACION_TOTAL : number = 11;
+    RURAL : number = 12;
+    GRUPOS_RURAL : number = 13;
+    TOTAL_POBLACION : number = 14;
+    IRE : number = 15;
+    GRADO : number = 16;
+    POSICION : number = 17;
+    POSICION_TABLA_PERIODICA : number = 18;
+    CLASE_HTML : number = 19;
 
     constructor(private lenguasDataService: LenguasDataService, private sanitizer: DomSanitizer,
                 public breakpointObserver: BreakpointObserver, private socialAuthService: SocialService) {
@@ -68,7 +131,11 @@ export class TablaLenguasIndigenasComponent implements OnInit, AfterViewInit {
 
     }
 
-    onSelectFamilia(f: string){
+    ngAfterViewInit(): void {
+
+    }
+
+    public onSelectFamilia(f: string){
         let c = document.getElementsByClassName(f);
 
         for(let i =0; i< c.length; i++){
@@ -98,7 +165,7 @@ export class TablaLenguasIndigenasComponent implements OnInit, AfterViewInit {
 
     }
 
-    onViewLengua(lengua){
+    public onViewLengua(lengua){
         let c = document.getElementsByClassName("modal");
         c[0].classList.toggle("is-active");
         document.getElementsByTagName("html")[0].style.overflowY="hidden";
@@ -108,7 +175,7 @@ export class TablaLenguasIndigenasComponent implements OnInit, AfterViewInit {
         //this.descripcion = this.sanitizer.bypassSecurityTrustHtml(lengua.descripcion).toString();
     }
 
-    onCloseLengua(){
+    public onCloseLengua(){
         let c = document.getElementsByClassName("modal");
         c[0].classList.toggle("is-active");
         document.getElementsByTagName("html")[0].style.overflowY="auto";
@@ -118,43 +185,64 @@ export class TablaLenguasIndigenasComponent implements OnInit, AfterViewInit {
         this.socialAuthService.facebookSharing(shareObj);
     }
 
-    ngAfterViewInit(): void {
-
-    }
-
     public orderByPosicion() {
-        Array.from(document.getElementsByClassName("group")).forEach(function(item) {
-            console.log(item);
-            item.classList.add("tabla-periodica");
-        });
-
-        this.lenguas.sort((a, b) => {
-            if (a[POSICION] < b[POSICION]) return -1;
-            if (a[POSICION] > b[POSICION]) return 1;
-            return 0;
-        });
-
+        TablaLenguasIndigenasComponent.typeTablaPeriodica();
+        this.orderLenguasBy(POSICION, ASC);
     }
 
     public orderByLengua(){
-        Array.from(document.getElementsByClassName("group")).forEach(function(item) {
-            item.classList.remove("tabla-periodica");
-            console.log(item);
-        });
-        this.lenguas.sort((a, b) => {
-            if (a[LENGUA] < b[LENGUA]) return -1;
-            if (a[LENGUA] > b[LENGUA]) return 1;
-            return 0;
-        });
-
-
+        TablaLenguasIndigenasComponent.typeGrid();
+        this.orderLenguasBy(LENGUA, ASC);
     }
 
-    filterChanged(selectedValue:string){
+    public orderByPoblacion(){
+        TablaLenguasIndigenasComponent.typeGrid();
+        this.orderLenguasBy(POBLACION, ASC);
+    }
+
+    private filterChanged(selectedValue:string){
         if(selectedValue === 'familias'){
             this.orderByPosicion();
         }else if(selectedValue === 'lengua'){
             this.orderByLengua();
+        }else if(selectedValue === 'poblacion'){
+            this.orderByPoblacion();
         }
+    }
+
+    private orderLenguasBy(pos: number, order: number){
+        if(pos === DESC){
+            this.lenguas.sort((a, b) => {
+                if (a[pos] < b[pos]) return 1;
+                if (a[pos] > b[pos]) return -1;
+                return 0;
+            });
+        }else{
+            this.lenguas.sort((a, b) => {
+                if (a[pos] < b[pos]) return -1;
+                if (a[pos] > b[pos]) return 1;
+                return 0;
+            });
+        }
+    }
+
+    private static typeTablaPeriodica(){
+        Array.from(document.getElementsByClassName("group")).forEach(function(item) {
+            item.classList.add("tabla-periodica");
+        });
+        Array.from(document.getElementsByClassName("grids")).forEach(function(item) {
+            item.classList.add("tabla-periodica-grids");
+            item.classList.remove("grids");
+        });
+    }
+
+    private static typeGrid(){
+        Array.from(document.getElementsByClassName("group")).forEach(function(item) {
+            item.classList.remove("tabla-periodica");
+        });
+        Array.from(document.getElementsByClassName("tabla-periodica-grids")).forEach(function(item) {
+            item.classList.remove("tabla-periodica-grids");
+            item.classList.add("grids");
+        });
     }
 }

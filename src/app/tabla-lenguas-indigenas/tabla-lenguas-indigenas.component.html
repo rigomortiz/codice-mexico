@@ -18,37 +18,37 @@
         <p class="subtitle">Familias</p>
         <ul>
             <li id="familia-algica" (click)="onSelectFamilia('algica')">
-                <a class="button  is-small algica" >ÁLGICA</a>
+                <a class="button is-small algica" >ÁLGICA</a>
             </li>
             <li id="familia-chontal-oaxaca" (click)="onSelectFamilia('chontal-oaxaca')">
-                <a class="button  is-small chontal-oaxaca">CHONTAL DE OAXACA</a>
+                <a class="button is-small chontal-oaxaca">CHONTAL DE OAXACA</a>
             </li>
             <li id="familia-cochimi-yumana" (click)="onSelectFamilia('cochimi-yumana')">
-                <a class="button  is-small cochimi-yumana">COCHIMÍ-YUMANA</a>
+                <a class="button is-small cochimi-yumana">COCHIMÍ-YUMANA</a>
             </li>
             <li id="familia-huave" (click)="onSelectFamilia('huave')">
-                <a class="button  is-small huave">HUAVE</a>
+                <a class="button is-small huave">HUAVE</a>
             </li>
             <li id="familia-maya" (click)="onSelectFamilia('maya')">
-                <a class="button  is-small maya">MAYA</a>
+                <a class="button is-small maya">MAYA</a>
             </li>
             <li id="familia-mixe-zoque" (click)="onSelectFamilia('mixe-zoque')">
-                <a class="button  is-small mixe-zoque">MIXE-ZOQUE</a>
+                <a class="button is-small mixe-zoque">MIXE-ZOQUE</a>
             </li>
             <li id="familia-oto-mangue" (click)="onSelectFamilia('oto-mangue')">
-                <a class="button  is-small oto-mangue">OTO-MANGUE</a>
+                <a class="button is-small oto-mangue">OTO-MANGUE</a>
             </li>
             <li id="familia-seri" (click)="onSelectFamilia('seri')">
-                <a class="button  is-small seri">SERI</a>
+                <a class="button is-small seri">SERI</a>
             </li>
             <li id="familia-tarasca" (click)="onSelectFamilia('tarasca')">
-                <a class="button  is-small tarasca">TARASCA</a>
+                <a class="button is-small tarasca">TARASCA</a>
             </li>
             <li id="familia-totonaco-tepehua" (click)="onSelectFamilia('totonaco-tepehua')">
-                <a class="button  is-small totonaco-tepehua">TOTONACO-TEPEHUA</a>
+                <a class="button is-small totonaco-tepehua">TOTONACO-TEPEHUA</a>
             </li>
             <li id="familia-yuto-nahua" (click)="onSelectFamilia('yuto-nahua')">
-                <a class="button  is-small is-success ">YUTO-NAHUA</a>
+                <a class="button is-small yuto-nahua ">YUTO-NAHUA</a>
             </li>
         </ul>
     </div>
@@ -63,15 +63,18 @@
 </div>
 <div class="tabla-periodica">
     <ol *ngIf="lenguas" class="tabla-periodica-grids">
-        <li *ngFor="let lengua of lenguas" id="{{lengua[2]}}" (click)="onViewLengua(lengua)" class="group {{lengua[19]}} tabla-periodica">
-            <p class="atomic-number">
-                {{lengua[0]}}
-            </p>
+        <li *ngFor="let lengua of lenguas" id="{{lengua[CVE_LEN]}}" (click)="onViewLengua(lengua)" class="group {{lengua[CLASE_HTML]}} tabla-periodica">
+            <b class="numero-id">
+                {{lengua[ID]}}
+            </b>
+            <b class="numero-poblacion">
+                {{lengua[POBLACION]}}
+            </b>
             <p class="element-symbol">
-                <b>{{lengua[2]}}</b>
+                <b>{{lengua[CVE_LEN]}}</b>
             </p>
             <p class="element-name">
-                {{lengua[1]}}
+                {{lengua[LENGUA]}}
             </p>
         </li>
     </ol>

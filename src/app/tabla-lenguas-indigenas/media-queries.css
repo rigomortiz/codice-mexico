@@ -54,12 +54,17 @@
         margin: 0 auto;
     }
 
-    .tabla-periodica-grids {
+    .grids{
         display: grid;
-        grid-template-columns: repeat(16, 6.25%);
+        grid-template-columns: repeat(10, 9%);
         margin-left: auto;
         margin-right: auto;
         font-family: 'Montserrat', serif;
+    }
+
+    .tabla-periodica-grids {
+        display: grid;
+        grid-template-columns: repeat(16, 6.25%);
     }
 
     .group {
@@ -87,7 +92,12 @@
         text-align: left;
     }
 
-    .atomic-number {
+    .numero-id {
+        font-size: 11px;
+        text-align: right;
+    }
+
+    .numero-poblacion {
         font-size: 11px;
         text-align: right;
     }
@@ -109,7 +119,7 @@
     }
 
     .element-name, .atomic-mass {
-        font-size: 12px;
+        font-size: 10px;
         flex: 1 1;
         align-items: flex-end;
         overflow: hidden;
@@ -189,7 +199,7 @@
 /*        font-size: 14px;*/
 /*    }*/
 
-/*    .atomic-number {*/
+/*    .numero-id {*/
 /*        font-size: 9px;*/
 /*    }*/
 
@@ -229,7 +239,7 @@
 /*        font-size: 18px;*/
 /*    }*/
 
-/*    .atomic-number {*/
+/*    .numero-id {*/
 /*        font-size: 9px;*/
 /*    }*/
 
@@ -270,7 +280,7 @@
 /*        font-size: 18px;*/
 /*    }*/
 
-/*    .atomic-number {*/
+/*    .numero-id {*/
 /*        font-size: 9px;*/
 /*    }*/
 
@@ -311,7 +321,7 @@
 /*        font-size: 18px;*/
 /*    }*/
 
-/*    .atomic-number {*/
+/*    .numero-id {*/
 /*        font-size: 9px;*/
 /*    }*/
 
