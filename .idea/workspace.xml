@@ -2,10 +2,112 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a6ac86b8-c743-4a31-85f1-2dabae4f7283" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/angular.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app.module.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/navbar/navbar.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/navbar/navbar.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/navbar/navbar.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/tabla-lenguas-indigenas/colors.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/tabla-lenguas-indigenas/helpers.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/tabla-lenguas-indigenas/lengua.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/tabla-lenguas-indigenas/lenguas-data.service.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/tabla-lenguas-indigenas/media-queries.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/tabla-lenguas-indigenas/tabla-lenguas-indigenas.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/tabla-lenguas-indigenas/tabla-lenguas-indigenas.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/tabla-lenguas-indigenas/tabla-lenguas-indigenas.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/data/data.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/data/excel.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/data/lenguas-mobile.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/data/lenguas.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/infografias-horizontal/Akateko.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/infografias-horizontal/Amuzgo.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/infografias-horizontal/Awakateko.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/infografias-horizontal/Ayapaneco.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/infografias-horizontal/Chatino.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/infografias-horizontal/Chichimeco-jonaz.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/infografias-horizontal/Chinanteco.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/infografias-horizontal/Chinateco.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/infografias-horizontal/Chocholteco.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/infografias-horizontal/Chontal de Oaxaca.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/infografias-horizontal/Chontal de Tabasco.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/infografias-horizontal/Chuj.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/infografias-horizontal/Ch’ol.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/infografias-horizontal/Cora.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/infografias-horizontal/Cucapá.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/infografias-horizontal/Cuicateco.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/infografias-horizontal/Guarijío.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/infografias-horizontal/Huasteco.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/infografias-horizontal/Huave.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/infografias-horizontal/Huichol.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/infografias-horizontal/Ixcalteco.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/infografias-horizontal/Ixil.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/infografias-horizontal/Jakalteco.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/infografias-horizontal/Kaqchikel.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/infografias-horizontal/Kickapoo.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/infografias-horizontal/Kiliwa.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/infografias-horizontal/Ku'hl.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/infografias-horizontal/Kumiai.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/infografias-horizontal/K’iche’.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/infografias-horizontal/Lacandón.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/infografias-horizontal/Mam.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/infografias-horizontal/Matlatzinca.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/infografias-horizontal/Maya.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/infografias-horizontal/Mayo.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/infografias-horizontal/Mazahua.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/infografias-horizontal/Mazateco.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/infografias-horizontal/Mexicaneros de Durango y Nayarit.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/infografias-horizontal/Mixe.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/infografias-horizontal/Mixteco.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/infografias-horizontal/Nahuas de Guerrero.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/infografias-horizontal/Nahuas de Hidalgo.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/infografias-horizontal/Nahuas de Jalisco.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/infografias-horizontal/Nahuas de Michoacán.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/infografias-horizontal/Nahuas de Milpa Alta.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/infografias-horizontal/Nahuas de Morelos.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/infografias-horizontal/Nahuas de Puebla.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/infografias-horizontal/Nahuas de San Luis Potosí.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/infografias-horizontal/Nahuas de Tlaxcala.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/infografias-horizontal/Nahuas de Veracruz.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/infografias-horizontal/Nahuas del Estado de México.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/infografias-horizontal/Oluteco.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/infografias-horizontal/Otomí.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/infografias-horizontal/Paipai.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/infografias-horizontal/Pame.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/infografias-horizontal/Pima.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/infografias-horizontal/Popoloca.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/infografias-horizontal/Popoluca de la Sierra.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/infografias-horizontal/Pápago.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/infografias-horizontal/Qato’k.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/infografias-horizontal/Q’anjob’al.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/infografias-horizontal/Q’eqchi’.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/infografias-horizontal/Sayulteco.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/infografias-horizontal/Seri.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/infografias-horizontal/Tarahumara.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/infografias-horizontal/Tepehua.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/infografias-horizontal/Tepehuano del norte.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/infografias-horizontal/Tepehuano del sur.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/infografias-horizontal/Texistepequeño.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/infografias-horizontal/Tlahuica.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/infografias-horizontal/Tlapaneco.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/infografias-horizontal/Tojolabal.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/infografias-horizontal/Totonaco.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/infografias-horizontal/Triqui.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/infografias-horizontal/Tseltal.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/infografias-horizontal/Tsotsil.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/infografias-horizontal/Yaqui.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/infografias-horizontal/Zopoteco Itsmo.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/infografias-horizontal/Zopoteco Sierra Norte.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/infografias-horizontal/Zopoteco Valle Centrales.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/infografias-horizontal/Zoque.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/inpi.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/polyfills.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tsconfig.json" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/dist/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -53,7 +155,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="11">
@@ -62,7 +164,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/package-lock.json">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
@@ -81,44 +183,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="120">
               <caret line="8" selection-start-line="8" selection-end-line="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/tabla-lenguas-indigenas/lengua.ts">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/app.component.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="13" selection-start-line="13" selection-end-line="13" />
-              <folding>
-                <element signature="n#style#0;n#h1#0;n#div#0;n#div#0;n#section#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/tabla-lenguas-indigenas/tabla-lenguas-indigenas.component.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2745">
-              <caret line="188" column="60" selection-start-line="188" selection-start-column="60" selection-end-line="188" selection-end-column="60" />
-              <folding>
-                <element signature="e#0#65#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/app.component.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" selection-start-line="3" selection-end-line="3" />
             </state>
           </provider>
         </entry>
@@ -238,11 +302,6 @@
               <item name="tabla-lenguas-indigenas-angular" type="b2602c69:ProjectViewProjectNode" />
               <item name="tabla-lenguas-indigenas-angular" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="tabla-lenguas-indigenas-angular" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tabla-lenguas-indigenas-angular" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -254,6 +313,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="add_unversioned_files" value="$PROJECT_DIR$/package-lock.json" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
@@ -405,7 +465,7 @@
       <workItem from="1559698442766" duration="647000" />
       <workItem from="1559699137463" duration="17888000" />
       <workItem from="1559912494878" duration="1425000" />
-      <workItem from="1559956710855" duration="1420000" />
+      <workItem from="1559956710855" duration="1685000" />
     </task>
     <task id="LOCAL-00001" summary="add excel">
       <created>1559585318713</created>
@@ -442,11 +502,18 @@
       <option name="project" value="LOCAL" />
       <updated>1559912783407</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="refactor code">
+      <created>1559963308327</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1559963308327</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="67968000" />
+    <option name="totallyTimeSpent" value="68233000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -458,7 +525,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="25" width="1368" height="744" extended-state="6" />
+    <frame x="-1" y="25" width="1368" height="744" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21223564" />
@@ -551,7 +618,8 @@
     <MESSAGE value="add excel" />
     <MESSAGE value="add selection de visualización" />
     <MESSAGE value="Deploy" />
-    <option name="LAST_COMMIT_MESSAGE" value="Deploy" />
+    <MESSAGE value="refactor code" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor code" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/assets/data/data.json">
@@ -691,9 +759,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/package-lock.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -714,6 +779,9 @@
           <caret line="12" column="46" selection-start-line="12" selection-start-column="46" selection-end-line="12" selection-end-column="46" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package-lock.json">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
   <component name="masterDetails">
