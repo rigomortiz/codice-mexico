@@ -10,3 +10,10 @@ npm-debug.log
 # Docker
 Dockerfile
 docker-compose.yml
+.idea/encodings.xml
+package-lock.json
+src/
+angular.json
+.idea/
+
+
