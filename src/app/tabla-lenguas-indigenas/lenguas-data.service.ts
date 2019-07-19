@@ -1,26 +1,26 @@
-import { Injectable } from '@angular/core';
-import { HttpClient, HttpResponse } from '@angular/common/http'; 
-import { Observable, throwError } from 'rxjs';
+import {Injectable} from '@angular/core';
+import {HttpClient, HttpResponse} from '@angular/common/http';
+import {Observable, throwError} from 'rxjs';
 
 @Injectable({
-  providedIn: 'root'
+    providedIn: 'root'
 })
 export class LenguasDataService {
     file: String = "";
 
-   constructor(private httpClient: HttpClient) {
-   }
+    constructor(private httpClient: HttpClient) {
+    }
 
     public getJSON(): Observable<HttpResponse<any>> {
-        return this.httpClient.get<any>("./assets/data/lenguas.json",  {
+        return this.httpClient.get<any>("./assets/data/lenguas.json", {
             observe: 'response'
         });
     }
 
     public getExcel(): Observable<HttpResponse<any>> {
-       return this.httpClient.get("./assets/data/excel.xlsx", {
-           responseType: 'arraybuffer',
-           observe:'response'
-       });
+        return this.httpClient.get("./assets/data/excel.xlsx", {
+            responseType: 'arraybuffer',
+            observe: 'response'
+        });
     }
 }

@@ -9,59 +9,108 @@
         margin: 0 auto;
     }
 
-    .familias-menu .subtitle{
+    .familias-menu .subtitle {
         margin-bottom: 10px !important;
     }
 
-    .familias-menu li{
+    .familias-menu li {
         font-family: 'Montserrat', serif;
         display: inline;
         cursor: pointer;
         overflow: hidden;
     }
 
-    .familias-menu li a{
+    .familias-menu li a {
         margin: 5px;
     }
 
 
-    #Kp.tabla-periodica {
+    #Kp.periodic-table {
         grid-column: 1 / span 1;
     }
 
-    #Cu.tabla-periodica {
+    #Cu.periodic-table {
         grid-column: 1 / span 1;
     }
 
-    #Ay.tabla-periodica {
+    #Ay.periodic-table {
         grid-column-start: 14;
     }
 
-    #Ps.tabla-periodica {
+    #Ps.periodic-table {
         grid-column-start: 13;
     }
 
-    #Qe.tabla-periodica {
+    #Qe.periodic-table {
         grid-column-start: 12;
     }
 
-    .orden-menu .subtitle{
+    .orden-menu .subtitle {
         margin-bottom: 10px !important;
     }
 
-    .tabla-periodica{
+    .vertical-grids {
+        display: grid;
+    }
+
+    .vertical-element {
+        padding: 10px 0;
+        height: 4.6vw;
+        overflow: hidden;
+        margin: 3px;
+        z-index: auto;
+    }
+
+    .vertical-element p.right{
+        text-align: right;
+    }
+
+    .vertical-element p.left{
+        text-align: left;
+    }
+
+    .horizontal-grids {
+        margin: 0 auto;
+    }
+
+    .horizontal-list {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .horizontal-list li{
+        display: block;
+        float: left;
+        width: 6.25%;
+    }
+
+    .periodic-table {
         list-style: none;
         margin: 0 auto;
     }
 
-    .grids{
+    .periodic-table-columns {
+        display: grid;
+        grid-template-columns: 3% 94% 3%;
+        grid-template-rows: auto;
+    }
+
+    .periodic-table-columns-item {
+    }
+
+    .grids {
         display: grid;
         grid-template-columns: repeat(16, 6.25%);
     }
 
-    .tabla-periodica-grids {
+    .periodic-table-grids {
         display: grid;
         grid-template-columns: repeat(16, 6.25%);
+    }
+
+    .is-small-button{
+        font-size: 9px;
     }
 
     .group {
@@ -75,7 +124,7 @@
         overflow: hidden;
         margin: 3px;
         /*transition: box-shadow .1s;*/
-        box-shadow: 0 4px 4px 0 rgba(0,0,0,.1), inset 0 0 0 2px rgba(0,0,0,.1);
+        box-shadow: 0 4px 4px 0 rgba(0, 0, 0, .1), inset 0 0 0 2px rgba(0, 0, 0, .1);
         /* transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
          -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);*/
         z-index: auto;
@@ -89,7 +138,7 @@
         text-align: left;
     }
 
-    .numero-id {
+    .number-id {
         font-size: 11px;
         text-align: right;
     }
@@ -153,7 +202,7 @@
 /*        grid-column-start: 12;*/
 /*    }*/
 
-/*    .tabla-periodica-grids {*/
+/*    .periodic-table-grids {*/
 /*        max-width: 1500px;*/
 /*        !*max-height: 300px;*!*/
 /*        display: grid;*/
@@ -171,7 +220,7 @@
 /**!*/
 
 /*@media (min-width: 768px) and (max-width: 1024px) {*/
-/*    .tabla-periodica-grids {*/
+/*    .periodic-table-grids {*/
 /*        !*max-height: 300px;*!*/
 /*        grid-template-columns: repeat(16, 60px) !important;*/
 /*        grid-template-rows: repeat(5, 70px) !important;*/
@@ -196,7 +245,7 @@
 /*        font-size: 14px;*/
 /*    }*/
 
-/*    .numero-id {*/
+/*    .number-id {*/
 /*        font-size: 9px;*/
 /*    }*/
 
@@ -211,7 +260,7 @@
 /**!*/
 
 /*@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {*/
-/*    .tabla-periodica-grids {*/
+/*    .periodic-table-grids {*/
 /*        !*max-height: 300px;*!*/
 /*        grid-template-columns: repeat(16, 60px) !important;*/
 /*        grid-template-rows: repeat(5, 70px) !important;*/
@@ -236,7 +285,7 @@
 /*        font-size: 18px;*/
 /*    }*/
 
-/*    .numero-id {*/
+/*    .number-id {*/
 /*        font-size: 9px;*/
 /*    }*/
 
@@ -252,7 +301,7 @@
 /**!*/
 
 /*@media (min-width: 481px) and (max-width: 767px) {*/
-/*    .tabla-periodica-grids {*/
+/*    .periodic-table-grids {*/
 /*        !*max-height: 300px;*!*/
 /*        grid-template-columns: repeat(16, 60px) !important;*/
 /*        grid-template-rows: repeat(5, 70px) !important;*/
@@ -277,7 +326,7 @@
 /*        font-size: 18px;*/
 /*    }*/
 
-/*    .numero-id {*/
+/*    .number-id {*/
 /*        font-size: 9px;*/
 /*    }*/
 
@@ -293,7 +342,7 @@
 /**!*/
 
 /*@media (min-width: 320px) and (max-width: 480px) {*/
-/*    .tabla-periodica-grids {*/
+/*    .periodic-table-grids {*/
 /*        !*max-height: 300px;*!*/
 /*        grid-template-columns: repeat(4, 25%) !important;*/
 /*        grid-template-rows: repeat(25, 100px) !important;*/
@@ -318,7 +367,7 @@
 /*        font-size: 18px;*/
 /*    }*/
 
-/*    .numero-id {*/
+/*    .number-id {*/
 /*        font-size: 9px;*/
 /*    }*/
 

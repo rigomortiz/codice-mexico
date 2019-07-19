@@ -3,7 +3,7 @@
 
 .bd-color {
     border-radius: 2px;
-    box-shadow: 0 2px 3px 0 rgba(0,0,0,.1), inset 0 0 0 1px rgba(0,0,0,.1);
+    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, .1), inset 0 0 0 1px rgba(0, 0, 0, .1);
     display: inline-block;
     float: left;
     height: 16px;
@@ -15,8 +15,8 @@
     background-color: #CCCCCC !important;
     color: #969696 !important;
     pointer-events: none !important;
-    box-shadow: 0 0px 0px 0 rgba(0,0,0,.1), inset 0 0 0 0px rgba(0,0,0,.1) !important;
-    background-image: -webkit-linear-gradient(135deg,  #CCCCCC 50%, #CCCCCC 50%) !important;
+    box-shadow: 0 0px 0px 0 rgba(0, 0, 0, .1), inset 0 0 0 0px rgba(0, 0, 0, .1) !important;
+    background-image: -webkit-linear-gradient(135deg, #CCCCCC 50%, #CCCCCC 50%) !important;
 }
 
 .hide:hover {

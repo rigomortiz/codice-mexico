@@ -1,4 +1,4 @@
-@media(max-width: 1700px) {
+@media (max-width: 1700px) {
     #seri {
         grid-column-start: 16;
     }
@@ -18,6 +18,7 @@
     #nahuas {
         grid-column-start: 3;
     }
+
     .atomic-mass {
         max-width: none;
         font-size: 9px;
@@ -37,81 +38,7 @@
 
 }
 
-@media(max-width: 1500px) {
-  #seri {
-    grid-column-start: 16;
-  }
-
-    #oto-mangue, #maya {
-        grid-column-start: 11;
-    }
-
-    #cerium, #thorium {
-        grid-column-start: 3;
-    }
-
-    #zapoteco {
-        grid-column-start: 14;
-    }
-
-    #nahuas {
-        grid-column-start: 3;
-    }
-    .atomic-mass {
-        display: none;
-    }
-
-    .group {
-        width: auto;
-        /* min-height: 85px; */
-    }    
-
-    .atomic-orbital-shells {
-        display: none;
-    }
-
-        .categorias div {
-            font-size: 0px;
-            padding: 7px 20px;
-            position: relative;
-        }
-
-        .characteristic {
-            max-width: 420px;
-            top: 20px;
-        }
-
-        .characteristic .non-metals {
-            max-width: 125px;
-            flex: 0 30%;
-        }
-
-        .characteristic .metals {
-            flex: 0 60%;
-            max-width: 252px;
-        }
-
-        .characteristic div span {
-            font-size: 12px;
-        }
-
-    .endangered {
-        font-size: 15px;
-    }
-
-    .endangered div[class*="threat"] [class*="fa"]:not(.fa-xs) {
-        font-size: 30px;
-    }
-
-    .endangered div[class*="threat"] sup {
-        left: 25px;
-        top: -5px;
-        font-size: 10px;
-    }
-
-}
-
-@media(max-width: 1300px) {
+@media (max-width: 1500px) {
     #seri {
         grid-column-start: 16;
     }
@@ -131,6 +58,82 @@
     #nahuas {
         grid-column-start: 3;
     }
+
+    .atomic-mass {
+        display: none;
+    }
+
+    .group {
+        width: auto;
+        /* min-height: 85px; */
+    }
+
+    .atomic-orbital-shells {
+        display: none;
+    }
+
+    .categorias div {
+        font-size: 0px;
+        padding: 7px 20px;
+        position: relative;
+    }
+
+    .characteristic {
+        max-width: 420px;
+        top: 20px;
+    }
+
+    .characteristic .non-metals {
+        max-width: 125px;
+        flex: 0 30%;
+    }
+
+    .characteristic .metals {
+        flex: 0 60%;
+        max-width: 252px;
+    }
+
+    .characteristic div span {
+        font-size: 12px;
+    }
+
+    .endangered {
+        font-size: 15px;
+    }
+
+    .endangered div[class*="threat"] [class*="fa"]:not(.fa-xs) {
+        font-size: 30px;
+    }
+
+    .endangered div[class*="threat"] sup {
+        left: 25px;
+        top: -5px;
+        font-size: 10px;
+    }
+
+}
+
+@media (max-width: 1300px) {
+    #seri {
+        grid-column-start: 16;
+    }
+
+    #oto-mangue, #maya {
+        grid-column-start: 11;
+    }
+
+    #cerium, #thorium {
+        grid-column-start: 3;
+    }
+
+    #zapoteco {
+        grid-column-start: 14;
+    }
+
+    #nahuas {
+        grid-column-start: 3;
+    }
+
     .atomic-number {
         font-size: 9px;
     }
@@ -152,7 +155,7 @@
         font-weight: 100;
     }
 
-    .element-symbol{
+    .element-symbol {
         font-size: 19px;
     }
 
@@ -181,7 +184,7 @@
 
 }
 
-@media(max-width: 1024px) {
+@media (max-width: 1024px) {
     #seri {
         grid-column-start: 16;
     }
@@ -201,12 +204,13 @@
     #nahuas {
         grid-column-start: 3;
     }
-    .categorias{
+
+    .categorias {
         display: flex;
         width: 100%;
     }
 
-    .categorias > div{
+    .categorias > div {
         width: 20%;
     }
 
@@ -256,7 +260,7 @@
 
 }
 
-@media(max-width: 980px) {
+@media (max-width: 980px) {
     #seri {
         grid-column-start: 16;
     }
@@ -276,12 +280,14 @@
     #nahuas {
         grid-column-start: 3;
     }
+
     element-name {
         font-size: 10px;
         line-height: 1em;
 
     }
-    .categorias{
+
+    .categorias {
         font-size: 11px;
     }
 
@@ -646,7 +652,7 @@
     font-size: .9vw;
     font-weight: lighter;
 }*/
-@media(max-width: 350px) {
+@media (max-width: 350px) {
     #seri {
         grid-column-start: 1;
     }
@@ -666,126 +672,132 @@
     #nahuas {
         grid-column-start: 1;
     }
-  .periodic-table {
-    /*max-height: 300px;*/
-    grid-template-columns: repeat(4, 25%) !important;
-    grid-template-rows: repeat(25, 100px) !important;
 
-    margin-left: auto;
-    margin-right: auto;
-    font-family: 'Montserrat', serif;
-  }
-  .group {
-      height: 90px;
-  }
+    .periodic-table {
+        /*max-height: 300px;*/
+        grid-template-columns: repeat(4, 25%) !important;
+        grid-template-rows: repeat(25, 100px) !important;
 
-  .familias-menu  {
-      font-family: 'Montserrat';
-      font-stretch: expanded;
-      font-size: 9px;
-  }
-  .familias-menu td {
-    padding: 2px;
-  }
-
-  .familias-menu :hover {
-      cursor: pointer;
-  }
-
-  .atomic-mass {
-    display: block;
-    max-width: none;
-    font-size: 11px;
-  }
-
-  .element-symbol {
-    font-weight: 300;
-    font-size: 20px;
-  }
-
-  .atomic-number {
-    font-size: 12px;
-  }
-
-  .element-name {
-    font-size: 11px;
-  }
-
-  .atomic-orbital-shells {
-    display: block;
-    font-size: 11px;
-  }
-
-}
-
-@media(max-width: 400px) {
-    #seri {
-        grid-column-start: 1;
+        margin-left: auto;
+        margin-right: auto;
+        font-family: 'Montserrat', serif;
     }
 
-    #oto-mangue, #maya {
-        grid-column-start: 1;
+    .group {
+        height: 90px;
     }
 
-    #cerium, #thorium {
-        grid-column-start: 1;
+    .familias-menu {
+        font-family: 'Montserrat';
+        font-stretch: expanded;
+        font-size: 9px;
     }
 
-    #zapoteco {
-        grid-column-start: 1;
-    }
-
-    #nahuas {
-        grid-column-start: 1;
-    }
-  .periodic-table {
-    /*max-height: 300px;*/
-    grid-template-columns: repeat(4, 25%) !important;
-    grid-template-rows: repeat(25, 100px) !important;
-
-    margin-left: auto;
-    margin-right: auto;
-    font-family: 'Montserrat', serif;
-  }
-  .group {
-      height: 90px;
-  }
-
-  .familias-menu  {
-    font-family: 'Montserrat';
-    font-stretch: expanded;
-    font-size: 9px;
-    }
     .familias-menu td {
-      padding: 2px;
+        padding: 2px;
     }
 
     .familias-menu :hover {
-         cursor: pointer;
+        cursor: pointer;
     }
 
     .atomic-mass {
-      display: block;
-      max-width: none;
-      font-size: 11px;
+        display: block;
+        max-width: none;
+        font-size: 11px;
     }
 
     .element-symbol {
-      font-weight: 300;
-      font-size: 20px;
+        font-weight: 300;
+        font-size: 20px;
     }
 
     .atomic-number {
-      font-size: 12px;
+        font-size: 12px;
     }
 
     .element-name {
-      font-size: 11px;
+        font-size: 11px;
     }
 
     .atomic-orbital-shells {
-      display: block;
-      font-size: 11px;
+        display: block;
+        font-size: 11px;
+    }
+
+}
+
+@media (max-width: 400px) {
+    #seri {
+        grid-column-start: 1;
+    }
+
+    #oto-mangue, #maya {
+        grid-column-start: 1;
+    }
+
+    #cerium, #thorium {
+        grid-column-start: 1;
+    }
+
+    #zapoteco {
+        grid-column-start: 1;
+    }
+
+    #nahuas {
+        grid-column-start: 1;
+    }
+
+    .periodic-table {
+        /*max-height: 300px;*/
+        grid-template-columns: repeat(4, 25%) !important;
+        grid-template-rows: repeat(25, 100px) !important;
+
+        margin-left: auto;
+        margin-right: auto;
+        font-family: 'Montserrat', serif;
+    }
+
+    .group {
+        height: 90px;
+    }
+
+    .familias-menu {
+        font-family: 'Montserrat';
+        font-stretch: expanded;
+        font-size: 9px;
+    }
+
+    .familias-menu td {
+        padding: 2px;
+    }
+
+    .familias-menu :hover {
+        cursor: pointer;
+    }
+
+    .atomic-mass {
+        display: block;
+        max-width: none;
+        font-size: 11px;
+    }
+
+    .element-symbol {
+        font-weight: 300;
+        font-size: 20px;
+    }
+
+    .atomic-number {
+        font-size: 12px;
+    }
+
+    .element-name {
+        font-size: 11px;
+    }
+
+    .atomic-orbital-shells {
+        display: block;
+        font-size: 11px;
     }
 
 }

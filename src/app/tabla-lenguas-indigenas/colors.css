@@ -79,7 +79,7 @@
 
 .zapoteco, .zapoteco.no-focus:hover {
     border-color: transparent;
-    background-image: -webkit-linear-gradient(135deg,  #51b54f 50%, #92d26b 50%) ;
+    background-image: -webkit-linear-gradient(135deg, #51b54f 50%, #92d26b 50%);
     /*background-color: #51b54f;*/
     color: #ffffff;
 }
@@ -87,6 +87,6 @@
 .nahuas, .nahuas.no-focus:hover {
     border-color: transparent;
     /*background-color: #8cabde;*/
-    background-image: -webkit-linear-gradient(135deg,  #8cabde 50%, #64cab9 50%) ;
+    background-image: -webkit-linear-gradient(135deg, #8cabde 50%, #64cab9 50%);
     color: #515757;
 }

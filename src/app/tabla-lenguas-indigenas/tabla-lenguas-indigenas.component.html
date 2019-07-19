@@ -12,7 +12,7 @@
 
 </div>
 -->
-
+<!--
 <div class="columns">
     <div class="column is-four-fifths familias-menu">
         <p class="subtitle">Familias</p>
@@ -61,20 +61,151 @@
         </div>
     </div>
 </div>
-<div class="tabla-periodica">
-    <ol *ngIf="lenguas" class="tabla-periodica-grids">
-        <li *ngFor="let lengua of lenguas" id="{{lengua[CVE_LEN]}}" (click)="onViewLengua(lengua)" class="group {{lengua[CLASE_HTML]}} tabla-periodica">
-            <p class="numero-id">
-                {{lengua[ID]}}
-            </p>
-            <p class="element-symbol">
-                <b>{{lengua[CVE_LEN]}}</b>
-            </p>
-            <p class="element-name">
-                {{lengua[LENGUA]}}
-            </p>
+-->
+
+<div class="tabs is-centered is-boxed">
+    <ul>
+        <li class="is-active">
+            <a><span>Familias</span></a>
         </li>
-    </ol>
+        <li>
+            <a><span>Población Indígena</span></a>
+        </li>
+        <li>
+            <a><span>Migración</span></a>
+        </li>
+        <li>
+            <a><span>Población Rural</span></a>
+        </li>
+        <li>
+            <a><span>Índice de Remplazo Etnolingüístico (IRE)</span></a>
+        </li>
+    </ul>
+</div>
+
+<div class="column is-four-fifths familias-menu">
+    <ul>
+        <li id="familia-algica" (click)="onSelectFamilia('algica')">
+            <a class="button is-small algica">ÁLGICA</a>
+        </li>
+        <li id="familia-chontal-oaxaca" (click)="onSelectFamilia('chontal-oaxaca')">
+            <a class="button is-small chontal-oaxaca">CHONTAL DE OAXACA</a>
+        </li>
+        <li id="familia-cochimi-yumana" (click)="onSelectFamilia('cochimi-yumana')">
+            <a class="button is-small cochimi-yumana">COCHIMÍ-YUMANA</a>
+        </li>
+        <li id="familia-huave" (click)="onSelectFamilia('huave')">
+            <a class="button is-small huave">HUAVE</a>
+        </li>
+        <li id="familia-maya" (click)="onSelectFamilia('maya')">
+            <a class="button is-small maya">MAYA</a>
+        </li>
+        <li id="familia-mixe-zoque" (click)="onSelectFamilia('mixe-zoque')">
+            <a class="button is-small mixe-zoque">MIXE-ZOQUE</a>
+        </li>
+        <li id="familia-oto-mangue" (click)="onSelectFamilia('oto-mangue')">
+            <a class="button is-small oto-mangue">OTO-MANGUE</a>
+        </li>
+        <li id="familia-seri" (click)="onSelectFamilia('seri')">
+            <a class="button is-small seri">SERI</a>
+        </li>
+        <li id="familia-tarasca" (click)="onSelectFamilia('tarasca')">
+            <a class="button is-small tarasca">TARASCA</a>
+        </li>
+        <li id="familia-totonaco-tepehua" (click)="onSelectFamilia('totonaco-tepehua')">
+            <a class="button is-small totonaco-tepehua">TOTONACO-TEPEHUA</a>
+        </li>
+        <li id="familia-yuto-nahua" (click)="onSelectFamilia('yuto-nahua')">
+            <a class="button is-small yuto-nahua ">YUTO-NAHUA</a>
+        </li>
+    </ul>
+</div>
+
+<div class="columns">
+    <div class="column is-6" style="float: right;">
+        <table class="table">
+            <tbody>
+            <tr>
+                <td>
+                    <a class="button is-small-button algica">
+                        <span class="icon is-small">
+                          <i class="fas fa-check"></i>
+                        </span>
+                    </a>
+                    ÁLGICA
+                </td>
+                <td><label class="checkbox">OTO-MANGUE<input type="checkbox"></label></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="column is-6" style="float: left;">
+
+    </div>
+</div>
+<div class="periodic-table-columns">
+    <div class="periodic-table-columns-item">
+        <ol class="vertical-grids">
+            <li class="vertical-element"><p class="right">1</p></li>
+            <li class="vertical-element"><p class="right">2</p></li>
+            <li class="vertical-element"><p class="right">3</p></li>
+            <li class="vertical-element"><p class="right">4</p></li>
+            <li class="vertical-element"><p class="right">5</p></li>
+            <li class="vertical-element"><p class="right">6</p></li>
+            <li class="vertical-element"><p class="right">7</p></li>
+        </ol>
+    </div>
+    <div class="periodic-table-columns-item">
+        <div>
+            <div>
+                <ol *ngIf="languages" class="periodic-table-grids">
+                    <li *ngFor="let language of languages" id="{{language[CVE_LEN]}}" (click)="onViewLanguage(language)"
+                        class="group {{language[CLASS_HTML]}} periodic-table">
+                        <p class="number-id">
+                            {{language[ID]}}
+                        </p>
+                        <p class="element-symbol">
+                            <b>{{language[CVE_LEN]}}</b>
+                        </p>
+                        <p class="element-name">
+                            {{language[LENGUA]}}
+                        </p>
+                    </li>
+                </ol>
+            </div>
+            <div class="horizontal-grids">
+                <ul class="horizontal-list">
+                    <li><p>A</p></li>
+                    <li><p>B</p></li>
+                    <li><p>C</p></li>
+                    <li><p>D</p></li>
+                    <li><p>E</p></li>
+                    <li><p>F</p></li>
+                    <li><p>G</p></li>
+                    <li><p>H</p></li>
+                    <li><p>I</p></li>
+                    <li><p>J</p></li>
+                    <li><p>K</p></li>
+                    <li><p>L</p></li>
+                    <li><p>M</p></li>
+                    <li><p>N</p></li>
+                    <li><p>O</p></li>
+                    <li><p>P</p></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="periodic-table-columns-item">
+        <ol class="vertical-grids">
+            <li class="vertical-element"><p>1</p></li>
+            <li class="vertical-element"><p>2</p></li>
+            <li class="vertical-element"><p>3</p></li>
+            <li class="vertical-element"><p>4</p></li>
+            <li class="vertical-element"><p>5</p></li>
+            <li class="vertical-element"><p>6</p></li>
+            <li class="vertical-element"><p>7</p></li>
+        </ol>
+    </div>
 </div>
 
 <!--
