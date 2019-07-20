@@ -3,27 +3,34 @@
   ##Screen = 1281px to higher resolution desktops
 */
 @media (min-width: 1281px) {
-    .familias-menu {
+    .family-menu {
+        display: flex;
+        justify-content: flex-end;
+        position: absolute;
+        padding-right: 2rem;
+        margin-top: 24px;
+    }
+
+    .family-menu table {
+        background: none;
         display: table;
         list-style: none;
-        margin: 0 auto;
+        font-size: 12px;
+        width: 50%
     }
 
-    .familias-menu .subtitle {
-        margin-bottom: 10px !important;
+    .family-menu tbody tr{
+        display: flex;
+        justify-content: space-between;
     }
 
-    .familias-menu li {
-        font-family: 'Montserrat', serif;
-        display: inline;
+    .family-menu tbody tr td{
+        border: none;
+        padding-bottom: .3em;
+        padding-left: 0;
+        padding-right: 0;
         cursor: pointer;
-        overflow: hidden;
     }
-
-    .familias-menu li a {
-        margin: 5px;
-    }
-
 
     #Kp.periodic-table {
         grid-column: 1 / span 1;
@@ -53,20 +60,15 @@
         display: grid;
     }
 
-    .vertical-element {
+    .vertical-grids li {
         padding: 10px 0;
         height: 4.6vw;
         overflow: hidden;
         margin: 3px;
         z-index: auto;
-    }
-
-    .vertical-element p.right{
-        text-align: right;
-    }
-
-    .vertical-element p.left{
-        text-align: left;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     .horizontal-grids {
@@ -80,9 +82,11 @@
     }
 
     .horizontal-list li{
-        display: block;
         float: left;
         width: 6.25%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     .periodic-table {

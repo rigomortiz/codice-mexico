@@ -687,17 +687,17 @@
         height: 90px;
     }
 
-    .familias-menu {
+    .family-menu {
         font-family: 'Montserrat';
         font-stretch: expanded;
         font-size: 9px;
     }
 
-    .familias-menu td {
+    .family-menu td {
         padding: 2px;
     }
 
-    .familias-menu :hover {
+    .family-menu :hover {
         cursor: pointer;
     }
 
@@ -762,17 +762,17 @@
         height: 90px;
     }
 
-    .familias-menu {
+    .family-menu {
         font-family: 'Montserrat';
         font-stretch: expanded;
         font-size: 9px;
     }
 
-    .familias-menu td {
+    .family-menu td {
         padding: 2px;
     }
 
-    .familias-menu :hover {
+    .family-menu :hover {
         cursor: pointer;
     }
 

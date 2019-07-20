@@ -14,44 +14,6 @@
 -->
 <!--
 <div class="columns">
-    <div class="column is-four-fifths familias-menu">
-        <p class="subtitle">Familias</p>
-        <ul>
-            <li id="familia-algica" (click)="onSelectFamilia('algica')">
-                <a class="button is-small algica" >ÁLGICA</a>
-            </li>
-            <li id="familia-chontal-oaxaca" (click)="onSelectFamilia('chontal-oaxaca')">
-                <a class="button is-small chontal-oaxaca">CHONTAL DE OAXACA</a>
-            </li>
-            <li id="familia-cochimi-yumana" (click)="onSelectFamilia('cochimi-yumana')">
-                <a class="button is-small cochimi-yumana">COCHIMÍ-YUMANA</a>
-            </li>
-            <li id="familia-huave" (click)="onSelectFamilia('huave')">
-                <a class="button is-small huave">HUAVE</a>
-            </li>
-            <li id="familia-maya" (click)="onSelectFamilia('maya')">
-                <a class="button is-small maya">MAYA</a>
-            </li>
-            <li id="familia-mixe-zoque" (click)="onSelectFamilia('mixe-zoque')">
-                <a class="button is-small mixe-zoque">MIXE-ZOQUE</a>
-            </li>
-            <li id="familia-oto-mangue" (click)="onSelectFamilia('oto-mangue')">
-                <a class="button is-small oto-mangue">OTO-MANGUE</a>
-            </li>
-            <li id="familia-seri" (click)="onSelectFamilia('seri')">
-                <a class="button is-small seri">SERI</a>
-            </li>
-            <li id="familia-tarasca" (click)="onSelectFamilia('tarasca')">
-                <a class="button is-small tarasca">TARASCA</a>
-            </li>
-            <li id="familia-totonaco-tepehua" (click)="onSelectFamilia('totonaco-tepehua')">
-                <a class="button is-small totonaco-tepehua">TOTONACO-TEPEHUA</a>
-            </li>
-            <li id="familia-yuto-nahua" (click)="onSelectFamilia('yuto-nahua')">
-                <a class="button is-small yuto-nahua ">YUTO-NAHUA</a>
-            </li>
-        </ul>
-    </div>
     <div class="column orden-menu">
         <p class="subtitle">Ordenar</p>
         <div class="select">
@@ -64,95 +26,134 @@
 -->
 
 <div class="tabs is-centered is-boxed">
-    <ul>
-        <li class="is-active">
-            <a><span>Familias</span></a>
-        </li>
-        <li>
-            <a><span>Población Indígena</span></a>
-        </li>
-        <li>
-            <a><span>Migración</span></a>
-        </li>
-        <li>
-            <a><span>Población Rural</span></a>
-        </li>
-        <li>
-            <a><span>Índice de Remplazo Etnolingüístico (IRE)</span></a>
-        </li>
+    <ul class="menu-views">
+        <li id="tab-family" class="is-active" (click)="onViewFamily()"><a><span>Familias</span></a></li>
+        <li id="tab-population" (click)="onViewPopulation()"><a><span>Población Indígena</span></a></li>
+        <li id="tab-migration" (click)="onViewMigration()"><a><span>Migración</span></a></li>
+        <li id="tab-rural-population" (click)="onViewPopulationRural()"><a><span>Población Rural</span></a></li>
+        <li id="tab-ire" (click)="onViewIRE()"><a><span>Índice de Remplazo Etnolingüístico (IRE)</span></a></li>
     </ul>
 </div>
-
-<div class="column is-four-fifths familias-menu">
-    <ul>
-        <li id="familia-algica" (click)="onSelectFamilia('algica')">
-            <a class="button is-small algica">ÁLGICA</a>
-        </li>
-        <li id="familia-chontal-oaxaca" (click)="onSelectFamilia('chontal-oaxaca')">
-            <a class="button is-small chontal-oaxaca">CHONTAL DE OAXACA</a>
-        </li>
-        <li id="familia-cochimi-yumana" (click)="onSelectFamilia('cochimi-yumana')">
-            <a class="button is-small cochimi-yumana">COCHIMÍ-YUMANA</a>
-        </li>
-        <li id="familia-huave" (click)="onSelectFamilia('huave')">
-            <a class="button is-small huave">HUAVE</a>
-        </li>
-        <li id="familia-maya" (click)="onSelectFamilia('maya')">
-            <a class="button is-small maya">MAYA</a>
-        </li>
-        <li id="familia-mixe-zoque" (click)="onSelectFamilia('mixe-zoque')">
-            <a class="button is-small mixe-zoque">MIXE-ZOQUE</a>
-        </li>
-        <li id="familia-oto-mangue" (click)="onSelectFamilia('oto-mangue')">
-            <a class="button is-small oto-mangue">OTO-MANGUE</a>
-        </li>
-        <li id="familia-seri" (click)="onSelectFamilia('seri')">
-            <a class="button is-small seri">SERI</a>
-        </li>
-        <li id="familia-tarasca" (click)="onSelectFamilia('tarasca')">
-            <a class="button is-small tarasca">TARASCA</a>
-        </li>
-        <li id="familia-totonaco-tepehua" (click)="onSelectFamilia('totonaco-tepehua')">
-            <a class="button is-small totonaco-tepehua">TOTONACO-TEPEHUA</a>
-        </li>
-        <li id="familia-yuto-nahua" (click)="onSelectFamilia('yuto-nahua')">
-            <a class="button is-small yuto-nahua ">YUTO-NAHUA</a>
-        </li>
-    </ul>
-</div>
-
 <div class="columns">
-    <div class="column is-6" style="float: right;">
+    <div class="column is-6 family-menu">
         <table class="table">
             <tbody>
-            <tr>
-                <td>
-                    <a class="button is-small-button algica">
-                        <span class="icon is-small">
-                          <i class="fas fa-check"></i>
-                        </span>
-                    </a>
-                    ÁLGICA
-                </td>
-                <td><label class="checkbox">OTO-MANGUE<input type="checkbox"></label></td>
-            </tr>
+                <tr>
+                    <td id="familia-algica" (click)="onSelectFamily('algica')">
+                        <a class="button is-small-button algica" >
+                            <span class="icon is-small">
+                              <i class="fas fa-check"></i>
+                            </span>
+                        </a>
+                        ÁLGICA
+                    </td>
+                    <td id="familia-oto-mangue" (click)="onSelectFamily('oto-mangue')">
+                        OTO-MANGUE
+                        <a class="button is-small-button oto-mangue">
+                            <span class="icon is-small">
+                              <i class="fas fa-check"></i>
+                            </span>
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td  id="familia-cochimi-yumana" (click)="onSelectFamily('cochimi-yumana')">
+                        <a class="button is-small-button cochimi-yumana">
+                            <span class="icon is-small">
+                              <i class="fas fa-check"></i>
+                            </span>
+                        </a>
+                        CHOCHIMÍ-YUMANA
+                    </td>
+                    <td id="familia-tarasca" (click)="onSelectFamily('tarasca')">
+                        TARASCA
+                        <a class="button is-small-button tarasca">
+                            <span class="icon is-small">
+                              <i class="fas fa-check"></i>
+                            </span>
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td id="familia-chontal-oaxaca" (click)="onSelectFamily('chontal-oaxaca')">
+                        <a class="button is-small-button chontal-oaxaca">
+                            <span class="icon is-small">
+                              <i class="fas fa-check"></i>
+                            </span>
+                        </a>
+                        CHONTAL DE OAXACA
+                    </td>
+                    <td id="familia-seri" (click)="onSelectFamily('seri')" >
+                        SERI
+                        <a class="button is-small-button seri">
+                            <span class="icon is-small">
+                              <i class="fas fa-check"></i>
+                            </span>
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td id="familia-huave" (click)="onSelectFamily('huave')">
+                        <a class="button is-small-button huave">
+                            <span class="icon is-small">
+                              <i class="fas fa-check"></i>
+                            </span>
+                        </a>
+                        HUAVE
+                    </td>
+                    <td id="familia-totonaco-tepehua" (click)="onSelectFamily('totonaco-tepehua')">
+                        TOTONACO-TEPEHUA
+                        <a class="button is-small-button totonaco-tepehua">
+                            <span class="icon is-small">
+                              <i class="fas fa-check"></i>
+                            </span>
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td id="familia-maya" (click)="onSelectFamily('maya')">
+                        <a class="button is-small-button maya">
+                            <span class="icon is-small">
+                              <i class="fas fa-check"></i>
+                            </span>
+                        </a>
+                        MAYA
+                    </td>
+                    <td id="familia-yuto-nahua" (click)="onSelectFamily('yuto-nahua')">
+                        YUTO-NAHUA
+                        <a class="button is-small-button yuto-nahua">
+                            <span class="icon is-small">
+                              <i class="fas fa-check"></i>
+                            </span>
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td id="familia-mixe-zoque" (click)="onSelectFamily('mixe-zoque')">
+                        <a class="button is-small-button mixe-zoque">
+                            <span class="icon is-small">
+                              <i class="fas fa-check"></i>
+                            </span>
+                        </a>
+                        MIXE-ZOQUE
+                    </td>
+                </tr>
             </tbody>
         </table>
     </div>
-    <div class="column is-6" style="float: left;">
-
+    <div class="column is-6">
     </div>
 </div>
 <div class="periodic-table-columns">
     <div class="periodic-table-columns-item">
         <ol class="vertical-grids">
-            <li class="vertical-element"><p class="right">1</p></li>
-            <li class="vertical-element"><p class="right">2</p></li>
-            <li class="vertical-element"><p class="right">3</p></li>
-            <li class="vertical-element"><p class="right">4</p></li>
-            <li class="vertical-element"><p class="right">5</p></li>
-            <li class="vertical-element"><p class="right">6</p></li>
-            <li class="vertical-element"><p class="right">7</p></li>
+            <li><p >1</p></li>
+            <li><p >2</p></li>
+            <li><p >3</p></li>
+            <li><p >4</p></li>
+            <li><p >5</p></li>
+            <li><p >6</p></li>
+            <li><p >7</p></li>
         </ol>
     </div>
     <div class="periodic-table-columns-item">
@@ -197,13 +198,13 @@
     </div>
     <div class="periodic-table-columns-item">
         <ol class="vertical-grids">
-            <li class="vertical-element"><p>1</p></li>
-            <li class="vertical-element"><p>2</p></li>
-            <li class="vertical-element"><p>3</p></li>
-            <li class="vertical-element"><p>4</p></li>
-            <li class="vertical-element"><p>5</p></li>
-            <li class="vertical-element"><p>6</p></li>
-            <li class="vertical-element"><p>7</p></li>
+            <li><p>1</p></li>
+            <li><p>2</p></li>
+            <li><p>3</p></li>
+            <li><p>4</p></li>
+            <li><p>5</p></li>
+            <li><p>6</p></li>
+            <li><p>7</p></li>
         </ol>
     </div>
 </div>

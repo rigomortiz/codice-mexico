@@ -129,14 +129,12 @@ export class TablaLenguasIndigenasComponent implements OnInit, AfterViewInit {
     }
 
     ngOnInit() {
-
     }
 
     ngAfterViewInit(): void {
-
     }
 
-    public onSelectFamilia(f: string) {
+    public onSelectFamily(f: string) {
         let c = document.getElementsByClassName(f);
 
         for (let i = 0; i < c.length; i++) {
@@ -164,6 +162,41 @@ export class TablaLenguasIndigenasComponent implements OnInit, AfterViewInit {
             }
         }
 
+    }
+
+    public onViewFamily(){
+        document.getElementsByClassName("menu-views")[0].childNodes.forEach( e => {
+            e.classList.remove("is-active");
+        });
+        document.getElementById("tab-family").classList.add("is-active");
+    }
+
+    public onViewPopulation(){
+        document.getElementsByClassName("menu-views")[0].childNodes.forEach( e => {
+            e.classList.remove("is-active");
+        });
+        document.getElementById("tab-population").classList.add("is-active");
+    }
+
+    public onViewMigration(){
+        document.getElementsByClassName("menu-views")[0].childNodes.forEach( e => {
+            e.classList.remove("is-active");
+        });
+        document.getElementById("tab-migration").classList.add("is-active");
+    }
+
+    public onViewPopulationRural(){
+        document.getElementsByClassName("menu-views")[0].childNodes.forEach( e => {
+            e.classList.remove("is-active");
+        });
+        document.getElementById("tab-rural-population").classList.add("is-active");
+    }
+
+    public onViewIRE(){
+        document.getElementsByClassName("menu-views")[0].childNodes.forEach( e => {
+            e.classList.remove("is-active");
+        });
+        document.getElementById("tab-ire").classList.add("is-active");
     }
 
     public onViewLanguage(lengua) {
