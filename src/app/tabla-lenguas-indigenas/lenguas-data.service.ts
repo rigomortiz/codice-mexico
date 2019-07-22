@@ -18,7 +18,7 @@ export class LenguasDataService {
     }
 
     public getExcel(): Observable<HttpResponse<any>> {
-        return this.httpClient.get("./assets/data/excel.xlsx", {
+        return this.httpClient.get("./assets/data/Tabla lenguas indigenas.xlsx", {
             responseType: 'arraybuffer',
             observe: 'response'
         });

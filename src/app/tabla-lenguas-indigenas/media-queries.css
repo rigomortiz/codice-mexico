@@ -5,10 +5,7 @@
 @media (min-width: 1281px) {
     .family-menu {
         display: flex;
-        justify-content: flex-end;
-        position: absolute;
-        padding-right: 2rem;
-        margin-top: 24px;
+        justify-content: center;
     }
 
     .family-menu table {
@@ -16,7 +13,6 @@
         display: table;
         list-style: none;
         font-size: 12px;
-        width: 50%
     }
 
     .family-menu tbody tr{
@@ -26,9 +22,6 @@
 
     .family-menu tbody tr td{
         border: none;
-        padding-bottom: .3em;
-        padding-left: 0;
-        padding-right: 0;
         cursor: pointer;
     }
 
@@ -44,7 +37,7 @@
         grid-column-start: 14;
     }
 
-    #Ps.periodic-table {
+    #PoS.periodic-table {
         grid-column-start: 13;
     }
 
@@ -89,28 +82,52 @@
         justify-content: center;
     }
 
+    .horizontal-list-groups {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .horizontal-list-groups li{
+        float: left;
+        width: 33.3%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
     .periodic-table {
         list-style: none;
         margin: 0 auto;
     }
 
-    .periodic-table-columns {
+    .periodic-table-family-columns {
         display: grid;
         grid-template-columns: 3% 94% 3%;
         grid-template-rows: auto;
     }
 
-    .periodic-table-columns-item {
+    .periodic-table-population-grids, .periodic-table-migration-grids, .periodic-table-rural-grids, .periodic-table-ire-grids {
+        display: grid;
+        grid-template-columns: repeat(3, 33%);
     }
 
-    .grids {
+    .periodic-table-family-grids {
         display: grid;
         grid-template-columns: repeat(16, 6.25%);
     }
 
-    .periodic-table-grids {
-        display: grid;
-        grid-template-columns: repeat(16, 6.25%);
+    .column-one {
+        padding-right: 0px;
+    }
+
+    .column-two, .column-three, .column-four {
+        padding-right: 0px;
+        padding-left: 0px;
+    }
+
+    .column-five {
+        padding-left: 0px;
     }
 
     .is-small-button{
@@ -136,18 +153,24 @@
         /*border: 1px solid #ccc;*/
     }
 
+    .group:after {
+        border-radius: 5px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        opacity: 0;
+    }
+
+    .group:hover {
+        transform: scale(1.5, 1.5);
+        cursor: pointer;
+    }
+
     .element-symbol {
         margin-top: -10px;
-        font-size: 20px;
+        font-size: 22px;
         text-align: left;
     }
 
     .number-id {
-        font-size: 11px;
-        text-align: right;
-    }
-
-    .numero-poblacion {
         font-size: 11px;
         text-align: right;
     }
@@ -168,8 +191,8 @@
         line-height: 10px;
     }
 
-    .element-name, .atomic-mass {
-        font-size: 10px;
+    .element-name{
+        font-size: 11px;
         flex: 1 1;
         align-items: flex-end;
         overflow: hidden;
@@ -177,7 +200,16 @@
         white-space: normal;
         margin-top: -5px;
     }
-
+    .population{
+        font-size: 11px;
+        flex: 1 1;
+        align-items: flex-end;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: normal;
+        margin-top: -3px;
+        margin-bottom: 1px;
+    }
 }
 
 /*!* */
@@ -206,7 +238,7 @@
 /*        grid-column-start: 12;*/
 /*    }*/
 
-/*    .periodic-table-grids {*/
+/*    .periodic-table-family-grids {*/
 /*        max-width: 1500px;*/
 /*        !*max-height: 300px;*!*/
 /*        display: grid;*/
@@ -224,7 +256,7 @@
 /**!*/
 
 /*@media (min-width: 768px) and (max-width: 1024px) {*/
-/*    .periodic-table-grids {*/
+/*    .periodic-table-family-grids {*/
 /*        !*max-height: 300px;*!*/
 /*        grid-template-columns: repeat(16, 60px) !important;*/
 /*        grid-template-rows: repeat(5, 70px) !important;*/
@@ -264,7 +296,7 @@
 /**!*/
 
 /*@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {*/
-/*    .periodic-table-grids {*/
+/*    .periodic-table-family-grids {*/
 /*        !*max-height: 300px;*!*/
 /*        grid-template-columns: repeat(16, 60px) !important;*/
 /*        grid-template-rows: repeat(5, 70px) !important;*/
@@ -305,7 +337,7 @@
 /**!*/
 
 /*@media (min-width: 481px) and (max-width: 767px) {*/
-/*    .periodic-table-grids {*/
+/*    .periodic-table-family-grids {*/
 /*        !*max-height: 300px;*!*/
 /*        grid-template-columns: repeat(16, 60px) !important;*/
 /*        grid-template-rows: repeat(5, 70px) !important;*/
@@ -346,7 +378,7 @@
 /**!*/
 
 /*@media (min-width: 320px) and (max-width: 480px) {*/
-/*    .periodic-table-grids {*/
+/*    .periodic-table-family-grids {*/
 /*        !*max-height: 300px;*!*/
 /*        grid-template-columns: repeat(4, 25%) !important;*/
 /*        grid-template-rows: repeat(25, 100px) !important;*/

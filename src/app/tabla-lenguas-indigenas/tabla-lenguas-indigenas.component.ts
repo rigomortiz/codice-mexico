@@ -5,49 +5,33 @@ import {BreakpointObserver, BreakpointState} from '@angular/cdk/layout'
 import {SocialService} from "ng6-social-button";
 import * as XLSX from 'xlsx';
 
-/**
- * ID
- * Lengua
- * CVE-LEN
- * FAMILIA
- * CVE-FAM
- * Población Indígena
- * 5 grupos de población
- * Porcentaje de población indígena que residía en otra entidad o país en marzo 2010, 2015
- * Porcentaje de población indígena que nació en otra entidad
- * Promedio de migración temporal y absoluta
- * Migración
- * Total de población
- * Rural (<2500)
- * Cinco grupos de población rural
- * Total de población
- * IRE (Índice de Remplazo Etnolingüístico)
- * Grado
- * Posición
- * Posición en la tabla periódica
- * clase html
-
- */
-const ID: number = 0;
-const LENGUA: number = 1;
-const CVE_LEN: number = 2;
-const FAMILIA: number = 3;
-const CVE_FAM: number = 4;
-const POBLACION: number = 5;
-const GRUPOS_POBLACION: number = 6;
-const RESIDENTES: number = 7;
-const NACIDOS: number = 8;
-const PROMEDIO_MIGRACION: number = 9;
-const MIGRACION: number = 10;
-const POBLACION_TOTAL: number = 11;
-const RURAL: number = 12;
-const GRUPOS_RURAL: number = 13;
-const TOTAL_POBLACION: number = 14;
-const IRE: number = 15;
-const GRADO: number = 16;
-const POSICION: number = 17;
-const POSICION_TABLA_PERIODICA: number = 18;
-const CLASE_HTML: number = 19;
+enum COLUMNS {
+ID
+,LENGUA
+,CVE_LEN
+,FAMILIA
+,CVE_FAM
+,POBLACION_INDIGENA
+,GRUPOS_DE_POBLACION
+,CATEGORIA
+,PORCENTAJE_DE_POBLACION_INDIGENA_QUE_RESIDIA_EN_OTRA_ENTIDAD_O_PAIS_EN_MARZO_2010_2015
+,PORCENTAJE_DE_POBLACION_INDIGENA_QUE_NACIO_EN_OTRA_ENTIDAD
+,PROMEDIO_DE_MIGRACION_TEMPORAL_Y_ABSOLUTA
+,MIGRACION
+,CATEGORIA_MIGRACION
+,RURAL
+,CINCO_GRUPOS_DE_POBLACION_RURAL
+,CATEGORIA_POBLACION_RURAL
+,IRE
+,GRADO
+,GRUPO_IRE
+,VARIANTES
+,NUMERO_DE_VARIANTES
+,POSICION
+,POSICION_EN_LA_TABLA_PERIODICA
+,CLASE_HTML
+,COLOR
+}
 
 const ASC: number = 1;
 const DESC: number = -1;
@@ -65,11 +49,15 @@ export class Lengua {
 @Component({
     selector: 'app-tabla-lenguas-indigenas',
     templateUrl: './tabla-lenguas-indigenas.component.html',
-    styleUrls: ['./tabla-lenguas-indigenas.component.css', 'media-queries.css'],
-
+    styleUrls: ['./tabla-lenguas-indigenas.component.css', 'media-queries.css']
 })
 export class TablaLenguasIndigenasComponent implements OnInit, AfterViewInit {
     private languages = [];
+    private languagesColumnA = [];
+    private languagesColumnB = [];
+    private languagesColumnC = [];
+    private languagesColumnD = [];
+    private languagesColumnE = [];
     private safeHtml: SafeHtml;
     private nombre = "";
     private simbolo = "";
@@ -77,6 +65,9 @@ export class TablaLenguasIndigenasComponent implements OnInit, AfterViewInit {
     private familia = "";
     private selectedFilter: string;
     public showContainer: boolean;
+
+    public columns: COLUMNS;
+    private COLOR = ["bg-green", "bg-green-light", "bg-yellow", "bg-orange", "bg-red", "bg-none"];
 
     private shareObj = {
         href: "FACEBOOK-SHARE-LINK",
@@ -88,26 +79,6 @@ export class TablaLenguasIndigenasComponent implements OnInit, AfterViewInit {
         {value: 'language', display: 'Lenguas'},
         {value: 'poblacion', display: 'Población'},
     ];
-    ID: number = 0;
-    LENGUA: number = 1;
-    CVE_LEN: number = 2;
-    FAMILIA: number = 3;
-    CVE_FAM: number = 4;
-    POBLACION: number = 5;
-    GRUPOS_POBLACION: number = 6;
-    RESIDENTES: number = 7;
-    NACIDOS: number = 8;
-    PROMEDIO_MIGRACION: number = 9;
-    MIGRACION: number = 10;
-    POBLACION_TOTAL: number = 11;
-    RURAL: number = 12;
-    GRUPOS_RURAL: number = 13;
-    TOTAL_POBLACION: number = 14;
-    IRE: number = 15;
-    GRADO: number = 16;
-    POSICION: number = 17;
-    POSICION_TABLA_PERIODICA: number = 18;
-    CLASS_HTML: number = 19;
 
     constructor(private lenguasDataService: LenguasDataService, private sanitizer: DomSanitizer,
                 public breakpointObserver: BreakpointObserver, private socialAuthService: SocialService) {
@@ -118,9 +89,10 @@ export class TablaLenguasIndigenasComponent implements OnInit, AfterViewInit {
             const ws: XLSX.WorkSheet = workbook.Sheets['Hoja1'];
             this.languages = XLSX.utils.sheet_to_json(ws, {header: 1});
             this.languages.shift();
+            console.log(this.languages);
             this.languages.sort((a, b) => {
-                if (a[POSICION] < b[POSICION]) return -1;
-                if (a[POSICION] > b[POSICION]) return 1;
+                if (a[COLUMNS.POSICION] < b[COLUMNS.POSICION]) return -1;
+                if (a[COLUMNS.POSICION] > b[COLUMNS.POSICION]) return 1;
                 return 0;
             });
         });
@@ -164,39 +136,69 @@ export class TablaLenguasIndigenasComponent implements OnInit, AfterViewInit {
 
     }
 
+    public openTab(evt, tabName){
+        let i, x, tabLinks;
+        x = document.getElementsByClassName("content-tab");
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+        }
+        tabLinks = document.getElementsByClassName("tab");
+        for (i = 0; i < x.length; i++) {
+            tabLinks[i].className = tabLinks[i].className.replace(" is-active", "");
+        }
+        document.getElementById(tabName).style.display = "block";
+        evt.currentTarget.className += " is-active";
+
+        if(tabName === "periodic-table-family")
+            this.onViewFamily();
+        else if(tabName === "periodic-table-population")
+            this.onViewPopulation();
+        else if(tabName === "periodic-table-migration")
+            this.onViewMigration();
+        else if(tabName === "periodic-table-rural-population")
+            this.onViewPopulationRural();
+        else if(tabName === "periodic-table-ire")
+            this.onViewIRE();
+    }
+
     public onViewFamily(){
-        document.getElementsByClassName("menu-views")[0].childNodes.forEach( e => {
-            e.classList.remove("is-active");
-        });
-        document.getElementById("tab-family").classList.add("is-active");
+        this.orderLanguagesBy(COLUMNS.POSICION, ASC);
     }
 
     public onViewPopulation(){
-        document.getElementsByClassName("menu-views")[0].childNodes.forEach( e => {
-            e.classList.remove("is-active");
-        });
-        document.getElementById("tab-population").classList.add("is-active");
+        this.orderLanguagesBy(COLUMNS.POBLACION_INDIGENA, DESC);
+        this.languagesColumnA = this.languages.filter( l => l[COLUMNS.GRUPOS_DE_POBLACION] === 5);
+        this.languagesColumnB = this.languages.filter( l => l[COLUMNS.GRUPOS_DE_POBLACION] === 4);
+        this.languagesColumnC = this.languages.filter( l => l[COLUMNS.GRUPOS_DE_POBLACION] === 3);
+        this.languagesColumnD = this.languages.filter( l => l[COLUMNS.GRUPOS_DE_POBLACION] === 2);
+        this.languagesColumnE = this.languages.filter( l => l[COLUMNS.GRUPOS_DE_POBLACION] === 1);
     }
 
     public onViewMigration(){
-        document.getElementsByClassName("menu-views")[0].childNodes.forEach( e => {
-            e.classList.remove("is-active");
-        });
-        document.getElementById("tab-migration").classList.add("is-active");
+        this.orderLanguagesBy(COLUMNS.PROMEDIO_DE_MIGRACION_TEMPORAL_Y_ABSOLUTA, DESC);
+        this.languagesColumnA = this.languages.filter( l => l[COLUMNS.MIGRACION] === 5);
+        this.languagesColumnB = this.languages.filter( l => l[COLUMNS.MIGRACION] === 4);
+        this.languagesColumnC = this.languages.filter( l => l[COLUMNS.MIGRACION] === 3);
+        this.languagesColumnD = this.languages.filter( l => l[COLUMNS.MIGRACION] === 2);
+        this.languagesColumnE = this.languages.filter( l => l[COLUMNS.MIGRACION] === 1);
     }
 
     public onViewPopulationRural(){
-        document.getElementsByClassName("menu-views")[0].childNodes.forEach( e => {
-            e.classList.remove("is-active");
-        });
-        document.getElementById("tab-rural-population").classList.add("is-active");
+        this.orderLanguagesBy(COLUMNS.RURAL, DESC);
+        this.languagesColumnA = this.languages.filter( l => l[COLUMNS.CINCO_GRUPOS_DE_POBLACION_RURAL] === 5);
+        this.languagesColumnB = this.languages.filter( l => l[COLUMNS.CINCO_GRUPOS_DE_POBLACION_RURAL] === 4);
+        this.languagesColumnC = this.languages.filter( l => l[COLUMNS.CINCO_GRUPOS_DE_POBLACION_RURAL] === 3);
+        this.languagesColumnD = this.languages.filter( l => l[COLUMNS.CINCO_GRUPOS_DE_POBLACION_RURAL] === 2);
+        this.languagesColumnE = this.languages.filter( l => l[COLUMNS.CINCO_GRUPOS_DE_POBLACION_RURAL] === 1);
     }
 
     public onViewIRE(){
-        document.getElementsByClassName("menu-views")[0].childNodes.forEach( e => {
-            e.classList.remove("is-active");
-        });
-        document.getElementById("tab-ire").classList.add("is-active");
+        this.orderLanguagesBy(COLUMNS.IRE, DESC);
+        this.languagesColumnA = this.languages.filter( l => l[COLUMNS.GRUPO_IRE] === 5);
+        this.languagesColumnB = this.languages.filter( l => l[COLUMNS.GRUPO_IRE] === 4);
+        this.languagesColumnC = this.languages.filter( l => l[COLUMNS.GRUPO_IRE] === 3);
+        this.languagesColumnD = this.languages.filter( l => l[COLUMNS.GRUPO_IRE] === 2);
+        this.languagesColumnE = this.languages.filter( l => l[COLUMNS.GRUPO_IRE] === 1);
     }
 
     public onViewLanguage(lengua) {
@@ -209,7 +211,7 @@ export class TablaLenguasIndigenasComponent implements OnInit, AfterViewInit {
         //this.descripcion = this.sanitizer.bypassSecurityTrustHtml(language.descripcion).toString();
     }
 
-    public onCloseLengua() {
+    public onCloseLanguage() {
         let c = document.getElementsByClassName("modal");
         c[0].classList.toggle("is-active");
         document.getElementsByTagName("html")[0].style.overflowY = "auto";
@@ -219,33 +221,34 @@ export class TablaLenguasIndigenasComponent implements OnInit, AfterViewInit {
         this.socialAuthService.facebookSharing(shareObj);
     }
 
-    public orderByPosicion() {
-        TablaLenguasIndigenasComponent.typePeriodicTable();
-        this.orderLanguagesBy(POSICION, ASC);
-    }
 
-    public orderByLengua() {
-        TablaLenguasIndigenasComponent.typeGrid();
-        this.orderLanguagesBy(LENGUA, ASC);
-    }
+    // public orderByPosicion() {
+    //     TablaLenguasIndigenasComponent.typePeriodicTable();
+    //     this.orderLanguagesBy(COLUMNS.POSICION, ASC);
+    // }
+    //
+    // public orderByLengua() {
+    //     TablaLenguasIndigenasComponent.typeGrid();
+    //     this.orderLanguagesBy(COLUMNS.LENGUA, ASC);
+    // }
+    //
+    // public orderByPoblacion() {
+    //     TablaLenguasIndigenasComponent.typeGrid();
+    //     this.orderLanguagesBy(COLUMNS.TOTAL_DE_POBLACION, ASC);
+    // }
 
-    public orderByPoblacion() {
-        TablaLenguasIndigenasComponent.typeGrid();
-        this.orderLanguagesBy(POBLACION, ASC);
-    }
-
-    private filterChanged(selectedValue: string) {
-        if (selectedValue === 'familias') {
-            this.orderByPosicion();
-        } else if (selectedValue === 'language') {
-            this.orderByLengua();
-        } else if (selectedValue === 'poblacion') {
-            this.orderByPoblacion();
-        }
-    }
+    // private filterChanged(selectedValue: string) {
+    //     if (selectedValue === 'familias') {
+    //         this.orderByPosicion();
+    //     } else if (selectedValue === 'language') {
+    //         this.orderByLengua();
+    //     } else if (selectedValue === 'poblacion') {
+    //         this.orderByPoblacion();
+    //     }
+    // }
 
     private orderLanguagesBy(pos: number, order: number) {
-        if (pos === DESC) {
+        if (order === DESC) {
             this.languages.sort((a, b) => {
                 if (a[pos] < b[pos]) return 1;
                 if (a[pos] > b[pos]) return -1;
@@ -260,23 +263,23 @@ export class TablaLenguasIndigenasComponent implements OnInit, AfterViewInit {
         }
     }
 
-    private static typePeriodicTable() {
-        Array.from(document.getElementsByClassName("group")).forEach(function (item) {
-            item.classList.add("periodic-table");
-        });
-        Array.from(document.getElementsByClassName("grids")).forEach(function (item) {
-            item.classList.add("periodic-table-grids");
-            item.classList.remove("grids");
-        });
-    }
-
-    private static typeGrid() {
-        Array.from(document.getElementsByClassName("group")).forEach(function (item) {
-            item.classList.remove("periodic-table");
-        });
-        Array.from(document.getElementsByClassName("periodic-table-grids")).forEach(function (item) {
-            item.classList.remove("periodic-table-grids");
-            item.classList.add("grids");
-        });
-    }
+    // private static typePeriodicTable() {
+    //     Array.from(document.getElementsByClassName("group")).forEach(function (item) {
+    //         item.classList.add("periodic-table");
+    //     });
+    //     Array.from(document.getElementsByClassName("grids")).forEach(function (item) {
+    //         item.classList.add("periodic-table-family-grids");
+    //         item.classList.remove("periodic-table-population-grids");
+    //     });
+    // }
+    //
+    // private static typeGrid() {
+    //     Array.from(document.getElementsByClassName("group")).forEach(function (item) {
+    //         item.classList.remove("periodic-table");
+    //     });
+    //     Array.from(document.getElementsByClassName("periodic-table-family-grids")).forEach(function (item) {
+    //         item.classList.remove("periodic-table-family-grids");
+    //         item.classList.add("grids");
+    //     });
+    // }
 }

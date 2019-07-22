@@ -1,3 +1,55 @@
+.bg-none {
+    display: none;
+}
+
+.bg-red {
+    background-color: #DD3430;
+    color: #FFFFFF;
+}
+
+.bg-yellow {
+    background-color: #FDE818;
+    color: #515757;
+}
+
+.bg-orange {
+    background-color: #F39519;
+    color: #FFFFFF;
+}
+
+.bg-green-light {
+    background-color: #68B32D;
+    color: #FFFFFF;
+}
+
+.bg-green {
+    background-color: #207331;
+    color: #FFFFFF;
+}
+
+.green {
+    color: #207331;
+}
+
+.green-light {
+    color: #68B32D;
+}
+
+.orange {
+    color: #F39519;
+}
+
+.yellow {
+    color: #FDE818;
+}
+
+.red {
+    color: #DD3430;
+}
+
+.gray {
+    color: #515757;
+}
 /**FAMILIAS*/
 .null, .null.no-focus:hover {
     display: block;
@@ -7,49 +59,49 @@
 
 .algica, .algica.no-focus:hover {
     border-color: transparent;
-    background-color: #ef7659;
+    background-color: #ED8965;
     color: #FFFFFF;
 }
 
 .seri, .seri.no-focus:hover {
     border-color: transparent;
-    background-color: #9350ae;
+    background-color: #9E60A4;
     color: #FFFFFF;
 }
 
 .cochimi-yumana, .cochimi-yumana.no-focus:hover {
     border-color: transparent;
-    background-color: #c92031;
+    background-color: #C61E26;
     color: #ffffff;
 }
 
 .oto-mangue, .oto-mangue.no-focus:hover {
     border-color: transparent;
-    background-color: #92d26b;
+    background-color: #799010;
     color: #ffffff;
 }
 
 .maya, .maya.no-focus:hover {
     border-color: transparent;
-    background-color: #f8ca35;
+    background-color: #83B5C2;
     color: #ffffff;
 }
 
 .yuto-nahua, .yuto-nahua.no-focus:hover {
     border-color: transparent;
-    background-color: #64cab9;
+    background-color: #FAB700;
     color: #FFFFFF;
 }
 
 .huave, .huave.no-focus:hover {
     border-color: transparent;
-    background-color: #389386;
+    background-color: #1C8E86;
     color: #ffffff;
 }
 
 .mixe-zoque, .mixe-zoque.no-focus:hover {
     border-color: transparent;
-    background-color: #e6457f;
+    background-color: #E4617F;
     color: #ffffff;
 }
 
@@ -61,19 +113,19 @@
 
 .totonaco-tepehua, .totonaco-tepehua.no-focus:hover {
     border-color: transparent;
-    background-color: #915128;
+    background-color: #9E602C;
     color: #FFFFFF;
 }
 
 .chontal-oaxaca, .chontal-oaxaca.no-focus:hover {
     border-color: transparent;
-    background-color: #ae1e94;
+    background-color: #4D71B0;
     color: #FFFFFF;
 }
 
 .tarasca, .tarasca.no-focus:hover {
     border-color: transparent;
-    background-color: #4c6eb5;
+    background-color: #B42E88;
     color: #FFFFFF;
 }
 
