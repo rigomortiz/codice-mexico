@@ -4,25 +4,45 @@
 */
 @media (min-width: 1281px) {
     .family-menu {
+        margin-top: 0; 
+        margin-bottom: 0; 
+        height: 0;
+    }
+    .family-menu .family-menu-options {
         display: flex;
-        justify-content: center;
+        justify-content: flex-end;
+        margin-top: 0;
+    }
+
+    .family-menu .family-menu-card {
+        display: flex;
+        margin-top: 0;
     }
 
     .family-menu table {
         background: none;
         display: table;
         list-style: none;
+        position: absolute;
         font-size: 12px;
     }
 
+    .family-menu .card{
+        position: absolute;
+    }
+
     .family-menu tbody tr{
-        display: flex;
-        justify-content: space-between;
+        /*display: flex;
+        justify-content: space-between;*/
     }
 
     .family-menu tbody tr td{
         border: none;
         cursor: pointer;
+    }
+
+    .family-menu tbody tr td b {
+        padding-left: 5px;
     }
 
     #Kp.periodic-table {
@@ -118,16 +138,16 @@
     }
 
     .column-one {
-        padding-right: 0px;
+        padding-right: 0;
     }
 
     .column-two, .column-three, .column-four {
-        padding-right: 0px;
-        padding-left: 0px;
+        padding-right: 0;
+        padding-left: 0;
     }
 
     .column-five {
-        padding-left: 0px;
+        padding-left: 0;
     }
 
     .is-small-button{
@@ -188,11 +208,11 @@
     .atomic-orbital-shells span {
         display: block;
         text-align: right;
-        line-height: 10px;
+        line-height: 10;
     }
 
     .element-name{
-        font-size: 11px;
+        font-size: 10px;
         flex: 1 1;
         align-items: flex-end;
         overflow: hidden;
@@ -207,17 +227,16 @@
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: normal;
-        margin-top: -3px;
-        margin-bottom: 1px;
+        margin: -3px -4px 5px;
     }
 }
 
 /*!* */
 /*  ##Device = Laptops, Desktops*/
-/*  ##Screen = B/w 1025px to 1280px*/
+/*  ##Screen = B/w 1025px to 1280*/
 /**!*/
 
-/*@media (min-width: 1025px) and (max-width: 1280px) {*/
+/*@media (min-width: 1025px) and (max-width: 1280) {*/
 /*    #Kp {*/
 /*        grid-column: 1 / span 1*/
 /*    }*/
@@ -239,8 +258,8 @@
 /*    }*/
 
 /*    .periodic-table-family-grids {*/
-/*        max-width: 1500px;*/
-/*        !*max-height: 300px;*!*/
+/*        max-width: 1500;*/
+/*        !*max-height: 300;*!*/
 /*        display: grid;*/
 /*        grid-template-columns: repeat(16, 6.25%);*/
 /*        grid-template-rows: repeat(4, 5vw);*/
@@ -257,9 +276,9 @@
 
 /*@media (min-width: 768px) and (max-width: 1024px) {*/
 /*    .periodic-table-family-grids {*/
-/*        !*max-height: 300px;*!*/
-/*        grid-template-columns: repeat(16, 60px) !important;*/
-/*        grid-template-rows: repeat(5, 70px) !important;*/
+/*        !*max-height: 300;*!*/
+/*        grid-template-columns: repeat(16, 60) !important;*/
+/*        grid-template-rows: repeat(5, 70) !important;*/
 
 /*        margin-left: auto;*/
 /*        margin-right: auto;*/
@@ -297,9 +316,9 @@
 
 /*@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {*/
 /*    .periodic-table-family-grids {*/
-/*        !*max-height: 300px;*!*/
-/*        grid-template-columns: repeat(16, 60px) !important;*/
-/*        grid-template-rows: repeat(5, 70px) !important;*/
+/*        !*max-height: 300;*!*/
+/*        grid-template-columns: repeat(16, 60) !important;*/
+/*        grid-template-rows: repeat(5, 70) !important;*/
 
 /*        margin-left: auto;*/
 /*        margin-right: auto;*/
@@ -338,9 +357,9 @@
 
 /*@media (min-width: 481px) and (max-width: 767px) {*/
 /*    .periodic-table-family-grids {*/
-/*        !*max-height: 300px;*!*/
-/*        grid-template-columns: repeat(16, 60px) !important;*/
-/*        grid-template-rows: repeat(5, 70px) !important;*/
+/*        !*max-height: 300;*!*/
+/*        grid-template-columns: repeat(16, 60) !important;*/
+/*        grid-template-rows: repeat(5, 70) !important;*/
 
 /*        margin-left: auto;*/
 /*        margin-right: auto;*/
@@ -374,14 +393,14 @@
 
 /*!* */
 /*  ##Device = Most of the Smartphones Mobiles (Portrait)*/
-/*  ##Screen = B/w 320px to 479px*/
+/*  ##Screen = B/w 320 to 479px*/
 /**!*/
 
-/*@media (min-width: 320px) and (max-width: 480px) {*/
+/*@media (min-width: 320) and (max-width: 480) {*/
 /*    .periodic-table-family-grids {*/
-/*        !*max-height: 300px;*!*/
+/*        !*max-height: 300;*!*/
 /*        grid-template-columns: repeat(4, 25%) !important;*/
-/*        grid-template-rows: repeat(25, 100px) !important;*/
+/*        grid-template-rows: repeat(25, 100) !important;*/
 
 /*        margin-left: auto;*/
 /*        margin-right: auto;*/

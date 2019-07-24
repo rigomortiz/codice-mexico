@@ -68,6 +68,7 @@ export class TablaLenguasIndigenasComponent implements OnInit, AfterViewInit {
 
     public columns: COLUMNS;
     private COLOR = ["bg-green", "bg-green-light", "bg-yellow", "bg-orange", "bg-red", "bg-none"];
+    private COLOR2 = ["green", "green-light", "yellow", "orange", "red", "none"];
 
     private shareObj = {
         href: "FACEBOOK-SHARE-LINK",
@@ -162,10 +163,14 @@ export class TablaLenguasIndigenasComponent implements OnInit, AfterViewInit {
     }
 
     public onViewFamily(){
+        document.getElementsByClassName("family-menu").item(0)
+            .setAttribute("style", "display: show;");
         this.orderLanguagesBy(COLUMNS.POSICION, ASC);
     }
 
     public onViewPopulation(){
+        document.getElementsByClassName("family-menu").item(0)
+            .setAttribute("style", "display: none;");
         this.orderLanguagesBy(COLUMNS.POBLACION_INDIGENA, DESC);
         this.languagesColumnA = this.languages.filter( l => l[COLUMNS.GRUPOS_DE_POBLACION] === 5);
         this.languagesColumnB = this.languages.filter( l => l[COLUMNS.GRUPOS_DE_POBLACION] === 4);
@@ -175,6 +180,8 @@ export class TablaLenguasIndigenasComponent implements OnInit, AfterViewInit {
     }
 
     public onViewMigration(){
+        document.getElementsByClassName("family-menu").item(0)
+            .setAttribute("style", "display: none;");
         this.orderLanguagesBy(COLUMNS.PROMEDIO_DE_MIGRACION_TEMPORAL_Y_ABSOLUTA, DESC);
         this.languagesColumnA = this.languages.filter( l => l[COLUMNS.MIGRACION] === 5);
         this.languagesColumnB = this.languages.filter( l => l[COLUMNS.MIGRACION] === 4);
@@ -184,6 +191,8 @@ export class TablaLenguasIndigenasComponent implements OnInit, AfterViewInit {
     }
 
     public onViewPopulationRural(){
+        document.getElementsByClassName("family-menu").item(0)
+            .setAttribute("style", "display: none;");
         this.orderLanguagesBy(COLUMNS.RURAL, DESC);
         this.languagesColumnA = this.languages.filter( l => l[COLUMNS.CINCO_GRUPOS_DE_POBLACION_RURAL] === 5);
         this.languagesColumnB = this.languages.filter( l => l[COLUMNS.CINCO_GRUPOS_DE_POBLACION_RURAL] === 4);
@@ -193,6 +202,8 @@ export class TablaLenguasIndigenasComponent implements OnInit, AfterViewInit {
     }
 
     public onViewIRE(){
+        document.getElementsByClassName("family-menu").item(0)
+            .setAttribute("style", "display: none;");
         this.orderLanguagesBy(COLUMNS.IRE, DESC);
         this.languagesColumnA = this.languages.filter( l => l[COLUMNS.GRUPO_IRE] === 5);
         this.languagesColumnB = this.languages.filter( l => l[COLUMNS.GRUPO_IRE] === 4);

@@ -25,7 +25,7 @@
 </div>
 -->
 
-<div class="tabs is-centered is-boxed">
+<div class="tabs is-centered is-boxed" style ="margin-bottom: 0px;">
     <ul class="menu-views">
         <li class="tab is-active" (click)="openTab($event, 'periodic-table-family')"><a><span>Familias</span></a></li>
         <li class="tab" (click)="openTab($event, 'periodic-table-population')"><a><span>Población Indígena</span></a>
@@ -38,7 +38,130 @@
     </ul>
 </div>
 
-<div id="periodic-table-family" class="content-tab">
+<div class="columns family-menu">
+    <div class="column is-6 family-menu-options">
+        <table class="table">
+            <tbody>
+            <tr>
+                <td id="familia-algica" (click)="onSelectFamily('algica')">
+                    <a class="button is-small-button algica" >
+                            <span class="icon is-small">
+                              <i class="fas fa-check"></i>
+                            </span>
+                    </a>
+                    <b>ÁLGICA</b>
+                </td>
+                <td id="familia-oto-mangue" (click)="onSelectFamily('oto-mangue')">
+                    <a class="button is-small-button oto-mangue">
+                            <span class="icon is-small">
+                              <i class="fas fa-check"></i>
+                            </span>
+                    </a>
+                    <b>OTO-MANGUE</b>
+                </td>
+            </tr>
+            <tr>
+                <td  id="familia-cochimi-yumana" (click)="onSelectFamily('cochimi-yumana')">
+                    <a class="button is-small-button cochimi-yumana">
+                            <span class="icon is-small">
+                              <i class="fas fa-check"></i>
+                            </span>
+                    </a>
+                    <b>CHOCHIMÍ-YUMANA</b>
+                </td>
+                <td id="familia-tarasca" (click)="onSelectFamily('tarasca')">
+                    <a class="button is-small-button tarasca">
+                            <span class="icon is-small">
+                              <i class="fas fa-check"></i>
+                            </span>
+                    </a>
+                    <b>TARASCA</b>
+                </td>
+            </tr>
+            <tr>
+                <td id="familia-chontal-oaxaca" (click)="onSelectFamily('chontal-oaxaca')">
+                    <a class="button is-small-button chontal-oaxaca">
+                            <span class="icon is-small">
+                              <i class="fas fa-check"></i>
+                            </span>
+                    </a>
+                    <b>CHONTAL DE OAXACA</b>
+                </td>
+                <td id="familia-seri" (click)="onSelectFamily('seri')" >
+                    <a class="button is-small-button seri">
+                            <span class="icon is-small">
+                              <i class="fas fa-check"></i>
+                            </span>
+                    </a>
+                    <b>SERI</b>
+                </td>
+            </tr>
+            <tr>
+                <td id="familia-huave" (click)="onSelectFamily('huave')">
+                    <a class="button is-small-button huave">
+                            <span class="icon is-small">
+                              <i class="fas fa-check"></i>
+                            </span>
+                    </a>
+                    <b>HUAVE</b>
+                </td>
+                <td id="familia-totonaco-tepehua" (click)="onSelectFamily('totonaco-tepehua')">
+                    <a class="button is-small-button totonaco-tepehua">
+                            <span class="icon is-small">
+                              <i class="fas fa-check"></i>
+                            </span>
+                    </a>
+                    <b>TOTONACO-TEPEHUA</b>
+                </td>
+            </tr>
+            <tr>
+                <td id="familia-maya" (click)="onSelectFamily('maya')">
+                    <a class="button is-small-button maya">
+                            <span class="icon is-small">
+                              <i class="fas fa-check"></i>
+                            </span>
+                    </a>
+                    <b>MAYA</b>
+                </td>
+                <td id="familia-yuto-nahua" (click)="onSelectFamily('yuto-nahua')">
+
+                    <a class="button is-small-button yuto-nahua">
+                            <span class="icon is-small">
+                              <i class="fas fa-check"></i>
+                            </span>
+                    </a>
+                    <b>YUTO-NAHUA</b>
+                </td>
+            </tr>
+            <tr>
+                <td id="familia-mixe-zoque" (click)="onSelectFamily('mixe-zoque')">
+                    <a class="button is-small-button mixe-zoque">
+                            <span class="icon is-small">
+                              <i class="fas fa-check"></i>
+                            </span>
+                    </a>
+                    <b>MIXE-ZOQUE</b>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <!--
+    <div class="column is-6 family-menu-card">
+        <div class="card">
+            <div class="card-content">
+                <div class="content">
+                    Cómo leer datos
+                    <div class="cochimi-yumana"><p class="number-id"> 1 </p><p class="element-symbol"><b>Pi</b></p><p class="element-name"> Paipai (41) </p></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    -->
+</div>
+<div id="periodic-table-family" class="content-tab box">
+
+    <!--
     <div class="columns family-menu">
         <table class="table">
             <tbody>
@@ -134,6 +257,7 @@
             </tbody>
         </table>
     </div>
+    -->
     <div class="periodic-table-family-columns">
         <div>
             <ol class="vertical-grids">
@@ -152,9 +276,15 @@
                     <ol *ngIf="languages" class="periodic-table-family-grids">
                         <li *ngFor="let language of languages" id="{{language[2]}}" (click)="onViewLanguage(language)"
                             class="group {{language[23]}} periodic-table">
-                            <p class="number-id">
+                            <!--<p class="population">
+                                <span class="icon is-small {{ COLOR2[5 - language[6]] }}"><i class="fas fa-circle"></i></span>
+                                <span class="icon is-small {{ COLOR2[5 - language[11]] }}"><i class="fas fa-square-full"></i></span>
+                                <span class="icon is-small {{ COLOR2[5 - language[14]] }}"><i class="fas fa-star"></i></span>
+                                <span class="icon is-small  {{ COLOR2[5 - language[18]] }}" style="font-size: 25px">&#9652;</span>
                                 {{language[20]}}
                             </p>
+                            -->
+                            <p class="number-id">{{language[20]}}</p>
                             <p class="element-symbol">
                                 <b>{{language[2]}}</b>
                             </p>
@@ -199,8 +329,7 @@
         </div>
     </div>
 </div>
-
-<div id="periodic-table-population" class="content-tab" style="display:none">
+<div id="periodic-table-population" class="content-tab box" style="display:none">
     <div class="columns" style="justify-content: center">
         <table class="table">
             <tbody>
@@ -391,7 +520,7 @@
     </div>
 </div>
 
-<div id="periodic-table-migration" class="content-tab" style="display:none">
+<div id="periodic-table-migration" class="content-tab box" style="display:none">
     <div class="columns" style="justify-content: center">
         <table class="table">
             <tbody>
@@ -582,7 +711,7 @@
     </div>
 </div>
 
-<div id="periodic-table-rural-population" class="content-tab" style="display:none">
+<div id="periodic-table-rural-population" class="content-tab box" style="display:none">
     <div class="columns" style="justify-content: center">
         <table class="table">
             <tbody>
@@ -773,7 +902,7 @@
     </div>
 </div>
 
-<div id="periodic-table-ire" class="content-tab" style="display:none">
+<div id="periodic-table-ire" class="content-tab box" style="display:none">
     <div class="columns" style="justify-content: center">
         <table class="table">
             <tbody>

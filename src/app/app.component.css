@@ -1,8 +1,13 @@
 .hero-body {
     /*margin-top: 50px;*/
     padding: 1rem 1.5rem;
+    font-family: 'Montserrat', serif;
 }
 
 .is-gray {
     background-color: #EAEAEA;
+}
+
+.not-show {
+    display: none;
 }
