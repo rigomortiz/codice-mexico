@@ -27,14 +27,11 @@
 
 <div class="tabs is-centered is-boxed" style ="margin-bottom: 0px;">
     <ul class="menu-views">
-        <li class="tab is-active" (click)="openTab($event, 'periodic-table-family')"><a><span>Familias</span></a></li>
-        <li class="tab" (click)="openTab($event, 'periodic-table-population')"><a><span>Población Indígena</span></a>
-        </li>
-        <li class="tab" (click)="openTab($event, 'periodic-table-migration')"><a><span>Migración</span></a></li>
-        <li class="tab" (click)="openTab($event, 'periodic-table-rural-population')"><a><span>Población Rural</span></a>
-        </li>
-        <li class="tab" (click)="openTab($event, 'periodic-table-ire')"><a><span>Índice de Remplazo Etnolingüístico (IRE)</span></a>
-        </li>
+        <li class="tab is-active" (click)="openTabPeriodicTablet($event, 'periodic-table-family')"><a><span>Familias</span></a></li>
+        <li class="tab" (click)="openTabPeriodicTablet($event, 'periodic-table-population')"><a><span>Población Indígena</span></a></li>
+        <li class="tab" (click)="openTabPeriodicTablet($event, 'periodic-table-migration')"><a><span>Migración</span></a></li>
+        <li class="tab" (click)="openTabPeriodicTablet($event, 'periodic-table-rural-population')"><a><span>Población Rural</span></a></li>
+        <li class="tab" (click)="openTabPeriodicTablet($event, 'periodic-table-ire')"><a><span>Índice de Remplazo Etnolingüístico (IRE)</span></a></li>
     </ul>
 </div>
 
@@ -146,7 +143,7 @@
             </tbody>
         </table>
     </div>
-    <!--
+
     <div class="column is-6 family-menu-card">
         <div class="card">
             <div class="card-content">
@@ -157,107 +154,9 @@
             </div>
         </div>
     </div>
-    -->
+
 </div>
 <div id="periodic-table-family" class="content-tab box">
-
-    <!--
-    <div class="columns family-menu">
-        <table class="table">
-            <tbody>
-                <tr>
-                <td id="familia-algica" (click)="onSelectFamily('algica')">
-                    <a class="button is-small algica">
-                        <span class="icon is-small">
-                          <i class="fas fa-check"></i>
-                        </span>
-                        <span>ÁLGICA</span>
-                    </a>
-                </td>
-                <td id="familia-cochimi-yumana" (click)="onSelectFamily('cochimi-yumana')">
-                    <a class="button is-small cochimi-yumana">
-                        <span class="icon is-small">
-                          <i class="fas fa-check"></i>
-                        </span>
-                        <span>CHOCHIMÍ-YUMANA</span>
-                    </a>
-                </td>
-                <td id="familia-chontal-oaxaca" (click)="onSelectFamily('chontal-oaxaca')">
-                    <a class="button is-small chontal-oaxaca">
-                        <span class="icon is-small">
-                          <i class="fas fa-check"></i>
-                        </span>
-                        <span>CHONTAL DE OAXACA</span>
-                    </a>
-                </td>
-                <td id="familia-huave" (click)="onSelectFamily('huave')">
-                    <a class="button is-small huave">
-                        <span class="icon is-small">
-                          <i class="fas fa-check"></i>
-                        </span>
-                        <span>HUAVE</span>
-                    </a>
-                </td>
-                <td id="familia-maya" (click)="onSelectFamily('maya')">
-                    <a class="button is-small maya">
-                        <span class="icon is-small">
-                          <i class="fas fa-check"></i>
-                        </span>
-                        <span>MAYA</span>
-                    </a>
-                </td>
-                <td id="familia-mixe-zoque" (click)="onSelectFamily('mixe-zoque')">
-                    <a class="button is-small mixe-zoque">
-                        <span class="icon is-small">
-                          <i class="fas fa-check"></i>
-                        </span>
-                        <span>MIXE-ZOQUE</span>
-                    </a>
-                </td>
-                <td id="familia-oto-mangue" (click)="onSelectFamily('oto-mangue')">
-                    <a class="button is-small oto-mangue">
-                        <span class="icon is-small">
-                          <i class="fas fa-check"></i>
-                        </span>
-                        <span>OTO-MANGUE</span>
-                    </a>
-                </td>
-                <td id="familia-seri" (click)="onSelectFamily('seri')">
-                    <a class="button is-small seri">
-                        <span class="icon is-small">
-                          <i class="fas fa-check"></i>
-                        </span>
-                        <span>SERI</span>
-                    </a>
-                </td>
-                <td id="familia-tarasca" (click)="onSelectFamily('tarasca')">
-                    <a class="button is-small tarasca">
-                        <span class="icon is-small">
-                          <i class="fas fa-check"></i>
-                        </span><span>TARASCA</span>
-                    </a>
-                </td>
-                <td id="familia-totonaco-tepehua" (click)="onSelectFamily('totonaco-tepehua')">
-                    <a class="button is-small totonaco-tepehua">
-                        <span class="icon is-small">
-                          <i class="fas fa-check"></i>
-                        </span>
-                        <span>TOTONACO-TEPEHUA</span>
-                    </a>
-                </td>
-                <td id="familia-yuto-nahua" (click)="onSelectFamily('yuto-nahua')">
-                    <a class="button is-small yuto-nahua">
-                        <span class="icon is-small">
-                          <i class="fas fa-check"></i>
-                        </span>
-                        <span>YUTO-NAHUA</span>
-                    </a>
-                </td>
-            </tr>
-            </tbody>
-        </table>
-    </div>
-    -->
     <div class="periodic-table-family-columns">
         <div>
             <ol class="vertical-grids">
@@ -275,7 +174,7 @@
                 <div>
                     <ol *ngIf="languages" class="periodic-table-family-grids">
                         <li *ngFor="let language of languages" id="{{language[2]}}" (click)="onViewLanguage(language)"
-                            class="group {{language[23]}} periodic-table">
+                            class="group {{language[23]}} periodic-table {{'A' + language[6]}} {{'B' + language[11] }} {{'C' + language[14]}} {{'D' + language[18]}} ">
                             <!--<p class="population">
                                 <span class="icon is-small {{ COLOR2[5 - language[6]] }}"><i class="fas fa-circle"></i></span>
                                 <span class="icon is-small {{ COLOR2[5 - language[11]] }}"><i class="fas fa-square-full"></i></span>
@@ -328,7 +227,235 @@
             </ol>
         </div>
     </div>
+    <div>
+        <div class="has-text-centered">
+            <p>
+                <strong>SIMBOLOGÍA</strong>
+            </p>
+            <div class="tabs is-centered">
+                <ul class="menu-views">
+                    <li class="tab-symbols is-active" (click)="openTabPeriodicTabletSymbols($event, 'periodic-table-family-symbol-population')">
+                        <a>
+                            <span class="icon is-small"><i class="fas fa-circle"></i></span>
+                            <span>Población Indígena</span>
+                        </a>
+                    </li>
+                    <li class="tab-symbols" (click)="openTabPeriodicTabletSymbols($event, 'periodic-table-family-symbol-migration')">
+                        <a>
+                            <span class="icon is-small"><i class="fas fa-square-full"></i></span>
+                            <span>Migración</span>
+                        </a>
+                    </li>
+                    <li class="tab-symbols" (click)="openTabPeriodicTabletSymbols($event, 'periodic-table-family-symbol-rural-population')">
+                        <a>
+                            <span class="icon is-small"><i class="fas fa-star"></i></span>
+                            <span>Población Rural</span>
+                        </a>
+                    </li>
+                    <li class="tab-symbols" (click)="openTabPeriodicTabletSymbols($event, 'periodic-table-family-symbol-ire')">
+                        <a>
+                            <span class="icon is-small"><i class="fas fa-exclamation-triangle"></i></span>
+                            <span>Índice de Remplazo Etnolingüístico (IRE)</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div id="periodic-table-family-symbol-population" class="content-tab-symbols" >
+                <table class="table">
+                    <tbody>
+                    <tr>
+                        <td (click)="onSelectA('A1')">
+                            <a class="button is-small-button bg-green A1" >
+                                <span class="icon is-small">
+                                    <i class="fas fa-check"></i>
+                                </span>
+                            </a>
+                            <span> > de 220 000 a 2 millones 886 mil</span>
+                        </td>
+                        <td (click)="onSelectA('A2')">
+                            <a class="button is-small-button bg-green-light A2" >
+                                <span class="icon is-small">
+                                    <i class="fas fa-check"></i>
+                                </span>
+                            </a>
+                            <span> > de 37 300 a < de 220 000</span>
+                        </td>
+                        <td (click)="onSelectA('A3')">
+                            <a class="button is-small-button bg-yellow A3" >
+                                <span class="icon is-small">
+                                    <i class="fas fa-check"></i>
+                                </span>
+                            </a>
+                            <span> > de 4 700 a < de 37 300</span>
+                        </td>
+                        <td (click)="onSelectA('A4')">
+                            <a class="button is-small-button bg-orange A4" >
+                                <span class="icon is-small">
+                                    <i class="fas fa-check"></i>
+                                </span>
+                            </a>
+                            <span> > de 600 a < de 4 700</span>
+                        </td>
+                        <td (click)="onSelectA('A5')">
+                            <a class="button is-small-button bg-red A5" >
+                                <span class="icon is-small">
+                                    <i class="fas fa-check"></i>
+                                </span>
+                            </a>
+                            <span> De 30 a 600</span>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div id="periodic-table-family-symbol-migration" class="content-tab-symbols" style="display: none;">
+                <table class="table">
+                    <tbody>
+                    <tr>
+                        <td>
+                            <a class="button is-small-button bg-green" >
+                                <span class="icon is-small">
+                                    <i class="fas fa-check"></i>
+                                </span>
+                            </a>
+                            <span> Muy baja</span>
+                        </td>
+                        <td>
+                            <a class="button is-small-button bg-green-light" >
+                                <span class="icon is-small">
+                                    <i class="fas fa-check"></i>
+                                </span>
+                            </a>
+                            <span> Baja</span>
+                        </td>
+                        <td>
+                            <a class="button is-small-button bg-yellow" >
+                                <span class="icon is-small">
+                                    <i class="fas fa-check"></i>
+                                </span>
+                            </a>
+                            <span> Promedio</span>
+                        </td>
+                        <td>
+                            <a class="button is-small-button bg-orange" >
+                                <span class="icon is-small">
+                                    <i class="fas fa-check"></i>
+                                </span>
+                            </a>
+                            <span> Alta</span>
+                        </td>
+                        <td>
+                            <a class="button is-small-button bg-red" >
+                                <span class="icon is-small">
+                                    <i class="fas fa-check"></i>
+                                </span>
+                            </a>
+                            <span> Muy alta</span>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div id="periodic-table-family-symbol-rural-population" class="content-tab-symbols" style="display: none;">
+                <table class="table">
+                    <tbody>
+                    <tr>
+                        <td>
+                            <a class="button is-small-button bg-green" >
+                                <span class="icon is-small">
+                                    <i class="fas fa-check"></i>
+                                </span>
+                            </a>
+                            <span> Muy rural</span>
+                        </td>
+                        <td>
+                            <a class="button is-small-button bg-green-light" >
+                                <span class="icon is-small">
+                                    <i class="fas fa-check"></i>
+                                </span>
+                            </a>
+                            <span> Rural</span>
+                        </td>
+                        <td>
+                            <a class="button is-small-button bg-yellow" >
+                                <span class="icon is-small">
+                                    <i class="fas fa-check"></i>
+                                </span>
+                            </a>
+                            <span> Rural promedio</span>
+                        </td>
+                        <td>
+                            <a class="button is-small-button bg-orange" >
+                                <span class="icon is-small">
+                                    <i class="fas fa-check"></i>
+                                </span>
+                            </a>
+                            <span> Rural - Urbano</span>
+                        </td>
+                        <td>
+                            <a class="button is-small-button bg-red" >
+                                <span class="icon is-small">
+                                    <i class="fas fa-check"></i>
+                                </span>
+                            </a>
+                            <span> Urbano</span>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div id="periodic-table-family-symbol-ire" class="content-tab-symbols" style="display: none;">
+                <table class="table">
+                    <tbody>
+                    <tr>
+                        <td>
+                            <a class="button is-small-button bg-green" >
+                                <span class="icon is-small">
+                                    <i class="fas fa-check"></i>
+                                </span>
+                            </a>
+                            <span> Expansión acelerada</span>
+                        </td>
+                        <td>
+                            <a class="button is-small-button bg-green-light" >
+                                <span class="icon is-small">
+                                    <i class="fas fa-check"></i>
+                                </span>
+                            </a>
+                            <span> Expansión lenta</span>
+                        </td>
+                        <td>
+                            <a class="button is-small-button bg-yellow" >
+                                <span class="icon is-small">
+                                    <i class="fas fa-check"></i>
+                                </span>
+                            </a>
+                            <span> Equilibrio</span>
+                        </td>
+                        <td>
+                            <a class="button is-small-button bg-orange" >
+                                <span class="icon is-small">
+                                    <i class="fas fa-check"></i>
+                                </span>
+                            </a>
+                            <span> Extinción lenta</span>
+                        </td>
+                        <td>
+                            <a class="button is-small-button bg-red" >
+                                <span class="icon is-small">
+                                    <i class="fas fa-check"></i>
+                                </span>
+                            </a>
+                            <span> Extinción acelerada</span>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
 </div>
+
 <div id="periodic-table-population" class="content-tab box" style="display:none">
     <div class="columns" style="justify-content: center">
         <table class="table">

@@ -70,6 +70,7 @@ export class TablaLenguasIndigenasComponent implements OnInit, AfterViewInit {
     private COLOR = ["bg-green", "bg-green-light", "bg-yellow", "bg-orange", "bg-red", "bg-none"];
     private COLOR2 = ["green", "green-light", "yellow", "orange", "red", "none"];
 
+
     private shareObj = {
         href: "FACEBOOK-SHARE-LINK",
         hashtag: "#FACEBOOK-SHARE-HASGTAG"
@@ -107,6 +108,19 @@ export class TablaLenguasIndigenasComponent implements OnInit, AfterViewInit {
     ngAfterViewInit(): void {
     }
 
+    public onSelectA(f: string){
+
+        let c = document.getElementsByClassName(f);
+
+
+
+        for (let i = 0; i < c.length; i++) {
+            c[i].classList.toggle("hide");
+        }
+    }
+
+
+
     public onSelectFamily(f: string) {
         let c = document.getElementsByClassName(f);
 
@@ -137,7 +151,7 @@ export class TablaLenguasIndigenasComponent implements OnInit, AfterViewInit {
 
     }
 
-    public openTab(evt, tabName){
+    public openTabPeriodicTablet(evt, tabName){
         let i, x, tabLinks;
         x = document.getElementsByClassName("content-tab");
         for (i = 0; i < x.length; i++) {
@@ -161,6 +175,23 @@ export class TablaLenguasIndigenasComponent implements OnInit, AfterViewInit {
         else if(tabName === "periodic-table-ire")
             this.onViewIRE();
     }
+
+    public openTabPeriodicTabletSymbols(evt, tabName){
+        let i, x, tabLinks;
+        x = document.getElementsByClassName("content-tab-symbols");
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+        }
+        tabLinks = document.getElementsByClassName("tab-symbols");
+        for (i = 0; i < x.length; i++) {
+            tabLinks[i].className = tabLinks[i].className.replace(" is-active", "");
+        }
+        document.getElementById(tabName).style.display = "flex";
+        evt.currentTarget.className += " is-active";
+
+        //if(tabName === "periodic-table-family-symbol-population")
+    }
+
 
     public onViewFamily(){
         document.getElementsByClassName("family-menu").item(0)
@@ -210,6 +241,21 @@ export class TablaLenguasIndigenasComponent implements OnInit, AfterViewInit {
         this.languagesColumnC = this.languages.filter( l => l[COLUMNS.GRUPO_IRE] === 3);
         this.languagesColumnD = this.languages.filter( l => l[COLUMNS.GRUPO_IRE] === 2);
         this.languagesColumnE = this.languages.filter( l => l[COLUMNS.GRUPO_IRE] === 1);
+    }
+
+    public onViewSymbolsPopulation(){
+        document.getElementsByClassName("family-menu").item(0)
+            .setAttribute("style", "display: none;");
+    }
+
+    public onViewSymbolsMigration(){
+
+    }
+    public onViewSymbolsRuralPopulation(){
+
+    }
+    public onViewSymbolsIRE(){
+
     }
 
     public onViewLanguage(lengua) {

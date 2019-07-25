@@ -4,10 +4,11 @@
 */
 @media (min-width: 1281px) {
     .family-menu {
-        margin-top: 0; 
-        margin-bottom: 0; 
+        margin-top: 0;
+        margin-bottom: 0;
         height: 0;
     }
+
     .family-menu .family-menu-options {
         display: flex;
         justify-content: flex-end;
@@ -27,16 +28,16 @@
         font-size: 12px;
     }
 
-    .family-menu .card{
+    .family-menu .card {
         position: absolute;
     }
 
-    .family-menu tbody tr{
+    .family-menu tbody tr {
         /*display: flex;
         justify-content: space-between;*/
     }
 
-    .family-menu tbody tr td{
+    .family-menu tbody tr td {
         border: none;
         cursor: pointer;
     }
@@ -94,7 +95,7 @@
         padding: 0;
     }
 
-    .horizontal-list li{
+    .horizontal-list li {
         float: left;
         width: 6.25%;
         display: flex;
@@ -108,7 +109,7 @@
         padding: 0;
     }
 
-    .horizontal-list-groups li{
+    .horizontal-list-groups li {
         float: left;
         width: 33.3%;
         display: flex;
@@ -119,6 +120,19 @@
     .periodic-table {
         list-style: none;
         margin: 0 auto;
+    }
+
+    .tabs{
+        margin-bottom: 10px;
+    }
+
+    .content-tab-symbols {
+        display: flex;
+        justify-content: center;
+    }
+
+    .content-tab-symbols > table > tbody > tr >td {
+        cursor: pointer;
     }
 
     .periodic-table-family-columns {
@@ -186,7 +200,7 @@
 
     .element-symbol {
         margin-top: -10px;
-        font-size: 22px;
+        font-size: 21px;
         text-align: left;
     }
 
@@ -212,7 +226,7 @@
     }
 
     .element-name{
-        font-size: 10px;
+        font-size: 9px;
         flex: 1 1;
         align-items: flex-end;
         overflow: hidden;
