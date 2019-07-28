@@ -183,7 +183,9 @@
                                 {{language[20]}}
                             </p>
                             -->
-                            <p class="number-id">{{language[20]}}</p>
+                            <p class="number-id">
+                                <b>{{language[20]}}</b>
+                            </p>
                             <p class="element-symbol">
                                 <b>{{language[2]}}</b>
                             </p>
@@ -227,7 +229,7 @@
             </ol>
         </div>
     </div>
-    <div>
+    <div class="periodic-table-symbols">
         <div class="has-text-centered">
             <p>
                 <strong>SIMBOLOGÍA</strong>
@@ -236,25 +238,21 @@
                 <ul class="menu-views">
                     <li class="tab-symbols is-active" (click)="openTabPeriodicTabletSymbols($event, 'periodic-table-family-symbol-population')">
                         <a>
-                            <span class="icon is-small"><i class="fas fa-circle"></i></span>
                             <span>Población Indígena</span>
                         </a>
                     </li>
                     <li class="tab-symbols" (click)="openTabPeriodicTabletSymbols($event, 'periodic-table-family-symbol-migration')">
                         <a>
-                            <span class="icon is-small"><i class="fas fa-square-full"></i></span>
                             <span>Migración</span>
                         </a>
                     </li>
                     <li class="tab-symbols" (click)="openTabPeriodicTabletSymbols($event, 'periodic-table-family-symbol-rural-population')">
                         <a>
-                            <span class="icon is-small"><i class="fas fa-star"></i></span>
                             <span>Población Rural</span>
                         </a>
                     </li>
                     <li class="tab-symbols" (click)="openTabPeriodicTabletSymbols($event, 'periodic-table-family-symbol-ire')">
                         <a>
-                            <span class="icon is-small"><i class="fas fa-exclamation-triangle"></i></span>
                             <span>Índice de Remplazo Etnolingüístico (IRE)</span>
                         </a>
                     </li>
@@ -265,7 +263,7 @@
                     <tbody>
                     <tr>
                         <td (click)="onSelectA('A1')">
-                            <a class="button is-small-button bg-green A1" >
+                            <a class="button is-small-button bg-green hide a1" >
                                 <span class="icon is-small">
                                     <i class="fas fa-check"></i>
                                 </span>
@@ -273,7 +271,7 @@
                             <span> > de 220 000 a 2 millones 886 mil</span>
                         </td>
                         <td (click)="onSelectA('A2')">
-                            <a class="button is-small-button bg-green-light A2" >
+                            <a class="button is-small-button bg-green-light hide a2" >
                                 <span class="icon is-small">
                                     <i class="fas fa-check"></i>
                                 </span>
@@ -281,7 +279,7 @@
                             <span> > de 37 300 a < de 220 000</span>
                         </td>
                         <td (click)="onSelectA('A3')">
-                            <a class="button is-small-button bg-yellow A3" >
+                            <a class="button is-small-button bg-yellow hide a3" >
                                 <span class="icon is-small">
                                     <i class="fas fa-check"></i>
                                 </span>
@@ -289,7 +287,7 @@
                             <span> > de 4 700 a < de 37 300</span>
                         </td>
                         <td (click)="onSelectA('A4')">
-                            <a class="button is-small-button bg-orange A4" >
+                            <a class="button is-small-button bg-orange hide a4" >
                                 <span class="icon is-small">
                                     <i class="fas fa-check"></i>
                                 </span>
@@ -297,7 +295,7 @@
                             <span> > de 600 a < de 4 700</span>
                         </td>
                         <td (click)="onSelectA('A5')">
-                            <a class="button is-small-button bg-red A5" >
+                            <a class="button is-small-button bg-red hide a5" >
                                 <span class="icon is-small">
                                     <i class="fas fa-check"></i>
                                 </span>
@@ -312,40 +310,40 @@
                 <table class="table">
                     <tbody>
                     <tr>
-                        <td>
-                            <a class="button is-small-button bg-green" >
+                        <td (click)="onSelectA('B1')">
+                            <a class="button is-small-button bg-green hide b1" >
                                 <span class="icon is-small">
                                     <i class="fas fa-check"></i>
                                 </span>
                             </a>
                             <span> Muy baja</span>
                         </td>
-                        <td>
-                            <a class="button is-small-button bg-green-light" >
+                        <td (click)="onSelectA('B2')">
+                            <a class="button is-small-button bg-green-light hide b2" >
                                 <span class="icon is-small">
                                     <i class="fas fa-check"></i>
                                 </span>
                             </a>
                             <span> Baja</span>
                         </td>
-                        <td>
-                            <a class="button is-small-button bg-yellow" >
+                        <td (click)="onSelectA('B3')">
+                            <a class="button is-small-button bg-yellow hide b3">
                                 <span class="icon is-small">
                                     <i class="fas fa-check"></i>
                                 </span>
                             </a>
                             <span> Promedio</span>
                         </td>
-                        <td>
-                            <a class="button is-small-button bg-orange" >
+                        <td (click)="onSelectA('B4')">
+                            <a class="button is-small-button bg-orange hide b4">
                                 <span class="icon is-small">
                                     <i class="fas fa-check"></i>
                                 </span>
                             </a>
                             <span> Alta</span>
                         </td>
-                        <td>
-                            <a class="button is-small-button bg-red" >
+                        <td (click)="onSelectA('B5')">
+                            <a class="button is-small-button bg-red hide b5">
                                 <span class="icon is-small">
                                     <i class="fas fa-check"></i>
                                 </span>
@@ -360,40 +358,40 @@
                 <table class="table">
                     <tbody>
                     <tr>
-                        <td>
-                            <a class="button is-small-button bg-green" >
+                        <td (click)="onSelectA('C1')">
+                            <a class="button is-small-button bg-green c1" >
                                 <span class="icon is-small">
                                     <i class="fas fa-check"></i>
                                 </span>
                             </a>
                             <span> Muy rural</span>
                         </td>
-                        <td>
-                            <a class="button is-small-button bg-green-light" >
+                        <td (click)="onSelectA('C2')">
+                            <a class="button is-small-button bg-green-light c2" >
                                 <span class="icon is-small">
                                     <i class="fas fa-check"></i>
                                 </span>
                             </a>
                             <span> Rural</span>
                         </td>
-                        <td>
-                            <a class="button is-small-button bg-yellow" >
+                        <td (click)="onSelectA('C3')">
+                            <a class="button is-small-button bg-yellow c3" >
                                 <span class="icon is-small">
                                     <i class="fas fa-check"></i>
                                 </span>
                             </a>
                             <span> Rural promedio</span>
                         </td>
-                        <td>
-                            <a class="button is-small-button bg-orange" >
+                        <td (click)="onSelectA('C4')">
+                            <a class="button is-small-button bg-orange c4" >
                                 <span class="icon is-small">
                                     <i class="fas fa-check"></i>
                                 </span>
                             </a>
                             <span> Rural - Urbano</span>
                         </td>
-                        <td>
-                            <a class="button is-small-button bg-red" >
+                        <td (click)="onSelectA('C5')">
+                            <a class="button is-small-button bg-red c5" >
                                 <span class="icon is-small">
                                     <i class="fas fa-check"></i>
                                 </span>
@@ -408,40 +406,40 @@
                 <table class="table">
                     <tbody>
                     <tr>
-                        <td>
-                            <a class="button is-small-button bg-green" >
+                        <td (click)="onSelectA('D1')">
+                            <a class="button is-small-button bg-green d1" >
                                 <span class="icon is-small">
                                     <i class="fas fa-check"></i>
                                 </span>
                             </a>
                             <span> Expansión acelerada</span>
                         </td>
-                        <td>
-                            <a class="button is-small-button bg-green-light" >
+                        <td (click)="onSelectA('D2')">
+                            <a class="button is-small-button bg-green-light d2" >
                                 <span class="icon is-small">
                                     <i class="fas fa-check"></i>
                                 </span>
                             </a>
                             <span> Expansión lenta</span>
                         </td>
-                        <td>
-                            <a class="button is-small-button bg-yellow" >
+                        <td (click)="onSelectA('D3')">
+                            <a class="button is-small-button bg-yellow d3" >
                                 <span class="icon is-small">
                                     <i class="fas fa-check"></i>
                                 </span>
                             </a>
                             <span> Equilibrio</span>
                         </td>
-                        <td>
-                            <a class="button is-small-button bg-orange" >
+                        <td (click)="onSelectA('D4')">
+                            <a class="button is-small-button bg-orange d4" >
                                 <span class="icon is-small">
                                     <i class="fas fa-check"></i>
                                 </span>
                             </a>
                             <span> Extinción lenta</span>
                         </td>
-                        <td>
-                            <a class="button is-small-button bg-red" >
+                        <td (click)="onSelectA('D5')">
+                            <a class="button is-small-button bg-red d5" >
                                 <span class="icon is-small">
                                     <i class="fas fa-check"></i>
                                 </span>

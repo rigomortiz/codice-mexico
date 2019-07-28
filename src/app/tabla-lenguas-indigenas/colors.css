@@ -1,3 +1,6 @@
+.A0, .B0, .C0, .D0 {
+}
+
 .principal {
     background-color: #a22244;
 }
@@ -49,6 +52,48 @@
 
 .red {
     color: #DD3430;
+}
+
+.shadow-green {
+    box-shadow: 0 0 0 4px #207331 !important;
+    border-color: #fff !important;
+    border-style: solid;
+}
+
+.shadow-green-light {
+    box-shadow: 0 0 0 4px #68B32D !important;
+    border-color: #fff !important;
+    border-style: solid;
+}
+
+.shadow-yellow {
+    box-shadow: 0 0 0 4px #FDE818 !important;
+    border-color: #fff !important;
+    border-style: solid;
+}
+
+.shadow-orange {
+    box-shadow: 0 0 0 4px #F39519 !important;
+    border-color: #fff !important;
+    border-style: solid;
+}
+
+.shadow-red {
+    box-shadow: 0 0 0 4px #DD3430 !important;
+    border-color: #fff !important;
+    border-style: solid;
+}
+
+.hvr-grow {
+    display: inline-block;
+    vertical-align: middle;
+    transition: all 1.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+    -webkit-transition: all 1.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.hvr-grow:hover, .hvr-grow:focus, .hvr-grow:active {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
 }
 
 .gray {

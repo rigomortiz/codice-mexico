@@ -78,7 +78,7 @@
         padding: 10px 0;
         height: 4.6vw;
         overflow: hidden;
-        margin: 3px;
+        margin: 4px;
         z-index: auto;
         display: flex;
         align-items: center;
@@ -87,6 +87,7 @@
 
     .horizontal-grids {
         margin: 0 auto;
+        padding-top: 10px;
     }
 
     .horizontal-list {
@@ -115,6 +116,10 @@
         display: flex;
         align-items: center;
         justify-content: center;
+    }
+
+    .periodic-table-symbols{
+        padding-top: 10px;
     }
 
     .periodic-table {
@@ -177,11 +182,11 @@
         padding: 5px;
         border-radius: 5px;
         overflow: hidden;
-        margin: 3px;
+        margin: 4px;
         /*transition: box-shadow .1s;*/
         box-shadow: 0 4px 4px 0 rgba(0, 0, 0, .1), inset 0 0 0 2px rgba(0, 0, 0, .1);
-        /* transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
-         -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);*/
+        transition: all 1.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+        -webkit-transition: all 1.5s cubic-bezier(0.165, 0.84, 0.44, 1);
         z-index: auto;
         /*transition:all 1s;*/
         /*border: 1px solid #ccc;*/

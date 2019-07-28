@@ -4,6 +4,7 @@ import {DomSanitizer, SafeHtml} from '@angular/platform-browser';
 import {BreakpointObserver, BreakpointState} from '@angular/cdk/layout'
 import {SocialService} from "ng6-social-button";
 import * as XLSX from 'xlsx';
+import {forEach} from "@angular/router/src/utils/collection";
 
 enum COLUMNS {
 ID
@@ -65,7 +66,6 @@ export class TablaLenguasIndigenasComponent implements OnInit, AfterViewInit {
     private familia = "";
     private selectedFilter: string;
     public showContainer: boolean;
-
     public columns: COLUMNS;
     private COLOR = ["bg-green", "bg-green-light", "bg-yellow", "bg-orange", "bg-red", "bg-none"];
     private COLOR2 = ["green", "green-light", "yellow", "orange", "red", "none"];
@@ -108,18 +108,61 @@ export class TablaLenguasIndigenasComponent implements OnInit, AfterViewInit {
     ngAfterViewInit(): void {
     }
 
-    public onSelectA(f: string){
+    public resetSymbols(){
+        let e;
 
-        let c = document.getElementsByClassName(f);
+        for(let i = 1; i <= 5; i++){
+            e = document.getElementsByClassName("a" + i);
+            for (let i = 0; i < e.length; i++) {
+                e[i].classList.add("hide");
+            }
+            e = document.getElementsByClassName("b" + i);
+            for (let i = 0; i < e.length; i++) {
+                e[i].classList.add("hide");
+            }
+            e = document.getElementsByClassName("c" + i);
+            for (let i = 0; i < e.length; i++) {
+                e[i].classList.add("hide");
+            }
+            e = document.getElementsByClassName("d" + i);
+            for (let i = 0; i < e.length; i++) {
+                e[i].classList.add("hide");
+            }
+        }
 
-
-
-        for (let i = 0; i < c.length; i++) {
-            c[i].classList.toggle("hide");
+        e = document.getElementsByClassName("group");
+        for (let i = 0; i < e.length; i++) {
+            e[i].classList.remove("shadow-green");
+            e[i].classList.remove("shadow-green-light");
+            e[i].classList.remove("shadow-yellow");
+            e[i].classList.remove("shadow-orange");
+            e[i].classList.remove("shadow-red");
         }
     }
 
+    public onSelectA(f: string){
+        let e = document.getElementsByClassName(f.toLowerCase());
+        for (let i = 0; i < e.length; i++) {
+            e[i].classList.toggle("hide");
+        }
 
+        let className;
+        if(f === "A1" || f === "B1" || f === "C1" || f === "D1")
+            className = "shadow-green";
+        else if(f === "A2" || f === "B2" || f === "C2" || f === "D2")
+            className = "shadow-green-light";
+        else if(f === "A3" || f === "B3" || f === "C3" || f === "D3")
+            className = "shadow-yellow";
+        else if(f === "A4" || f === "B4" || f === "C4" || f === "D4")
+            className = "shadow-orange";
+        else if(f === "A5" || f === "B5" || f === "C5" || f === "D5")
+            className = "shadow-red";
+
+        let c = document.getElementsByClassName(f);
+        for (let i = 0; i < c.length; i++) {
+            c[i].classList.toggle(className);
+        }
+    }
 
     public onSelectFamily(f: string) {
         let c = document.getElementsByClassName(f);
@@ -163,7 +206,6 @@ export class TablaLenguasIndigenasComponent implements OnInit, AfterViewInit {
         }
         document.getElementById(tabName).style.display = "block";
         evt.currentTarget.className += " is-active";
-
         if(tabName === "periodic-table-family")
             this.onViewFamily();
         else if(tabName === "periodic-table-population")
@@ -188,6 +230,7 @@ export class TablaLenguasIndigenasComponent implements OnInit, AfterViewInit {
         }
         document.getElementById(tabName).style.display = "flex";
         evt.currentTarget.className += " is-active";
+        this.resetSymbols();
 
         //if(tabName === "periodic-table-family-symbol-population")
     }
