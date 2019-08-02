@@ -5,6 +5,11 @@
     background-color: #a22244;
 }
 
+.bg-principal{
+    background-color: #a22244;
+    color: #FFFFFF;
+}
+
 .bg-none {
     display: none;
 }

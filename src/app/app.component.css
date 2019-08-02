@@ -1,7 +1,10 @@
-.hero-body {
+.main {
     /*margin-top: 50px;*/
     padding: 1rem 1.5rem;
     font-family: 'Montserrat', serif;
+    max-width: 1468px;
+    max-height: 931px;
+    margin: auto;
 }
 
 .is-gray {

@@ -46,23 +46,23 @@
         padding-left: 5px;
     }
 
-    #Kp.periodic-table {
+    #Kp.periodic-table-family{
         grid-column: 1 / span 1;
     }
 
-    #Cu.periodic-table {
+    #Cu.periodic-table-family{
         grid-column: 1 / span 1;
     }
 
-    #Ay.periodic-table {
+    #Ay.periodic-table-family{
         grid-column-start: 14;
     }
 
-    #PoS.periodic-table {
+    #PoS.periodic-table-family {
         grid-column-start: 13;
     }
 
-    #Qe.periodic-table {
+    #Qe.periodic-table-family {
         grid-column-start: 12;
     }
 
@@ -75,6 +75,7 @@
     }
 
     .vertical-grids li {
+        max-height: 70px;
         padding: 10px 0;
         height: 4.6vw;
         overflow: hidden;
@@ -90,15 +91,23 @@
         padding-top: 10px;
     }
 
-    .horizontal-list {
+    .horizontal-grids > ul {
         list-style-type: none;
         margin: 0;
         padding: 0;
     }
 
-    .horizontal-list li {
+    .horizontal-list-a li {
         float: left;
         width: 6.25%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .horizontal-list-b li {
+        float: left;
+        width: 6.6%;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -129,6 +138,12 @@
 
     .tabs{
         margin-bottom: 10px;
+    }
+
+    .content-tab{
+        padding-bottom: 0;
+        padding-right: 0;
+        padding-left: 0;
     }
 
     .content-tab-symbols {
@@ -174,22 +189,19 @@
     }
 
     .group {
-        /*max-width: 107px;*/
+        max-width: 115px;
         /*min-height: 103px;*/
-        /*max-height: 103px;*/
+        max-height: 70px;
         /*width: 105px;*/
         height: 4.6vw;
         padding: 5px;
         border-radius: 5px;
         overflow: hidden;
         margin: 4px;
-        /*transition: box-shadow .1s;*/
         box-shadow: 0 4px 4px 0 rgba(0, 0, 0, .1), inset 0 0 0 2px rgba(0, 0, 0, .1);
         transition: all 1.5s cubic-bezier(0.165, 0.84, 0.44, 1);
         -webkit-transition: all 1.5s cubic-bezier(0.165, 0.84, 0.44, 1);
         z-index: auto;
-        /*transition:all 1s;*/
-        /*border: 1px solid #ccc;*/
     }
 
     .group:after {
@@ -199,18 +211,21 @@
     }
 
     .group:hover {
-        transform: scale(1.5, 1.5);
-        cursor: pointer;
+       /* transform: scale(2, 2);*/
     }
 
     .element-symbol {
         margin-top: -10px;
-        font-size: 21px;
+        font-size: 20px;
         text-align: left;
     }
 
+    .element-symbol > b{
+        cursor: pointer;
+    }
+
     .number-id {
-        font-size: 11px;
+        font-size: 9px;
         text-align: right;
     }
 
@@ -231,6 +246,7 @@
     }
 
     .element-name{
+        cursor: pointer;
         font-size: 9px;
         flex: 1 1;
         align-items: flex-end;

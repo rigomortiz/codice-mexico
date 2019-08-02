@@ -54,7 +54,7 @@ export class Lengua {
 })
 export class TablaLenguasIndigenasComponent implements OnInit, AfterViewInit {
     private languages = [];
-    private languagesColumnA = [];
+    private languagesColumnA = [21];
     private languagesColumnB = [];
     private languagesColumnC = [];
     private languagesColumnD = [];
@@ -69,7 +69,7 @@ export class TablaLenguasIndigenasComponent implements OnInit, AfterViewInit {
     public columns: COLUMNS;
     private COLOR = ["bg-green", "bg-green-light", "bg-yellow", "bg-orange", "bg-red", "bg-none"];
     private COLOR2 = ["green", "green-light", "yellow", "orange", "red", "none"];
-
+    private typeClassTable = "periodic-table-family";
 
     private shareObj = {
         href: "FACEBOOK-SHARE-LINK",
@@ -83,7 +83,7 @@ export class TablaLenguasIndigenasComponent implements OnInit, AfterViewInit {
     ];
 
     constructor(private lenguasDataService: LenguasDataService, private sanitizer: DomSanitizer,
-                public breakpointObserver: BreakpointObserver, private socialAuthService: SocialService) {
+                public breakpointObserver: BreakpointObserver, private socialAuthService: SocialService, ) {
 
         this.lenguasDataService.getExcel().subscribe(resp => {
             let data = new Uint8Array(resp.body);
@@ -141,6 +141,8 @@ export class TablaLenguasIndigenasComponent implements OnInit, AfterViewInit {
     }
 
     public onSelectA(f: string){
+      //  this.resetSymbols();
+
         let e = document.getElementsByClassName(f.toLowerCase());
         for (let i = 0; i < e.length; i++) {
             e[i].classList.toggle("hide");
@@ -197,14 +199,14 @@ export class TablaLenguasIndigenasComponent implements OnInit, AfterViewInit {
     public openTabPeriodicTablet(evt, tabName){
         let i, x, tabLinks;
         x = document.getElementsByClassName("content-tab");
-        for (i = 0; i < x.length; i++) {
+       /* for (i = 0; i < x.length; i++) {
             x[i].style.display = "none";
-        }
+        }*/
         tabLinks = document.getElementsByClassName("tab");
-        for (i = 0; i < x.length; i++) {
+        for (i = 0; i < tabLinks.length; i++) {
             tabLinks[i].className = tabLinks[i].className.replace(" is-active", "");
         }
-        document.getElementById(tabName).style.display = "block";
+        //document.getElementById(tabName).style.display = "block";
         evt.currentTarget.className += " is-active";
         if(tabName === "periodic-table-family")
             this.onViewFamily();
@@ -239,13 +241,20 @@ export class TablaLenguasIndigenasComponent implements OnInit, AfterViewInit {
     public onViewFamily(){
         document.getElementsByClassName("family-menu").item(0)
             .setAttribute("style", "display: show;");
+        document.getElementsByClassName("periodic-table-symbols").item(0)
+            .setAttribute("style", "display: show;");
         this.orderLanguagesBy(COLUMNS.POSICION, ASC);
+        this.typeClassTable = "periodic-table-family";
     }
 
     public onViewPopulation(){
+        this.typeClassTable = "periodic-table-population";
         document.getElementsByClassName("family-menu").item(0)
             .setAttribute("style", "display: none;");
-        this.orderLanguagesBy(COLUMNS.POBLACION_INDIGENA, DESC);
+        document.getElementsByClassName("periodic-table-symbols").item(0)
+            .setAttribute("style", "display: none;");
+        this.orderLanguagesBy(COLUMNS.POBLACION_INDIGENA, ASC);
+        
         this.languagesColumnA = this.languages.filter( l => l[COLUMNS.GRUPOS_DE_POBLACION] === 5);
         this.languagesColumnB = this.languages.filter( l => l[COLUMNS.GRUPOS_DE_POBLACION] === 4);
         this.languagesColumnC = this.languages.filter( l => l[COLUMNS.GRUPOS_DE_POBLACION] === 3);
@@ -254,7 +263,10 @@ export class TablaLenguasIndigenasComponent implements OnInit, AfterViewInit {
     }
 
     public onViewMigration(){
+        this.typeClassTable = "periodic-table-migration";
         document.getElementsByClassName("family-menu").item(0)
+            .setAttribute("style", "display: none;");
+        document.getElementsByClassName("periodic-table-symbols").item(0)
             .setAttribute("style", "display: none;");
         this.orderLanguagesBy(COLUMNS.PROMEDIO_DE_MIGRACION_TEMPORAL_Y_ABSOLUTA, DESC);
         this.languagesColumnA = this.languages.filter( l => l[COLUMNS.MIGRACION] === 5);
@@ -265,7 +277,10 @@ export class TablaLenguasIndigenasComponent implements OnInit, AfterViewInit {
     }
 
     public onViewPopulationRural(){
+        this.typeClassTable = "periodic-table-rural";
         document.getElementsByClassName("family-menu").item(0)
+            .setAttribute("style", "display: none;");
+        document.getElementsByClassName("periodic-table-symbols").item(0)
             .setAttribute("style", "display: none;");
         this.orderLanguagesBy(COLUMNS.RURAL, DESC);
         this.languagesColumnA = this.languages.filter( l => l[COLUMNS.CINCO_GRUPOS_DE_POBLACION_RURAL] === 5);
@@ -276,7 +291,10 @@ export class TablaLenguasIndigenasComponent implements OnInit, AfterViewInit {
     }
 
     public onViewIRE(){
+        this.typeClassTable = "periodic-table-ire";
         document.getElementsByClassName("family-menu").item(0)
+            .setAttribute("style", "display: none;");
+        document.getElementsByClassName("periodic-table-symbols").item(0)
             .setAttribute("style", "display: none;");
         this.orderLanguagesBy(COLUMNS.IRE, DESC);
         this.languagesColumnA = this.languages.filter( l => l[COLUMNS.GRUPO_IRE] === 5);
@@ -361,6 +379,57 @@ export class TablaLenguasIndigenasComponent implements OnInit, AfterViewInit {
                 return 0;
             });
         }
+    }
+
+    private orderVertical() {
+        let a = new Array(7).fill(0).map(() => new Array(10).fill(0));
+
+        let i = 0, j = 0;
+
+        this.languages.map(e => {
+            if(i>6){
+                i = 0;
+                j++;
+            }
+            a[i++][j] = e;
+            //e.push( this.sanitizer.bypassSecurityTrustStyle("'grid-column':" + j + "; 'grid-row':" + i + ";").toString());
+        });
+        console.log(a);
+        let A = [];
+        for(let i = 0; i< 7; i++){
+            for(let j = 0; j< 10; j++){
+                    A.push(a[i][j])
+            }
+        }
+        A.pop()
+        A.pop();
+        console.log(A);
+        return A;
+        /*
+        let i = 4, j = 1;
+
+        this.languages.map(e => {
+            if(i>7){
+                i = 4;
+                j++;
+            }
+            e.push(j);
+            e.push(i++);
+            //e.push( this.sanitizer.bypassSecurityTrustStyle("'grid-column':" + j + "; 'grid-row':" + i + ";").toString());
+        });
+
+        this.languages.forEach(e => {
+            console.log(e);
+        });
+        */
+
+    }
+
+    private orderNormal(){
+        this.languages.map(e => {
+            e.push('auto');
+            e.push('auto');
+        });
     }
 
     // private static typePeriodicTable() {
