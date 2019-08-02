@@ -140,6 +140,34 @@
     -->
 </div>
 
+<div class="tags is-centered" style="margin: 15px;" *ngIf="typeClassTable === 'periodic-table-population'">
+    <span class="tag is-rounded bg-green" > > de 220 000 a 2 millones 886 mil</span>
+    <span class="tag is-rounded bg-green-light" >  > de 37 300 a < de 220 000</span>
+    <span class="tag is-rounded bg-yellow" >  > de 4 700 a < de 37 300</span>
+    <span class="tag is-rounded bg-orange" > > de 600 a < de 4 700</span>
+    <span class="tag is-rounded bg-red" > De 30 a 600</span>
+</div>
+<div class="tags is-centered" style="margin: 15px;" *ngIf="typeClassTable === 'periodic-table-migration'">
+    <span class="tag is-rounded bg-green" >Muy baja</span>
+    <span class="tag is-rounded bg-green-light" >Baja</span>
+    <span class="tag is-rounded bg-yellow" >Promedio</span>
+    <span class="tag is-rounded bg-orange" >Alta</span>
+    <span class="tag is-rounded bg-red" >Muy alta</span>
+</div>
+<div class="tags is-centered" style="margin: 15px;" *ngIf="typeClassTable === 'periodic-table-rural'">
+    <span class="tag is-rounded bg-green" >Muy rural</span>
+    <span class="tag is-rounded bg-green-light" >Rural</span>
+    <span class="tag is-rounded bg-yellow" >Rural promedio</span>
+    <span class="tag is-rounded bg-orange" >Rural - Urbano</span>
+    <span class="tag is-rounded bg-red" >Urbano</span>
+</div>
+<div class="tags is-centered" style="margin: 15px;" *ngIf="typeClassTable === 'periodic-table-ire'">
+    <span class="tag is-rounded bg-green" >Expansión acelerada</span>
+    <span class="tag is-rounded bg-green-light" >Expansión lenta</span>
+    <span class="tag is-rounded bg-yellow" >Equilibrio</span>
+    <span class="tag is-rounded bg-orange" >Extinción lenta</span>
+    <span class="tag is-rounded bg-red" >Extinción acelerada</span>
+</div>
 <div >
     <div class="periodic-table-family-columns">
         <div>
@@ -181,6 +209,7 @@
                     </ol>
                 </div>
                 <div class="columns" *ngIf="typeClassTable === 'periodic-table-population'">
+
                     <div class="column is-one-fifth column-one" >
                         <ol *ngIf="languages" class="periodic-table-population-grids"  >
                             <li *ngFor="let language of languagesColumnA" (click)="onViewLanguage(language)"
@@ -838,7 +867,6 @@
     </div>
 </div>
 
-
 <div class="modal" id="modal-info">
     <div class="modal-background"></div>
     <div class="modal-content">
@@ -846,28 +874,42 @@
         <div class="modal-card">
             <header class="modal-card-head {{clase}}">
                 <p class="modal-card-title {{clase}}">{{nombre}} ({{simbolo}})</p>
-                <button class="modal-close is-large" aria-label="close" (click)="onCloseLanguage()"></button>
+                <button class="delete close" aria-label="close" (click)="onCloseLanguage()"></button>
             </header>
             <section class="modal-card-body">
                 <p><b>Familia: </b></p>
                 <div class="tags are-medium">
                     <span class="tag is-rounded">{{familia}}</span>
                 </div>
+
+                <p><b>Población: </b> {{poblacion}}</p>
+                <div class="tags are-medium">
+                    <span class="tag is-rounded">{{categoriaPoblacion}}</span>
+                </div>
+
+                <p><b>Migración: </b> {{migracion}}</p>
+                <div class="tags are-medium">
+                    <span class="tag is-rounded">{{categoriaMigracion}}</span>
+                </div>
+
+                <p><b>Población Rural: </b> {{rural}}</p>
+                <div class="tags are-medium">
+                    <span class="tag is-rounded">{{ruralMigracion}}</span>
+                </div>
+
+                <p><b>IRE (Índice de Remplazo Etnolingüístico): </b> {{ire}}</p>
+                <div class="tags are-medium">
+                    <span class="tag is-rounded">{{ireMigracion}}</span>
+                </div>
+
                 <p><b>Variantes:</b></p>
-                <!--
-                <ol *ngIf="variantes">
-                    <li *ngFor="let variante of variantes">
-                        {{variante}}
-                    </li>
-                </ol>
-                -->
                 <div class="tags are-medium" *ngIf="variantes">
                     <span *ngFor="let variante of variantes" class="tag  is-rounded">{{variante}}</span>
                 </div>
                 <!--<button class="button is-link" (click)="facebookSharing(shareObj)">Más</button>-->
             </section>
             <footer class="modal-card-foot">
-                <button class="button {{clase}}" (click)="viewImage()">Imágen</button>
+                <button class="button {{clase}}" (click)="viewImage()">Infografía</button>
                 <button class="button" (click)="facebookSharing(shareObj)">Compartir</button>
             </footer>
         </div>

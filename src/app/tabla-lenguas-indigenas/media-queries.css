@@ -202,6 +202,7 @@
         transition: all 1.5s cubic-bezier(0.165, 0.84, 0.44, 1);
         -webkit-transition: all 1.5s cubic-bezier(0.165, 0.84, 0.44, 1);
         z-index: auto;
+        cursor: pointer;
     }
 
     .group:after {
@@ -221,7 +222,6 @@
     }
 
     .element-symbol > b{
-        cursor: pointer;
     }
 
     .number-id {
@@ -246,7 +246,6 @@
     }
 
     .element-name{
-        cursor: pointer;
         font-size: 9px;
         flex: 1 1;
         align-items: flex-end;

@@ -64,6 +64,17 @@ export class TablaLenguasIndigenasComponent implements OnInit, AfterViewInit {
     private clase = "";
     private simbolo = "";
     private descripcion = "";
+    private claveFamilia = "";
+    private poblacion = "";
+    private categoriaPoblacion = "";
+    private migracion = "";
+    private categoriaMigracion = "";
+    private rural = "";
+    private ruralMigracion = "";
+    private ire = "";
+    private ireMigracion = "";
+
+
     private familia = "";
     private variantes = [];
     private selectedFilter: string;
@@ -338,7 +349,21 @@ export class TablaLenguasIndigenasComponent implements OnInit, AfterViewInit {
         this.familia = lengua[COLUMNS.FAMILIA];
         this.simbolo = lengua[COLUMNS.CVE_LEN];
         let str:String = lengua[COLUMNS.VARIANTES];
+
+        //this.descripcion = "";
+        this.claveFamilia = lengua[COLUMNS.CVE_FAM];
+        this.poblacion = lengua[COLUMNS.POBLACION_INDIGENA];
+        this.categoriaPoblacion = lengua[COLUMNS.CATEGORIA];
+        this.migracion = lengua[COLUMNS.MIGRACION];
+        this.categoriaMigracion = lengua[COLUMNS.CATEGORIA_MIGRACION];
+        this.rural = lengua[COLUMNS.RURAL];
+        this.ruralMigracion = lengua[COLUMNS.CATEGORIA_POBLACION_RURAL];
+        this.ire = lengua[COLUMNS.IRE];
+        this.ireMigracion = lengua[COLUMNS.GRADO];
+
         this.variantes = str.split("\n");
+
+    
         //this.descripcion = this.sanitizer.bypassSecurityTrustHtml(language.descripcion).toString();
     }
 
