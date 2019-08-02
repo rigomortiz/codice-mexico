@@ -61,9 +61,11 @@ export class TablaLenguasIndigenasComponent implements OnInit, AfterViewInit {
     private languagesColumnE = [];
     private safeHtml: SafeHtml;
     private nombre = "";
+    private clase = "";
     private simbolo = "";
     private descripcion = "";
     private familia = "";
+    private variantes = [];
     private selectedFilter: string;
     public showContainer: boolean;
     public columns: COLUMNS;
@@ -297,10 +299,18 @@ export class TablaLenguasIndigenasComponent implements OnInit, AfterViewInit {
         document.getElementsByClassName("periodic-table-symbols").item(0)
             .setAttribute("style", "display: none;");
         this.orderLanguagesBy(COLUMNS.IRE, DESC);
-        this.languagesColumnA = this.languages.filter( l => l[COLUMNS.GRUPO_IRE] === 5);
-        this.languagesColumnB = this.languages.filter( l => l[COLUMNS.GRUPO_IRE] === 4);
-        this.languagesColumnC = this.languages.filter( l => l[COLUMNS.GRUPO_IRE] === 3);
-        this.languagesColumnD = this.languages.filter( l => l[COLUMNS.GRUPO_IRE] === 2);
+        this.languagesColumnA = this.languages.filter( l => l[COLUMNS.GRUPO_IRE] === 5 || l[COLUMNS.GRUPO_IRE] === 4);
+        this.languagesColumnB = this.languages.filter( l => l[COLUMNS.GRUPO_IRE] === 3);
+
+        let yourArray = this.languages.filter( l => l[COLUMNS.GRUPO_IRE] === 2);
+        let halfWayThough = Math.floor(yourArray.length / 2);
+
+        let arrayFirstHalf = yourArray.slice(0, halfWayThough);
+        let arraySecondHalf = yourArray.slice(halfWayThough, yourArray.length);
+
+
+        this.languagesColumnC = arrayFirstHalf;
+        this.languagesColumnD = arraySecondHalf;
         this.languagesColumnE = this.languages.filter( l => l[COLUMNS.GRUPO_IRE] === 1);
     }
 
@@ -320,18 +330,35 @@ export class TablaLenguasIndigenasComponent implements OnInit, AfterViewInit {
     }
 
     public onViewLanguage(lengua) {
-        let c = document.getElementsByClassName("modal");
-        c[0].classList.toggle("is-active");
+        let c = document.getElementById("modal-info");
+        c.classList.toggle("is-active");
         document.getElementsByTagName("html")[0].style.overflowY = "hidden";
-        this.nombre = lengua[1];
-        this.familia = lengua[19];
-        this.simbolo = lengua[2];
+        this.nombre = lengua[COLUMNS.LENGUA];
+        this.clase = lengua[COLUMNS.CLASE_HTML];
+        this.familia = lengua[COLUMNS.FAMILIA];
+        this.simbolo = lengua[COLUMNS.CVE_LEN];
+        let str:String = lengua[COLUMNS.VARIANTES];
+        this.variantes = str.split("\n");
         //this.descripcion = this.sanitizer.bypassSecurityTrustHtml(language.descripcion).toString();
     }
 
+    public viewImage(){
+        this.onCloseLanguage();
+        let c = document.getElementById("modal-image");
+        c.classList.toggle("is-active");
+        document.getElementsByTagName("html")[0].style.overflowY = "hidden";
+
+    }
+
     public onCloseLanguage() {
-        let c = document.getElementsByClassName("modal");
-        c[0].classList.toggle("is-active");
+        let c = document.getElementById("modal-info");
+        c.classList.toggle("is-active");
+        document.getElementsByTagName("html")[0].style.overflowY = "auto";
+    }
+
+    public onCloseImage() {
+        let c = document.getElementById("modal-image");
+        c.classList.toggle("is-active");
         document.getElementsByTagName("html")[0].style.overflowY = "auto";
     }
 
@@ -379,57 +406,6 @@ export class TablaLenguasIndigenasComponent implements OnInit, AfterViewInit {
                 return 0;
             });
         }
-    }
-
-    private orderVertical() {
-        let a = new Array(7).fill(0).map(() => new Array(10).fill(0));
-
-        let i = 0, j = 0;
-
-        this.languages.map(e => {
-            if(i>6){
-                i = 0;
-                j++;
-            }
-            a[i++][j] = e;
-            //e.push( this.sanitizer.bypassSecurityTrustStyle("'grid-column':" + j + "; 'grid-row':" + i + ";").toString());
-        });
-        console.log(a);
-        let A = [];
-        for(let i = 0; i< 7; i++){
-            for(let j = 0; j< 10; j++){
-                    A.push(a[i][j])
-            }
-        }
-        A.pop()
-        A.pop();
-        console.log(A);
-        return A;
-        /*
-        let i = 4, j = 1;
-
-        this.languages.map(e => {
-            if(i>7){
-                i = 4;
-                j++;
-            }
-            e.push(j);
-            e.push(i++);
-            //e.push( this.sanitizer.bypassSecurityTrustStyle("'grid-column':" + j + "; 'grid-row':" + i + ";").toString());
-        });
-
-        this.languages.forEach(e => {
-            console.log(e);
-        });
-        */
-
-    }
-
-    private orderNormal(){
-        this.languages.map(e => {
-            e.push('auto');
-            e.push('auto');
-        });
     }
 
     // private static typePeriodicTable() {

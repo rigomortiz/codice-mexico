@@ -211,7 +211,7 @@
     }
 
     .group:hover {
-       /* transform: scale(2, 2);*/
+       transform: scale(1.5, 1.5);
     }
 
     .element-symbol {
@@ -263,6 +263,10 @@
         text-overflow: ellipsis;
         white-space: normal;
         margin: -3px -4px 5px;
+    }
+
+    .message-body {
+        padding: 30px;
     }
 }
 
