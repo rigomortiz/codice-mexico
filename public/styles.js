@@ -555,7 +555,7 @@ if(false) {}
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /home/rigoberto/Descargas/projects/tabla-lenguas-indigenas-angular/src/styles.css */"./src/styles.css");
+module.exports = __webpack_require__(/*! /home/rigoberto/Descargas/projects/codice-mexico/tabla-lenguas-indigenas-angular/src/styles.css */"./src/styles.css");
 
 
 /***/ })

@@ -43,20 +43,70 @@
     color: #207331;
 }
 
+.green-checkbox label:before  {
+    background-color: #207331;
+    border-color: #207331;
+}
+
+.green-checkbox label:after {
+    color: #ffffff;
+    border-color: #FFFFFF;
+}
+
 .green-light {
     color: #68B32D;
+}
+
+.green-light-checkbox label:before  {
+    background-color: #68B32D;
+    border-color: #68B32D;
+}
+
+.green-light-checkbox label:after {
+    color: #ffffff;
+    border-color: #FFFFFF;
 }
 
 .orange {
     color: #F39519;
 }
 
+.orange-checkbox label:before  {
+    background-color: #F39519;
+    border-color: #F39519;
+}
+
+.orange-checkbox label:after {
+    color: #ffffff;
+    border-color: #FFFFFF;
+}
+
 .yellow {
     color: #FDE818;
 }
 
+.yellow-checkbox label:before  {
+    background-color: #FDE818;
+    border-color: #FDE818;
+}
+
+.yellow-checkbox label:after {
+    color: #515757;
+    border-color: #FFFFFF;
+}
+
 .red {
     color: #DD3430;
+}
+
+.red-checkbox label:before  {
+    background-color: #DD3430;
+    border-color: #DD3430;
+}
+
+.red-checkbox label:after {
+    color: #ffffff;
+    border-color: #FFFFFF;
 }
 
 .shadow-green {
@@ -117,10 +167,30 @@
     color: #FFFFFF;
 }
 
+.algica-checkbox label:before  {
+    background-color: #ED8965;
+    border-color: #ED8965;
+}
+
+.algica-checkbox label:after {
+    color: #FFFFFF;
+    border-color: #FFFFFF;
+}
+
 .seri, .seri.no-focus:hover {
     border-color: transparent;
     background-color: #9E60A4;
     color: #FFFFFF;
+}
+
+.seri-checkbox label:before  {
+    background-color: #9E60A4;
+    border-color: #9E60A4;
+}
+
+.seri-checkbox label:after {
+    color: #FFFFFF;
+    border-color: #FFFFFF;
 }
 
 .cochimi-yumana, .cochimi-yumana.no-focus:hover {
@@ -129,10 +199,30 @@
     color: #ffffff;
 }
 
+.cochimi-yumana-checkbox label:before  {
+    background-color: #C61E26;
+    border-color: #C61E26;
+}
+
+.cochimi-yumana-checkbox label:after {
+    color: #FFFFFF;
+    border-color: #FFFFFF;
+}
+
 .oto-mangue, .oto-mangue.no-focus:hover {
     border-color: transparent;
     background-color: #799010;
     color: #ffffff;
+}
+
+.oto-mangue-checkbox label:before  {
+    background-color: #799010;
+    border-color: #799010;
+}
+
+.oto-mangue-checkbox label:after {
+    color: #FFFFFF;
+    border-color: #FFFFFF;
 }
 
 .maya, .maya.no-focus:hover {
@@ -141,10 +231,30 @@
     color: #ffffff;
 }
 
+.maya-checkbox label:before  {
+    background-color: #83B5C2;
+    border-color: #83B5C2;
+}
+
+.maya-checkbox label:after {
+    color: #FFFFFF;
+    border-color: #FFFFFF;
+}
+
 .yuto-nahua, .yuto-nahua.no-focus:hover {
     border-color: transparent;
     background-color: #FAB700;
     color: #FFFFFF;
+}
+
+.yuto-nahua-checkbox label:before  {
+    background-color: #FAB700;
+    border-color: #FAB700;
+}
+
+.yuto-nahua-checkbox label:after {
+    color: #FFFFFF;
+    border-color: #FFFFFF;
 }
 
 .huave, .huave.no-focus:hover {
@@ -153,10 +263,30 @@
     color: #ffffff;
 }
 
+.huave-checkbox label:before  {
+    background-color: #1C8E86;
+    border-color: #1C8E86;
+}
+
+.huave-checkbox label:after {
+    color: #FFFFFF;
+    border-color: #FFFFFF;
+}
+
 .mixe-zoque, .mixe-zoque.no-focus:hover {
     border-color: transparent;
     background-color: #E4617F;
     color: #ffffff;
+}
+
+.mixe-zoque-checkbox label:before  {
+    background-color: #E4617F;
+    border-color: #E4617F;
+}
+
+.mixe-zoque-checkbox label:after {
+    color: #FFFFFF;
+    border-color: #FFFFFF;
 }
 
 .teko, .teko.no-focus:hover {
@@ -165,10 +295,30 @@
     color: #FFFFFF;
 }
 
+.teko-checkbox label:before  {
+    background-color: #3ab863;
+    border-color: #3ab863;
+}
+
+.teko-checkbox label:after {
+    color: #FFFFFF;
+    border-color: #FFFFFF;
+}
+
 .totonaco-tepehua, .totonaco-tepehua.no-focus:hover {
     border-color: transparent;
     background-color: #9E602C;
     color: #FFFFFF;
+}
+
+.totonaco-tepehua-checkbox label:before  {
+    background-color: #9E602C;
+    border-color: #9E602C;
+}
+
+.totonaco-tepehua-checkbox label:after {
+    color: #FFFFFF;
+    border-color: #FFFFFF;
 }
 
 .chontal-oaxaca, .chontal-oaxaca.no-focus:hover {
@@ -177,11 +327,32 @@
     color: #FFFFFF;
 }
 
+.chontal-oaxaca-checkbox label:before  {
+    background-color: #4D71B0;
+    border-color: #4D71B0;
+}
+
+.chontal-oaxaca-checkbox label:after {
+    color: #FFFFFF;
+    border-color: #FFFFFF;
+}
+
 .tarasca, .tarasca.no-focus:hover {
     border-color: transparent;
     background-color: #B42E88;
     color: #FFFFFF;
 }
+
+.tarasca-checkbox label:before  {
+    background-color: #B42E88;
+    border-color: #B42E88;
+}
+
+.tarasca-checkbox label:after {
+    color: #FFFFFF;
+    border-color: #FFFFFF;
+}
+
 
 .zapoteco, .zapoteco.no-focus:hover {
     border-color: transparent;
@@ -190,9 +361,27 @@
     color: #ffffff;
 }
 
+.zapoteco-checkbox label:before  {
+    background-image: -webkit-linear-gradient(135deg, #51b54f 50%, #92d26b 50%);
+    border-color: transparent;
+}
+
+.zapoteco-checkbox label:after {
+    color: #ffffff;
+}
+
 .nahuas, .nahuas.no-focus:hover {
     border-color: transparent;
     /*background-color: #8cabde;*/
     background-image: -webkit-linear-gradient(135deg, #8cabde 50%, #64cab9 50%);
     color: #515757;
+}
+
+.nahuas-checkbox label:before  {
+    background-image: -webkit-linear-gradient(135deg, #8cabde 50%, #64cab9 50%);
+    border-color: transparent;
+}
+
+.nahuas-checkbox label:after {
+    color: #ffffff;
 }

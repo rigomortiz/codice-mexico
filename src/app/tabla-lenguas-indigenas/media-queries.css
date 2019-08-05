@@ -4,9 +4,14 @@
 */
 @media (min-width: 1281px) {
     .family-menu {
+        /*
         margin-top: 0;
         margin-bottom: 0;
         height: 0;
+        */
+        display: flex;
+        justify-content: center;
+        margin-top: .75rem;
     }
 
     .family-menu .family-menu-options {
@@ -66,6 +71,26 @@
         grid-column-start: 12;
     }
 
+    #Hu.periodic-table-population, #ThS.periodic-table-population, #Sa.periodic-table-population, #Se.periodic-table-population, #Ay.periodic-table-population {
+        grid-column-start: 1;
+    }
+
+    #PoS.periodic-table-migration, #ThS.periodic-table-migration, #Po.periodic-table-migration, #Hu.periodic-table-migration, #Mm.periodic-table-migration {
+        grid-column-start: 1;
+    }
+
+    #Co.periodic-table-rural, #Cu.periodic-table-rural, #Mx.periodic-table-rural, #Po.periodic-table-rural, #Qa.periodic-table-rural {
+        grid-column-start: 1;
+    }
+
+    #Cj.periodic-table-ire, #Ci.periodic-table-ire, #Pg.periodic-table-ire {
+        grid-column-start: 1;
+    }
+
+    #Ak.periodic-table-variantes, #Gu.periodic-table-variantes, #Po.periodic-table-variantes {
+        grid-column-start: 1;
+    }
+
     .orden-menu .subtitle {
         margin-bottom: 10px !important;
     }
@@ -87,7 +112,8 @@
     }
 
     .horizontal-grids {
-        margin: 0 auto;
+        margin-left: 35px;
+        margin-right: 35px;
         padding-top: 10px;
     }
 
@@ -107,7 +133,7 @@
 
     .horizontal-list-b li {
         float: left;
-        width: 6.6%;
+        width: 33.3%;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -155,15 +181,34 @@
         cursor: pointer;
     }
 
-    .periodic-table-family-columns {
+    .periodic-table-columns {
         display: grid;
         grid-template-columns: 3% 94% 3%;
         grid-template-rows: auto;
     }
 
-    .periodic-table-population-grids, .periodic-table-migration-grids, .periodic-table-rural-grids, .periodic-table-ire-grids {
+    .periodic-table-population-grids, .periodic-table-migration-grids, .periodic-table-rural-grids, .periodic-table-ire-grids, .periodic-table-variantes-grids {
         display: grid;
         grid-template-columns: repeat(3, 33%);
+        justify-content: center;
+    }
+
+    .periodic-table-alphabet-grids{
+        display: grid;
+        grid-template-columns: repeat(14, 7.1%);
+        justify-content: center;
+    }
+
+    .periodic-table-variantes-grids {
+        display: grid;
+        grid-template-columns: repeat(8, 12.5%);
+        justify-content: center;
+    }
+
+    .periodic-table-variantes-grids-b {
+        display: grid;
+        grid-template-columns: repeat(4, 25%);
+        justify-content: center;
     }
 
     .periodic-table-family-grids {
@@ -199,8 +244,8 @@
         overflow: hidden;
         margin: 4px;
         box-shadow: 0 4px 4px 0 rgba(0, 0, 0, .1), inset 0 0 0 2px rgba(0, 0, 0, .1);
-        transition: all 1.5s cubic-bezier(0.165, 0.84, 0.44, 1);
-        -webkit-transition: all 1.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+        transition: all 0.2s linear;
+        -webkit-transition: all 0.2s linear;
         z-index: auto;
         cursor: pointer;
     }
@@ -217,7 +262,7 @@
 
     .element-symbol {
         margin-top: -10px;
-        font-size: 20px;
+        font-size: 19px;
         text-align: left;
     }
 
@@ -255,13 +300,13 @@
         margin-top: -5px;
     }
     .population{
-        font-size: 11px;
+        font-size: 9px;
         flex: 1 1;
         align-items: flex-end;
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: normal;
-        margin: -3px -4px 5px;
+        margin: -3px -4px 3px;
     }
 
     .message-body {
