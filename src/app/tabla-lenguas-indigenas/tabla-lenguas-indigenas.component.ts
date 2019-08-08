@@ -86,7 +86,7 @@ export class TablaLenguasIndigenasComponent implements OnInit, AfterViewInit {
     private COLOR2 = ["green", "green-light", "yellow", "orange", "red", "none"];
     private typeClassTable = "periodic-table-family";
 
-    private numberWithCommas(x) {
+    public numberWithCommas(x) {
         return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
     }
 
@@ -290,11 +290,11 @@ export class TablaLenguasIndigenasComponent implements OnInit, AfterViewInit {
         this.languagesColumnD = this.languages.filter( l => l[COLUMNS.GRUPOS_DE_POBLACION] === 2);
         this.languagesColumnE = this.languages.filter( l => l[COLUMNS.GRUPOS_DE_POBLACION] === 1);
 
-        this.orderLanguagesBy(this.languagesColumnA, COLUMNS.POBLACION_INDIGENA, ASC);
-        this.orderLanguagesBy(this.languagesColumnB, COLUMNS.POBLACION_INDIGENA, ASC);
-        this.orderLanguagesBy(this.languagesColumnC, COLUMNS.POBLACION_INDIGENA, ASC);
-        this.orderLanguagesBy(this.languagesColumnD, COLUMNS.POBLACION_INDIGENA, ASC);
-        this.orderLanguagesBy(this.languagesColumnE, COLUMNS.POBLACION_INDIGENA, ASC);
+        this.orderLanguagesBy(this.languagesColumnA, COLUMNS.POBLACION_INDIGENA, DESC);
+        this.orderLanguagesBy(this.languagesColumnB, COLUMNS.POBLACION_INDIGENA, DESC);
+        this.orderLanguagesBy(this.languagesColumnC, COLUMNS.POBLACION_INDIGENA, DESC);
+        this.orderLanguagesBy(this.languagesColumnD, COLUMNS.POBLACION_INDIGENA, DESC);
+        this.orderLanguagesBy(this.languagesColumnE, COLUMNS.POBLACION_INDIGENA, DESC);
     }
 
     public onViewMigration(){
@@ -309,11 +309,11 @@ export class TablaLenguasIndigenasComponent implements OnInit, AfterViewInit {
         this.languagesColumnD = this.languages.filter( l => l[COLUMNS.MIGRACION] === 2);
         this.languagesColumnE = this.languages.filter( l => l[COLUMNS.MIGRACION] === 1);
 
-        this.orderLanguagesBy(this.languagesColumnA, COLUMNS.PROMEDIO_DE_MIGRACION_TEMPORAL_Y_ABSOLUTA, ASC);
-        this.orderLanguagesBy(this.languagesColumnB, COLUMNS.PROMEDIO_DE_MIGRACION_TEMPORAL_Y_ABSOLUTA, ASC);
-        this.orderLanguagesBy(this.languagesColumnC, COLUMNS.PROMEDIO_DE_MIGRACION_TEMPORAL_Y_ABSOLUTA, ASC);
-        this.orderLanguagesBy(this.languagesColumnD, COLUMNS.PROMEDIO_DE_MIGRACION_TEMPORAL_Y_ABSOLUTA, ASC);
-        this.orderLanguagesBy(this.languagesColumnE, COLUMNS.PROMEDIO_DE_MIGRACION_TEMPORAL_Y_ABSOLUTA, ASC);
+        this.orderLanguagesBy(this.languagesColumnA, COLUMNS.PROMEDIO_DE_MIGRACION_TEMPORAL_Y_ABSOLUTA, DESC);
+        this.orderLanguagesBy(this.languagesColumnB, COLUMNS.PROMEDIO_DE_MIGRACION_TEMPORAL_Y_ABSOLUTA, DESC);
+        this.orderLanguagesBy(this.languagesColumnC, COLUMNS.PROMEDIO_DE_MIGRACION_TEMPORAL_Y_ABSOLUTA, DESC);
+        this.orderLanguagesBy(this.languagesColumnD, COLUMNS.PROMEDIO_DE_MIGRACION_TEMPORAL_Y_ABSOLUTA, DESC);
+        this.orderLanguagesBy(this.languagesColumnE, COLUMNS.PROMEDIO_DE_MIGRACION_TEMPORAL_Y_ABSOLUTA, DESC);
 
     }
 
@@ -329,11 +329,11 @@ export class TablaLenguasIndigenasComponent implements OnInit, AfterViewInit {
         this.languagesColumnD = this.languages.filter( l => l[COLUMNS.CINCO_GRUPOS_DE_POBLACION_RURAL] === 2);
         this.languagesColumnE = this.languages.filter( l => l[COLUMNS.CINCO_GRUPOS_DE_POBLACION_RURAL] === 1);
 
-        this.orderLanguagesBy(this.languagesColumnA, COLUMNS.RURAL, ASC);
-        this.orderLanguagesBy(this.languagesColumnB, COLUMNS.RURAL, ASC);
-        this.orderLanguagesBy(this.languagesColumnC, COLUMNS.RURAL, ASC);
-        this.orderLanguagesBy(this.languagesColumnD, COLUMNS.RURAL, ASC);
-        this.orderLanguagesBy(this.languagesColumnE, COLUMNS.RURAL, ASC);
+        this.orderLanguagesBy(this.languagesColumnA, COLUMNS.RURAL, DESC);
+        this.orderLanguagesBy(this.languagesColumnB, COLUMNS.RURAL, DESC);
+        this.orderLanguagesBy(this.languagesColumnC, COLUMNS.RURAL, DESC);
+        this.orderLanguagesBy(this.languagesColumnD, COLUMNS.RURAL, DESC);
+        this.orderLanguagesBy(this.languagesColumnE, COLUMNS.RURAL, DESC);
     }
 
     public onViewIRE(){
@@ -346,7 +346,7 @@ export class TablaLenguasIndigenasComponent implements OnInit, AfterViewInit {
         this.languagesColumnB = this.languages.filter( l => l[COLUMNS.GRUPO_IRE] === 3);
 
         let yourArray = this.languages.filter( l => l[COLUMNS.GRUPO_IRE] === 2);
-        this.orderLanguagesBy(yourArray, COLUMNS.IRE, ASC);
+        this.orderLanguagesBy(yourArray, COLUMNS.IRE, DESC);
 
         let halfWayThough = Math.floor(yourArray.length / 2);
 
@@ -357,11 +357,11 @@ export class TablaLenguasIndigenasComponent implements OnInit, AfterViewInit {
         this.languagesColumnD = arraySecondHalf;
         this.languagesColumnE = this.languages.filter( l => l[COLUMNS.GRUPO_IRE] === 1);
 
-        this.orderLanguagesBy(this.languagesColumnA, COLUMNS.IRE, ASC);
-        this.orderLanguagesBy(this.languagesColumnB, COLUMNS.IRE, ASC);
-        this.orderLanguagesBy(this.languagesColumnC, COLUMNS.IRE, ASC);
-        this.orderLanguagesBy(this.languagesColumnD, COLUMNS.IRE, ASC);
-        this.orderLanguagesBy(this.languagesColumnE, COLUMNS.IRE, ASC);
+        this.orderLanguagesBy(this.languagesColumnA, COLUMNS.IRE, DESC);
+        this.orderLanguagesBy(this.languagesColumnB, COLUMNS.IRE, DESC);
+        this.orderLanguagesBy(this.languagesColumnC, COLUMNS.IRE, DESC);
+        this.orderLanguagesBy(this.languagesColumnD, COLUMNS.IRE, DESC);
+        this.orderLanguagesBy(this.languagesColumnE, COLUMNS.IRE, DESC);
     }
 
     public onViewVariantes(){
@@ -375,10 +375,10 @@ export class TablaLenguasIndigenasComponent implements OnInit, AfterViewInit {
         this.languagesColumnC = this.languages.filter( l => l[COLUMNS.GRUPO_DE_VARIANTES] === 3 || l[COLUMNS.GRUPO_DE_VARIANTES] === 2 || l[COLUMNS.GRUPO_DE_VARIANTES] === 1);
 
         this.orderLanguagesBy(this.languagesColumnA, COLUMNS.ID, ASC);
-        this.orderLanguagesBy(this.languagesColumnA, COLUMNS.NUMERO_DE_VARIANTES, ASC);
+        this.orderLanguagesBy(this.languagesColumnA, COLUMNS.NUMERO_DE_VARIANTES, DESC);
         this.orderLanguagesBy(this.languagesColumnB, COLUMNS.ID, ASC);
-        this.orderLanguagesBy(this.languagesColumnB, COLUMNS.NUMERO_DE_VARIANTES, ASC);
-        this.orderLanguagesBy(this.languagesColumnC, COLUMNS.NUMERO_DE_VARIANTES, ASC);
+        this.orderLanguagesBy(this.languagesColumnB, COLUMNS.NUMERO_DE_VARIANTES, DESC);
+        this.orderLanguagesBy(this.languagesColumnC, COLUMNS.NUMERO_DE_VARIANTES, DESC);
     }
 
     public onViewAlphabet(){

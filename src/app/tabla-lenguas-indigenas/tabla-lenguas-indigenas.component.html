@@ -2,11 +2,11 @@
     <ul class="menu-views">
         <li class="tab is-active" (click)="openTabPeriodicTablet($event, 'periodic-table-family')"><a><span>Familias</span></a></li>
         <li class="tab" (click)="openTabPeriodicTablet($event, 'periodic-table-alphabet')"><a><span>Alfabético</span></a></li>
+        <li class="tab" (click)="openTabPeriodicTablet($event, 'periodic-table-variantes')"><a><span>Variantes</span></a></li>
         <li class="tab" (click)="openTabPeriodicTablet($event, 'periodic-table-population')"><a><span>Población Indígena</span></a></li>
         <li class="tab" (click)="openTabPeriodicTablet($event, 'periodic-table-migration')"><a><span>Migración</span></a></li>
         <li class="tab" (click)="openTabPeriodicTablet($event, 'periodic-table-rural-population')"><a><span>Población Rural</span></a></li>
         <li class="tab" (click)="openTabPeriodicTablet($event, 'periodic-table-ire')"><a><span>Índice de Remplazo Etnolingüístico (IRE)</span></a></li>
-        <li class="tab" (click)="openTabPeriodicTablet($event, 'periodic-table-variantes')"><a><span>Variantes</span></a></li>
     </ul>
 </div>
 
@@ -181,7 +181,7 @@
                                 class="group {{ COLOR[5 - language[6]] }} periodic-table-population">
                                 <p class="population">
                                     <span class="icon is-small white"><i class="fas fa-circle"></i></span>
-                                    {{language[5]}}
+                                    {{numberWithCommas(language[5])}}
                                 </p>
                                 <p class="element-symbol">
                                     <b>{{language[2]}}</b>
@@ -198,7 +198,7 @@
                                 class="group {{ COLOR[5 - language[6]] }} periodic-table-population">
                                 <p class="population">
                                     <span class="icon is-small white"><i class="fas fa-circle"></i></span>
-                                    {{language[5]}}
+                                    {{numberWithCommas(language[5])}}
                                 </p>
                                 <p class="element-symbol">
                                     <b>{{language[2]}}</b>
@@ -215,7 +215,7 @@
                                 class="group {{ COLOR[5 - language[6]] }} periodic-table-population">
                                 <p class="population">
                                     <span class="icon is-small white"><i class="fas fa-circle"></i></span>
-                                    {{language[5]}}
+                                    {{numberWithCommas(language[5])}}
                                 </p>
                                 <p class="element-symbol">
                                     <b>{{language[2]}}</b>
@@ -232,7 +232,7 @@
                                 class="group {{ COLOR[5 - language[6]] }} periodic-table-population">
                                 <p class="population">
                                     <span class="icon is-small white"><i class="fas fa-circle"></i></span>
-                                    {{language[5]}}
+                                    {{numberWithCommas(language[5])}}
                                 </p>
                                 <p class="element-symbol">
                                     <b>{{language[2]}}</b>
@@ -249,7 +249,7 @@
                                 class="group {{ COLOR[5 - language[6]] }} {{language[23]}} periodic-table-population">
                                 <p class="population">
                                     <span class="icon is-small white"><i class="fas fa-circle"></i></span>
-                                    {{language[5]}}
+                                    {{numberWithCommas(language[5])}}
                                 </p>
                                 <p class="element-symbol">
                                     <b>{{language[2]}}</b>
@@ -268,7 +268,7 @@
                                 class="group {{ COLOR[5 - language[11]] }} periodic-table-migration">
                                 <p class="population">
                                     <span class="icon is-small white"><i class="fas fa-square-full"></i></span>
-                                    {{language[10]}}
+                                    {{numberWithCommas(language[10])}}
                                 </p>
                                 <p class="element-symbol">
                                     <b>{{language[2]}}</b>
@@ -285,7 +285,7 @@
                                 class="group {{ COLOR[5 - language[11]] }} periodic-table-migration">
                                 <p class="population">
                                     <span class="icon is-small white"><i class="fas fa-square-full"></i></span>
-                                    {{language[10]}}
+                                    {{numberWithCommas(language[10])}}
                                 </p>
                                 <p class="element-symbol">
                                     <b>{{language[2]}}</b>
@@ -302,7 +302,7 @@
                                 class="group {{ COLOR[5 - language[11]] }} periodic-table-migration">
                                 <p class="population">
                                     <span class="icon is-small white"><i class="fas fa-square-full"></i></span>
-                                    {{language[10]}}
+                                    {{numberWithCommas(language[10])}}
                                 </p>
                                 <p class="element-symbol">
                                     <b>{{language[2]}}</b>
@@ -319,7 +319,7 @@
                                 class="group {{ COLOR[5 - language[11]] }} periodic-table-migration">
                                 <p class="population">
                                     <span class="icon is-small white"><i class="fas fa-square-full"></i></span>
-                                    {{language[10]}}
+                                    {{numberWithCommas(language[10])}}
                                 </p>
                                 <p class="element-symbol">
                                     <b>{{language[2]}}</b>
@@ -336,7 +336,7 @@
                                 class="group {{ COLOR[5 - language[11]] }} periodic-table-migration">
                                 <p class="population">
                                     <span class="icon is-small white"><i class="fas fa-square-full"></i></span>
-                                    {{language[10]}}
+                                    {{numberWithCommas(language[10])}}
                                 </p>
                                 <p class="element-symbol">
                                     <b>{{language[2]}}</b>
@@ -682,6 +682,31 @@
                 </div>
             </div>
         </ng-template>
+    </div>
+    <div *ngIf="typeClassTable === 'periodic-table-population'" class="container is-fullhd">
+        <div class="notification">
+            <strong>Población Indígena</strong><br>
+            La estimación del volumen de la población indígena se basa en el criterio de hogar indígena, que son aquellos en donde el jefe (a) y/o el cónyuge y/o alguno de los ascendientes (madre, padre, madrastra o padrastro, abuelo (a), bisabuelo (a), tatarabuelo (a), suegro (a) declaró ser hablante de alguna lengua indígena (HLI). De acuerdo al tamaño de la población se definieron cinco grupos o quintiles, donde cada uno contiene al veinte por ciento de los agrupaciones lingüísticas o pueblos indígenas.
+        </div>
+    </div>
+    <div *ngIf="typeClassTable === 'periodic-table-migration'" class="container is-fullhd">
+        <div class="notification">
+            <strong>Migración</strong><br>
+            La información sobre este tema se refiere a dos formas de identificar la migración, la primera por residir en una entidad distinta al lugar del nacimiento y la segunda por haber cambiado el lugar de residencia en los últimos cinco años. El indicador refleja el promedio de las dos tendencias migratorias en porcentaje y se agrupa en quintiles donde cada uno contiene al veinte por ciento de los agrupaciones lingüísticas o pueblos indígenas.
+        </div>
+    </div>
+    <div *ngIf="typeClassTable === 'periodic-table-rural'" class="container is-fullhd">
+        <div class="notification">
+            <strong>Población Rural</strong><br>
+            El indicador de población rural se refiere al porcentaje población indígena que habita en localidades menores de 2 mil 500 habitantes y su forma de agrupación son los quintiles donde cada uno contiene al veinte por ciento de los agrupaciones lingüísticas o pueblos indígenas.
+        </div>
+    </div>
+    <div *ngIf="typeClassTable === 'periodic-table-ire'" class="container is-fullhd">
+        <div class="notification">
+            <strong>Índice de Reemplazo Etnolingüístico</strong><br>
+            El índice refleja la relación entre los hablantes de lenguas indígenas del grupo de edad de 15 a 49 años con los niños hablantes de lenguas indígenas entre 5 y 9 años, considerando como base un modelo demográfico del estado de Oaxaca.
+            El índice permite medir la condición en que las nuevas generaciones de la población de un grupo etnolingüístico mantienen el uso de las lenguas indígenas.  Sus resultados se clasifican de la siguiente forma: expansión acelerada (valores mayores a 2); expansión lenta (entre 1.11 y 2); equilibrio (entre 0.9 y 1.1); extinción lenta (entre 0.51 y 0.9) y extinción acelerada (menor a 0.5).
+        </div>
     </div>
 
     <div class="periodic-table-symbols">

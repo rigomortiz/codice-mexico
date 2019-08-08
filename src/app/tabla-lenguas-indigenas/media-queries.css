@@ -71,23 +71,23 @@
         grid-column-start: 12;
     }
 
-    #Hu.periodic-table-population, #ThS.periodic-table-population, #Sa.periodic-table-population, #Se.periodic-table-population, #Ay.periodic-table-population {
+    #My.periodic-table-population, #Tp.periodic-table-population, #Ya.periodic-table-population, #Ak.periodic-table-population, #It.periodic-table-population {
         grid-column-start: 1;
     }
 
-    #PoS.periodic-table-migration, #ThS.periodic-table-migration, #Po.periodic-table-migration, #Hu.periodic-table-migration, #Mm.periodic-table-migration {
+    #Ts.periodic-table-migration, #Hv.periodic-table-migration, #My.periodic-table-migration, #Kq.periodic-table-migration, #Aw.periodic-table-migration {
         grid-column-start: 1;
     }
 
-    #Co.periodic-table-rural, #Cu.periodic-table-rural, #Mx.periodic-table-rural, #Po.periodic-table-rural, #Qa.periodic-table-rural {
+    #Ix.periodic-table-rural, #Ci.periodic-table-rural, #Ta.periodic-table-rural, #Mi.periodic-table-rural, #It.periodic-table-rural {
         grid-column-start: 1;
     }
 
-    #Cj.periodic-table-ire, #Ci.periodic-table-ire, #Pg.periodic-table-ire {
+    #ThS.periodic-table-ire, #Hu.periodic-table-ire, #ChT.periodic-table-ire {
         grid-column-start: 1;
     }
 
-    #Ak.periodic-table-variantes, #Gu.periodic-table-variantes, #Po.periodic-table-variantes {
+    #Aw.periodic-table-variantes, #Ta.periodic-table-variantes, #Mo.periodic-table-variantes, #Ot.periodic-table-variantes , #Tp.periodic-table-variantes  {
         grid-column-start: 1;
     }
 
