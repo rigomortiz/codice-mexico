@@ -126,11 +126,14 @@ export class TablaLenguasIndigenasComponent implements OnInit, AfterViewInit {
 
     ngAfterViewInit(): void {
     }
+
     public resetMenu(){
 
-        let e: HTMLCollectionOf<Element> = document.getElementsByClassName("menu-checkbox");
+        let e;
+
+        e = document.getElementsByClassName("menu-checkbox");
         for (let i = 0; i < e.length; i++) {
-            e[i].setAttribute("checked",  "checked");
+            e[i].checked = true;
         }
     }
     public resetSymbols(){
@@ -420,6 +423,8 @@ export class TablaLenguasIndigenasComponent implements OnInit, AfterViewInit {
         this.numeroVariantes = lengua[COLUMNS.NUMERO_DE_VARIANTES];
         if(this.numeroVariantes >0)
             this.variantes = str.split("\n");
+        else
+            this.variantes = []
 
         //this.descripcion = this.sanitizer.bypassSecurityTrustHtml(language.descripcion).toString();
     }

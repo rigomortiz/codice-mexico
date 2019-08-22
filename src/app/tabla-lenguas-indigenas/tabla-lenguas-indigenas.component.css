@@ -40,3 +40,23 @@
     border-bottom-color: #a22244;
     color: #a22244;
 }
+
+.menu-vertical{
+    display: none;
+}
+
+.navbar-burger{
+    display:block
+}
+
+.navbar-burger:hover{
+    display:block;
+    cursor: pointer;
+   /* background-color: #FFFFFF;
+    color: #a22244;*/
+}
+
+.bd-snippet-preview{
+    width: 33.3333%;
+    padding: 1.5rem;
+}

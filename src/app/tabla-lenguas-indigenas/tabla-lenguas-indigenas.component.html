@@ -1,3 +1,18 @@
+<div class="columns is-mobile" style="justify-content: flex-end;">
+    <div id="nav-menu" class="column is-one-third is-offset-two-third menu-vertical" style="position: absolute; height: 100%;">
+        <aside  class="card menu" style="padding: .75rem; z-index: 99; height: 100%">
+            <p class="menu-label">
+                Descargar
+            </p>
+            <ul class="menu-list">
+                <li><a href="./assets/codice-mexico-inpi-infografia.pdf" target="_blank">Infografía</a></li>
+                <li><a href="./assets/mapa-codice-mexico-inpi.pdf" target="_blank">Mapa</a></li>
+            </ul>
+        </aside>
+
+    </div>
+</div>
+
 <div class="tabs is-centered is-boxed" style ="margin-bottom: 0;">
     <ul class="menu-views">
         <li class="tab is-active" (click)="openTabPeriodicTablet($event, 'periodic-table-family')"><a><span>Familias</span></a></li>
@@ -8,11 +23,17 @@
         <li class="tab" (click)="openTabPeriodicTablet($event, 'periodic-table-rural-population')"><a><span>Población Rural</span></a></li>
         <li class="tab" (click)="openTabPeriodicTablet($event, 'periodic-table-ire')"><a><span>Índice de Remplazo Etnolingüístico (IRE)</span></a></li>
     </ul>
+    <a role="button" id="button-menu" class="navbar-burger is-dark" aria-label="menu" aria-expanded="false" style="z-index: 100"
+       onclick="document.getElementById('nav-menu').classList.toggle('menu-vertical'); document.getElementById('button-menu').classList.toggle('is-active')">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+    </a>
 </div>
 
 <div class="columns family-menu">
     <div class="field algica-checkbox is-inline" >
-        <input class="is-checkradio menu-checkbox" checked type="checkbox" id="familia-algica" (click)="onSelectFamily('algica')">
+        <input class="is-checkradio menu-checkbox " checked type="checkbox" id="familia-algica" (click)="onSelectFamily('algica')">
         <label for="familia-algica">
             Álgica
         </label>
@@ -874,11 +895,11 @@
     <div class="modal-background"></div>
     <div class="modal-card" style="width: 90%;">
         <header class="modal-card-head {{clase}}">
-            <p class="modal-card-title {{clase}}">{{nombre}}</p>
+            <p class="modal-card-title {{clase}}">{{nombre}} ({{simbolo}})</p>
             <button class="delete close" aria-label="close" (click)="onCloseImage()"></button>
         </header>
         <section class="modal-card-body" style="padding:0">
-            <img src="./assets/img/infografias-horizontal/{{nombre}}.jpg" alt="{{nombre}}">
+            <img src="./assets/img/horizontal/{{simbolo}}.png" alt="{{nombre}}">
         </section>
     </div>
 </div>
@@ -886,7 +907,6 @@
 <div class="modal" id="modal-info">
     <div class="modal-background"></div>
     <div class="modal-content">
-
         <div class="modal-card">
             <header class="modal-card-head {{clase}}">
                 <p class="modal-card-title {{clase}}">{{nombre}} ({{simbolo}})</p>
