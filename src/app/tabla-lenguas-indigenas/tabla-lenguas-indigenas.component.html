@@ -1,19 +1,20 @@
 <div class="columns is-mobile" style="justify-content: flex-end;">
     <div id="nav-menu" class="column is-one-third is-offset-two-third menu-vertical" style="position: absolute; height: 100%;">
-        <aside  class="card menu" style="padding: .75rem; z-index: 99; height: 100%">
+        <aside  class="card menu" style="padding: .75rem; z-index: 39; height: 100%">
             <p class="menu-label">
                 Descargar
             </p>
             <ul class="menu-list">
-                <li><a href="./assets/codice-mexico-inpi-infografia.pdf" target="_blank">Infografía</a></li>
-                <li><a href="./assets/mapa-codice-mexico-inpi.pdf" target="_blank">Mapa</a></li>
+                <li><a href="./assets/codice-mexico-inpi-infografia.pdf" target="_blank" (click)="viewMenu()">Infografía</a></li>
+                <li><a href="./assets/mapa-codice-mexico-inpi.pdf" target="_blank" (click)="viewMenu()">Mapa</a></li>
+                <li><a (click)="viewLenguasExtintas()">Obituario(lenguas extintas)</a></li>
             </ul>
         </aside>
 
     </div>
 </div>
 
-<div class="tabs is-centered is-boxed" style ="margin-bottom: 0;">
+<div class="tabs is-small is-centered is-boxed" style ="margin-bottom: 0;">
     <ul class="menu-views">
         <li class="tab is-active" (click)="openTabPeriodicTablet($event, 'periodic-table-family')"><a><span>Familias</span></a></li>
         <li class="tab" (click)="openTabPeriodicTablet($event, 'periodic-table-alphabet')"><a><span>Alfabético</span></a></li>
@@ -23,8 +24,8 @@
         <li class="tab" (click)="openTabPeriodicTablet($event, 'periodic-table-rural-population')"><a><span>Población Rural</span></a></li>
         <li class="tab" (click)="openTabPeriodicTablet($event, 'periodic-table-ire')"><a><span>Índice de Remplazo Etnolingüístico (IRE)</span></a></li>
     </ul>
-    <a role="button" id="button-menu" class="navbar-burger is-dark" aria-label="menu" aria-expanded="false" style="z-index: 100"
-       onclick="document.getElementById('nav-menu').classList.toggle('menu-vertical'); document.getElementById('button-menu').classList.toggle('is-active')">
+    <a role="button" id="button-menu" class="navbar-burger is-dark" aria-label="menu" aria-expanded="false" style="z-index: 40; height: 38px;"
+       (click)="viewMenu()">
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
@@ -33,67 +34,67 @@
 
 <div class="columns family-menu">
     <div class="field algica-checkbox is-inline" >
-        <input class="is-checkradio menu-checkbox " checked type="checkbox" id="familia-algica" (click)="onSelectFamily('algica')">
+        <input class="is-checkradio is-small menu-checkbox " checked type="checkbox" id="familia-algica" (click)="onSelectFamily('algica')">
         <label for="familia-algica">
             Álgica
         </label>
     </div>
     <div class="field cochimi-yumana-checkbox is-inline">
-        <input class="is-checkradio menu-checkbox" checked type="checkbox" id="familia-cochimi-yumana" (click)="onSelectFamily('cochimi-yumana')">
+        <input class="is-checkradio is-small menu-checkbox" checked type="checkbox" id="familia-cochimi-yumana" (click)="onSelectFamily('cochimi-yumana')">
         <label for="familia-cochimi-yumana">
             Chochimí-Yumana
         </label>
     </div>
     <div class="field chontal-oaxaca-checkbox is-inline">
-        <input class="is-checkradio menu-checkbox" checked type="checkbox" id="familia-chontal-oaxaca" (click)="onSelectFamily('chontal-oaxaca')">
+        <input class="is-checkradio is-small menu-checkbox" checked type="checkbox" id="familia-chontal-oaxaca" (click)="onSelectFamily('chontal-oaxaca')">
         <label for="familia-chontal-oaxaca">
             Chontal de Oaxaca
         </label>
     </div>
     <div class="field huave-checkbox is-inline">
-        <input class="is-checkradio menu-checkbox" checked type="checkbox" id="familia-huave" (click)="onSelectFamily('huave')">
+        <input class="is-checkradio is-small menu-checkbox" checked type="checkbox" id="familia-huave" (click)="onSelectFamily('huave')">
         <label for="familia-huave">
             Huave
         </label>
     </div>
     <div class="field maya-checkbox is-inline">
-        <input class="is-checkradio menu-checkbox" checked type="checkbox" id="familia-maya" (click)="onSelectFamily('maya')">
+        <input class="is-checkradio is-small menu-checkbox" checked type="checkbox" id="familia-maya" (click)="onSelectFamily('maya')">
         <label for="familia-maya">
             Maya
         </label>
     </div>
     <div class="field mixe-zoque-checkbox is-inline">
-        <input class="is-checkradio menu-checkbox" checked type="checkbox" id="familia-mixe-zoque" (click)="onSelectFamily('mixe-zoque')">
+        <input class="is-checkradio is-small menu-checkbox" checked type="checkbox" id="familia-mixe-zoque" (click)="onSelectFamily('mixe-zoque')">
         <label for="familia-mixe-zoque">
             Mixe-Zoque
         </label>
     </div>
     <div class="field oto-mangue-checkbox is-inline">
-        <input class="is-checkradio menu-checkbox" checked type="checkbox" id="familia-oto-mangue" (click)="onSelectFamily('oto-mangue')">
+        <input class="is-checkradio is-small menu-checkbox" checked type="checkbox" id="familia-oto-mangue" (click)="onSelectFamily('oto-mangue')">
         <label for="familia-oto-mangue">
             Oto-Mangue
         </label>
     </div>
     <div class="field seri-checkbox is-inline">
-        <input class="is-checkradio menu-checkbox" checked type="checkbox" id="familia-seri" (click)="onSelectFamily('seri')">
+        <input class="is-checkradio is-small menu-checkbox" checked type="checkbox" id="familia-seri" (click)="onSelectFamily('seri')">
         <label for="familia-seri">
             Seri
         </label>
     </div>
     <div class="field tarasca-checkbox is-inline">
-        <input class="is-checkradio menu-checkbox" checked type="checkbox" id="familia-tarasca" (click)="onSelectFamily('tarasca')">
+        <input class="is-checkradio is-small menu-checkbox" checked type="checkbox" id="familia-tarasca" (click)="onSelectFamily('tarasca')">
         <label for="familia-tarasca">
             Tarasca
         </label>
     </div>
     <div class="field totonaco-tepehua-checkbox is-inline">
-        <input class="is-checkradio menu-checkbox" checked type="checkbox" id="familia-totonaco-tepehua" (click)="onSelectFamily('totonaco-tepehua')">
+        <input class="is-checkradio is-small menu-checkbox" checked type="checkbox" id="familia-totonaco-tepehua" (click)="onSelectFamily('totonaco-tepehua')">
         <label for="familia-totonaco-tepehua">
             Totonaco-Tepehua
         </label>
     </div>
     <div class="field yuto-nahua-checkbox is-inline">
-        <input class="is-checkradio menu-checkbox" checked type="checkbox" id="familia-yuto-nahua" (click)="onSelectFamily('yuto-nahua')">
+        <input class="is-checkradio is-small menu-checkbox" checked type="checkbox" id="familia-yuto-nahua" (click)="onSelectFamily('yuto-nahua')">
         <label for="familia-yuto-nahua">
             Yuto-Nahua
         </label>
@@ -102,35 +103,49 @@
 </div>
 
 <div>
-    <div class="tags is-centered are-medium" style="margin: 15px;" *ngIf="typeClassTable === 'periodic-table-population'">
+    <div class="tags is-centered is-small" style="margin: 15px;" *ngIf="typeClassTable === 'periodic-table-population'">
         <span class="tag is-rounded bg-green"> > de 220 000 a 2 millones 886 mil</span>
         <span class="tag is-rounded bg-green-light">  > de 37 300 a < de 220 000</span>
         <span class="tag is-rounded bg-yellow">  > de 4 700 a < de 37 300</span>
         <span class="tag is-rounded bg-orange"> > de 600 a < de 4 700</span>
         <span class="tag is-rounded bg-red"> De 30 a 600</span>
+        <span class="icon has-text-info tooltip is-tooltip-info is-tooltip-bottom is-tooltip-multiline" data-tooltip="La estimación del volumen de la población indígena se basa en el criterio de hogar indígena, que son aquellos en donde el jefe (a) y/o el cónyuge y/o alguno de los ascendientes (madre, padre, madrastra o padrastro, abuelo (a), bisabuelo (a), tatarabuelo (a), suegro (a) declaró ser hablante de alguna lengua indígena (HLI). De acuerdo al tamaño de la población se definieron cinco grupos o quintiles, donde cada uno contiene al veinte por ciento de los agrupaciones lingüísticas o pueblos indígenas.">
+          <i class="fas fa-info-circle"></i>
+        </span>
     </div>
-    <div class="tags is-centered are-medium" style="margin: 15px;" *ngIf="typeClassTable === 'periodic-table-migration'">
+    <div class="tags is-centered is-small" style="margin: 15px;" *ngIf="typeClassTable === 'periodic-table-migration'">
         <span class="tag is-rounded bg-green">Muy baja</span>
         <span class="tag is-rounded bg-green-light">Baja</span>
         <span class="tag is-rounded bg-yellow">Promedio</span>
         <span class="tag is-rounded bg-orange">Alta</span>
         <span class="tag is-rounded bg-red">Muy alta</span>
+        <span class="icon has-text-info tooltip is-tooltip-info is-tooltip-bottom is-tooltip-multiline" data-tooltip="La información sobre este tema se refiere a dos formas de identificar la migración, la primera por residir en una entidad distinta al lugar del nacimiento y la segunda por haber cambiado el lugar de residencia en los últimos cinco años. El indicador refleja el promedio de las dos tendencias migratorias en porcentaje y se agrupa en quintiles donde cada uno contiene al veinte por ciento de los agrupaciones lingüísticas o pueblos indígenas.">
+          <i class="fas fa-info-circle"></i>
+        </span>
     </div>
-    <div class="tags is-centered are-medium" style="margin: 15px;" *ngIf="typeClassTable === 'periodic-table-rural'">
+    <div class="tags is-centered is-small" style="margin: 15px;" *ngIf="typeClassTable === 'periodic-table-rural'">
         <span class="tag is-rounded bg-green" >Muy rural</span>
         <span class="tag is-rounded bg-green-light" >Rural</span>
         <span class="tag is-rounded bg-yellow" >Rural promedio</span>
         <span class="tag is-rounded bg-orange" >Rural - Urbano</span>
         <span class="tag is-rounded bg-red" >Urbano</span>
+        <span class="icon has-text-info tooltip is-tooltip-info is-tooltip-bottom is-tooltip-multiline" data-tooltip="El indicador de población rural se refiere al porcentaje población indígena que habita en localidades menores de 2 mil 500 habitantes y su forma de agrupación son los quintiles donde cada uno contiene al veinte por ciento de los agrupaciones lingüísticas o pueblos indígenas.">
+          <i class="fas fa-info-circle"></i>
+        </span>
     </div>
-    <div class="tags is-centered are-medium" style="margin: 15px;" *ngIf="typeClassTable === 'periodic-table-ire'">
+    <div class="tags is-centered is-small" style="margin: 15px;" *ngIf="typeClassTable === 'periodic-table-ire'">
         <span class="tag is-rounded bg-green" >Expansión acelerada</span>
         <span class="tag is-rounded bg-green-light" >Expansión lenta</span>
         <span class="tag is-rounded bg-yellow" >Equilibrio</span>
         <span class="tag is-rounded bg-orange" >Extinción lenta</span>
         <span class="tag is-rounded bg-red" >Extinción acelerada</span>
-    </div>
-    <div class="tags is-centered are-medium" style="margin: 15px;" *ngIf="typeClassTable === 'periodic-table-variantes'">
+        <span class="icon has-text-info tooltip is-tooltip-info is-tooltip-bottom is-tooltip-multiline" data-tooltip="  El índice refleja la relación entre los hablantes de lenguas indígenas del grupo de edad de 15 a 49 años con los niños hablantes de lenguas indígenas entre 5 y 9 años, considerando como base un modelo demográfico del estado de Oaxaca.
+        El índice permite medir la condición en que las nuevas generaciones de la población de un grupo etnolingüístico mantienen el uso de las lenguas indígenas.  Sus resultados se clasifican de la siguiente forma: expansión acelerada (valores mayores a 2); expansión lenta (entre 1.11 y 2); equilibrio (entre 0.9 y 1.1); extinción lenta (entre 0.51 y 0.9) y extinción acelerada (menor a 0.5).
+  ">
+          <i class="fas fa-info-circle"></i>
+        </span>
+       </div>
+    <div class="tags is-centered is-small" style="margin: 15px;" *ngIf="typeClassTable === 'periodic-table-variantes'">
         <span class="tag is-rounded bg-green">1</span>
         <span class="tag is-rounded bg-green-light">2 - 5</span>
         <span class="tag is-rounded bg-yellow">6 - 10</span>
@@ -161,6 +176,7 @@
                 <li><p>5</p></li>
             </ol>
             <ol *ngIf="typeClassTable === 'periodic-table-variantes'" class="vertical-grids">
+                <li><p></p></li>
                 <li><p>1</p></li>
                 <li><p>2</p></li>
                 <li><p>3</p></li>
@@ -631,6 +647,7 @@
                 <li><p>5</p></li>
             </ol>
             <ol *ngIf="typeClassTable === 'periodic-table-variantes'" class="vertical-grids">
+                <li><p></p></li>
                 <li><p>1</p></li>
                 <li><p>2</p></li>
                 <li><p>3</p></li>
@@ -704,24 +721,31 @@
             </div>
         </ng-template>
     </div>
+    <!--
     <div *ngIf="typeClassTable === 'periodic-table-population'" class="container is-fullhd">
         <div class="notification">
             <strong>Población Indígena</strong><br>
             La estimación del volumen de la población indígena se basa en el criterio de hogar indígena, que son aquellos en donde el jefe (a) y/o el cónyuge y/o alguno de los ascendientes (madre, padre, madrastra o padrastro, abuelo (a), bisabuelo (a), tatarabuelo (a), suegro (a) declaró ser hablante de alguna lengua indígena (HLI). De acuerdo al tamaño de la población se definieron cinco grupos o quintiles, donde cada uno contiene al veinte por ciento de los agrupaciones lingüísticas o pueblos indígenas.
         </div>
     </div>
+    -->
+    <!--
     <div *ngIf="typeClassTable === 'periodic-table-migration'" class="container is-fullhd">
         <div class="notification">
             <strong>Migración</strong><br>
             La información sobre este tema se refiere a dos formas de identificar la migración, la primera por residir en una entidad distinta al lugar del nacimiento y la segunda por haber cambiado el lugar de residencia en los últimos cinco años. El indicador refleja el promedio de las dos tendencias migratorias en porcentaje y se agrupa en quintiles donde cada uno contiene al veinte por ciento de los agrupaciones lingüísticas o pueblos indígenas.
         </div>
     </div>
+    -->
+    <!--
     <div *ngIf="typeClassTable === 'periodic-table-rural'" class="container is-fullhd">
         <div class="notification">
             <strong>Población Rural</strong><br>
             El indicador de población rural se refiere al porcentaje población indígena que habita en localidades menores de 2 mil 500 habitantes y su forma de agrupación son los quintiles donde cada uno contiene al veinte por ciento de los agrupaciones lingüísticas o pueblos indígenas.
         </div>
     </div>
+    -->
+    <!--
     <div *ngIf="typeClassTable === 'periodic-table-ire'" class="container is-fullhd">
         <div class="notification">
             <strong>Índice de Reemplazo Etnolingüístico</strong><br>
@@ -729,11 +753,12 @@
             El índice permite medir la condición en que las nuevas generaciones de la población de un grupo etnolingüístico mantienen el uso de las lenguas indígenas.  Sus resultados se clasifican de la siguiente forma: expansión acelerada (valores mayores a 2); expansión lenta (entre 1.11 y 2); equilibrio (entre 0.9 y 1.1); extinción lenta (entre 0.51 y 0.9) y extinción acelerada (menor a 0.5).
         </div>
     </div>
+    -->
 
     <div class="periodic-table-symbols">
         <div class="has-text-centered">
-            <p><strong>SIMBOLOGÍA</strong></p>
-            <div class="tabs is-centered">
+            <!--<p><strong>SIMBOLOGÍA</strong></p>-->
+            <div class="tabs is-small is-centered">
                 <ul class="menu-views">
                     <li class="tab-symbols is-active" (click)="openTabPeriodicTabletSymbols($event, 'periodic-table-family-symbol-population')">
                         <a>
@@ -759,31 +784,31 @@
             </div>
             <div id="periodic-table-family-symbol-population" class="content-tab-symbols">
                 <div class="field green-checkbox is-inline" >
-                    <input class="is-checkradio a5" type="checkbox" id="a5" (click)="onSelectA('A5')">
+                    <input class="is-checkradio is-small a5" type="checkbox" id="a5" (click)="onSelectA('A5')">
                     <label for="a5">
                         > de 220 000 a 2 millones 886 mil
                     </label>
                 </div>
                 <div class="field green-light-checkbox is-inline" >
-                    <input class="is-checkradio a4" type="checkbox" id="a4" (click)="onSelectA('A4')">
+                    <input class="is-checkradio is-small a4" type="checkbox" id="a4" (click)="onSelectA('A4')">
                     <label for="a4">
                         > de 37 300 a < de 220 000
                     </label>
                 </div>
                 <div class="field yellow-checkbox is-inline" >
-                    <input class="is-checkradio a3" type="checkbox" id="a3" (click)="onSelectA('A3')">
+                    <input class="is-checkradio is-small a3" type="checkbox" id="a3" (click)="onSelectA('A3')">
                     <label for="a3">
                         > de 4 700 a < de 37 300
                     </label>
                 </div>
                 <div class="field orange-checkbox is-inline" >
-                    <input class="is-checkradio a2" type="checkbox" id="a2" (click)="onSelectA('A2')">
+                    <input class="is-checkradio is-small a2" type="checkbox" id="a2" (click)="onSelectA('A2')">
                     <label for="a2">
                         > de 600 a < de 4 700
                     </label>
                 </div>
                 <div class="field red-checkbox is-inline" >
-                    <input class="is-checkradio a1" type="checkbox" id="a1" (click)="onSelectA('A1')">
+                    <input class="is-checkradio is-small a1" type="checkbox" id="a1" (click)="onSelectA('A1')">
                     <label for="a1">
                         De 30 a 600
                     </label>
@@ -791,31 +816,31 @@
             </div>
             <div id="periodic-table-family-symbol-migration" class="content-tab-symbols" style="display: none;">
                 <div class="field green-checkbox is-inline" >
-                    <input class="is-checkradio b5" type="checkbox" id="b5" (click)="onSelectA('B5')">
+                    <input class="is-checkradio is-small b5" type="checkbox" id="b5" (click)="onSelectA('B5')">
                     <label for="b5">
                         Muy baja
                     </label>
                 </div>
                 <div class="field green-light-checkbox is-inline" >
-                    <input class="is-checkradio b4" type="checkbox" id="b4" (click)="onSelectA('B4')">
+                    <input class="is-checkradio is-small b4" type="checkbox" id="b4" (click)="onSelectA('B4')">
                     <label for="b4">
                         Baja
                     </label>
                 </div>
                 <div class="field yellow-checkbox is-inline" >
-                    <input class="is-checkradio b3" type="checkbox" id="b3" (click)="onSelectA('B3')">
+                    <input class="is-checkradio is-small b3" type="checkbox" id="b3" (click)="onSelectA('B3')">
                     <label for="b3">
                         Promedio
                     </label>
                 </div>
                 <div class="field orange-checkbox is-inline" >
-                    <input class="is-checkradio b2" type="checkbox" id="b2" (click)="onSelectA('B2')">
+                    <input class="is-checkradio is-small b2" type="checkbox" id="b2" (click)="onSelectA('B2')">
                     <label for="b2">
                         Alta
                     </label>
                 </div>
                 <div class="field red-checkbox is-inline" >
-                    <input class="is-checkradio b1" type="checkbox" id="b1" (click)="onSelectA('B1')">
+                    <input class="is-checkradio is-small b1" type="checkbox" id="b1" (click)="onSelectA('B1')">
                     <label for="b1">
                         Muy Alta
                     </label>
@@ -823,31 +848,31 @@
             </div>
             <div id="periodic-table-family-symbol-rural-population" class="content-tab-symbols" style="display: none;">
                 <div class="field green-checkbox is-inline" >
-                    <input class="is-checkradio c5" type="checkbox" id="c5" (click)="onSelectA('C5')">
+                    <input class="is-checkradio is-small c5" type="checkbox" id="c5" (click)="onSelectA('C5')">
                     <label for="c5">
                         Muy rural
                     </label>
                 </div>
                 <div class="field green-light-checkbox is-inline" >
-                    <input class="is-checkradio c4" type="checkbox" id="c4" (click)="onSelectA('C4')">
+                    <input class="is-checkradio is-small c4" type="checkbox" id="c4" (click)="onSelectA('C4')">
                     <label for="c4">
                         Rural
                     </label>
                 </div>
                 <div class="field yellow-checkbox is-inline" >
-                    <input class="is-checkradio c3" type="checkbox" id="c3" (click)="onSelectA('C3')">
+                    <input class="is-checkradio is-small c3" type="checkbox" id="c3" (click)="onSelectA('C3')">
                     <label for="c3">
                         Rural promedio
                     </label>
                 </div>
                 <div class="field orange-checkbox is-inline" >
-                    <input class="is-checkradio c2" type="checkbox" id="c2" (click)="onSelectA('C2')">
+                    <input class="is-checkradio is-small c2" type="checkbox" id="c2" (click)="onSelectA('C2')">
                     <label for="c2">
                         Rural - Urbano
                     </label>
                 </div>
                 <div class="field red-checkbox is-inline" >
-                    <input class="is-checkradio c1" type="checkbox" id="c1" (click)="onSelectA('C1')">
+                    <input class="is-checkradio is-small c1" type="checkbox" id="c1" (click)="onSelectA('C1')">
                     <label for="c1">
                         Urbano
                     </label>
@@ -855,31 +880,31 @@
             </div>
             <div id="periodic-table-family-symbol-ire" class="content-tab-symbols" style="display: none;">
                 <div class="field green-checkbox is-inline" >
-                    <input class="is-checkradio d5" type="checkbox" id="d5" (click)="onSelectA('D5')">
+                    <input class="is-checkradio is-small d5" type="checkbox" id="d5" (click)="onSelectA('D5')">
                     <label for="d5">
                         Expansión acelerada
                     </label>
                 </div>
                 <div class="field green-light-checkbox is-inline" >
-                    <input class="is-checkradio d4" type="checkbox" id="d4" (click)="onSelectA('D4')">
+                    <input class="is-checkradio is-small d4" type="checkbox" id="d4" (click)="onSelectA('D4')">
                     <label for="d4">
                         Expansión lenta
                     </label>
                 </div>
                 <div class="field yellow-checkbox is-inline" >
-                    <input class="is-checkradio d3" type="checkbox" id="d3" (click)="onSelectA('D3')">
+                    <input class="is-checkradio is-small d3" type="checkbox" id="d3" (click)="onSelectA('D3')">
                     <label for="d3">
                         Equilibrio
                     </label>
                 </div>
                 <div class="field orange-checkbox is-inline" >
-                    <input class="is-checkradio d2" type="checkbox" id="d2" (click)="onSelectA('D2')">
+                    <input class="is-checkradio is-small d2" type="checkbox" id="d2" (click)="onSelectA('D2')">
                     <label for="d2">
                         Extinción lenta
                     </label>
                 </div>
                 <div class="field red-checkbox is-inline" >
-                    <input class="is-checkradio d1" type="checkbox" id="d1" (click)="onSelectA('D1')">
+                    <input class="is-checkradio is-small d1" type="checkbox" id="d1" (click)="onSelectA('D1')">
                     <label for="d1">
                         Extinción acelerada
                     </label>
@@ -888,7 +913,6 @@
         </div>
     </div>
 </div>
-
 
 
 <div class="modal" id="modal-image">
@@ -949,5 +973,819 @@
                 <!--<button class="button" (click)="facebookSharing(shareObj)">Compartir</button>-->
             </footer>
         </div>
+    </div>
+</div>
+
+<div class="modal" id="modal-menu" style="z-index: 38;">
+    <div class="modal-background"></div>
+</div>
+
+
+<div class="modal" id="modal-obituario">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+        <header class="modal-card-head">
+            <p class="modal-card-title">Lengua extintas</p>
+            <button class="delete close" aria-label="close" (click)="onCloseLanguasExtintas()"></button>
+        </header>
+        <section class="modal-card-body">
+            <table class="table is-fullwidth">
+                <thead>
+                <tr>
+                    <th>Lengua extinta</th>
+                    <th>Ubicación</th>
+                </tr>
+                </thead>
+                <tbody>
+            <tr>
+                <td>Acaxe</td>
+                <td>Sinaloa y Durango</td>
+            </tr>
+            <tr>
+                <td>Achire</td>
+                <td>Sinaloa</td>
+            </tr>
+            <tr>
+                <td>Acmara</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>Aguata</td>
+                <td>Tamaulipas</td>
+            </tr>
+            <tr>
+                <td>Ahome</td>
+                <td>Sinaloa</td>
+            </tr>
+            <tr>
+                <td>Ahualculco</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>Akwáala</td>
+                <td>Baja California</td>
+            </tr>
+            <tr>
+                <td>Alazapa</td>
+                <td>Coahuila y Nuevo    León</td>
+            </tr>
+            <tr>
+                <td>Apache</td>
+                <td>Chihuahua</td>
+            </tr>
+            <tr>
+                <td>Apaneco</td>
+                <td>Jalisco y Michoacán</td>
+            </tr>
+            <tr>
+                <td>Baciroa</td>
+                <td>Sonora</td>
+            </tr>
+            <tr>
+                <td>Baimena</td>
+                <td>Sinaloa</td>
+            </tr>
+            <tr>
+                <td>Basopa</td>
+                <td>Sinaloa</td>
+            </tr>
+            <tr>
+                <td>Baturoque</td>
+                <td>Sonora</td>
+            </tr>
+            <tr>
+                <td>Bausarígame</td>
+                <td>Coahuila</td>
+            </tr>
+            <tr>
+                <td>Bobol</td>
+                <td>Coahuila y Nuevo    León</td>
+            </tr>
+            <tr>
+                <td>Bocalo</td>
+                <td>Nuevo León</td>
+            </tr>
+            <tr>
+                <td>Borrado</td>
+                <td>Tamaulipas y Nuevo    León</td>
+            </tr>
+            <tr>
+                <td>Cabeza</td>
+                <td>Coahuila</td>
+            </tr>
+            <tr>
+                <td>Cácari</td>
+                <td>Durango</td>
+            </tr>
+            <tr>
+                <td>Cacaxte</td>
+                <td>Coahuila y Nuevo    León</td>
+            </tr>
+            <tr>
+                <td>Cacoma</td>
+                <td>Jalisco</td>
+            </tr>
+            <tr>
+                <td>Cacunica</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>Cahita</td>
+                <td>Sinaloa</td>
+            </tr>
+            <tr>
+                <td>Cahuillos</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>Cahuimeto</td>
+                <td>Sinaloa</td>
+            </tr>
+            <tr>
+                <td>Camoteca</td>
+                <td>Guerrero</td>
+            </tr>
+            <tr>
+                <td>Carrizo</td>
+                <td>Tamaulipas</td>
+            </tr>
+            <tr>
+                <td>Casdal</td>
+                <td>Chiapas</td>
+            </tr>
+            <tr>
+                <td>Cataara</td>
+                <td>Nuevo León</td>
+            </tr>
+            <tr>
+                <td>Catujano</td>
+                <td>Coahuila y Nuevo    León</td>
+            </tr>
+            <tr>
+                <td>Cazcán (o)</td>
+                <td>Jalisco y Zacatecas</td>
+            </tr>
+            <tr>
+                <td>Chabañal&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>Chamalteca</td>
+                <td>Jalisco</td>
+            </tr>
+            <tr>
+                <td>Chaneabal</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>Chantaleno</td>
+                <td>Oaxaca</td>
+            </tr>
+            <tr>
+                <td>Chiapaneca</td>
+                <td>Chiapas</td>
+            </tr>
+            <tr>
+                <td>Chicomucelteca</td>
+                <td>Chiapas</td>
+            </tr>
+            <tr>
+                <td>Chicorato</td>
+                <td>Sinaloa</td>
+            </tr>
+            <tr>
+                <td>Chimalapas</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>Chinarra</td>
+                <td>Chihuahua</td>
+            </tr>
+            <tr>
+                <td>Chínipa</td>
+                <td>Chihuahua</td>
+            </tr>
+            <tr>
+                <td>Chizo</td>
+                <td>Chihuahua</td>
+            </tr>
+            <tr>
+                <td>Chuchonas</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>Chumbia</td>
+                <td>Guerrero</td>
+            </tr>
+            <tr>
+                <td>Coahuilteco</td>
+                <td>Coahuila</td>
+            </tr>
+            <tr>
+                <td>Coano</td>
+                <td>Nayarit</td>
+            </tr>
+            <tr>
+                <td>Coca</td>
+                <td>Jalisco, Colima y    Nayarit</td>
+            </tr>
+            <tr>
+                <td>Cochín</td>
+                <td>Jalisco y Michoacán</td>
+            </tr>
+            <tr>
+                <td>Cocomacaque</td>
+                <td>Guerrero</td>
+            </tr>
+            <tr>
+                <td>Colotlan</td>
+                <td>Nayarit y Zacatecas</td>
+            </tr>
+            <tr>
+                <td>Comanche</td>
+                <td>Chihuahua y Coahuila</td>
+            </tr>
+            <tr>
+                <td>Comanito</td>
+                <td>Sinaloa</td>
+            </tr>
+            <tr>
+                <td>Comecrudo</td>
+                <td>Coahuila</td>
+            </tr>
+            <tr>
+                <td>Comepescado</td>
+                <td>Nuevo León</td>
+            </tr>
+            <tr>
+                <td>Comoporí</td>
+                <td>Sinaloa</td>
+            </tr>
+            <tr>
+                <td>Concho</td>
+                <td>Chihuahua</td>
+            </tr>
+            <tr>
+                <td>Conicare</td>
+                <td>Sonora</td>
+            </tr>
+            <tr>
+                <td>Contotor</td>
+                <td>Coahuila</td>
+            </tr>
+            <tr>
+                <td>Cotoname</td>
+                <td>Tamaulipas</td>
+            </tr>
+            <tr>
+                <td>Cuachichil</td>
+                <td>Zacatecas</td>
+            </tr>
+            <tr>
+                <td>Cuauhcomeca</td>
+                <td>Michoacán</td>
+            </tr>
+            <tr>
+                <td>Cucharete</td>
+                <td>Michoacán</td>
+            </tr>
+            <tr>
+                <td>Cuicalteco&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>Cuissima&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>Cuitlateco o Teco</td>
+                <td>Guerrero y Michoacán</td>
+            </tr>
+            <tr>
+                <td>Culhua</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>Cuyumateca o Cuyutumateco</td>
+                <td>Guerrero</td>
+            </tr>
+            <tr>
+                <td>Cuyuteca</td>
+                <td>Jalisco</td>
+            </tr>
+            <tr>
+                <td>Diegueño</td>
+                <td>Baja California</td>
+            </tr>
+            <tr>
+                <td>Eudeve</td>
+                <td>Sonora</td>
+            </tr>
+            <tr>
+                <td>Guachichil</td>
+                <td>Jalisco y Zacatecas</td>
+            </tr>
+            <tr>
+                <td>Guaicura</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>Guamare</td>
+                <td>Guanajuato y    Querétaro</td>
+            </tr>
+            <tr>
+                <td>Guasave</td>
+                <td>Sinaloa</td>
+            </tr>
+            <tr>
+                <td>Guaxabana</td>
+                <td>Guanajuato</td>
+            </tr>
+            <tr>
+                <td>Guaycura</td>
+                <td>Baja California Sur</td>
+            </tr>
+            <tr>
+                <td>Guaymas</td>
+                <td>Sonora</td>
+            </tr>
+            <tr>
+                <td>Guazapar</td>
+                <td>Chihuahua</td>
+            </tr>
+            <tr>
+                <td>Guazapare</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>Hine</td>
+                <td>Sinaloa</td>
+            </tr>
+            <tr>
+                <td>Hualahuis</td>
+                <td>Nuevo León</td>
+            </tr>
+            <tr>
+                <td>Huatiquimane</td>
+                <td>Oaxaca</td>
+            </tr>
+            <tr>
+                <td>Huavi (Huatzonteco)</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>Huaynamota</td>
+                <td>Nayarit</td>
+            </tr>
+            <tr>
+                <td>Hueyquetzal</td>
+                <td>Coahuila</td>
+            </tr>
+            <tr>
+                <td>Huite</td>
+                <td>Sinaloa</td>
+            </tr>
+            <tr>
+                <td>Hume</td>
+                <td>Sinaloa</td>
+            </tr>
+            <tr>
+                <td>Huzco</td>
+                <td>Oaxaca</td>
+            </tr>
+            <tr>
+                <td>Icaura Ayancaura</td>
+                <td>Tamaulipas</td>
+            </tr>
+            <tr>
+                <td>Irritila</td>
+                <td>Coahuila</td>
+            </tr>
+            <tr>
+                <td>Itzuco</td>
+                <td>Guerrero y Michocán</td>
+            </tr>
+            <tr>
+                <td>Janambre</td>
+                <td>Nuevo León y    Tamaulipas</td>
+            </tr>
+            <tr>
+                <td>Jonaz</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>Jova</td>
+                <td>Sonora</td>
+            </tr>
+            <tr>
+                <td>Julime</td>
+                <td>Chihuahua</td>
+            </tr>
+            <tr>
+                <td>Jumano</td>
+                <td>Chihuahua</td>
+            </tr>
+            <tr>
+                <td>Kania</td>
+                <td>Baja California</td>
+            </tr>
+            <tr>
+                <td>Kikima</td>
+                <td>Baja California</td>
+            </tr>
+            <tr>
+                <td>Lagunero</td>
+                <td>Coahuila</td>
+            </tr>
+            <tr>
+                <td>Laymón</td>
+                <td>Baja California</td>
+            </tr>
+            <tr>
+                <td>Macoaque</td>
+                <td>México</td>
+            </tr>
+            <tr>
+                <td>Macoyahui</td>
+                <td>Sonora</td>
+            </tr>
+            <tr>
+                <td>Macoyahuy</td>
+                <td>Sonora</td>
+            </tr>
+            <tr>
+                <td>Mancheño</td>
+                <td>Tamaulipas</td>
+            </tr>
+            <tr>
+                <td>Maratín</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>Matlame</td>
+                <td>Oaxaca y Guerrero</td>
+            </tr>
+            <tr>
+                <td>Mediotaguel</td>
+                <td>Sinaloa</td>
+            </tr>
+            <tr>
+                <td>Mextitlatecas</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>Mocorito</td>
+                <td>Sinaloa</td>
+            </tr>
+            <tr>
+                <td>Nayarita</td>
+                <td>Nayarit</td>
+            </tr>
+            <tr>
+                <td>Negrito</td>
+                <td>San Luis Potosí</td>
+            </tr>
+            <tr>
+                <td>Nevomes</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>Nio</td>
+                <td>Sinaloa</td>
+            </tr>
+            <tr>
+                <td>Niquiran</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>Obayo</td>
+                <td>Coahuila</td>
+            </tr>
+            <tr>
+                <td>Ocoroni</td>
+                <td>Sinaloa</td>
+            </tr>
+            <tr>
+                <td>Ohuera</td>
+                <td>Sinaloa</td>
+            </tr>
+            <tr>
+                <td>Olive</td>
+                <td>Tamaulipas</td>
+            </tr>
+            <tr>
+                <td>Ópata</td>
+                <td>Sonora</td>
+            </tr>
+            <tr>
+                <td>Pacasa</td>
+                <td>Sinaloa</td>
+            </tr>
+            <tr>
+                <td>Pame del Sur&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>Pampuchín</td>
+                <td>Jalisco</td>
+            </tr>
+            <tr>
+                <td>Panteca</td>
+                <td>Guerrero</td>
+            </tr>
+            <tr>
+                <td>Papabucos</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>Pelón</td>
+                <td>Tamaulipas</td>
+            </tr>
+            <tr>
+                <td>Pericú</td>
+                <td>Baja California Sur</td>
+            </tr>
+            <tr>
+                <td>Piro</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>Pisón</td>
+                <td>Tamaulipas</td>
+            </tr>
+            <tr>
+                <td>Puctunc o puntucne&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>Putima</td>
+                <td>Sonora</td>
+            </tr>
+            <tr>
+                <td>Quelen</td>
+                <td>Chiapas</td>
+            </tr>
+            <tr>
+                <td>Sabaguis</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>Sabaibo</td>
+                <td>Sinaloa</td>
+            </tr>
+            <tr>
+                <td>Salinero</td>
+                <td>Sonora</td>
+            </tr>
+            <tr>
+                <td>Sayulteca</td>
+                <td>Jalisco y Colima</td>
+            </tr>
+            <tr>
+                <td>Soltecos</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>Subtiabe</td>
+                <td>Guerrero</td>
+            </tr>
+            <tr>
+                <td>Suma-Jumano</td>
+                <td>Chihuahua</td>
+            </tr>
+            <tr>
+                <td>Tahue</td>
+                <td>Sinaloa</td>
+            </tr>
+            <tr>
+                <td>Tahueca</td>
+                <td>Sinaloa</td>
+            </tr>
+            <tr>
+                <td>Tamaulipeco</td>
+                <td>Tamaulipas</td>
+            </tr>
+            <tr>
+                <td>Tamazulteca</td>
+                <td>Michoacán</td>
+            </tr>
+            <tr>
+                <td>Tapachulteca I</td>
+                <td>Chiapas</td>
+            </tr>
+            <tr>
+                <td>Tapijulapanes</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>Tebaca</td>
+                <td>Sinaloa</td>
+            </tr>
+            <tr>
+                <td>Tecoripas</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>Teco-Tecoxquin</td>
+                <td>Nayarit</td>
+            </tr>
+            <tr>
+                <td>Tecual</td>
+                <td>Sinaloa</td>
+            </tr>
+            <tr>
+                <td>Tecuexe</td>
+                <td>Jalisco y Zacatecas</td>
+            </tr>
+            <tr>
+                <td>Tehua</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>Tehueco</td>
+                <td>Sinaloa</td>
+            </tr>
+            <tr>
+                <td>Témori</td>
+                <td>Chihuahua</td>
+            </tr>
+            <tr>
+                <td>Tene</td>
+                <td>Jalisco</td>
+            </tr>
+            <tr>
+                <td>Tepahue</td>
+                <td>Sonora</td>
+            </tr>
+            <tr>
+                <td>Teparantana</td>
+                <td>Sonora</td>
+            </tr>
+            <tr>
+                <td>Tepecano</td>
+                <td>Jalisco y Zacatecas</td>
+            </tr>
+            <tr>
+                <td>Tepextiteca</td>
+                <td>Guerrero</td>
+            </tr>
+            <tr>
+                <td>Tepoca</td>
+                <td>Sonora</td>
+            </tr>
+            <tr>
+                <td>Tepocanteco</td>
+                <td>Jalisco</td>
+            </tr>
+            <tr>
+                <td>Tepuzteca-Tlacotepehua</td>
+                <td>Guerrero</td>
+            </tr>
+            <tr>
+                <td>Tequijana</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>Teul</td>
+                <td>Zacatecas</td>
+            </tr>
+            <tr>
+                <td>Texcateco</td>
+                <td>Guerrero</td>
+            </tr>
+            <tr>
+                <td>Texome</td>
+                <td>Guerrero</td>
+            </tr>
+            <tr>
+                <td>Texome</td>
+                <td>Guerrero</td>
+            </tr>
+            <tr>
+                <td>Tezcateca</td>
+                <td>Guerrero</td>
+            </tr>
+            <tr>
+                <td>Tiam</td>
+                <td>Jalisco</td>
+            </tr>
+            <tr>
+                <td>Tisteco</td>
+                <td>Guerrero</td>
+            </tr>
+            <tr>
+                <td>Tlacotepehua - Tepoxteca</td>
+                <td>Guerrero</td>
+            </tr>
+            <tr>
+                <td>Tlaltempaneca</td>
+                <td>Michoacán y Jalisco</td>
+            </tr>
+            <tr>
+                <td>Tlascalans</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>Tlatzihuiteca</td>
+                <td>Guerrero</td>
+            </tr>
+            <tr>
+                <td>Tlaxomulteca</td>
+                <td>Jalisco</td>
+            </tr>
+            <tr>
+                <td>Toboso</td>
+                <td>Chihuahua y Coahuila</td>
+            </tr>
+            <tr>
+                <td>Tolimeca</td>
+                <td>Guerrero y Michoacán</td>
+            </tr>
+            <tr>
+                <td>Tomateca</td>
+                <td>Michoacán y Jalisco</td>
+            </tr>
+            <tr>
+                <td>Tortuga</td>
+                <td>Tamaulipas y Nuevo    León</td>
+            </tr>
+            <tr>
+                <td>Totorame</td>
+                <td>Nayarit</td>
+            </tr>
+            <tr>
+                <td>Trokek</td>
+                <td>Chiapas</td>
+            </tr>
+            <tr>
+                <td>Tubar</td>
+                <td>Chihuahua</td>
+            </tr>
+            <tr>
+                <td>Tuxteca</td>
+                <td>Guerrero</td>
+            </tr>
+            <tr>
+                <td>Vacoreque</td>
+                <td>Sinaloa</td>
+            </tr>
+            <tr>
+                <td>Vayema</td>
+                <td>Sonora</td>
+            </tr>
+            <tr>
+                <td>Vigitega</td>
+                <td>Nayarit</td>
+            </tr>
+            <tr>
+                <td>Xanambre</td>
+                <td>Tamaulipas</td>
+            </tr>
+            <tr>
+                <td>Xilotlatzinca</td>
+                <td>Jalisco</td>
+            </tr>
+            <tr>
+                <td>Xixime</td>
+                <td>Durango, Coahuila y    Chihuahua</td>
+            </tr>
+            <tr>
+                <td>Xocoteca</td>
+                <td>Michoacán y Jalisco</td>
+            </tr>
+            <tr>
+                <td>Yuma</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>Zacateca</td>
+                <td>Zacatecas</td>
+            </tr>
+            <tr>
+                <td>Zapotlaneca</td>
+                <td>Jalisco</td>
+            </tr>
+            <tr>
+                <td>Zayahueco</td>
+                <td>Jalisco y Nayarit</td>
+            </tr>
+            <tr>
+                <td>Zoe</td>
+                <td>Sinaloa y Sonora</td>
+            </tr>
+            <tr>
+                <td>Zotzlem</td>
+                <td>Chiapas</td>
+            </tr>
+            <tr>
+                <td>Zoyateca</td>
+                <td>Jalisco</td>
+            </tr>
+            <tr>
+                <td>Zuaque</td>
+                <td>Sinaloa</td>
+            </tr>
+            </tbody></table>
+        </section>
     </div>
 </div>

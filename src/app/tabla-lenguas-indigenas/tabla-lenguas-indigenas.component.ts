@@ -429,11 +429,25 @@ export class TablaLenguasIndigenasComponent implements OnInit, AfterViewInit {
         //this.descripcion = this.sanitizer.bypassSecurityTrustHtml(language.descripcion).toString();
     }
 
+    public viewMenu(){
+        document.getElementById("modal-menu").classList.toggle("is-active");
+        document.getElementById('nav-menu').classList.toggle('menu-vertical');
+        document.getElementById('button-menu').classList.toggle('is-active');
+    }
+
     public viewImage(){
         this.onCloseLanguage();
         let c = document.getElementById("modal-image");
         c.classList.toggle("is-active");
         document.getElementsByTagName("html")[0].style.overflowY = "hidden";
+    }
+
+    public viewLenguasExtintas(){
+        let c = document.getElementById("modal-obituario");
+        c.classList.toggle("is-active");
+        document.getElementById("modal-menu").classList.toggle("is-active");
+        document.getElementById('nav-menu').classList.toggle('menu-vertical');
+        document.getElementById('button-menu').classList.toggle('is-active');
     }
 
     public onCloseLanguage() {
@@ -446,7 +460,11 @@ export class TablaLenguasIndigenasComponent implements OnInit, AfterViewInit {
         let c = document.getElementById("modal-image");
         c.classList.toggle("is-active");
         document.getElementsByTagName("html")[0].style.overflowY = "auto";
+    }
 
+    public onCloseLanguasExtintas() {
+        let c = document.getElementById("modal-obituario");
+        c.classList.toggle("is-active");
     }
 
     public facebookSharing(shareObj: any) {
