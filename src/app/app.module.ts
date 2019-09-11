@@ -2,30 +2,17 @@ import {NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
 import {FormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
-
+import { LayoutModule } from '@angular/cdk/layout';
 import {AppComponent} from './app.component';
-import {NavbarComponent} from './navbar/navbar.component';
 import {TablaLenguasIndigenasComponent} from './tabla-lenguas-indigenas/tabla-lenguas-indigenas.component';
 import {LenguasDataService} from './tabla-lenguas-indigenas/lenguas-data.service';
 
-import {Ng6SocialButtonModule, SocialServiceConfig} from "ng6-social-button";
-
-// Configs
-export function getAuthServiceConfigs() {
-    let config = new SocialServiceConfig()
-        .addFacebook("357892264834597");
-    return config;
-}
-
 @NgModule({
-    imports: [BrowserModule, FormsModule, HttpClientModule, Ng6SocialButtonModule
+    imports: [BrowserModule, FormsModule, HttpClientModule, LayoutModule
     ],
-    declarations: [AppComponent, NavbarComponent, TablaLenguasIndigenasComponent],
+    declarations: [AppComponent, TablaLenguasIndigenasComponent],
     bootstrap: [AppComponent],
-    providers: [LenguasDataService, {
-        provide: SocialServiceConfig,
-        useFactory: getAuthServiceConfigs
-    },]
+    providers: [LenguasDataService]
 })
 export class AppModule {
 }

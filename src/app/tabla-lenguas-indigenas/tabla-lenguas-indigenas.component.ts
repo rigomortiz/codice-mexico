@@ -1,8 +1,8 @@
 import {Component, OnInit, AfterViewInit} from '@angular/core';
 import {LenguasDataService} from './lenguas-data.service';
 import {DomSanitizer, SafeHtml} from '@angular/platform-browser';
-import {BreakpointObserver, BreakpointState} from '@angular/cdk/layout'
-import {SocialService} from "ng6-social-button";
+import { BreakpointObserver, BreakpointState } from '@angular/cdk/layout';
+
 import * as XLSX from 'xlsx';
 import {forEach} from "@angular/router/src/utils/collection";
 
@@ -77,7 +77,7 @@ export class TablaLenguasIndigenasComponent implements OnInit, AfterViewInit {
     private familia = "";
     private variantes = [];
     private numeroVariantes;
-
+    private menu_ire = "Índice de Remplazo Etnolingüístico (IRE)";
     private selectedFilter: string;
     public showContainer: boolean;
     public columns: COLUMNS;
@@ -85,6 +85,8 @@ export class TablaLenguasIndigenasComponent implements OnInit, AfterViewInit {
     private COLOR3 = ["shadow-green", "shadow-green-light", "shadow-yellow", "shadow-orange", "shadow-red", "bg-none"];
     private COLOR2 = ["green", "green-light", "yellow", "orange", "red", "none"];
     private typeClassTable = "periodic-table-family";
+
+    matcher: MediaQueryList;
 
     public numberWithCommas(x) {
         return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
@@ -102,7 +104,7 @@ export class TablaLenguasIndigenasComponent implements OnInit, AfterViewInit {
     ];
 
     constructor(private lenguasDataService: LenguasDataService, private sanitizer: DomSanitizer,
-                public breakpointObserver: BreakpointObserver, private socialAuthService: SocialService, ) {
+                public breakpointObserver: BreakpointObserver ) {
 
         this.lenguasDataService.getExcel().subscribe(resp => {
             let data = new Uint8Array(resp.body);
@@ -122,6 +124,15 @@ export class TablaLenguasIndigenasComponent implements OnInit, AfterViewInit {
     }
 
     ngOnInit() {
+        this.breakpointObserver
+            .observe(['(min-width: 768px) and (max-width: 1023px)'])
+            .subscribe((state: BreakpointState) => {
+                if (state.matches) {
+                    this.menu_ire = "IRE";
+                } else {
+                    this.menu_ire = "Índice de Remplazo Etnolingüístico (IRE)";
+                }
+            });
     }
 
     ngAfterViewInit(): void {
@@ -465,10 +476,6 @@ export class TablaLenguasIndigenasComponent implements OnInit, AfterViewInit {
     public onCloseLanguasExtintas() {
         let c = document.getElementById("modal-obituario");
         c.classList.toggle("is-active");
-    }
-
-    public facebookSharing(shareObj: any) {
-        this.socialAuthService.facebookSharing(shareObj);
     }
 
 

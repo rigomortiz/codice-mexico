@@ -22,7 +22,7 @@
         <li class="tab" (click)="openTabPeriodicTablet($event, 'periodic-table-population')"><a><span>Población Indígena</span></a></li>
         <li class="tab" (click)="openTabPeriodicTablet($event, 'periodic-table-migration')"><a><span>Migración</span></a></li>
         <li class="tab" (click)="openTabPeriodicTablet($event, 'periodic-table-rural-population')"><a><span>Población Rural</span></a></li>
-        <li class="tab" (click)="openTabPeriodicTablet($event, 'periodic-table-ire')"><a><span>Índice de Remplazo Etnolingüístico (IRE)</span></a></li>
+        <li class="tab" (click)="openTabPeriodicTablet($event, 'periodic-table-ire')"><a><span>{{menu_ire}}</span></a></li>
     </ul>
     <a role="button" id="button-menu" class="navbar-burger is-dark" aria-label="menu" aria-expanded="false" style="z-index: 40; height: 38px;"
        (click)="viewMenu()">
@@ -32,74 +32,74 @@
     </a>
 </div>
 
-<div class="columns family-menu">
-    <div class="field algica-checkbox is-inline" >
+<div class="columns family-menu is-multiline is-mobile">
+    <div class="column field algica-checkbox is-inline checkbox-option is-2" >
         <input class="is-checkradio is-small menu-checkbox " checked type="checkbox" id="familia-algica" (click)="onSelectFamily('algica')">
         <label for="familia-algica">
             Álgica
         </label>
     </div>
-    <div class="field cochimi-yumana-checkbox is-inline">
+    <div class="column field cochimi-yumana-checkbox is-inline checkbox-option is-2">
         <input class="is-checkradio is-small menu-checkbox" checked type="checkbox" id="familia-cochimi-yumana" (click)="onSelectFamily('cochimi-yumana')">
         <label for="familia-cochimi-yumana">
             Chochimí-Yumana
         </label>
     </div>
-    <div class="field chontal-oaxaca-checkbox is-inline">
+    <div class="column field chontal-oaxaca-checkbox is-inline checkbox-option is-2">
         <input class="is-checkradio is-small menu-checkbox" checked type="checkbox" id="familia-chontal-oaxaca" (click)="onSelectFamily('chontal-oaxaca')">
         <label for="familia-chontal-oaxaca">
             Chontal de Oaxaca
         </label>
     </div>
-    <div class="field huave-checkbox is-inline">
+    <div class="column field huave-checkbox is-inline checkbox-option is-2">
         <input class="is-checkradio is-small menu-checkbox" checked type="checkbox" id="familia-huave" (click)="onSelectFamily('huave')">
         <label for="familia-huave">
             Huave
         </label>
     </div>
-    <div class="field maya-checkbox is-inline">
+    <div class="column field maya-checkbox is-inline checkbox-option is-2">
         <input class="is-checkradio is-small menu-checkbox" checked type="checkbox" id="familia-maya" (click)="onSelectFamily('maya')">
         <label for="familia-maya">
             Maya
         </label>
     </div>
-    <div class="field mixe-zoque-checkbox is-inline">
+    <div class="column field mixe-zoque-checkbox is-inline checkbox-option is-2">
         <input class="is-checkradio is-small menu-checkbox" checked type="checkbox" id="familia-mixe-zoque" (click)="onSelectFamily('mixe-zoque')">
         <label for="familia-mixe-zoque">
             Mixe-Zoque
         </label>
     </div>
-    <div class="field oto-mangue-checkbox is-inline">
+    <div class="column field oto-mangue-checkbox is-inline checkbox-option is-2">
         <input class="is-checkradio is-small menu-checkbox" checked type="checkbox" id="familia-oto-mangue" (click)="onSelectFamily('oto-mangue')">
         <label for="familia-oto-mangue">
             Oto-Mangue
         </label>
     </div>
-    <div class="field seri-checkbox is-inline">
+    <div class="column field seri-checkbox is-inline checkbox-option is-2">
         <input class="is-checkradio is-small menu-checkbox" checked type="checkbox" id="familia-seri" (click)="onSelectFamily('seri')">
         <label for="familia-seri">
             Seri
         </label>
     </div>
-    <div class="field tarasca-checkbox is-inline">
+    <div class="column field tarasca-checkbox is-inline checkbox-option is-2">
         <input class="is-checkradio is-small menu-checkbox" checked type="checkbox" id="familia-tarasca" (click)="onSelectFamily('tarasca')">
         <label for="familia-tarasca">
             Tarasca
         </label>
     </div>
-    <div class="field totonaco-tepehua-checkbox is-inline">
+    <div class="column field totonaco-tepehua-checkbox is-inline checkbox-option is-2">
         <input class="is-checkradio is-small menu-checkbox" checked type="checkbox" id="familia-totonaco-tepehua" (click)="onSelectFamily('totonaco-tepehua')">
         <label for="familia-totonaco-tepehua">
             Totonaco-Tepehua
         </label>
     </div>
-    <div class="field yuto-nahua-checkbox is-inline">
+    <div class="column field yuto-nahua-checkbox is-inline checkbox-option is-2">
         <input class="is-checkradio is-small menu-checkbox" checked type="checkbox" id="familia-yuto-nahua" (click)="onSelectFamily('yuto-nahua')">
         <label for="familia-yuto-nahua">
             Yuto-Nahua
         </label>
     </div>
-
+    <div class="column is-2"></div>
 </div>
 
 <div>
@@ -185,7 +185,7 @@
                 <li><p>6</p></li>
             </ol>
         </div>
-        <div style="align-self: flex-end;">
+        <div class="periodic-table-columns-div">
             <div class="columns" style="margin: 0px;">
                 <div *ngIf="typeClassTable === 'periodic-table-family'">
                     <ol *ngIf="languages" class="periodic-table-family-grids">
@@ -211,7 +211,7 @@
                         </li>
                     </ol>
                 </div>
-                <div class="columns" *ngIf="typeClassTable === 'periodic-table-population'">
+                <div class="columns is-mobile" *ngIf="typeClassTable === 'periodic-table-population'">
                     <div class="column is-one-fifth column-one">
                         <ol *ngIf="languages" class="periodic-table-population-grids"  >
                             <li *ngFor="let language of languagesColumnA" id="{{language[2]}}" (click)="onViewLanguage(language)"
@@ -658,9 +658,9 @@
         </div>
     </div>
     <div class="horizontal-grids columns">
-        <ul *ngIf="typeClassTable === 'periodic-table-family' || typeClassTable === 'periodic-table-variantes' ;then family;else other"></ul>
+        <ul *ngIf="typeClassTable === 'periodic-table-family' || typeClassTable === 'periodic-table-variantes' || typeClassTable === 'periodic-table-alphabet';then family;else other"></ul>
         <ng-template #family>
-            <ul class="horizontal-list-a column">
+            <ul  *ngIf="typeClassTable !== 'periodic-table-alphabet'" class="horizontal-list-a column">
                 <li><p>A</p></li>
                 <li><p>B</p></li>
                 <li><p>C</p></li>
@@ -677,6 +677,22 @@
                 <li><p>N</p></li>
                 <li><p>O</p></li>
                 <li><p>P</p></li>
+            </ul>
+            <ul  *ngIf="typeClassTable === 'periodic-table-alphabet'" class="horizontal-list-c column">
+                <li><p>A</p></li>
+                <li><p>B</p></li>
+                <li><p>C</p></li>
+                <li><p>D</p></li>
+                <li><p>E</p></li>
+                <li><p>F</p></li>
+                <li><p>G</p></li>
+                <li><p>H</p></li>
+                <li><p>I</p></li>
+                <li><p>J</p></li>
+                <li><p>K</p></li>
+                <li><p>L</p></li>
+                <li><p>M</p></li>
+                <li><p>N</p></li>
             </ul>
         </ng-template>
         <ng-template #other>
@@ -930,12 +946,14 @@
 
 <div class="modal" id="modal-info">
     <div class="modal-background"></div>
-    <div class="modal-content">
-        <div class="modal-card">
+        <div class="modal-card" style="width: 90%;">
+
             <header class="modal-card-head {{clase}}">
                 <p class="modal-card-title {{clase}}">{{nombre}} ({{simbolo}})</p>
+                <button class="button is-white" (click)="viewImage()" style="margin-right: 20px;">Infografía</button>
                 <button class="delete close" aria-label="close" (click)="onCloseLanguage()"></button>
             </header>
+
             <section class="modal-card-body">
                 <p><b>Familia: </b></p>
                 <div class="tags are-medium">
@@ -968,22 +986,17 @@
                 </div>
                 <!--<button class="button is-link" (click)="facebookSharing(shareObj)">Más</button>-->
             </section>
-            <footer class="modal-card-foot">
-                <button class="button {{clase}}" (click)="viewImage()">Infografía</button>
-                <!--<button class="button" (click)="facebookSharing(shareObj)">Compartir</button>-->
-            </footer>
         </div>
-    </div>
+
 </div>
 
 <div class="modal" id="modal-menu" style="z-index: 38;">
     <div class="modal-background"></div>
 </div>
 
-
 <div class="modal" id="modal-obituario">
     <div class="modal-background"></div>
-    <div class="modal-card">
+    <div class="modal-card" style="width: 90%;">
         <header class="modal-card-head">
             <p class="modal-card-title">Lengua extintas</p>
             <button class="delete close" aria-label="close" (click)="onCloseLanguasExtintas()"></button>
