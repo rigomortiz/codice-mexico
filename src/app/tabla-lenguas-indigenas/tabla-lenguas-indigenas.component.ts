@@ -82,9 +82,9 @@ export class TablaLenguasIndigenasComponent implements OnInit, AfterViewInit {
     public showContainer: boolean;
     public columns: COLUMNS;
     private COLOR = ["bg-green", "bg-green-light", "bg-yellow", "bg-orange", "bg-red", "bg-none"];
-    private COLOR3 = ["shadow-green", "shadow-green-light", "shadow-yellow", "shadow-orange", "shadow-red", "bg-none"];
-    private COLOR2 = ["green", "green-light", "yellow", "orange", "red", "none"];
     private typeClassTable = "periodic-table-family";
+    public menu = true;
+    public languagesFamilia = [];
 
     matcher: MediaQueryList;
 
@@ -118,7 +118,12 @@ export class TablaLenguasIndigenasComponent implements OnInit, AfterViewInit {
                 if (a[COLUMNS.POSICION] > b[COLUMNS.POSICION]) return 1;
                 return 0;
             });
+            this.languagesFamilia = this.languages;
+            this.orderLanguagesBy(this.languagesFamilia, COLUMNS.FAMILIA, ASC);
+
         });
+
+
 
         this.selectedFilter = 'familia';
     }
@@ -131,6 +136,15 @@ export class TablaLenguasIndigenasComponent implements OnInit, AfterViewInit {
                     this.menu_ire = "IRE";
                 } else {
                     this.menu_ire = "Índice de Remplazo Etnolingüístico (IRE)";
+                }
+            });
+        this.breakpointObserver
+            .observe(['(min-width: 320px) and (max-width: 767px)'])
+            .subscribe((state: BreakpointState) => {
+                if (state.matches) {
+                    this.menu = false;
+                } else {
+                    this.menu = true;
                 }
             });
     }

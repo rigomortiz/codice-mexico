@@ -1,88 +1,167 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a6ac86b8-c743-4a31-85f1-2dabae4f7283" name="Default Changelist" comment="add selection de visualización">
-      <change afterPath="$PROJECT_DIR$/src/assets/css/bulma-tooltip.min.css" afterDir="false" />
+    <list default="true" id="2923d373-c45e-4af6-b401-94af61ed6211" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/codestream.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codestream.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/main.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/public/main.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/tabla-lenguas-indigenas/colors.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/tabla-lenguas-indigenas/colors.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/infografias-horizontal/Akateko.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/infografias-horizontal/Amuzgo.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/infografias-horizontal/Awakateko.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/infografias-horizontal/Ayapaneco.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/infografias-horizontal/Chatino.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/infografias-horizontal/Chichimeco-jonaz.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/infografias-horizontal/Chinanteco.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/infografias-horizontal/Chinateco.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/infografias-horizontal/Chocholteco.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/infografias-horizontal/Chontal de Oaxaca.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/infografias-horizontal/Chontal de Tabasco.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/infografias-horizontal/Chuj.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/infografias-horizontal/Ch’ol.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/infografias-horizontal/Cora.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/infografias-horizontal/Cucapá.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/infografias-horizontal/Cuicateco.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/infografias-horizontal/Guarijío.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/infografias-horizontal/Huasteco.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/infografias-horizontal/Huave.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/infografias-horizontal/Huichol.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/infografias-horizontal/Ixcalteco.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/infografias-horizontal/Ixil.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/infografias-horizontal/Jakalteco.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/infografias-horizontal/Kaqchikel.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/infografias-horizontal/Kickapoo.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/infografias-horizontal/Kiliwa.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/infografias-horizontal/Ku'hl.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/infografias-horizontal/Kumiai.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/infografias-horizontal/K’iche’.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/infografias-horizontal/Lacandón.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/infografias-horizontal/Mam.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/infografias-horizontal/Matlatzinca.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/infografias-horizontal/Maya.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/infografias-horizontal/Mayo.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/infografias-horizontal/Mazahua.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/infografias-horizontal/Mazateco.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/infografias-horizontal/Mexicaneros de Durango y Nayarit.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/infografias-horizontal/Mixe.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/infografias-horizontal/Mixteco.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/infografias-horizontal/Nahuas de Guerrero.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/infografias-horizontal/Nahuas de Hidalgo.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/infografias-horizontal/Nahuas de Jalisco.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/infografias-horizontal/Nahuas de Michoacán.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/infografias-horizontal/Nahuas de Milpa Alta.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/infografias-horizontal/Nahuas de Morelos.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/infografias-horizontal/Nahuas de Puebla.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/infografias-horizontal/Nahuas de San Luis Potosí.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/infografias-horizontal/Nahuas de Tlaxcala.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/infografias-horizontal/Nahuas de Veracruz.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/infografias-horizontal/Nahuas del Estado de México.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/infografias-horizontal/Oluteco.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/infografias-horizontal/Otomí.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/infografias-horizontal/Paipai.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/infografias-horizontal/Pame.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/infografias-horizontal/Pima.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/infografias-horizontal/Popoloca.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/infografias-horizontal/Popoluca de la Sierra.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/infografias-horizontal/Pápago.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/infografias-horizontal/Qato’k.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/infografias-horizontal/Q’anjob’al.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/infografias-horizontal/Q’eqchi’.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/infografias-horizontal/Sayulteco.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/infografias-horizontal/Seri.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/infografias-horizontal/Tarahumara.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/infografias-horizontal/Tepehua.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/infografias-horizontal/Tepehuano del norte.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/infografias-horizontal/Tepehuano del sur.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/infografias-horizontal/Texistepequeño.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/infografias-horizontal/Tlahuica.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/infografias-horizontal/Tlapaneco.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/infografias-horizontal/Tojolabal.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/infografias-horizontal/Totonaco.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/infografias-horizontal/Triqui.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/infografias-horizontal/Tseltal.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/infografias-horizontal/Tsotsil.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/infografias-horizontal/Yaqui.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/infografias-horizontal/Zopoteco Itsmo.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/infografias-horizontal/Zopoteco Sierra Norte.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/infografias-horizontal/Zopoteco Valle Centrales.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/infografias-horizontal/Zoque.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/tabla-lenguas-indigenas/media-queries.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/tabla-lenguas-indigenas/media-queries.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/tabla-lenguas-indigenas/tabla-lenguas-indigenas.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/tabla-lenguas-indigenas/tabla-lenguas-indigenas.component.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/tabla-lenguas-indigenas/tabla-lenguas-indigenas.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/tabla-lenguas-indigenas/tabla-lenguas-indigenas.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/tabla-lenguas-indigenas/tabla-lenguas-indigenas.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/tabla-lenguas-indigenas/tabla-lenguas-indigenas.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/data/excel.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
     </list>
-    <ignored path="$PROJECT_DIR$/dist/" />
-    <ignored path="$PROJECT_DIR$/tmp/" />
-    <ignored path="$PROJECT_DIR$/.idea/httpRequests/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="DatabaseView">
-    <option name="SHOW_INTERMEDIATE" value="true" />
-    <option name="GROUP_DATA_SOURCES" value="true" />
-    <option name="GROUP_SCHEMA" value="true" />
-    <option name="GROUP_CONTENTS" value="false" />
-    <option name="SORT_POSITIONED" value="false" />
-    <option name="SHOW_EMPTY_GROUPS" value="false" />
-    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
-    <option name="HIDDEN_KINDS">
-      <set />
-    </option>
-    <expand />
-    <select />
-  </component>
-  <component name="DefaultGradleProjectSettings">
-    <option name="isMigrated" value="true" />
-  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/app/tabla-lenguas-indigenas/tabla-lenguas-indigenas.component.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="170" column="55" selection-start-line="170" selection-start-column="55" selection-end-line="170" selection-end-column="55" />
+            <state relative-caret-position="226">
+              <caret line="931" column="47" selection-start-line="931" selection-start-column="47" selection-end-line="931" selection-end-column="47" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#aside#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#!!top" expanded="true" />
                 <element signature="n#div#1;n#!!top" />
-                <element signature="n#div#0;n#div#0;n#div#2;n#!!top" />
-                <element signature="n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#2;n#!!top" />
-                <element signature="n#div#1;n#div#1;n#div#0;n#div#1;n#div#0;n#div#2;n#!!top" />
-                <element signature="n#div#2;n#div#1;n#div#0;n#div#1;n#div#0;n#div#2;n#!!top" />
-                <element signature="n#div#3;n#div#1;n#div#0;n#div#1;n#div#0;n#div#2;n#!!top" />
-                <element signature="n#div#4;n#div#1;n#div#0;n#div#1;n#div#0;n#div#2;n#!!top" />
-                <element signature="n#div#0;n#div#3;n#div#0;n#div#1;n#div#0;n#div#2;n#!!top" />
-                <element signature="n#ol#0;n#div#0;n#div#4;n#div#0;n#div#1;n#div#0;n#div#2;n#!!top" />
-                <element signature="n#div#2;n#div#0;n#div#2;n#!!top" />
-                <element signature="n#div#1;n#div#2;n#!!top" />
+                <element signature="n#style#0;n#a#0;n#div#1;n#!!top" expanded="true" />
+                <element signature="n#div#2;n#!!top" />
+                <element signature="n#div#3;n#!!top" />
+                <element signature="n#style#0;n#div#0;n#div#3;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#3;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#2;n#div#3;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#3;n#div#3;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#4;n#div#3;n#!!top" expanded="true" />
+                <element signature="n#div#4;n#!!top" />
+                <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#4;n#!!top" expanded="true" />
+                <element signature="n#ol#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#4;n#!!top" />
+                <element signature="n#div#1;n#div#0;n#div#1;n#div#0;n#div#4;n#!!top" />
+                <element signature="n#div#2;n#div#0;n#div#1;n#div#0;n#div#4;n#!!top" />
+                <element signature="n#div#3;n#div#0;n#div#1;n#div#0;n#div#4;n#!!top" />
+                <element signature="n#div#0;n#div#3;n#div#0;n#div#1;n#div#0;n#div#4;n#!!top" />
+                <element signature="n#div#4;n#div#0;n#div#1;n#div#0;n#div#4;n#!!top" />
+                <element signature="n#style#0;n#div#0;n#div#4;n#div#0;n#div#1;n#div#0;n#div#4;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#4;n#div#0;n#div#1;n#div#0;n#div#4;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#2;n#div#4;n#div#0;n#div#1;n#div#0;n#div#4;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#3;n#div#4;n#div#0;n#div#1;n#div#0;n#div#4;n#!!top" expanded="true" />
+                <element signature="n#div#5;n#div#0;n#div#1;n#div#0;n#div#4;n#!!top" />
+                <element signature="n#style#0;n#div#0;n#div#5;n#div#0;n#div#1;n#div#0;n#div#4;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#5;n#div#0;n#div#1;n#div#0;n#div#4;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#2;n#div#5;n#div#0;n#div#1;n#div#0;n#div#4;n#!!top" expanded="true" />
+                <element signature="n#div#6;n#div#0;n#div#1;n#div#0;n#div#4;n#!!top" />
+                <element signature="e#43698#44428#0" />
+                <element signature="e#44433#45095#0" />
+                <element signature="e#45100#45598#0" />
+                <element signature="e#45603#46477#0" />
+                <element signature="n#div#0;n#div#0;n#div#2;n#div#4;n#!!top" />
+                <element signature="n#style#0;n#div#3;n#div#0;n#div#2;n#div#4;n#!!top" expanded="true" />
+                <element signature="n#div#5;n#!!top" />
+                <element signature="n#style#0;n#div#1;n#div#5;n#!!top" expanded="true" />
+                <element signature="n#div#6;n#!!top" />
+                <element signature="n#style#0;n#div#1;n#div#6;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#button#0;n#header#0;n#div#1;n#div#6;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#7;n#!!top" expanded="true" />
+                <element signature="n#div#7;n#!!top" />
+                <element signature="n#div#8;n#!!top" />
+                <element signature="n#style#0;n#div#1;n#div#8;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/index.html">
+        <entry file="file://$PROJECT_DIR$/src/app/tabla-lenguas-indigenas/tabla-lenguas-indigenas.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="163">
-              <caret line="17" column="65" selection-start-line="17" selection-start-column="65" selection-end-line="17" selection-end-column="65" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/assets/css/bulma-tooltip.min.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="21">
-              <caret line="1" selection-start-line="1" selection-end-line="1" />
+            <state relative-caret-position="38">
+              <caret line="121" column="51" lean-forward="true" selection-start-line="121" selection-start-column="51" selection-end-line="121" selection-end-column="51" />
+              <folding>
+                <element signature="e#0#63#0" expanded="true" />
+                <element signature="n#!!block;n#onViewMigration#0;n#TablaLenguasIndigenasComponent#0" />
+                <element signature="n#!!block;n#onViewIRE#0;n#TablaLenguasIndigenasComponent#0" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -90,27 +169,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/app/tabla-lenguas-indigenas/media-queries.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-856">
-              <caret line="213" column="35" selection-start-line="213" selection-start-column="35" selection-end-line="213" selection-end-column="35" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/tabla-lenguas-indigenas/tabla-lenguas-indigenas.component.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="415">
-              <caret line="31" selection-start-line="31" selection-end-line="31" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/app.module.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
+            <state relative-caret-position="248">
+              <caret line="1979" column="23" selection-start-line="1979" selection-start-column="23" selection-end-line="1979" selection-end-column="23" />
               <folding>
-                <element signature="e#0#39#0" expanded="true" />
+                <element signature="e#125#331#0" />
+                <element signature="e#22030#29306#0" />
               </folding>
             </state>
           </provider>
@@ -120,43 +183,47 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>dist</find>
-      <find>tabla-periodica</find>
-      <find>bd</find>
-      <find>is-rounded</find>
-      <find>maya</find>
-      <find>POSICION_ID</find>
-      <find>span</find>
-      <find>atomic-number</find>
-      <find>0px</find>
+      <find>De 30 a 600</find>
+      <find>Población</find>
+      <find>Migración</find>
+      <find>Urbano</find>
+      <find>acelerada</find>
+      <find>width=&quot;177&quot;</find>
+      <find>obitu</find>
+      <find>z-index</find>
+      <find>group</find>
+      <find>number-id</find>
+      <find>periodic-table-columns</find>
+      <find>horizontal-list-a</find>
+      <find>flex</find>
+      <find>horizontal-list-c</find>
+      <find>.group</find>
+      <find>Familias</find>
+      <find>IRE</find>
+      <find>Índice de Remplazo Etnolingüístico</find>
+      <find>family-menu</find>
+      <find>overflow</find>
+      <find>.periodic-table-columns</find>
+      <find>horizontal-grids</find>
+      <find>vertical-grids</find>
+      <find>infogra</find>
       <find>population</find>
-      <find>star</find>
-      <find>icon is-small</find>
-      <find>cómo</find>
-      <find>class=&quot;button&quot;</find>
-      <find>justify-content: center;</find>
-      <find>cur</find>
-      <find>hide</find>
-      <find>horizo</find>
-      <find>periodic-table-simbols</find>
-      <find>outlin</find>
-      <find>hvr-grow</find>
-      <find>&gt; de 220 000 a 2 millones 886 mil</find>
-      <find>margin: 3</find>
-      <find>algica</find>
-      <find>simbologia</find>
-      <find>fa-square-full</find>
-      <find>&lt;span class=&quot;icon is-small white&quot;&gt;&lt;i class=&quot;fas fa-star&quot;&gt;&lt;/i&gt;&lt;/span&gt;</find>
-      <find>vert</find>
-      <find>periodic-table</find>
+      <find>columns</find>
+      <find>element-name</find>
+      <find>periodic-table-family-grids</find>
+      <find>languages</find>
+      <find>16</find>
     </findStrings>
     <replaceStrings>
-      <replace>POSICION</replace>
-      <replace>tabla-periodica-grids</replace>
-      <replace>a</replace>
-      <replace>numero-id</replace>
-      <replace>0</replace>
-      <replace>&lt;span class=&quot;icon is-small white&quot;&gt;&lt;i class=&quot;fas fa-circle&quot;&gt;&lt;/i&gt;&lt;/span&gt;</replace>
+      <replace>is-checkradio</replace>
+      <replace>field</replace>
+      <replace>{{numberWithCommas(language[5])}}</replace>
+      <replace>{{numberWithCommas(language[10])}}</replace>
+      <replace>{{numberWithCommas(language[16])}}</replace>
+      <replace>DESC</replace>
+      <replace>menu-checkbox is-small</replace>
+      <replace>tabs is-small</replace>
+      <replace>checkbox-option is-2</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -170,38 +237,29 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/package.json" />
-        <option value="$PROJECT_DIR$/angular.json" />
-        <option value="$PROJECT_DIR$/index.js" />
-        <option value="$PROJECT_DIR$/.idea/workspace.xml" />
-        <option value="$PROJECT_DIR$/src/app/tabla-lenguas-indigenas/lenguas-data.service.ts" />
-        <option value="$PROJECT_DIR$/src/assets/css/hover/hover.css" />
+        <option value="$PROJECT_DIR$/src/assets/css/bulma-radio-checkbox.min.css" />
         <option value="$PROJECT_DIR$/src/app/tabla-lenguas-indigenas/colors.css" />
-        <option value="$PROJECT_DIR$/src/app/app.component.ts" />
+        <option value="$PROJECT_DIR$/src/styles.css" />
+        <option value="$PROJECT_DIR$/src/app/tabla-lenguas-indigenas/tabla-lenguas-indigenas.component.css" />
+        <option value="$PROJECT_DIR$/src/app/tabla-lenguas-indigenas/lenguas-data.service.ts" />
+        <option value="$PROJECT_DIR$/src/index.html" />
         <option value="$PROJECT_DIR$/src/app/app.component.html" />
-        <option value="$PROJECT_DIR$/src/app/app.component.css" />
+        <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/src/app/app.module.ts" />
+        <option value="$PROJECT_DIR$/src/app/tabla-lenguas-indigenas/tabla-lenguas-indigenas.component.html" />
         <option value="$PROJECT_DIR$/src/app/tabla-lenguas-indigenas/tabla-lenguas-indigenas.component.ts" />
         <option value="$PROJECT_DIR$/src/app/tabla-lenguas-indigenas/media-queries.css" />
-        <option value="$PROJECT_DIR$/src/app/tabla-lenguas-indigenas/tabla-lenguas-indigenas.component.css" />
-        <option value="$PROJECT_DIR$/src/app/tabla-lenguas-indigenas/tabla-lenguas-indigenas.component.html" />
-        <option value="$PROJECT_DIR$/src/assets/css/bulma-tooltip.min.css" />
-        <option value="$PROJECT_DIR$/src/index.html" />
       </list>
     </option>
   </component>
   <component name="MacroExpansionManager">
-    <option name="directoryName" value="RCRnSBTQ" />
+    <option name="directoryName" value="bZCToyoD" />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="170" />
-    <option name="y" value="117" />
-    <option name="width" value="1026" />
-    <option name="height" value="559" />
-  </component>
-  <component name="ProjectLevelVcsManager">
-    <ConfirmationsSetting value="2" id="Add" />
+    <option name="x" value="-1" />
+    <option name="y" value="25" />
+    <option name="width" value="685" />
+    <option name="height" value="744" />
   </component>
   <component name="ProjectView">
     <navigator currentView="Scope" currentSubView="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope" proportions="" version="1">
@@ -215,37 +273,6 @@
               <item name="tabla-lenguas-indigenas-angular" type="b2602c69:ProjectViewProjectNode" />
               <item name="tabla-lenguas-indigenas-angular" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="tabla-lenguas-indigenas-angular" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tabla-lenguas-indigenas-angular" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tabla-lenguas-indigenas-angular" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tabla-lenguas-indigenas-angular" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tabla-lenguas-indigenas-angular" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tabla-lenguas-indigenas-angular" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="tabla-lenguas-indigenas" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tabla-lenguas-indigenas-angular" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tabla-lenguas-indigenas-angular" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tabla-lenguas-indigenas-angular" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tabla-lenguas-indigenas-angular" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -255,45 +282,25 @@
           <expand>
             <path>
               <item name="tabla-lenguas-indigenas-angular" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="~/Descargas/projects/tabla-lenguas-indigenas-angular" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="~/Descargas/projects/codice-mexico/tabla-lenguas-indigenas-angular" type="442cc68d:ScopeViewTreeModel$RootNode" />
             </path>
             <path>
               <item name="tabla-lenguas-indigenas-angular" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="~/Descargas/projects/tabla-lenguas-indigenas-angular" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="~/Descargas/projects/codice-mexico/tabla-lenguas-indigenas-angular" type="442cc68d:ScopeViewTreeModel$RootNode" />
               <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
             <path>
               <item name="tabla-lenguas-indigenas-angular" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="~/Descargas/projects/tabla-lenguas-indigenas-angular" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="~/Descargas/projects/codice-mexico/tabla-lenguas-indigenas-angular" type="442cc68d:ScopeViewTreeModel$RootNode" />
               <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="app" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
             <path>
               <item name="tabla-lenguas-indigenas-angular" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="~/Descargas/projects/tabla-lenguas-indigenas-angular" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="~/Descargas/projects/codice-mexico/tabla-lenguas-indigenas-angular" type="442cc68d:ScopeViewTreeModel$RootNode" />
               <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="app" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="tabla-lenguas-indigenas" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="tabla-lenguas-indigenas-angular" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="~/Descargas/projects/tabla-lenguas-indigenas-angular" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="assets" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="tabla-lenguas-indigenas-angular" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="~/Descargas/projects/tabla-lenguas-indigenas-angular" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="assets" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="css" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="tabla-lenguas-indigenas-angular" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="~/Descargas/projects/tabla-lenguas-indigenas-angular" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="assets" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="data" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
           </expand>
           <select />
@@ -307,65 +314,25 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/assets/css/hover" />
+    <property name="go.gopath.indexing.explicitly.defined" value="true" />
+    <property name="go.import.settings.migrated" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/assets" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="org.rust.cargo.project.model.PROJECT_DISCOVERY" value="true" />
-    <property name="project.structure.last.edited" value="Artifacts" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.3395486" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="show.migrate.to.gradle.popup" value="false" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\Users\B75175\IdeaProjects\tabla-lenguas-indigenas-angular" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/assets/css/hover" />
-      <recent name="E:\Users\B75175\IdeaProjects\tabla-lenguas-indigenas-angular" />
+      <recent name="$PROJECT_DIR$/src/assets" />
+      <recent name="$PROJECT_DIR$/src/assets/data" />
     </key>
-  </component>
-  <component name="RestClientSettings">
-    <option name="REQUEST_HISTORY">
-      <list>
-        <RestClientRequest>
-          <option name="httpMethod" value="GET" />
-          <option name="urlBase" value="https://www.dropbox.com" />
-          <option name="urlPath" value="/s/4enfekvp6gfyhh5/excel.xlsx" />
-          <option name="headers">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="Accept" />
-                <option name="value" value="*/*" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="Cache-Control" />
-                <option name="value" value="no-cache" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="parameters">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="dl" />
-                <option name="value" value="0" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="parametersEnabled" value="true" />
-          <option name="textToSend" value="" />
-          <option name="filesToSend" value="" />
-        </RestClientRequest>
-      </list>
-    </option>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -379,46 +346,15 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="npm.Angular CLI Server">
-    <configuration name="Angular Application" type="JavascriptDebugType" uri="http://localhost:4200">
-      <method v="2" />
-    </configuration>
-    <configuration name="Deploy" type="heroku-deploy" factoryName="Heroku Deployment" server-name="Heroku">
-      <deployment type="module" name="tabla-lenguas-indigenas-angular">
-        <settings>
-          <option name="defaultDeploymentName" value="false" />
-          <option name="deploymentName" value="lenguas-indigenas-de-mexico" />
-          <option name="host" value="" />
-        </settings>
-      </deployment>
-      <method v="2" />
-    </configuration>
-    <configuration name="Angular CLI Build" type="js.build_tools.npm">
+  <component name="RunManager" selected="npm.ngstart">
+    <configuration name="ngstart" type="js.build_tools.npm" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
       <scripts>
-        <script value="ng" />
+        <script value="ngstart" />
       </scripts>
-      <arguments value="build" />
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
-    <configuration name="Angular CLI Server" type="js.build_tools.npm">
-      <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="ng" />
-      </scripts>
-      <arguments value="serve" />
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
-    <configuration name="Install" type="js.build_tools.npm">
-      <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="install" />
-      <node-interpreter value="project" />
+      <node-interpreter value="$USER_HOME$/.nvm/versions/node/v8.9.4/bin/node" />
+      <package-manager value="npm" />
       <envs />
       <method v="2" />
     </configuration>
@@ -428,16 +364,13 @@
       <scripts>
         <script value="start" />
       </scripts>
-      <node-interpreter value="project" />
+      <node-interpreter value="$USER_HOME$/.nvm/versions/node/v8.9.4/bin/node" />
       <envs />
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="JavaScript Debug.Angular Application" />
-      <item itemvalue="npm.Angular CLI Build" />
-      <item itemvalue="npm.Angular CLI Server" />
-      <item itemvalue="npm.Install" />
       <item itemvalue="npm.start" />
+      <item itemvalue="npm.ngstart" />
     </list>
   </component>
   <component name="SvnConfiguration">
@@ -445,123 +378,151 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="a6ac86b8-c743-4a31-85f1-2dabae4f7283" name="Default Changelist" comment="" />
-      <created>1558455948712</created>
+      <changelist id="2923d373-c45e-4af6-b401-94af61ed6211" name="Default Changelist" comment="" />
+      <created>1564887840531</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1558455948712</updated>
-      <workItem from="1558455951009" duration="5234000" />
-      <workItem from="1559573324112" duration="13591000" />
-      <workItem from="1559696590309" duration="1021000" />
-      <workItem from="1559698442766" duration="647000" />
-      <workItem from="1559699137463" duration="17888000" />
-      <workItem from="1563937808316" duration="19079000" />
-      <workItem from="1564021011047" duration="12392000" />
-      <workItem from="1564107229418" duration="13857000" />
-      <workItem from="1564260953774" duration="18498000" />
-      <workItem from="1564345551916" duration="26769000" />
-      <workItem from="1564450908438" duration="17783000" />
-      <workItem from="1564626497924" duration="1252000" />
-      <workItem from="1564712107463" duration="18270000" />
-      <workItem from="1564747044129" duration="1042000" />
+      <updated>1564887840531</updated>
+      <workItem from="1564887843267" duration="21142000" />
+      <workItem from="1564933661832" duration="384000" />
+      <workItem from="1564934380200" duration="7805000" />
+      <workItem from="1564966623348" duration="28511000" />
+      <workItem from="1565143814456" duration="5666000" />
+      <workItem from="1565532080951" duration="5872000" />
+      <workItem from="1566081542683" duration="2072000" />
+      <workItem from="1566163545126" duration="7417000" />
+      <workItem from="1566450039737" duration="13605000" />
+      <workItem from="1567222776716" duration="600000" />
+      <workItem from="1567361063544" duration="1815000" />
+      <workItem from="1567387903868" duration="8801000" />
+      <workItem from="1567878372663" duration="15979000" />
+      <workItem from="1568173630703" duration="27584000" />
+      <workItem from="1568350244974" duration="16236000" />
     </task>
-    <task id="LOCAL-00001" summary="add excel">
-      <created>1559585318713</created>
+    <task id="LOCAL-00001" summary="version con variantes y alfabetica">
+      <created>1565241681958</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1559585318713</updated>
+      <updated>1565241681958</updated>
     </task>
-    <task id="LOCAL-00002" summary="add selection de visualización">
-      <created>1559771884296</created>
+    <task id="LOCAL-00002" summary="version con variantes y alfabetica">
+      <created>1566460875318</created>
       <option name="number" value="00002" />
       <option name="presentableId" value="LOCAL-00002" />
       <option name="project" value="LOCAL" />
-      <updated>1559771884296</updated>
+      <updated>1566460875318</updated>
     </task>
-    <task id="LOCAL-00003" summary="add selection de visualización">
-      <created>1563954691038</created>
+    <task id="LOCAL-00003" summary="version con variantes y alfabetica">
+      <created>1566461140132</created>
       <option name="number" value="00003" />
       <option name="presentableId" value="LOCAL-00003" />
       <option name="project" value="LOCAL" />
-      <updated>1563954691038</updated>
+      <updated>1566461140132</updated>
     </task>
-    <task id="LOCAL-00004" summary="add selection de visualización">
-      <created>1564034785573</created>
+    <task id="LOCAL-00004" summary="version con variantes y alfabetica">
+      <created>1566462932252</created>
       <option name="number" value="00004" />
       <option name="presentableId" value="LOCAL-00004" />
       <option name="project" value="LOCAL" />
-      <updated>1564034785573</updated>
+      <updated>1566462932252</updated>
     </task>
-    <task id="LOCAL-00005" summary="add selection de visualización">
-      <created>1564274506705</created>
+    <task id="LOCAL-00005" summary="version con variantes y alfabetica">
+      <created>1568202626895</created>
       <option name="number" value="00005" />
       <option name="presentableId" value="LOCAL-00005" />
       <option name="project" value="LOCAL" />
-      <updated>1564274506706</updated>
+      <updated>1568202626896</updated>
     </task>
     <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="192164000" />
-  </component>
-  <component name="TodoView">
-    <todo-panel id="selected-file">
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-    <todo-panel id="all">
-      <are-packages-shown value="true" />
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
+    <option name="totallyTimeSpent" value="163489000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="25" width="1368" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21752267" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.22758621" weight="0.29456192" />
+      <window_info active="true" id="Structure" order="1" sideWeight="0.7724138" side_tool="true" visible="true" weight="0.21903323" />
       <window_info id="Designer" order="2" />
-      <window_info id="Image Layers" order="3" />
-      <window_info id="Capture Tool" order="4" />
-      <window_info id="Favorites" order="5" side_tool="true" />
-      <window_info id="UI Designer" order="6" />
-      <window_info id="npm" order="7" side_tool="true" />
-      <window_info id="Database" order="8" weight="0.32930514" />
-      <window_info id="PlantUML" order="9" weight="0.32930514" />
+      <window_info id="Capture Tool" order="3" />
+      <window_info id="Favorites" order="4" side_tool="true" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Image Layers" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32931036" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49773413" weight="0.55344826" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49924472" weight="0.45" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.3298292" />
-      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49697885" weight="0.42068964" />
-      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5030211" side_tool="true" weight="0.42068964" />
-      <window_info anchor="bottom" id="Database Changes" order="10" />
-      <window_info anchor="bottom" id="Version Control" order="11" sideWeight="0.49848944" weight="0.16034482" />
-      <window_info anchor="bottom" id="Flutter Performance" order="12" side_tool="true" />
-      <window_info anchor="bottom" id="Application Servers" order="13" weight="0.42413792" />
-      <window_info anchor="bottom" id="REST Client" order="14" weight="0.500684" />
-      <window_info anchor="bottom" id="TypeScript" order="15" weight="0.32931036" />
-      <window_info anchor="bottom" id="Educational.CheckDetails" order="16" />
-      <window_info anchor="bottom" id="Messages" order="17" weight="0.32931036" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Application Servers" order="7" />
+      <window_info anchor="bottom" id="TypeScript" order="8" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49848944" weight="0.46551725" />
+      <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Educational.CheckDetails" order="11" />
+      <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.5007553" side_tool="true" weight="0.42931035" />
+      <window_info anchor="bottom" id="Database Changes" order="13" />
+      <window_info anchor="bottom" id="Version Control" order="14" weight="0.3810345" />
+      <window_info anchor="bottom" id="Flutter Performance" order="15" side_tool="true" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Maven" order="3" />
       <window_info anchor="right" id="Palette" order="4" />
-      <window_info anchor="right" id="Flutter Inspector" order="5" />
-      <window_info anchor="right" id="Flutter Outline" order="6" />
-      <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info anchor="right" id="Theme Preview" order="8" />
-      <window_info anchor="right" id="Capture Analysis" order="9" />
-      <window_info anchor="right" id="SciView" order="10" />
-      <window_info anchor="right" id="Json Parser" order="11" />
-      <window_info anchor="right" id="Cargo" order="12" weight="0.32930514" />
-      <window_info anchor="right" id="CodeStream" order="13" weight="0.25906345" />
+      <window_info anchor="right" id="Cargo" order="5" />
+      <window_info anchor="right" id="Flutter Inspector" order="6" />
+      <window_info anchor="right" id="Flutter Outline" order="7" />
+      <window_info anchor="right" id="Capture Analysis" order="8" />
+      <window_info anchor="right" id="SciView" order="9" />
+      <window_info anchor="right" id="Database" order="10" />
+      <window_info anchor="right" id="CodeStream" order="11" />
+      <window_info anchor="right" id="Palette&#9;" order="12" />
+      <window_info anchor="right" id="Theme Preview" order="13" />
+      <window_info anchor="right" id="Json Parser" order="14" />
     </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2779456" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Capture Tool" order="3" />
+      <window_info id="Favorites" order="4" side_tool="true" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Image Layers" order="6" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49924472" weight="0.27586207" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Application Servers" order="7" />
+      <window_info anchor="bottom" id="TypeScript" order="8" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49848944" weight="0.3051724" />
+      <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Educational.CheckDetails" order="11" />
+      <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.5007553" side_tool="true" weight="0.42931035" />
+      <window_info anchor="bottom" id="Database Changes" order="13" />
+      <window_info anchor="bottom" id="Version Control" order="14" weight="0.3810345" />
+      <window_info anchor="bottom" id="Flutter Performance" order="15" side_tool="true" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Maven" order="3" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="Cargo" order="5" />
+      <window_info anchor="right" id="Flutter Inspector" order="6" />
+      <window_info anchor="right" id="Flutter Outline" order="7" />
+      <window_info anchor="right" id="Capture Analysis" order="8" />
+      <window_info anchor="right" id="SciView" order="9" />
+      <window_info anchor="right" id="Database" order="10" />
+      <window_info anchor="right" id="CodeStream" order="11" />
+      <window_info anchor="right" id="Palette&#9;" order="12" />
+      <window_info anchor="right" id="Theme Preview" order="13" />
+      <window_info anchor="right" id="Json Parser" order="14" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -607,106 +568,124 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="add excel" />
-    <MESSAGE value="add selection de visualización" />
-    <option name="LAST_COMMIT_MESSAGE" value="add selection de visualización" />
+    <MESSAGE value="version con variantes y alfabetica" />
+    <option name="LAST_COMMIT_MESSAGE" value="version con variantes y alfabetica" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/assets/data/data.json">
+    <entry file="file://$PROJECT_DIR$/src/assets/css/bulma-radio-checkbox.min.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
+    <entry file="file://$PROJECT_DIR$/node_modules/typescript/lib/lib.es5.d.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
+        <state relative-caret-position="21">
+          <caret line="124" column="4" selection-start-line="124" selection-start-column="4" selection-end-line="124" selection-end-column="4" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/package-lock.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1326" />
-      </provider>
+    <entry file="file://$PROJECT_DIR$/src/assets/css/all.css">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Procfile">
+    <entry file="file://$PROJECT_DIR$/node_modules/typescript/lib/lib.dom.d.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+        <state relative-caret-position="91560">
+          <caret line="4373" column="48" selection-start-line="4373" selection-start-column="48" selection-end-line="4373" selection-end-column="74" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test.js" />
-    <entry file="file://$PROJECT_DIR$/angular.json">
+    <entry file="file://$PROJECT_DIR$/src/app/tabla-lenguas-indigenas/lengua.ts">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/bulma/css/bulma.min.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="16" column="38" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="38" />
+        <state relative-caret-position="138">
+          <caret column="123421" lean-forward="true" selection-start-column="123421" selection-end-column="123448" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.js">
+    <entry file="file://$PROJECT_DIR$/node_modules/bulma/sass/components/navbar.sass">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        <state relative-caret-position="96">
+          <caret line="166" selection-start-line="166" selection-end-line="172" selection-end-column="35" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/xlsx/types/index.d.ts">
+    <entry file="file://$PROJECT_DIR$/src/assets/js/all.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="14574">
-          <caret line="695" column="7" selection-start-line="695" selection-start-column="7" selection-end-line="695" selection-end-column="7" />
+        <state relative-caret-position="-7770">
+          <caret line="68" column="7" selection-start-line="68" selection-start-column="7" selection-end-line="68" selection-end-column="7" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/rxjs/src/internal/Observable.ts">
+    <entry file="file://$PROJECT_DIR$/public/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1449">
-          <caret line="79" column="2" selection-start-line="79" selection-start-column="2" selection-end-line="79" selection-end-column="2" />
+        <state relative-caret-position="-3276" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2035" />
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/platform-impl.jar!/resources/html5-schema/html5/legacy.rnc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="810" column="18" selection-start-line="810" selection-start-column="18" selection-end-line="810" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/tabla-lenguas-indigenas/lenguas-data.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="301">
+          <caret line="20" column="78" selection-start-line="20" selection-start-column="78" selection-end-line="20" selection-end-column="78" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/tabla-lenguas-indigenas/colors.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="4" column="29" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/tabla-lenguas-indigenas/helpers.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/navbar/navbar.component.html" />
+    <entry file="file://$PROJECT_DIR$/src/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1554">
+          <caret line="83" column="7" selection-start-line="83" selection-start-column="7" selection-end-line="83" selection-end-column="7" />
+          <folding>
+            <element signature="n#style#0;n#h1#0;n#div#0;n#div#0;n#section#0;n#my-app#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/polyfills.ts">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/styles.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/tsconfig.json">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/styles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="30" column="12" selection-start-line="30" selection-start-column="12" selection-end-line="30" selection-end-column="12" />
+        <state relative-caret-position="420">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="147">
-            <caret line="7" column="39" lean-forward="true" selection-start-line="7" selection-start-column="39" selection-end-line="7" selection-end-column="39" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/assets/css/hover/hover.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="10" selection-start-line="10" selection-end-line="25" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/tabla-lenguas-indigenas/lengua.ts">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main.ts">
       <provider selected="true" editor-type-id="text-editor">
@@ -717,217 +696,115 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/assets/css/hover/demo-page.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="156" column="1" selection-start-line="156" selection-start-column="1" selection-end-line="156" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/tabla-lenguas-indigenas/colors.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1344">
-          <caret line="64" column="24" selection-start-line="64" selection-start-column="24" selection-end-line="64" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/tabla-lenguas-indigenas/helpers.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="24" selection-start-line="24" selection-end-line="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/app.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="4" column="28" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/typescript/lib/lib.es5.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="142">
-          <caret line="1255" column="4" selection-start-line="1255" selection-start-column="4" selection-end-line="1255" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/lib/platform-impl.jar!/resources/html5-schema/html5/block.rnc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="88" column="16" selection-start-line="88" selection-start-column="16" selection-end-line="88" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/tabla-lenguas-indigenas/lenguas-data.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="20" column="49" selection-start-line="20" selection-start-column="49" selection-end-line="20" selection-end-column="49" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/src/app/app.component.css">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app/app.module.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
+        <state relative-caret-position="126">
+          <caret line="13" column="30" selection-start-line="13" selection-start-column="30" selection-end-line="13" selection-end-column="30" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/app.component.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/src/app/app.component.ts">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/tabla-lenguas-indigenas/tabla-lenguas-indigenas.component.ts">
+    <entry file="file://$PROJECT_DIR$/src/app/tabla-lenguas-indigenas/tabla-lenguas-indigenas.component.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="28" column="10" selection-start-line="28" selection-start-column="10" selection-end-line="28" selection-end-column="10" />
-          <folding>
-            <element signature="n#!!block;n#resetSymbols#0;n#TablaLenguasIndigenasComponent#0" />
-            <element signature="n#!!block;n#onSelectA#0;n#TablaLenguasIndigenasComponent#0" />
-            <element signature="n#!!block;n#onSelectFamily#0;n#TablaLenguasIndigenasComponent#0" />
-            <element signature="n#!!block;n#onViewPopulation#0;n#TablaLenguasIndigenasComponent#0" />
-            <element signature="n#!!block;n#onViewLanguage#0;n#TablaLenguasIndigenasComponent#0" />
-          </folding>
+        <state relative-caret-position="462">
+          <caret line="43" column="14" selection-start-line="43" selection-start-column="1" selection-end-line="43" selection-end-column="14" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app/app.component.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/tabla-lenguas-indigenas/media-queries.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-856">
-          <caret line="213" column="35" selection-start-line="213" selection-start-column="35" selection-end-line="213" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/tabla-lenguas-indigenas/tabla-lenguas-indigenas.component.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="415">
-          <caret line="31" selection-start-line="31" selection-end-line="31" />
+        <state>
+          <caret column="49" selection-start-column="49" selection-end-column="49" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app/tabla-lenguas-indigenas/tabla-lenguas-indigenas.component.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="170" column="55" selection-start-line="170" selection-start-column="55" selection-end-line="170" selection-end-column="55" />
+        <state relative-caret-position="226">
+          <caret line="931" column="47" selection-start-line="931" selection-start-column="47" selection-end-line="931" selection-end-column="47" />
           <folding>
             <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#aside#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#!!top" expanded="true" />
             <element signature="n#div#1;n#!!top" />
-            <element signature="n#div#0;n#div#0;n#div#2;n#!!top" />
-            <element signature="n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#2;n#!!top" />
-            <element signature="n#div#1;n#div#1;n#div#0;n#div#1;n#div#0;n#div#2;n#!!top" />
-            <element signature="n#div#2;n#div#1;n#div#0;n#div#1;n#div#0;n#div#2;n#!!top" />
-            <element signature="n#div#3;n#div#1;n#div#0;n#div#1;n#div#0;n#div#2;n#!!top" />
-            <element signature="n#div#4;n#div#1;n#div#0;n#div#1;n#div#0;n#div#2;n#!!top" />
-            <element signature="n#div#0;n#div#3;n#div#0;n#div#1;n#div#0;n#div#2;n#!!top" />
-            <element signature="n#ol#0;n#div#0;n#div#4;n#div#0;n#div#1;n#div#0;n#div#2;n#!!top" />
-            <element signature="n#div#2;n#div#0;n#div#2;n#!!top" />
-            <element signature="n#div#1;n#div#2;n#!!top" />
+            <element signature="n#style#0;n#a#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#div#2;n#!!top" />
+            <element signature="n#div#3;n#!!top" />
+            <element signature="n#style#0;n#div#0;n#div#3;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#3;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#3;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#3;n#div#3;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#4;n#div#3;n#!!top" expanded="true" />
+            <element signature="n#div#4;n#!!top" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#4;n#!!top" expanded="true" />
+            <element signature="n#ol#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#4;n#!!top" />
+            <element signature="n#div#1;n#div#0;n#div#1;n#div#0;n#div#4;n#!!top" />
+            <element signature="n#div#2;n#div#0;n#div#1;n#div#0;n#div#4;n#!!top" />
+            <element signature="n#div#3;n#div#0;n#div#1;n#div#0;n#div#4;n#!!top" />
+            <element signature="n#div#0;n#div#3;n#div#0;n#div#1;n#div#0;n#div#4;n#!!top" />
+            <element signature="n#div#4;n#div#0;n#div#1;n#div#0;n#div#4;n#!!top" />
+            <element signature="n#style#0;n#div#0;n#div#4;n#div#0;n#div#1;n#div#0;n#div#4;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#4;n#div#0;n#div#1;n#div#0;n#div#4;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#4;n#div#0;n#div#1;n#div#0;n#div#4;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#3;n#div#4;n#div#0;n#div#1;n#div#0;n#div#4;n#!!top" expanded="true" />
+            <element signature="n#div#5;n#div#0;n#div#1;n#div#0;n#div#4;n#!!top" />
+            <element signature="n#style#0;n#div#0;n#div#5;n#div#0;n#div#1;n#div#0;n#div#4;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#5;n#div#0;n#div#1;n#div#0;n#div#4;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#5;n#div#0;n#div#1;n#div#0;n#div#4;n#!!top" expanded="true" />
+            <element signature="n#div#6;n#div#0;n#div#1;n#div#0;n#div#4;n#!!top" />
+            <element signature="e#43698#44428#0" />
+            <element signature="e#44433#45095#0" />
+            <element signature="e#45100#45598#0" />
+            <element signature="e#45603#46477#0" />
+            <element signature="n#div#0;n#div#0;n#div#2;n#div#4;n#!!top" />
+            <element signature="n#style#0;n#div#3;n#div#0;n#div#2;n#div#4;n#!!top" expanded="true" />
+            <element signature="n#div#5;n#!!top" />
+            <element signature="n#style#0;n#div#1;n#div#5;n#!!top" expanded="true" />
+            <element signature="n#div#6;n#!!top" />
+            <element signature="n#style#0;n#div#1;n#div#6;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#header#0;n#div#1;n#div#6;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#7;n#!!top" expanded="true" />
+            <element signature="n#div#7;n#!!top" />
+            <element signature="n#div#8;n#!!top" />
+            <element signature="n#style#0;n#div#1;n#div#8;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/assets/css/bulma-tooltip.min.css">
+    <entry file="file://$PROJECT_DIR$/src/app/tabla-lenguas-indigenas/media-queries.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        <state relative-caret-position="248">
+          <caret line="1979" column="23" selection-start-line="1979" selection-start-column="23" selection-end-line="1979" selection-end-column="23" />
+          <folding>
+            <element signature="e#125#331#0" />
+            <element signature="e#22030#29306#0" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/assets/css/all.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.html">
+    <entry file="file://$PROJECT_DIR$/src/app/tabla-lenguas-indigenas/tabla-lenguas-indigenas.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="163">
-          <caret line="17" column="65" selection-start-line="17" selection-start-column="65" selection-end-line="17" selection-end-column="65" />
+        <state relative-caret-position="38">
+          <caret line="121" column="51" lean-forward="true" selection-start-line="121" selection-start-column="51" selection-end-line="121" selection-end-column="51" />
+          <folding>
+            <element signature="e#0#63#0" expanded="true" />
+            <element signature="n#!!block;n#onViewMigration#0;n#TablaLenguasIndigenasComponent#0" />
+            <element signature="n#!!block;n#onViewIRE#0;n#TablaLenguasIndigenasComponent#0" />
+          </folding>
         </state>
       </provider>
     </entry>
-  </component>
-  <component name="masterDetails">
-    <states>
-      <state key="ArtifactsStructureConfigurable.UI">
-        <settings>
-          <artifact-editor />
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.3395486" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="FacetStructureConfigurable.UI">
-        <settings>
-          <last-edited>No facets are configured</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.3395486" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="GlobalLibrariesConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.3395486" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="JdkListConfigurable.UI">
-        <settings>
-          <last-edited>1.6</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.3395486" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ModuleStructureConfigurable.UI">
-        <settings>
-          <last-edited>tabla-lenguas-indigenas-angular</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.3395486" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectLibrariesConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.3395486" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-    </states>
   </component>
 </project>

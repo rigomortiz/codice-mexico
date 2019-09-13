@@ -14,7 +14,7 @@
     </div>
 </div>
 
-<div class="tabs is-small is-centered is-boxed" style ="margin-bottom: 0;">
+<div *ngIf="menu === true" class="tabs is-small is-centered is-boxed" style ="margin-bottom: 0;">
     <ul class="menu-views">
         <li class="tab is-active" (click)="openTabPeriodicTablet($event, 'periodic-table-family')"><a><span>Familias</span></a></li>
         <li class="tab" (click)="openTabPeriodicTablet($event, 'periodic-table-alphabet')"><a><span>Alfabético</span></a></li>
@@ -32,7 +32,7 @@
     </a>
 </div>
 
-<div class="columns family-menu is-multiline is-mobile">
+<div *ngIf="menu" class="columns family-menu is-multiline is-mobile">
     <div class="column field algica-checkbox is-inline checkbox-option is-2" >
         <input class="is-checkradio is-small menu-checkbox " checked type="checkbox" id="familia-algica" (click)="onSelectFamily('algica')">
         <label for="familia-algica">
@@ -140,8 +140,7 @@
         <span class="tag is-rounded bg-orange" >Extinción lenta</span>
         <span class="tag is-rounded bg-red" >Extinción acelerada</span>
         <span class="icon has-text-info tooltip is-tooltip-info is-tooltip-bottom is-tooltip-multiline" data-tooltip="  El índice refleja la relación entre los hablantes de lenguas indígenas del grupo de edad de 15 a 49 años con los niños hablantes de lenguas indígenas entre 5 y 9 años, considerando como base un modelo demográfico del estado de Oaxaca.
-        El índice permite medir la condición en que las nuevas generaciones de la población de un grupo etnolingüístico mantienen el uso de las lenguas indígenas.  Sus resultados se clasifican de la siguiente forma: expansión acelerada (valores mayores a 2); expansión lenta (entre 1.11 y 2); equilibrio (entre 0.9 y 1.1); extinción lenta (entre 0.51 y 0.9) y extinción acelerada (menor a 0.5).
-  ">
+        El índice permite medir la condición en que las nuevas generaciones de la población de un grupo etnolingüístico mantienen el uso de las lenguas indígenas.  Sus resultados se clasifican de la siguiente forma: expansión acelerada (valores mayores a 2); expansión lenta (entre 1.11 y 2); equilibrio (entre 0.9 y 1.1); extinción lenta (entre 0.51 y 0.9) y extinción acelerada (menor a 0.5).">
           <i class="fas fa-info-circle"></i>
         </span>
        </div>
@@ -154,7 +153,7 @@
     </div>
 </div>
 
-<div>
+<div *ngIf="menu">
     <div class="periodic-table-columns">
         <div>
             <ol *ngIf="typeClassTable === 'periodic-table-family' || typeClassTable === 'periodic-table-ire' " class="vertical-grids">
@@ -298,7 +297,7 @@
                         </ol>
                     </div>
                 </div>
-                <div class="columns" *ngIf="typeClassTable === 'periodic-table-migration'">
+                <div class="columns is-mobile" *ngIf="typeClassTable === 'periodic-table-migration'">
                     <div class="column is-one-fifth column-one">
                         <ol *ngIf="languages" class="periodic-table-migration-grids">
                             <li *ngFor="let language of languagesColumnA" id="{{language[2]}}"  (click)="onViewLanguage(language)"
@@ -385,7 +384,7 @@
                         </ol>
                     </div>
                 </div>
-                <div class="columns" *ngIf="typeClassTable === 'periodic-table-rural'">
+                <div class="columns is-mobile" *ngIf="typeClassTable === 'periodic-table-rural'">
                     <div class="column is-one-fifth column-one">
                         <ol *ngIf="languages" class="periodic-table-rural-grids">
                             <li *ngFor="let language of languagesColumnA" id="{{language[2]}}" (click)="onViewLanguage(language)"
@@ -472,7 +471,7 @@
                         </ol>
                     </div>
                 </div>
-                <div class="columns"  *ngIf="typeClassTable === 'periodic-table-ire'">
+                <div class="columns is-mobile" *ngIf="typeClassTable === 'periodic-table-ire'">
                     <div class="column column-one" style="align-self: flex-end;">
                         <ol *ngIf="languages" class="periodic-table-ire-grids">
                             <li *ngFor="let language of languagesColumnA" id="{{language[2]}}" (click)="onViewLanguage(language)"
@@ -559,7 +558,7 @@
                         </ol>
                     </div>
                 </div>
-                <div class="columns"  *ngIf="typeClassTable === 'periodic-table-variantes'">
+                <div class="columns is-mobile" *ngIf="typeClassTable === 'periodic-table-variantes'">
                     <div class="column is-half column-one" style="align-self: flex-end;">
                         <ol *ngIf="languages" class="periodic-table-variantes-grids">
                             <li *ngFor="let language of languagesColumnA" id="{{language[2]}}" (click)="onViewLanguage(language)"
@@ -770,7 +769,6 @@
         </div>
     </div>
     -->
-
     <div class="periodic-table-symbols">
         <div class="has-text-centered">
             <!--<p><strong>SIMBOLOGÍA</strong></p>-->
@@ -930,6 +928,28 @@
     </div>
 </div>
 
+<ol class="periodic-table-family-grids">
+    <li *ngFor="let language of languagesFamilia" id="{{language[2]}}" (click)="onViewLanguage(language)"
+        class="group {{language[24]}} {{typeClassTable}} {{'A' + language[6]}} {{'B' + language[11] }} {{'C' + language[14]}} {{'D' + language[18]}}">
+        <!--<p class="population">
+            <span class="icon is-small {{ COLOR2[5 - language[6]] }}"><i class="fas fa-circle"></i></span>
+            <span class="icon is-small {{ COLOR2[5 - language[11]] }}"><i class="fas fa-square-full"></i></span>
+            <span class="icon is-small {{ COLOR2[5 - language[14]] }}"><i class="fas fa-star"></i></span>
+            <span class="icon is-small  {{ COLOR2[5 - language[18]] }}" style="font-size: 25px">&#9652;</span>
+            {{language[20]}}
+        </p>
+        -->
+        <p class="number-id">
+            <b>{{language[20]}}</b>
+        </p>
+        <p class="element-symbol">
+            <b>{{language[2]}}</b>
+        </p>
+        <p class="element-name">
+            {{language[1]}} ({{language[0]}})
+        </p>
+    </li>
+</ol>
 
 <div class="modal" id="modal-image">
     <div class="modal-background"></div>
