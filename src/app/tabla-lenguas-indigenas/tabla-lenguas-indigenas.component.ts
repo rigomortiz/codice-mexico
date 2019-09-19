@@ -1,4 +1,4 @@
-import {Component, OnInit, AfterViewInit} from '@angular/core';
+import {Component, OnInit, AfterViewInit, ViewChild, ElementRef} from '@angular/core';
 import {LenguasDataService} from './lenguas-data.service';
 import {DomSanitizer, SafeHtml} from '@angular/platform-browser';
 import { BreakpointObserver, BreakpointState } from '@angular/cdk/layout';
@@ -64,6 +64,7 @@ export class TablaLenguasIndigenasComponent implements OnInit, AfterViewInit {
     private nombre = "";
     private clase = "";
     private simbolo = "";
+    private orientacion = "horizontal";
     private descripcion = "";
     private claveFamilia = "";
     private poblacion = "";
@@ -83,10 +84,12 @@ export class TablaLenguasIndigenasComponent implements OnInit, AfterViewInit {
     public columns: COLUMNS;
     private COLOR = ["bg-green", "bg-green-light", "bg-yellow", "bg-orange", "bg-red", "bg-none"];
     private typeClassTable = "periodic-table-family";
-    public menu = true;
-    public languagesFamilia = [];
+    public isMobile = true;
+    public languagesMobile = [];
 
     matcher: MediaQueryList;
+
+
 
     public numberWithCommas(x) {
         return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
@@ -118,12 +121,10 @@ export class TablaLenguasIndigenasComponent implements OnInit, AfterViewInit {
                 if (a[COLUMNS.POSICION] > b[COLUMNS.POSICION]) return 1;
                 return 0;
             });
-            this.languagesFamilia = this.languages;
-            this.orderLanguagesBy(this.languagesFamilia, COLUMNS.FAMILIA, ASC);
 
+            this.languagesMobile = Array.from(this.languages);
+            this.orderLanguagesBy(this.languagesMobile, COLUMNS.FAMILIA, ASC);
         });
-
-
 
         this.selectedFilter = 'familia';
     }
@@ -142,9 +143,11 @@ export class TablaLenguasIndigenasComponent implements OnInit, AfterViewInit {
             .observe(['(min-width: 320px) and (max-width: 767px)'])
             .subscribe((state: BreakpointState) => {
                 if (state.matches) {
-                    this.menu = false;
+                    this.orientacion = "vertical";
+                    this.isMobile = true;
                 } else {
-                    this.menu = true;
+                    this.orientacion = "horizontal";
+                    this.isMobile = false;
                 }
             });
     }
@@ -161,6 +164,7 @@ export class TablaLenguasIndigenasComponent implements OnInit, AfterViewInit {
             e[i].checked = true;
         }
     }
+
     public resetSymbols(){
         let e;
 
@@ -231,26 +235,6 @@ export class TablaLenguasIndigenasComponent implements OnInit, AfterViewInit {
             if (this.showContainer && c[i].tagName == "LI")
                 c[i].classList.toggle("hide-mobile");
         }
-        // if (f === "oto-mangue") {
-        //     let c = document.getElementsByClassName("zapoteco");
-        //
-        //     for (let i = 0; i < c.length; i++) {
-        //         c[i].classList.toggle("hide");
-        //         if (this.showContainer && c[i].tagName == "LI")
-        //             c[i].classList.toggle("hide-mobile");
-        //     }
-        // }
-        //
-        // if (f === "yuto-nahua") {
-        //     let c = document.getElementsByClassName("nahuas");
-        //
-        //     for (let i = 0; i < c.length; i++) {
-        //         c[i].classList.toggle("hide");
-        //         if (this.showContainer && c[i].tagName == "LI")
-        //             c[i].classList.toggle("hide-mobile");
-        //     }
-        // }
-
     }
 
     public openTabPeriodicTablet(evt, tabName){
@@ -418,6 +402,17 @@ export class TablaLenguasIndigenasComponent implements OnInit, AfterViewInit {
         document.getElementsByClassName("periodic-table-symbols").item(0)
             .setAttribute("style", "display: visible;");
         this.orderLanguagesBy(this.languages, COLUMNS.ID, ASC);
+    }
+
+    public onMenuMobile() {
+        var inputValue = (<HTMLInputElement>document.getElementById("menu-tabla-periodica-mobile")).value;
+
+        if(inputValue === "0"){
+            this.orderLanguagesBy(this.languagesMobile, COLUMNS.POSICION, ASC);
+        } else if(inputValue === "1"){
+            this.orderLanguagesBy(this.languagesMobile, COLUMNS.ID, ASC);
+        }
+
     }
 
     public onViewSymbolsPopulation(){

@@ -11,8 +11,8 @@
         */
         display: flex;
         justify-content: center;
-        margin-top: 5px;
-        margin-bottom: 5px;
+        margin: 5px 48px;
+
     }
 
     .family-menu .family-menu-options {
@@ -336,6 +336,14 @@
     .message-body {
         padding: 30px;
     }
+
+    .modal-image-full .modal-content{
+        margin: 0 20px;
+        max-height: calc(100vh - 160px);
+        overflow: auto;
+        position: relative;
+        width: 100%;
+    }
 }
 
 /*!* */
@@ -352,8 +360,7 @@
         */
         display: flex;
         justify-content: center;
-        margin-top: 5px;
-        margin-bottom: 5px;
+        margin: 5px 48px;
     }
 
     .family-menu  label{
@@ -681,6 +688,14 @@
     .message-body {
         padding: 30px;
     }
+
+    .modal-image-full .modal-content{
+        margin: 0 20px;
+        max-height: calc(100vh - 160px);
+        overflow: auto;
+        position: relative;
+        width: 100%;
+    }
 }
 
 
@@ -698,8 +713,8 @@
         */
         display: flex;
         justify-content: center;
-        margin-top: 5px;
-        margin-bottom: 5px;
+        margin: 5px 48px;
+
     }
 
     .family-menu  label{
@@ -1030,6 +1045,14 @@
 
     .message-body {
         padding: 30px;
+    }
+
+    .modal-image-full .modal-content{
+        margin: 0 20px;
+        max-height: calc(100vh - 100px);
+        overflow: auto;
+        position: relative;
+        width: 100%;
     }
 }
 
@@ -1038,7 +1061,7 @@
 /*  ##Screen = B/w 768px to 1024px*/
 /**!*/
 
-@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+@media (min-width: 768px) and (max-width: 1023px) and (orientation: landscape) {
     .family-menu {
         /*
         margin-top: 0;
@@ -1047,8 +1070,8 @@
         */
         display: flex;
         justify-content: center;
-        margin-top: 5px;
-        margin-bottom: 5px;
+        margin: 5px 48px;
+
     }
 
     .family-menu  label{
@@ -1380,6 +1403,18 @@
     .message-body {
         padding: 30px;
     }
+
+    .modal-image-full .modal-content{
+        margin: 0 20px;
+        max-height: calc(100vh - 100px);
+        overflow: auto;
+        position: relative;
+        width: 100%;
+    }
+
+    .modal-card-title {
+        flex-shrink: 1;
+    }
 }
 
 /*!* */
@@ -1387,7 +1422,7 @@
 /*  ##Screen = B/w 481px to 767px*/
 /**!*/
 
-@media (min-width: 320px) and (max-width: 480px) {
+@media (min-width: 481px) and (max-width: 767px) {
     .family-menu {
         /*
         margin-top: 0;
@@ -1396,8 +1431,8 @@
         */
         display: flex;
         justify-content: center;
-        margin-top: 5px;
-        margin-bottom: 5px;
+        margin: 5px 48px;
+
     }
 
     .family-menu  label{
@@ -1627,7 +1662,8 @@
 
     .periodic-table-family-grids {
         display: grid;
-        grid-template-columns: repeat(6, 16.6%);
+        grid-template-columns: repeat(5, 20%);
+        padding-top: 56px;
     }
 
     .column-one {
@@ -1651,7 +1687,7 @@
         max-width: 115px;
         /*min-height: 103px;*/
         /*width: 105px;*/
-        height: 11vw;
+        height: 15vw;
         padding: 3px;
         border-radius: 5px;
         overflow: hidden;
@@ -1724,6 +1760,22 @@
 
     .message-body {
         padding: 30px;
+    }
+
+    .modal-image-full .modal-content{
+        margin: 0 20px;
+        max-height: calc(100vh - 100px);
+        overflow: auto;
+        position: relative;
+        width: 100%;
+    }
+
+    .modal-card-title {
+        flex-shrink: 1;
+    }
+
+    .tag{
+        white-space: normal;
     }
 }
 
@@ -1742,8 +1794,8 @@
         */
         display: flex;
         justify-content: center;
-        margin-top: 5px;
-        margin-bottom: 5px;
+        margin: 5px 48px;
+
     }
 
     .family-menu  label{
@@ -1973,7 +2025,8 @@
 
     .periodic-table-family-grids {
         display: grid;
-        grid-template-columns: repeat(6, 16.6%);
+        grid-template-columns: repeat(4, 25%);
+        padding-top: 56px;
     }
 
     .column-one {
@@ -1997,7 +2050,7 @@
         max-width: 115px;
         /*min-height: 103px;*/
         /*width: 105px;*/
-        height: 11vw;
+        height: 14vw;
         padding: 3px;
         border-radius: 5px;
         overflow: hidden;
@@ -2070,5 +2123,21 @@
 
     .message-body {
         padding: 30px;
+    }
+
+    .modal-image-full .modal-content{
+        margin: 0 20px;
+        max-height: calc(100vh - 100px);
+        overflow: auto;
+        position: relative;
+        width: 100%;
+    }
+
+    .modal-card-title {
+        flex-shrink: 1;
+    }
+
+    .tag{
+        white-space: normal;
     }
 }

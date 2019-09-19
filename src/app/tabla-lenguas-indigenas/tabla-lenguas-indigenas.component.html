@@ -1,5 +1,49 @@
+<nav *ngIf="isMobile" class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+        <a class="navbar-item" href="#">
+            <img src="assets/img/logo_inpi-logo-baston-220x70.png" width="80" height="28">
+        </a>
+        <div class="navbar-item field">
+            <div class="control">
+                <div class="select is-small is-rounded">
+                    <select id="menu-tabla-periodica-mobile" (change)="onMenuMobile()">
+                        <option value="0">Familias</option>
+                        <option value="1">Alfabético</option>
+                        <option value="2">Variantes</option>
+                        <option value="3">Población Indígena</option>
+                        <option value="4">Migración</option>
+                        <option value="5">Población Rural</option>
+                        <option value="6">IRE</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample" (click)="viewMenu()">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+    </div>
+    <!--
+    <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-end">
+            <div class="navbar-item">
+                <div class="buttons">
+                    <a class="button is-primary">
+                        <strong>Sign up</strong>
+                    </a>
+                    <a class="button is-light">
+                        Log in
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    --->
+</nav>
+
 <div class="columns is-mobile" style="justify-content: flex-end;">
-    <div id="nav-menu" class="column is-one-third is-offset-two-third menu-vertical" style="position: absolute; height: 100%;">
+    <div id="nav-menu" class="column is-one-third menu-vertical" style="position: absolute; height: 100%;">
         <aside  class="card menu" style="padding: .75rem; z-index: 39; height: 100%">
             <p class="menu-label">
                 Descargar
@@ -10,11 +54,10 @@
                 <li><a (click)="viewLenguasExtintas()">Obituario(lenguas extintas)</a></li>
             </ul>
         </aside>
-
     </div>
 </div>
 
-<div *ngIf="menu === true" class="tabs is-small is-centered is-boxed" style ="margin-bottom: 0;">
+<div *ngIf="!isMobile" class="tabs is-small is-centered is-boxed" style ="margin-bottom: 0;">
     <ul class="menu-views">
         <li class="tab is-active" (click)="openTabPeriodicTablet($event, 'periodic-table-family')"><a><span>Familias</span></a></li>
         <li class="tab" (click)="openTabPeriodicTablet($event, 'periodic-table-alphabet')"><a><span>Alfabético</span></a></li>
@@ -32,74 +75,73 @@
     </a>
 </div>
 
-<div *ngIf="menu" class="columns family-menu is-multiline is-mobile">
-    <div class="column field algica-checkbox is-inline checkbox-option is-2" >
+<div *ngIf="!isMobile" class="columns family-menu is-multiline is-mobile" style="margin-left: 48px;margin-right: 48px;">
+    <div class="column field algica-checkbox is-inline checkbox-option " >
         <input class="is-checkradio is-small menu-checkbox " checked type="checkbox" id="familia-algica" (click)="onSelectFamily('algica')">
         <label for="familia-algica">
             Álgica
         </label>
     </div>
-    <div class="column field cochimi-yumana-checkbox is-inline checkbox-option is-2">
+    <div class="column field cochimi-yumana-checkbox is-inline checkbox-option ">
         <input class="is-checkradio is-small menu-checkbox" checked type="checkbox" id="familia-cochimi-yumana" (click)="onSelectFamily('cochimi-yumana')">
         <label for="familia-cochimi-yumana">
             Chochimí-Yumana
         </label>
     </div>
-    <div class="column field chontal-oaxaca-checkbox is-inline checkbox-option is-2">
+    <div class="column field chontal-oaxaca-checkbox is-inline checkbox-option ">
         <input class="is-checkradio is-small menu-checkbox" checked type="checkbox" id="familia-chontal-oaxaca" (click)="onSelectFamily('chontal-oaxaca')">
         <label for="familia-chontal-oaxaca">
             Chontal de Oaxaca
         </label>
     </div>
-    <div class="column field huave-checkbox is-inline checkbox-option is-2">
+    <div class="column field huave-checkbox is-inline checkbox-option ">
         <input class="is-checkradio is-small menu-checkbox" checked type="checkbox" id="familia-huave" (click)="onSelectFamily('huave')">
         <label for="familia-huave">
             Huave
         </label>
     </div>
-    <div class="column field maya-checkbox is-inline checkbox-option is-2">
+    <div class="column field maya-checkbox is-inline checkbox-option ">
         <input class="is-checkradio is-small menu-checkbox" checked type="checkbox" id="familia-maya" (click)="onSelectFamily('maya')">
         <label for="familia-maya">
             Maya
         </label>
     </div>
-    <div class="column field mixe-zoque-checkbox is-inline checkbox-option is-2">
+    <div class="column field mixe-zoque-checkbox is-inline checkbox-option ">
         <input class="is-checkradio is-small menu-checkbox" checked type="checkbox" id="familia-mixe-zoque" (click)="onSelectFamily('mixe-zoque')">
         <label for="familia-mixe-zoque">
             Mixe-Zoque
         </label>
     </div>
-    <div class="column field oto-mangue-checkbox is-inline checkbox-option is-2">
+    <div class="column field oto-mangue-checkbox is-inline checkbox-option ">
         <input class="is-checkradio is-small menu-checkbox" checked type="checkbox" id="familia-oto-mangue" (click)="onSelectFamily('oto-mangue')">
         <label for="familia-oto-mangue">
             Oto-Mangue
         </label>
     </div>
-    <div class="column field seri-checkbox is-inline checkbox-option is-2">
+    <div class="column field seri-checkbox is-inline checkbox-option ">
         <input class="is-checkradio is-small menu-checkbox" checked type="checkbox" id="familia-seri" (click)="onSelectFamily('seri')">
         <label for="familia-seri">
             Seri
         </label>
     </div>
-    <div class="column field tarasca-checkbox is-inline checkbox-option is-2">
+    <div class="column field tarasca-checkbox is-inline checkbox-option ">
         <input class="is-checkradio is-small menu-checkbox" checked type="checkbox" id="familia-tarasca" (click)="onSelectFamily('tarasca')">
         <label for="familia-tarasca">
             Tarasca
         </label>
     </div>
-    <div class="column field totonaco-tepehua-checkbox is-inline checkbox-option is-2">
+    <div class="column field totonaco-tepehua-checkbox is-inline checkbox-option ">
         <input class="is-checkradio is-small menu-checkbox" checked type="checkbox" id="familia-totonaco-tepehua" (click)="onSelectFamily('totonaco-tepehua')">
         <label for="familia-totonaco-tepehua">
             Totonaco-Tepehua
         </label>
     </div>
-    <div class="column field yuto-nahua-checkbox is-inline checkbox-option is-2">
+    <div class="column field yuto-nahua-checkbox is-inline checkbox-option ">
         <input class="is-checkradio is-small menu-checkbox" checked type="checkbox" id="familia-yuto-nahua" (click)="onSelectFamily('yuto-nahua')">
         <label for="familia-yuto-nahua">
             Yuto-Nahua
         </label>
     </div>
-    <div class="column is-2"></div>
 </div>
 
 <div>
@@ -153,7 +195,7 @@
     </div>
 </div>
 
-<div *ngIf="menu">
+<div *ngIf="!isMobile">
     <div class="periodic-table-columns">
         <div>
             <ol *ngIf="typeClassTable === 'periodic-table-family' || typeClassTable === 'periodic-table-ire' " class="vertical-grids">
@@ -928,11 +970,11 @@
     </div>
 </div>
 
-<ol class="periodic-table-family-grids">
-    <li *ngFor="let language of languagesFamilia" id="{{language[2]}}" (click)="onViewLanguage(language)"
+<ol *ngIf="isMobile" class="periodic-table-family-grids">
+    <li *ngFor="let language of languagesMobile" id="{{language[2]}}" (click)="onViewLanguage(language)"
         class="group {{language[24]}} {{typeClassTable}} {{'A' + language[6]}} {{'B' + language[11] }} {{'C' + language[14]}} {{'D' + language[18]}}">
         <!--<p class="population">
-            <span class="icon is-small {{ COLOR2[5 - language[6]] }}"><i class="fas fa-circle"></i></span>
+             <span class="icon is-small {{ COLOR2[5 - language[6]] }}"><i class="fas fa-circle"></i></span>
             <span class="icon is-small {{ COLOR2[5 - language[11]] }}"><i class="fas fa-square-full"></i></span>
             <span class="icon is-small {{ COLOR2[5 - language[14]] }}"><i class="fas fa-star"></i></span>
             <span class="icon is-small  {{ COLOR2[5 - language[18]] }}" style="font-size: 25px">&#9652;</span>
@@ -950,7 +992,7 @@
         </p>
     </li>
 </ol>
-
+<!--
 <div class="modal" id="modal-image">
     <div class="modal-background"></div>
     <div class="modal-card" style="width: 90%;">
@@ -959,55 +1001,66 @@
             <button class="delete close" aria-label="close" (click)="onCloseImage()"></button>
         </header>
         <section class="modal-card-body" style="padding:0">
-            <img src="./assets/img/horizontal/{{simbolo}}.png" alt="{{nombre}}">
+            <img src="./assets/img/{{orientacion}}/{{simbolo}}.png" alt="{{nombre}}">
         </section>
     </div>
+</div>
+-->
+
+<div class="modal modal-image-full"  id="modal-image">
+    <div class="modal-background"></div>
+    <div class="modal-content">
+        <p class="image" style="width: 100%;">
+            <img src="./assets/img/{{orientacion}}/{{simbolo}}.png" alt="{{nombre}}">
+        </p>
+    </div>
+    <button class="modal-close is-large" aria-label="close" (click)="onCloseImage()"></button>
 </div>
 
 <div class="modal" id="modal-info">
     <div class="modal-background"></div>
-        <div class="modal-card" style="width: 90%;">
+    <div class="modal-card">
+        <header class="modal-card-head {{clase}}">
+            <p class="modal-card-title {{clase}}">{{nombre}} ({{simbolo}})</p>
+            <button class="delete close" aria-label="close" (click)="onCloseLanguage()"></button>
+        </header>
 
-            <header class="modal-card-head {{clase}}">
-                <p class="modal-card-title {{clase}}">{{nombre}} ({{simbolo}})</p>
-                <button class="button is-white" (click)="viewImage()" style="margin-right: 20px;">Infografía</button>
-                <button class="delete close" aria-label="close" (click)="onCloseLanguage()"></button>
-            </header>
+        <section class="modal-card-body">
+            <p><b>Familia: </b></p>
+            <div class="tags are-medium">
+                <span class="tag is-rounded">{{familia}}</span>
+            </div>
 
-            <section class="modal-card-body">
-                <p><b>Familia: </b></p>
-                <div class="tags are-medium">
-                    <span class="tag is-rounded">{{familia}}</span>
-                </div>
+            <p><b>Población: </b> {{poblacion}}</p>
+            <div class="tags are-medium">
+                <span class="tag is-rounded">{{categoriaPoblacion}}</span>
+            </div>
 
-                <p><b>Población: </b> {{poblacion}}</p>
-                <div class="tags are-medium">
-                    <span class="tag is-rounded">{{categoriaPoblacion}}</span>
-                </div>
+            <p><b>Migración: </b> {{migracion}}</p>
+            <div class="tags are-medium">
+                <span class="tag is-rounded">{{categoriaMigracion}}</span>
+            </div>
 
-                <p><b>Migración: </b> {{migracion}}</p>
-                <div class="tags are-medium">
-                    <span class="tag is-rounded">{{categoriaMigracion}}</span>
-                </div>
+            <p><b>Población Rural: </b> {{rural}}</p>
+            <div class="tags are-medium">
+                <span class="tag is-rounded">{{ruralMigracion}}</span>
+            </div>
 
-                <p><b>Población Rural: </b> {{rural}}</p>
-                <div class="tags are-medium">
-                    <span class="tag is-rounded">{{ruralMigracion}}</span>
-                </div>
+            <p><b>IRE (Índice de Remplazo Etnolingüístico): </b> {{ire}}</p>
+            <div class="tags are-medium">
+                <span class="tag is-rounded">{{ireMigracion}}</span>
+            </div>
 
-                <p><b>IRE (Índice de Remplazo Etnolingüístico): </b> {{ire}}</p>
-                <div class="tags are-medium">
-                    <span class="tag is-rounded">{{ireMigracion}}</span>
-                </div>
-
-                <p><b>Variantes:</b> {{numeroVariantes}}</p>
-                <div class="tags are-medium" *ngIf="variantes">
-                    <span *ngFor="let variante of variantes" class="tag  is-rounded">{{variante}}</span>
-                </div>
-                <!--<button class="button is-link" (click)="facebookSharing(shareObj)">Más</button>-->
-            </section>
-        </div>
-
+            <p><b>Variantes:</b> {{numeroVariantes}}</p>
+            <div class="tags are-medium" *ngIf="variantes">
+                <span *ngFor="let variante of variantes" class="tag  is-rounded">{{variante}}</span>
+            </div>
+        </section>
+        <footer class="modal-card-foot">
+            <button class="button {{clase}}" (click)="viewImage()">Infografía</button>
+            <!--<button class="button" (click)="facebookSharing(shareObj)">Compartir</button>-->
+        </footer>
+</div>
 </div>
 
 <div class="modal" id="modal-menu" style="z-index: 38;">
