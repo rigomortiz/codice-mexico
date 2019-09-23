@@ -1,8 +1,8 @@
 <nav *ngIf="isMobile" class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
-        <a class="navbar-item" href="#">
+       <!-- <a class="navbar-item" href="#">
             <img src="assets/img/logo_inpi-logo-baston-220x70.png" width="80" height="28">
-        </a>
+        </a>-->
         <div class="navbar-item field">
             <div class="control">
                 <div class="select is-small is-rounded">
@@ -43,10 +43,16 @@
 </nav>
 
 <div class="columns is-mobile" style="justify-content: flex-end;">
-    <div id="nav-menu" class="column is-one-third menu-vertical" style="position: absolute; height: 100%;">
+    <div id="nav-menu" class="column is-one-third-desktop is-one-third-fullhd is-one-third-tablet is-four-fifths-mobile menu-vertical" style="position: absolute; height: 100%;">
         <aside  class="card menu" style="padding: .75rem; z-index: 39; height: 100%">
+            <a *ngIf="isMobile" role="button" id="button-menu" class="navbar-burger is-dark" aria-label="menu" aria-expanded="false" style="z-index: 40; height: 38px;"
+               (click)="viewMenu()">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
             <p class="menu-label">
-                Descargar
+                Menú
             </p>
             <ul class="menu-list">
                 <li><a href="./assets/codice-mexico-inpi-infografia.pdf" target="_blank" (click)="viewMenu()">Infografía</a></li>
@@ -75,68 +81,68 @@
     </a>
 </div>
 
-<div *ngIf="!isMobile" class="columns family-menu is-multiline is-mobile" style="margin-left: 48px;margin-right: 48px;">
-    <div class="column field algica-checkbox is-inline checkbox-option " >
+<div *ngIf="!isMobile" class="columns is-mobile is-multiline is-centered family-menu">
+    <div class="column is-narrow field  algica-checkbox is-inline checkbox-option " >
         <input class="is-checkradio is-small menu-checkbox " checked type="checkbox" id="familia-algica" (click)="onSelectFamily('algica')">
         <label for="familia-algica">
             Álgica
         </label>
     </div>
-    <div class="column field cochimi-yumana-checkbox is-inline checkbox-option ">
+    <div class="column is-narrow field cochimi-yumana-checkbox is-inline checkbox-option ">
         <input class="is-checkradio is-small menu-checkbox" checked type="checkbox" id="familia-cochimi-yumana" (click)="onSelectFamily('cochimi-yumana')">
         <label for="familia-cochimi-yumana">
             Chochimí-Yumana
         </label>
     </div>
-    <div class="column field chontal-oaxaca-checkbox is-inline checkbox-option ">
+    <div class="column is-narrow field chontal-oaxaca-checkbox is-inline checkbox-option ">
         <input class="is-checkradio is-small menu-checkbox" checked type="checkbox" id="familia-chontal-oaxaca" (click)="onSelectFamily('chontal-oaxaca')">
         <label for="familia-chontal-oaxaca">
             Chontal de Oaxaca
         </label>
     </div>
-    <div class="column field huave-checkbox is-inline checkbox-option ">
+    <div class="column is-narrow field huave-checkbox is-inline checkbox-option ">
         <input class="is-checkradio is-small menu-checkbox" checked type="checkbox" id="familia-huave" (click)="onSelectFamily('huave')">
         <label for="familia-huave">
             Huave
         </label>
     </div>
-    <div class="column field maya-checkbox is-inline checkbox-option ">
+    <div class="column is-narrow field maya-checkbox is-inline checkbox-option ">
         <input class="is-checkradio is-small menu-checkbox" checked type="checkbox" id="familia-maya" (click)="onSelectFamily('maya')">
         <label for="familia-maya">
             Maya
         </label>
     </div>
-    <div class="column field mixe-zoque-checkbox is-inline checkbox-option ">
+    <div class="column is-narrow field mixe-zoque-checkbox is-inline checkbox-option ">
         <input class="is-checkradio is-small menu-checkbox" checked type="checkbox" id="familia-mixe-zoque" (click)="onSelectFamily('mixe-zoque')">
         <label for="familia-mixe-zoque">
             Mixe-Zoque
         </label>
     </div>
-    <div class="column field oto-mangue-checkbox is-inline checkbox-option ">
+    <div class="column is-narrow field oto-mangue-checkbox is-inline checkbox-option ">
         <input class="is-checkradio is-small menu-checkbox" checked type="checkbox" id="familia-oto-mangue" (click)="onSelectFamily('oto-mangue')">
         <label for="familia-oto-mangue">
             Oto-Mangue
         </label>
     </div>
-    <div class="column field seri-checkbox is-inline checkbox-option ">
+    <div class="column is-narrow field seri-checkbox is-inline checkbox-option ">
         <input class="is-checkradio is-small menu-checkbox" checked type="checkbox" id="familia-seri" (click)="onSelectFamily('seri')">
         <label for="familia-seri">
             Seri
         </label>
     </div>
-    <div class="column field tarasca-checkbox is-inline checkbox-option ">
+    <div class="column is-narrow field tarasca-checkbox is-inline checkbox-option ">
         <input class="is-checkradio is-small menu-checkbox" checked type="checkbox" id="familia-tarasca" (click)="onSelectFamily('tarasca')">
         <label for="familia-tarasca">
             Tarasca
         </label>
     </div>
-    <div class="column field totonaco-tepehua-checkbox is-inline checkbox-option ">
+    <div class="column is-narrow field totonaco-tepehua-checkbox is-inline checkbox-option ">
         <input class="is-checkradio is-small menu-checkbox" checked type="checkbox" id="familia-totonaco-tepehua" (click)="onSelectFamily('totonaco-tepehua')">
         <label for="familia-totonaco-tepehua">
             Totonaco-Tepehua
         </label>
     </div>
-    <div class="column field yuto-nahua-checkbox is-inline checkbox-option ">
+    <div class="column is-narrow field yuto-nahua-checkbox is-inline checkbox-option ">
         <input class="is-checkradio is-small menu-checkbox" checked type="checkbox" id="familia-yuto-nahua" (click)="onSelectFamily('yuto-nahua')">
         <label for="familia-yuto-nahua">
             Yuto-Nahua
@@ -144,7 +150,7 @@
     </div>
 </div>
 
-<div>
+<div *ngIf="!isMobile">
     <div class="tags is-centered is-small" style="margin: 15px;" *ngIf="typeClassTable === 'periodic-table-population'">
         <span class="tag is-rounded bg-green"> > de 220 000 a 2 millones 886 mil</span>
         <span class="tag is-rounded bg-green-light">  > de 37 300 a < de 220 000</span>
@@ -232,14 +238,6 @@
                     <ol *ngIf="languages" class="periodic-table-family-grids">
                         <li *ngFor="let language of languages" id="{{language[2]}}" (click)="onViewLanguage(language)"
                             class="group {{language[24]}} {{typeClassTable}} {{'A' + language[6]}} {{'B' + language[11] }} {{'C' + language[14]}} {{'D' + language[18]}}">
-                            <!--<p class="population">
-                                <span class="icon is-small {{ COLOR2[5 - language[6]] }}"><i class="fas fa-circle"></i></span>
-                                <span class="icon is-small {{ COLOR2[5 - language[11]] }}"><i class="fas fa-square-full"></i></span>
-                                <span class="icon is-small {{ COLOR2[5 - language[14]] }}"><i class="fas fa-star"></i></span>
-                                <span class="icon is-small  {{ COLOR2[5 - language[18]] }}" style="font-size: 25px">&#9652;</span>
-                                {{language[20]}}
-                            </p>
-                            -->
                             <p class="number-id">
                                 <b>{{language[20]}}</b>
                             </p>
@@ -778,39 +776,6 @@
             </div>
         </ng-template>
     </div>
-    <!--
-    <div *ngIf="typeClassTable === 'periodic-table-population'" class="container is-fullhd">
-        <div class="notification">
-            <strong>Población Indígena</strong><br>
-            La estimación del volumen de la población indígena se basa en el criterio de hogar indígena, que son aquellos en donde el jefe (a) y/o el cónyuge y/o alguno de los ascendientes (madre, padre, madrastra o padrastro, abuelo (a), bisabuelo (a), tatarabuelo (a), suegro (a) declaró ser hablante de alguna lengua indígena (HLI). De acuerdo al tamaño de la población se definieron cinco grupos o quintiles, donde cada uno contiene al veinte por ciento de los agrupaciones lingüísticas o pueblos indígenas.
-        </div>
-    </div>
-    -->
-    <!--
-    <div *ngIf="typeClassTable === 'periodic-table-migration'" class="container is-fullhd">
-        <div class="notification">
-            <strong>Migración</strong><br>
-            La información sobre este tema se refiere a dos formas de identificar la migración, la primera por residir en una entidad distinta al lugar del nacimiento y la segunda por haber cambiado el lugar de residencia en los últimos cinco años. El indicador refleja el promedio de las dos tendencias migratorias en porcentaje y se agrupa en quintiles donde cada uno contiene al veinte por ciento de los agrupaciones lingüísticas o pueblos indígenas.
-        </div>
-    </div>
-    -->
-    <!--
-    <div *ngIf="typeClassTable === 'periodic-table-rural'" class="container is-fullhd">
-        <div class="notification">
-            <strong>Población Rural</strong><br>
-            El indicador de población rural se refiere al porcentaje población indígena que habita en localidades menores de 2 mil 500 habitantes y su forma de agrupación son los quintiles donde cada uno contiene al veinte por ciento de los agrupaciones lingüísticas o pueblos indígenas.
-        </div>
-    </div>
-    -->
-    <!--
-    <div *ngIf="typeClassTable === 'periodic-table-ire'" class="container is-fullhd">
-        <div class="notification">
-            <strong>Índice de Reemplazo Etnolingüístico</strong><br>
-            El índice refleja la relación entre los hablantes de lenguas indígenas del grupo de edad de 15 a 49 años con los niños hablantes de lenguas indígenas entre 5 y 9 años, considerando como base un modelo demográfico del estado de Oaxaca.
-            El índice permite medir la condición en que las nuevas generaciones de la población de un grupo etnolingüístico mantienen el uso de las lenguas indígenas.  Sus resultados se clasifican de la siguiente forma: expansión acelerada (valores mayores a 2); expansión lenta (entre 1.11 y 2); equilibrio (entre 0.9 y 1.1); extinción lenta (entre 0.51 y 0.9) y extinción acelerada (menor a 0.5).
-        </div>
-    </div>
-    -->
     <div class="periodic-table-symbols">
         <div class="has-text-centered">
             <!--<p><strong>SIMBOLOGÍA</strong></p>-->
@@ -970,42 +935,174 @@
     </div>
 </div>
 
-<ol *ngIf="isMobile" class="periodic-table-family-grids">
-    <li *ngFor="let language of languagesMobile" id="{{language[2]}}" (click)="onViewLanguage(language)"
-        class="group {{language[24]}} {{typeClassTable}} {{'A' + language[6]}} {{'B' + language[11] }} {{'C' + language[14]}} {{'D' + language[18]}}">
-        <!--<p class="population">
-             <span class="icon is-small {{ COLOR2[5 - language[6]] }}"><i class="fas fa-circle"></i></span>
-            <span class="icon is-small {{ COLOR2[5 - language[11]] }}"><i class="fas fa-square-full"></i></span>
-            <span class="icon is-small {{ COLOR2[5 - language[14]] }}"><i class="fas fa-star"></i></span>
-            <span class="icon is-small  {{ COLOR2[5 - language[18]] }}" style="font-size: 25px">&#9652;</span>
-            {{language[20]}}
-        </p>
-        -->
-        <p class="number-id">
-            <b>{{language[20]}}</b>
-        </p>
-        <p class="element-symbol">
-            <b>{{language[2]}}</b>
-        </p>
-        <p class="element-name">
-            {{language[1]}} ({{language[0]}})
-        </p>
-    </li>
-</ol>
-<!--
-<div class="modal" id="modal-image">
-    <div class="modal-background"></div>
-    <div class="modal-card" style="width: 90%;">
-        <header class="modal-card-head {{clase}}">
-            <p class="modal-card-title {{clase}}">{{nombre}} ({{simbolo}})</p>
-            <button class="delete close" aria-label="close" (click)="onCloseImage()"></button>
-        </header>
-        <section class="modal-card-body" style="padding:0">
-            <img src="./assets/img/{{orientacion}}/{{simbolo}}.png" alt="{{nombre}}">
-        </section>
+<div *ngIf="isMobile">
+    <div class="tags is-centered is-small tag-info" style="padding-top: 56px;" *ngIf="typeClassTable === 'periodic-table-population'">
+       <span class="tag is-rounded is-small bg-green"> > de 220 000 a 2 millones 886 mil</span>
+        <span class="tag is-rounded is-small bg-green-light">  > de 37 300 a < de 220 000</span>
+        <span class="tag is-rounded is-small bg-yellow">  > de 4 700 a < de 37 300</span>
+        <span class="tag is-rounded is-small bg-orange"> > de 600 a < de 4 700</span>
+        <span class="tag is-rounded is-small bg-red"> De 30 a 600</span>
+        <span class="icon has-text-info" (click)='viewInfo("La estimación del volumen de la población indígena se basa en el criterio de hogar indígena, que son aquellos en donde el jefe (a) y/o el cónyuge y/o alguno de los ascendientes (madre, padre, madrastra o padrastro, abuelo (a), bisabuelo (a), tatarabuelo (a), suegro (a) declaró ser hablante de alguna lengua indígena (HLI). De acuerdo al tamaño de la población se definieron cinco grupos o quintiles, donde cada uno contiene al veinte por ciento de los agrupaciones lingüísticas o pueblos indígenas.")'>
+          <i class="fas fa-info-circle"></i>
+        </span>
+    </div>
+    <div class="tags is-centered is-small" style="padding-top: 56px;" *ngIf="typeClassTable === 'periodic-table-migration'">
+        <span class="tag is-rounded is-small bg-green">Muy baja</span>
+        <span class="tag is-rounded is-small bg-green-light">Baja</span>
+        <span class="tag is-rounded is-small bg-yellow">Promedio</span>
+        <span class="tag is-rounded is-small bg-orange">Alta</span>
+        <span class="tag is-rounded is-small bg-red">Muy alta</span>
+        <span class="icon has-text-info" (click)='viewInfo("La información sobre este tema se refiere a dos formas de identificar la migración, la primera por residir en una entidad distinta al lugar del nacimiento y la segunda por haber cambiado el lugar de residencia en los últimos cinco años. El indicador refleja el promedio de las dos tendencias migratorias en porcentaje y se agrupa en quintiles donde cada uno contiene al veinte por ciento de los agrupaciones lingüísticas o pueblos indígenas.")'>
+          <i class="fas fa-info-circle"></i>
+        </span>
+    </div>
+    <div class="tags is-centered is-small" style="padding-top: 56px;" *ngIf="typeClassTable === 'periodic-table-rural'">
+        <span class="tag is-rounded is-small bg-green" >Muy rural</span>
+        <span class="tag is-rounded is-small bg-green-light" >Rural</span>
+        <span class="tag is-rounded is-small bg-yellow" >Rural promedio</span>
+        <span class="tag is-rounded is-small bg-orange" >Rural - Urbano</span>
+        <span class="tag is-rounded is-small bg-red" >Urbano</span>
+        <span class="icon has-text-info" (click)='viewInfo("El indicador de población rural se refiere al porcentaje población indígena que habita en localidades menores de 2 mil 500 habitantes y su forma de agrupación son los quintiles donde cada uno contiene al veinte por ciento de los agrupaciones lingüísticas o pueblos indígenas.")'>
+          <i class="fas fa-info-circle"></i>
+        </span>
+    </div>
+    <div class="tags is-centered is-small" style="padding-top: 56px;" *ngIf="typeClassTable === 'periodic-table-ire'">
+        <span class="tag is-rounded is-small bg-green" >Expansión acelerada</span>
+        <span class="tag is-rounded is-small bg-green-light" >Expansión lenta</span>
+        <span class="tag is-rounded is-small bg-yellow" >Equilibrio</span>
+        <span class="tag is-rounded is-small bg-orange" >Extinción lenta</span>
+        <span class="tag is-rounded is-small bg-red" >Extinción acelerada</span>
+        <span class="icon has-text-info" (click)='viewInfo("El índice refleja la relación entre los hablantes de lenguas indígenas del grupo de edad de 15 a 49 años con los niños hablantes de lenguas indígenas entre 5 y 9 años, considerando como base un modelo demográfico del estado de Oaxaca. El índice permite medir la condición en que las nuevas generaciones de la población de un grupo etnolingüístico mantienen el uso de las lenguas indígenas.  Sus resultados se clasifican de la siguiente forma: expansión acelerada (valores mayores a 2); expansión lenta (entre 1.11 y 2); equilibrio (entre 0.9 y 1.1); extinción lenta (entre 0.51 y 0.9) y extinción acelerada (menor a 0.5).")'>
+          <i class="fas fa-info-circle"></i>
+        </span>
+    </div>
+    <div class="tags is-centered is-small" style="padding-top: 56px;" *ngIf="typeClassTable === 'periodic-table-variantes'">
+        <span class="tag is-rounded is-small bg-green">1</span>
+        <span class="tag is-rounded is-small bg-green-light">2 - 5</span>
+        <span class="tag is-rounded is-small bg-yellow">6 - 10</span>
+        <span class="tag is-rounded is-small bg-orange">11 - 29</span>
+        <span class="tag is-rounded is-small bg-red">Mas de 30</span>
     </div>
 </div>
--->
+
+<div *ngIf="isMobile" style="padding-top: 15px;">
+    <div *ngIf="typeClassTable === 'periodic-table-family'" style="padding-top: 56px">
+        <ol class="periodic-table-family-grids">
+            <li *ngFor="let language of languagesMobile" id="{{language[2]}}" (click)="onViewLanguage(language)"
+                class="group {{language[24]}} {{typeClassTable}} {{'A' + language[6]}} {{'B' + language[11] }} {{'C' + language[14]}} {{'D' + language[18]}}">
+                <p class="number-id">
+                    <b>{{language[20]}}</b>
+                </p>
+                <p class="element-symbol">
+                    <b>{{language[2]}}</b>
+                </p>
+                <p class="element-name">
+                    {{language[1]}} ({{language[0]}})
+                </p>
+            </li>
+        </ol>
+    </div>
+    <div *ngIf="typeClassTable === 'periodic-table-alphabet'"  style="padding-top: 56px">
+        <ol class="periodic-table-family-grids">
+            <li *ngFor="let language of languagesMobile" id="{{language[2]}}" (click)="onViewLanguage(language)"
+                class="group {{language[24]}} {{typeClassTable}} {{'A' + language[6]}} {{'B' + language[11] }} {{'C' + language[14]}} {{'D' + language[18]}}">
+                <p class="number-id">
+                    <b>{{language[0]}}</b>
+                </p>
+                <p class="element-symbol">
+                    <b>{{language[2]}}</b>
+                </p>
+                <p class="element-name">
+                    {{language[1]}} ({{language[0]}})
+                </p>
+            </li>
+        </ol>
+    </div>
+    <div *ngIf="typeClassTable === 'periodic-table-population'">
+        <ol class="periodic-table-family-grids">
+            <li *ngFor="let language of languagesMobile" id="{{language[2]}}" (click)="onViewLanguage(language)"
+                class="group {{ COLOR[5 - language[6]] }} periodic-table-population">
+                 <p class="population">
+                    <span class="icon is-small white"><i class="fas fa-circle"></i></span>
+                    {{numberWithCommas(language[5])}}
+                </p>
+                <p class="element-symbol">
+                    <b>{{language[2]}}</b>
+                </p>
+                <p class="element-name">
+                    {{language[1]}} ({{language[0]}})
+                </p>
+            </li>
+        </ol>
+    </div>
+    <div *ngIf="typeClassTable === 'periodic-table-migration'">
+        <ol class="periodic-table-family-grids">
+            <li *ngFor="let language of languagesMobile" id="{{language[2]}}"  (click)="onViewLanguage(language)"
+                class="group {{ COLOR[5 - language[11]] }} periodic-table-migration">
+                <p class="population">
+                    <span class="icon is-small white"><i class="fas fa-square-full"></i></span>
+                    {{numberWithCommas(language[10])}}
+                </p>
+                <p class="element-symbol">
+                    <b>{{language[2]}}</b>
+                </p>
+                <p class="element-name">
+                    {{language[1]}} ({{language[0]}})
+                </p>
+            </li>
+        </ol>
+    </div>
+    <div *ngIf="typeClassTable === 'periodic-table-rural'">
+        <ol class="periodic-table-family-grids">
+            <li *ngFor="let language of languagesMobile"  id="{{language[2]}}" (click)="onViewLanguage(language)"
+                class="group {{ COLOR[5 - language[14]] }} periodic-table-rural">
+                <p class="population">
+                    <span class="icon is-small white"><i class="fas fa-star"></i></span>
+                    {{language[13]}}
+                </p>
+                <p class="element-symbol">
+                    <b>{{language[2]}}</b>
+                </p>
+                <p class="element-name">
+                    {{language[1]}} ({{language[0]}})
+                </p>
+            </li>
+        </ol>
+    </div>
+    <div *ngIf="typeClassTable === 'periodic-table-ire'">
+        <ol class="periodic-table-family-grids">
+            <li *ngFor="let language of languagesMobile" id="{{language[2]}}" (click)="onViewLanguage(language)"
+                class="group {{ COLOR[5 - language[18]] }} periodic-table-ire">
+                <p class="population">
+                    <span class="icon is-small white"><i class="fas fa-play"></i></span>
+                    {{language[16]}}
+                </p>
+                <p class="element-symbol">
+                    <b>{{language[2]}}</b>
+                </p>
+                <p class="element-name">
+                    {{language[1]}} ({{language[0]}})
+                </p>
+            </li>
+        </ol>
+    </div>
+    <div *ngIf="typeClassTable === 'periodic-table-variantes'">
+        <ol class="periodic-table-family-grids">
+            <li *ngFor="let language of languagesMobile" id="{{language[2]}}" (click)="onViewLanguage(language)"
+                class="group {{ COLOR[5 - language[21]] }} periodic-table-variantes">
+                <p class="number-id">
+                    <b>{{language[20]}}</b>
+                </p>
+                <p class="element-symbol">
+                    <b>{{language[2]}}</b>
+                </p>
+                <p class="element-name">
+                    {{language[1]}} ({{language[0]}})
+                </p>
+            </li>
+        </ol>
+    </div>
+</div>
 
 <div class="modal modal-image-full"  id="modal-image">
     <div class="modal-background"></div>
@@ -1024,7 +1121,6 @@
             <p class="modal-card-title {{clase}}">{{nombre}} ({{simbolo}})</p>
             <button class="delete close" aria-label="close" (click)="onCloseLanguage()"></button>
         </header>
-
         <section class="modal-card-body">
             <p><b>Familia: </b></p>
             <div class="tags are-medium">
@@ -1060,7 +1156,7 @@
             <button class="button {{clase}}" (click)="viewImage()">Infografía</button>
             <!--<button class="button" (click)="facebookSharing(shareObj)">Compartir</button>-->
         </footer>
-</div>
+    </div>
 </div>
 
 <div class="modal" id="modal-menu" style="z-index: 38;">
@@ -1069,7 +1165,7 @@
 
 <div class="modal" id="modal-obituario">
     <div class="modal-background"></div>
-    <div class="modal-card" style="width: 90%;">
+    <div class="modal-card">
         <header class="modal-card-head">
             <p class="modal-card-title">Lengua extintas</p>
             <button class="delete close" aria-label="close" (click)="onCloseLanguasExtintas()"></button>
@@ -1874,4 +1970,16 @@
             </tbody></table>
         </section>
     </div>
+</div>
+
+<div class="modal" id="modal-info-periodic-table">
+    <div class="modal-background"></div>
+    <div class="modal-content">
+        <section class="modal-card-body">
+            <p class="is-4by3">
+                {{info}}
+            </p>
+        </section>
+    </div>
+    <button class="modal-close is-large" aria-label="close" (click)="onCloseInfo()"></button>
 </div>

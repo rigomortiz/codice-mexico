@@ -86,7 +86,7 @@ export class TablaLenguasIndigenasComponent implements OnInit, AfterViewInit {
     private typeClassTable = "periodic-table-family";
     public isMobile = true;
     public languagesMobile = [];
-
+    public info = "";
     matcher: MediaQueryList;
 
 
@@ -116,11 +116,13 @@ export class TablaLenguasIndigenasComponent implements OnInit, AfterViewInit {
             this.languages = XLSX.utils.sheet_to_json(ws, {header: 1});
             this.languages.shift();
             console.log(this.languages);
-            this.languages.sort((a, b) => {
-                if (a[COLUMNS.POSICION] < b[COLUMNS.POSICION]) return -1;
-                if (a[COLUMNS.POSICION] > b[COLUMNS.POSICION]) return 1;
-                return 0;
-            });
+            // this.languages.sort((a, b) => {
+            //     if (a[COLUMNS.POSICION] < b[COLUMNS.POSICION]) return -1;
+            //     if (a[COLUMNS.POSICION] > b[COLUMNS.POSICION]) return 1;
+            //     return 0;
+            // });
+            this.orderLanguagesBy(this.languages, COLUMNS.POSICION, ASC);
+
 
             this.languagesMobile = Array.from(this.languages);
             this.orderLanguagesBy(this.languagesMobile, COLUMNS.FAMILIA, ASC);
@@ -289,6 +291,34 @@ export class TablaLenguasIndigenasComponent implements OnInit, AfterViewInit {
         this.orderLanguagesBy(this.languages, COLUMNS.POSICION, ASC);
     }
 
+    public onViewAlphabet(){
+        this.typeClassTable = "periodic-table-alphabet";
+        this.resetMenu();
+
+        document.getElementsByClassName("family-menu").item(0)
+            .setAttribute("style", "display: visible;");
+        document.getElementsByClassName("periodic-table-symbols").item(0)
+            .setAttribute("style", "display: visible;");
+        this.orderLanguagesBy(this.languages, COLUMNS.ID, ASC);
+    }
+
+    public onViewVariantes(){
+        this.typeClassTable = "periodic-table-variantes";
+        document.getElementsByClassName("family-menu").item(0)
+            .setAttribute("style", "display: none;");
+        document.getElementsByClassName("periodic-table-symbols").item(0)
+            .setAttribute("style", "display: none;");
+        this.languagesColumnA = this.languages.filter( l => l[COLUMNS.GRUPO_DE_VARIANTES] === 5);
+        this.languagesColumnB = this.languages.filter( l => l[COLUMNS.GRUPO_DE_VARIANTES] === 4);
+        this.languagesColumnC = this.languages.filter( l => l[COLUMNS.GRUPO_DE_VARIANTES] === 3 || l[COLUMNS.GRUPO_DE_VARIANTES] === 2 || l[COLUMNS.GRUPO_DE_VARIANTES] === 1);
+
+        this.orderLanguagesBy(this.languagesColumnA, COLUMNS.ID, ASC);
+        this.orderLanguagesBy(this.languagesColumnA, COLUMNS.NUMERO_DE_VARIANTES, DESC);
+        this.orderLanguagesBy(this.languagesColumnB, COLUMNS.ID, ASC);
+        this.orderLanguagesBy(this.languagesColumnB, COLUMNS.NUMERO_DE_VARIANTES, DESC);
+        this.orderLanguagesBy(this.languagesColumnC, COLUMNS.NUMERO_DE_VARIANTES, DESC);
+    }
+
     public onViewPopulation(){
         this.typeClassTable = "periodic-table-population";
         document.getElementsByClassName("family-menu").item(0)
@@ -376,43 +406,37 @@ export class TablaLenguasIndigenasComponent implements OnInit, AfterViewInit {
         this.orderLanguagesBy(this.languagesColumnE, COLUMNS.IRE, DESC);
     }
 
-    public onViewVariantes(){
-        this.typeClassTable = "periodic-table-variantes";
-        document.getElementsByClassName("family-menu").item(0)
-            .setAttribute("style", "display: none;");
-        document.getElementsByClassName("periodic-table-symbols").item(0)
-            .setAttribute("style", "display: none;");
-        this.languagesColumnA = this.languages.filter( l => l[COLUMNS.GRUPO_DE_VARIANTES] === 5);
-        this.languagesColumnB = this.languages.filter( l => l[COLUMNS.GRUPO_DE_VARIANTES] === 4);
-        this.languagesColumnC = this.languages.filter( l => l[COLUMNS.GRUPO_DE_VARIANTES] === 3 || l[COLUMNS.GRUPO_DE_VARIANTES] === 2 || l[COLUMNS.GRUPO_DE_VARIANTES] === 1);
-
-        this.orderLanguagesBy(this.languagesColumnA, COLUMNS.ID, ASC);
-        this.orderLanguagesBy(this.languagesColumnA, COLUMNS.NUMERO_DE_VARIANTES, DESC);
-        this.orderLanguagesBy(this.languagesColumnB, COLUMNS.ID, ASC);
-        this.orderLanguagesBy(this.languagesColumnB, COLUMNS.NUMERO_DE_VARIANTES, DESC);
-        this.orderLanguagesBy(this.languagesColumnC, COLUMNS.NUMERO_DE_VARIANTES, DESC);
-    }
-
-    public onViewAlphabet(){
-        this.typeClassTable = "periodic-table-alphabet";
-        this.resetMenu();
-
-        document.getElementsByClassName("family-menu").item(0)
-            .setAttribute("style", "display: visible;");
-        document.getElementsByClassName("periodic-table-symbols").item(0)
-            .setAttribute("style", "display: visible;");
-        this.orderLanguagesBy(this.languages, COLUMNS.ID, ASC);
-    }
-
     public onMenuMobile() {
         var inputValue = (<HTMLInputElement>document.getElementById("menu-tabla-periodica-mobile")).value;
 
         if(inputValue === "0"){
             this.orderLanguagesBy(this.languagesMobile, COLUMNS.POSICION, ASC);
+            this.orderLanguagesBy(this.languagesMobile, COLUMNS.FAMILIA, ASC);
+            this.typeClassTable = "periodic-table-family";
         } else if(inputValue === "1"){
             this.orderLanguagesBy(this.languagesMobile, COLUMNS.ID, ASC);
+            this.typeClassTable = "periodic-table-alphabet";
+        } else if(inputValue === "2"){
+            this.orderLanguagesBy(this.languagesMobile, COLUMNS.ID, ASC);
+            this.orderLanguagesBy(this.languagesMobile, COLUMNS.NUMERO_DE_VARIANTES, DESC);
+            this.typeClassTable = "periodic-table-variantes";
+        } else if(inputValue === "3"){
+            this.orderLanguagesBy(this.languagesMobile, COLUMNS.ID, ASC);
+            this.orderLanguagesBy(this.languagesMobile, COLUMNS.POBLACION_INDIGENA, DESC);
+            this.typeClassTable = "periodic-table-population";
+        } else if(inputValue === "4"){
+            this.orderLanguagesBy(this.languagesMobile, COLUMNS.ID, ASC);
+            this.orderLanguagesBy(this.languagesMobile, COLUMNS.MIGRACION, DESC);
+            this.typeClassTable = "periodic-table-migration";
+        } else if(inputValue === "5"){
+            this.orderLanguagesBy(this.languagesMobile, COLUMNS.IRE, DESC);
+            this.orderLanguagesBy(this.languagesMobile, COLUMNS.RURAL, DESC);
+            this.typeClassTable = "periodic-table-rural";
+        } else if(inputValue === "6"){
+            this.orderLanguagesBy(this.languagesMobile, COLUMNS.ID, ASC);
+            this.orderLanguagesBy(this.languagesMobile, COLUMNS.IRE, DESC);
+            this.typeClassTable = "periodic-table-ire";
         }
-
     }
 
     public onViewSymbolsPopulation(){
@@ -450,6 +474,13 @@ export class TablaLenguasIndigenasComponent implements OnInit, AfterViewInit {
     }
 
     public viewMenu(){
+        console.log(document.getElementsByTagName("html")[0].style.overflowY);
+        if(document.getElementsByTagName("html")[0].style.overflowY == "" ||
+            document.getElementsByTagName("html")[0].style.overflowY == "auto")
+            document.getElementsByTagName("html")[0].style.overflowY = "hidden";
+        else document.getElementsByTagName("html")[0].style.overflowY = "auto";
+
+
         document.getElementById("modal-menu").classList.toggle("is-active");
         document.getElementById('nav-menu').classList.toggle('menu-vertical');
         document.getElementById('button-menu').classList.toggle('is-active');
@@ -460,6 +491,13 @@ export class TablaLenguasIndigenasComponent implements OnInit, AfterViewInit {
         let c = document.getElementById("modal-image");
         c.classList.toggle("is-active");
         document.getElementsByTagName("html")[0].style.overflowY = "hidden";
+    }
+
+    public viewInfo(info){
+        this.info = info;
+        document.getElementsByTagName("html")[0].style.overflowY = "hidden";
+        let c = document.getElementById("modal-info-periodic-table");
+        c.classList.toggle("is-active");
     }
 
     public viewLenguasExtintas(){
@@ -478,6 +516,12 @@ export class TablaLenguasIndigenasComponent implements OnInit, AfterViewInit {
 
     public onCloseImage() {
         let c = document.getElementById("modal-image");
+        c.classList.toggle("is-active");
+        document.getElementsByTagName("html")[0].style.overflowY = "auto";
+    }
+
+    public onCloseInfo() {
+        let c = document.getElementById("modal-info-periodic-table");
         c.classList.toggle("is-active");
         document.getElementsByTagName("html")[0].style.overflowY = "auto";
     }
