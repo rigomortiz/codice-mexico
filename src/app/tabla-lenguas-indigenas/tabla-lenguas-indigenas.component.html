@@ -233,7 +233,7 @@
             </ol>
         </div>
         <div class="periodic-table-columns-div">
-            <div class="columns" style="margin: 0px;">
+            <div class="columns" style="margin: 0px;display: grid;">
                 <div *ngIf="typeClassTable === 'periodic-table-family'">
                     <ol *ngIf="languages" class="periodic-table-family-grids">
                         <li *ngFor="let language of languages" id="{{language[2]}}" (click)="onViewLanguage(language)"

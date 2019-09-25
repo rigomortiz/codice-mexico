@@ -503,6 +503,8 @@ export class TablaLenguasIndigenasComponent implements OnInit, AfterViewInit {
     public viewLenguasExtintas(){
         let c = document.getElementById("modal-obituario");
         c.classList.toggle("is-active");
+        document.getElementsByTagName("html")[0].style.overflowY = "hidden";
+
         document.getElementById("modal-menu").classList.toggle("is-active");
         document.getElementById('nav-menu').classList.toggle('menu-vertical');
         document.getElementById('button-menu').classList.toggle('is-active');
@@ -529,6 +531,8 @@ export class TablaLenguasIndigenasComponent implements OnInit, AfterViewInit {
     public onCloseLanguasExtintas() {
         let c = document.getElementById("modal-obituario");
         c.classList.toggle("is-active");
+        document.getElementsByTagName("html")[0].style.overflowY = "auto";
+        document.getElementsByTagName("html")[0].style.overflowY = "auto";
     }
 
 
