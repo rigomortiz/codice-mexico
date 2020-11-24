@@ -7,7 +7,7 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = [[module.i, "/* Add application styles & imports to this file! */\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9zdHlsZXMuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLG9EQUFvRCIsImZpbGUiOiJzcmMvc3R5bGVzLmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi8qIEFkZCBhcHBsaWNhdGlvbiBzdHlsZXMgJiBpbXBvcnRzIHRvIHRoaXMgZmlsZSEgKi8iXX0= */", '', '']]
+module.exports = [[module.i, "/* Add application styles & imports to this file! */\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9zdHlsZXMuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLG9EQUFvRCIsImZpbGUiOiJzcmMvc3R5bGVzLmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi8qIEFkZCBhcHBsaWNhdGlvbiBzdHlsZXMgJiBpbXBvcnRzIHRvIHRoaXMgZmlsZSEgKi9cbiJdfQ== */", '', '']]
 
 /***/ }),
 
@@ -555,7 +555,7 @@ if(false) {}
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /home/rigoberto/Descargas/projects/tabla-lenguas-indigenas-angular/src/styles.css */"./src/styles.css");
+module.exports = __webpack_require__(/*! /home/rigoberto/Documentos/github.com/rigobertocanseco/tabla-lenguas-indigenas-angular/src/styles.css */"./src/styles.css");
 
 
 /***/ })
