@@ -1,8 +1,4 @@
-# tabla-lenguas-indigenas
+# Tabla periódica de lenguas indígenas de México
 
-[Edit on StackBlitz ⚡️](https://stackblitz.com/edit/tabla-lenguas-indigenas)
+[Códice México](http://www.inpi.gob.mx/codicemexico/)
 
-###Insipración
-
-
-https://codepen.io/nemophrost/pen/EkImb
