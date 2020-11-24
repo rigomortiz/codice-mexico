@@ -7067,7 +7067,7 @@ __webpack_require__(/*! zone.js/dist/zone */ "./node_modules/zone.js/dist/zone.j
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /home/rigoberto/Descargas/projects/codice-mexico/tabla-lenguas-indigenas-angular/src/main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! /home/rigoberto/Documentos/github.com/rigobertocanseco/tabla-lenguas-indigenas-angular/src/main.ts */"./src/main.ts");
 
 
 /***/ }),
