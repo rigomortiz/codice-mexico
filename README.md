@@ -1,14 +1,7 @@
-# tabla-lenguas-indigenas
+# CÓDICE MÉXICO
 
-[Edit on StackBlitz ⚡️](https://stackblitz.com/edit/tabla-lenguas-indigenas)
+Tabla interactiva de las lenguas indígenas nacionales  
+[Sitio web](http://www.inpi.gob.mx/codicemexico/)
 
-###Insipración
-
-
-https://codepen.io/nemophrost/pen/EkImb
-
-https://www.freecodecamp.org/news/the-periodic-table-of-australian-startups-4ab76b79ee34/
-
-https://periodictableofchemicalelements.com/
-
-https://www.ptable.com/?lang=es#Property/Affinity
+![](https://github.com/rigobertocanseco/codicemexico/raw/master/Captura%20de%20pantalla%20de%202020-11-24%2012-54-18.png)
+![](https://github.com/rigobertocanseco/codicemexico/raw/master/Captura%20de%20pantalla%20de%202020-11-25%2000-14-02.png)
